@@ -6,11 +6,14 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
- 
+
 public class QuestionManager : MonoBehaviour
 {
     [Header("Questions Section")]
     [SerializeField] int currentIndex = 0;
+
+    // Tên Level để lưu vào PlayerPrefs
+    [SerializeField] string levelPrefName;
 
     // question Text
     [SerializeField] TextMeshProUGUI questionText;
@@ -35,7 +38,7 @@ public class QuestionManager : MonoBehaviour
     [SerializeField] Sprite rightAnswerSprite;
     [SerializeField] Sprite defaultAnswerSprite;
     TextMeshProUGUI answersText;
-     
+
     [SerializeField] AudioClip wrongAnswerClip;
     [SerializeField][Range(0, 1)] float wrongAudio;
     [SerializeField] AudioClip rightAnswerClip;
@@ -55,7 +58,7 @@ public class QuestionManager : MonoBehaviour
     [SerializeField] bool isReading;
     [SerializeField] bool isAnswered;
     [SerializeField] bool isAnswerCorrect;
-    
+
 
 
 
@@ -117,12 +120,21 @@ public class QuestionManager : MonoBehaviour
             answersText.text = questions[currentIndex].GetAnswer(i);
         }
 
+        if (currentIndex <= questions.Length - 1 && isAnswerCorrect && currentIndex >= 0)
+        {
+            Debug.Log("đã lưu dữ liệu vào trong PlayerPrefs");
+            // Khi hoàn thành level trong scene A
+            string levelName = levelPrefName; // Tên của level
+            PlayerPrefs.SetInt(levelName, 1); // Ghi lại trạng thái hoàn thành (1: true)
+            PlayerPrefs.Save(); // Lưu lại PlayerPrefs
+        }
+
     }
 
     public void OnAnswerSelected(int userAnswerIndex)
     {
         // nếu trả lời đúng
-        if (userAnswerIndex == questions[currentIndex].GetCorrectAnswerIndex() && isAnswered == false )
+        if (userAnswerIndex == questions[currentIndex].GetCorrectAnswerIndex() && isAnswered == false)
         {
             // làm hiệu ứng tung hoa bằng particles
             rightAnswerPE.Play();
@@ -149,7 +161,7 @@ public class QuestionManager : MonoBehaviour
 
             Invoke("ResetIsAnswered", delayTimeSmall);
 
-            
+
 
             // chạy hiệu ứng âm thanh trả lời sai
             quizSectionAudio.PlayOneShot(wrongAnswerClip, wrongAudio);
@@ -252,18 +264,23 @@ public class QuestionManager : MonoBehaviour
     public void LoadNextQuestion()
     {
         // questions.Length - 1 vì mảng bắt đầu từ 0, nếu để tới độ dài của mảng thì sẽ thừa 1
-        if (currentIndex >= 0 && currentIndex < questions.Length - 1 && isAnswerCorrect )
+        if (currentIndex >= 0 && currentIndex < questions.Length - 1 && isAnswerCorrect)
         {
             currentIndex++;
-            
+
             MuteAudio();
-            
+
             LoadQuestion();
 
             isAnswered = false;
             isAnswerCorrect = false;
         }
-        else { return; }
+        else
+        {
+            
+
+            return;
+        }
 
     }
 
@@ -272,13 +289,13 @@ public class QuestionManager : MonoBehaviour
         if (currentIndex > 0 && currentIndex <= questions.Length)
         {
             MuteAudio();
-            
+
             currentIndex--;
-            
+
             LoadQuestion();
 
         }
-        else if (currentIndex == 0 )
+        else if (currentIndex == 0)
         {
             MuteAudio();
 

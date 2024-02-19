@@ -18,7 +18,7 @@ public class LoadScene : MonoBehaviour
 
     [SerializeField] GameObject loadingScreen;
     [SerializeField] Slider loadingBar;
-    [SerializeField] Image loadingBarImage; // dùng khi chị Khánh gửi chữ Loading
+    //[SerializeField] Image loadingBarImage; // dùng khi chị Khánh gửi chữ Loading
     [SerializeField] TextMeshProUGUI loadingPercent;
 
     AudioManager gameAudio;

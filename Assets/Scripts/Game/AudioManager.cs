@@ -9,8 +9,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioClip StartAudio;
     [SerializeField][Range(0, 1)] float startVolume = 1f;
 
-    [SerializeField] AudioClip batWord;
-    [SerializeField][Range(0, 1)] float batWordVolume = 1f;
+    [SerializeField] AudioClip buttonAudio;
+    [SerializeField][Range(0, 1)] float buttonVolume = 1f;
 
     [SerializeField] AudioClip hatWord;
     [SerializeField][Range(0, 1)] float hatWordVolume = 1f;
@@ -67,9 +67,9 @@ public class AudioManager : MonoBehaviour
         PlayAudio(StartAudio, startVolume);
     }
 
-    public void PlayBatClip()
+    public void PlayButtonClip()
     {
-        PlayAudio(batWord, batWordVolume);
+        PlayAudio(buttonAudio, buttonVolume);
     }
 
     public void PlayHatClip()

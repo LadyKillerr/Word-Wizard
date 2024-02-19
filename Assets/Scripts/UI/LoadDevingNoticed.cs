@@ -30,6 +30,8 @@ public class LoadDevingNoticed : MonoBehaviour
     {
         underDevelopmentNoti.SetActive(false);
         NotiText.SetActive(false);
+        screenDarken.SetActive(false);
+
     }
 
     // trượt hộp thông báo xuống
@@ -37,6 +39,7 @@ public class LoadDevingNoticed : MonoBehaviour
     {
         underDevelopmentNoti.SetActive(true);
         NotiText.SetActive(true);
+        screenDarken.SetActive(true);
     }
 
     
