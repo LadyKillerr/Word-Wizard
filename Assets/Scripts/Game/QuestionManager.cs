@@ -64,7 +64,7 @@ public class QuestionManager : MonoBehaviour
 
     [Header("Quiz Effects")]
     [SerializeField] ParticleSystem rightAnswerPE;
-    CameraShake wrongAnswerVFX;
+
 
     // Components that are hidden
     AudioSource quizSectionAudio;
@@ -75,7 +75,7 @@ public class QuestionManager : MonoBehaviour
 
     void Awake()
     {
-        wrongAnswerVFX = Camera.main.GetComponent<CameraShake>();
+
 
         quizSectionAudio = GetComponent<AudioSource>();
 
@@ -157,7 +157,12 @@ public class QuestionManager : MonoBehaviour
             isAnswered = true;
             isAnswerCorrect = false;
 
-            wrongAnswerVFX.ShakeCamera();
+            // làm đth rung 1 tý
+            Handheld.Vibrate();
+
+            Debug.Log("Phone vibrate performed");
+
+
 
             Invoke("ResetIsAnswered", delayTimeSmall);
 

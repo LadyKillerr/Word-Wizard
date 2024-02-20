@@ -251,9 +251,12 @@ public class StoryManager : MonoBehaviour
     //    storyIntro.SetActive(false);
     //}
 
+    // bật đoạn giao giữa 2 scene story và quiz
     void ToggleIntersection()
     {
         intersectionSection.SetActive(true);
+
+        MuteAllAudioParts();
 
         StartCoroutine(DisableIntersection());
 
