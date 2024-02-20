@@ -7,10 +7,14 @@ public class EnglishLevelSelector : MonoBehaviour
 
     [SerializeField] GameObject levelSelector;
 
+    AudioManager audioManager;
+
     bool isShow;
 
     void Start()
     {
+        audioManager = FindObjectOfType<AudioManager>();
+
         isShow = false;
     }
 
@@ -27,11 +31,15 @@ public class EnglishLevelSelector : MonoBehaviour
             isShow = true;
             levelSelector.SetActive(true);
 
+            audioManager.PlayButtonClip();
+
         }
         else
         {
             isShow = false;
             levelSelector.SetActive(false);
+            audioManager.PlayButtonClip();
+
         }
     }
 }

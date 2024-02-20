@@ -12,8 +12,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioClip buttonAudio;
     [SerializeField][Range(0, 1)] float buttonVolume = 1f;
 
-    [SerializeField] AudioClip hatWord;
-    [SerializeField][Range(0, 1)] float hatWordVolume = 1f;
+    [SerializeField] AudioClip pageTurningAudio;
+    [SerializeField][Range(0, 1)] float pageTurningVolume = 1f;
 
     [SerializeField] AudioClip appleWord;
     [SerializeField][Range(0, 1)] float appleWordVolume = 1f;
@@ -72,9 +72,9 @@ public class AudioManager : MonoBehaviour
         PlayAudio(buttonAudio, buttonVolume);
     }
 
-    public void PlayHatClip()
+    public void PlayPageTurningClip()
     {
-        PlayAudio(hatWord, hatWordVolume);
+        PlayAudio(pageTurningAudio, pageTurningVolume);
     }
 
     public void PlayAppleWord()

@@ -48,13 +48,14 @@ public class StoryManager : MonoBehaviour
 
     // Components
     AudioSource storyAudioSource;
+    AudioManager gameAudioManager;
     [SerializeField] QuestionManager questionManager;
 
     // flow code: Awake sẽ là LoadFirstStoryPart, sau đó tiếp tục load part các index tiếp theo dần dần
 
     void Awake()
     {
-
+        gameAudioManager = FindObjectOfType<AudioManager>();
 
         storyAudioSource = GetComponent<AudioSource>();
 
@@ -156,8 +157,11 @@ public class StoryManager : MonoBehaviour
 
             currentIndex += 1;
 
+            gameAudioManager.PlayPageTurningClip();
+
             // tăng index lên sau khi đã ẩn hình với ảnh hiện tại đi
             LoadParts();
+
 
         }
         // nếu index đã max (là part cuối trong 1 câu truyện)
@@ -192,6 +196,8 @@ public class StoryManager : MonoBehaviour
 
             // giảm index đi để lùi trang truyện và trang tranh về trang trước 
             currentIndex -= 1;
+
+            gameAudioManager.PlayPageTurningClip();
 
             // load ra trang tương ứng với index mới trừ đó
             LoadParts();
@@ -260,7 +266,7 @@ public class StoryManager : MonoBehaviour
 
         StartCoroutine(DisableIntersection());
 
-
+          
     }
 
     IEnumerator DisableIntersection()

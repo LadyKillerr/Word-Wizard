@@ -32,7 +32,15 @@ public class LoadScene : MonoBehaviour
     {
         StartCoroutine(LoadAsynchrounously(sceneIndex));
 
-        playButtonAudio();
+        if (sceneIndex == 1 || sceneIndex == 2)
+        {
+            PlayStartAudio();
+
+        }
+        else
+        {
+            PlayButtonAudio();
+        }
     }
 
     public IEnumerator LoadAsynchrounously(int sceneIndex)
@@ -52,9 +60,14 @@ public class LoadScene : MonoBehaviour
         }
     }
 
-    void playButtonAudio()
+    void PlayStartAudio()
     {
         gameAudio.PlayStartAudio();
+    }
+
+    void PlayButtonAudio()
+    {
+        gameAudio.PlayButtonClip();
     }
 
     //public void LoadMainMenu()

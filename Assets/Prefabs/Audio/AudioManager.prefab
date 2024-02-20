@@ -50,8 +50,8 @@ MonoBehaviour:
   startVolume: 1
   buttonAudio: {fileID: 8300000, guid: 883355f9c23f42940863dd4edd695442, type: 3}
   buttonVolume: 1
-  hatWord: {fileID: 0}
-  hatWordVolume: 1
+  pageTurningAudio: {fileID: 8300000, guid: eaf90cc1a1679db4c9e19f7014fd15dc, type: 3}
+  pageTurningVolume: 1
   appleWord: {fileID: 0}
   appleWordVolume: 1
   cakeWord: {fileID: 0}

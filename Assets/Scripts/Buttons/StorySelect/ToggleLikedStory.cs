@@ -20,6 +20,7 @@ public class ToggleLikedStory : MonoBehaviour
         {
             heartsImage.SetActive(false);
 
+            gameAudio.PlayButtonClip();
 
             // kích hoạt tín hiệu cho thấy đã like bộ truyện này
         }
@@ -27,6 +28,7 @@ public class ToggleLikedStory : MonoBehaviour
         {
             heartsImage.SetActive(true);
 
+            gameAudio.PlayButtonClip();
 
             // kích hoạt tag cho thấy đã bỏ like bộ truyện này
         }
