@@ -72,10 +72,11 @@ public class QuestionManager : MonoBehaviour
     [SerializeField] QuestionManager questionManager;
     [SerializeField] StoryManager storyManager;
 
+    PlayerData playerDataManager;
 
     void Awake()
     {
-
+        playerDataManager = FindObjectOfType<PlayerData>();
 
         quizSectionAudio = GetComponent<AudioSource>();
 
@@ -282,7 +283,7 @@ public class QuestionManager : MonoBehaviour
         }
         else
         {
-            
+            playerDataManager.IncreaseStars();
 
             return;
         }

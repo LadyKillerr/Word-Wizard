@@ -13,8 +13,12 @@ public class LoadDevingNoticed : MonoBehaviour
     // Screen Darken
     [SerializeField] GameObject screenDarken;
 
+    AudioManager gameAudio; 
+
     void Start()
     {
+        gameAudio = FindObjectOfType<AudioManager>();
+
         underDevelopmentNoti.SetActive(false) ;
     }
 
@@ -40,6 +44,8 @@ public class LoadDevingNoticed : MonoBehaviour
         underDevelopmentNoti.SetActive(true);
         NotiText.SetActive(true);
         screenDarken.SetActive(true);
+
+        gameAudio.PlayBugClip();
     }
 
     

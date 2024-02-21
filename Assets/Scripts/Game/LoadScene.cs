@@ -32,15 +32,15 @@ public class LoadScene : MonoBehaviour
     {
         StartCoroutine(LoadAsynchrounously(sceneIndex));
 
-        if (sceneIndex == 1 || sceneIndex == 2)
-        {
+        //if (sceneIndex == 1 || sceneIndex == 2)
+        //{
             PlayStartAudio();
 
-        }
-        else
-        {
-            PlayButtonAudio();
-        }
+        //}
+        //else
+        //{
+        //    PlayButtonAudio();
+        //}
     }
 
     public IEnumerator LoadAsynchrounously(int sceneIndex)
