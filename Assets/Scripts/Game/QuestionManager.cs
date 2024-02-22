@@ -76,7 +76,7 @@ public class QuestionManager : MonoBehaviour
 
     void Awake()
     {
-        playerDataManager = FindObjectOfType<PlayerData>();
+
 
         quizSectionAudio = GetComponent<AudioSource>();
 
@@ -283,7 +283,7 @@ public class QuestionManager : MonoBehaviour
         }
         else
         {
-            playerDataManager.IncreaseStars();
+
 
             return;
         }

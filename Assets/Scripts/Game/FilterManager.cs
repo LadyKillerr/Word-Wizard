@@ -76,9 +76,7 @@ public class FilterManager : MonoBehaviour
         checkButton.SetActive(false);
 
         // ấn vào r thì tắt menu filter buttons đi và chỉnh lại biến bool, bật âm thanh
-        isShow = false;
-        filterButtonsMenu.SetActive(false);
-        audioManager.PlayButtonClip();
+        TurnOffFilterMenu();
     }
 
     public void FilterNewBooks()
@@ -89,9 +87,7 @@ public class FilterManager : MonoBehaviour
         heartsButton.SetActive(false);
         checkButton.SetActive(false);
 
-        isShow = false;
-        filterButtonsMenu.SetActive(false);
-        audioManager.PlayButtonClip();
+        TurnOffFilterMenu();
     }
 
     public void FilterHourglassBooks()
@@ -102,9 +98,7 @@ public class FilterManager : MonoBehaviour
         heartsButton.SetActive(false);
         checkButton.SetActive(false);
 
-        isShow = false;
-        filterButtonsMenu.SetActive(false);
-        audioManager.PlayButtonClip();
+        TurnOffFilterMenu();
     }
 
     public void FilterHeartsBooks()
@@ -115,9 +109,7 @@ public class FilterManager : MonoBehaviour
         heartsButton.SetActive(true);
         checkButton.SetActive(false);
 
-        isShow = false;
-        filterButtonsMenu.SetActive(false);
-        audioManager.PlayButtonClip();
+        TurnOffFilterMenu();
     }
 
     public void FilterCheckBooks()
@@ -128,6 +120,11 @@ public class FilterManager : MonoBehaviour
         heartsButton.SetActive(false);
         checkButton.SetActive(true);
 
+        TurnOffFilterMenu();
+    }
+
+    void TurnOffFilterMenu()
+    {
         isShow = false;
         filterButtonsMenu.SetActive(false);
         audioManager.PlayButtonClip();
