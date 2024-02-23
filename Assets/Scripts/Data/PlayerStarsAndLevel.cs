@@ -9,7 +9,10 @@ public class PlayerStarsAndLevel : MonoBehaviour
 
     public void SavePlayer()
     {
+        // dang co bug 
         //SaveSystem.SavePlayer(this);
+
+        
     }
 
     public void LoadPlayer()

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
@@ -18,15 +19,11 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioClip bugAudio;
     [SerializeField][Range(0, 1)] float bugAudioVolume = 1f;
 
-    [SerializeField] AudioClip cakeWord;
-    [SerializeField][Range(0, 1)] float cakeWordVolume = 1f;
-
-    [SerializeField] AudioClip treeWord;
-    [SerializeField][Range(0, 1)] float treeWordVolume = 1f;
+    
+    
+    
 
     AudioSource gameAudio;
-
-    Vector3 cameraPosition;
 
     private void Awake()
     {
@@ -55,7 +52,7 @@ public class AudioManager : MonoBehaviour
     // hàm dùng chung để chạy tất cả các clip âm thanh được lưu ở đây
     void PlayAudio(AudioClip clip, float volume)
     {
-        if (!gameAudio.isPlaying)
+        if (!gameAudio.isPlaying && gameAudio.enabled == true)
         {
             gameAudio.PlayOneShot(clip, volume);
 
@@ -82,13 +79,5 @@ public class AudioManager : MonoBehaviour
         PlayAudio(bugAudio, bugAudioVolume);
     }
 
-    public void PlayCakeWord()
-    {
-        PlayAudio(cakeWord, cakeWordVolume);
-    }
-
-    public void PlayTreeWord()
-    {
-        PlayAudio(treeWord, treeWordVolume);
-    }
+   
 }
