@@ -541,7 +541,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  TweenTime: 3
+  TweenTime: 0
   TweenUIBefore: {fileID: 0}
   _ease: 27
 --- !u!225 &749245543
@@ -747,7 +747,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 2126369463}
-  TweenTime: 1
+  TweenTime: 2
   TweenUIBefore: {fileID: 2016012734}
   _ease: 27
 --- !u!1 &1050069296
@@ -1820,7 +1820,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 888030156}
-  TweenTime: 1
+  TweenTime: 2
   TweenUIBefore: {fileID: 749245542}
   _ease: 27
 --- !u!1 &2047810275
@@ -1859,7 +1859,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 4294967295
 --- !u!114 &2047810277
 MonoBehaviour:
   m_ObjectHideFlags: 0
