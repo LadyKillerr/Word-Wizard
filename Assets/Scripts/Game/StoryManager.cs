@@ -3,12 +3,15 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using TMPro;
 using UnityEngine;
 
 public class StoryManager : MonoBehaviour
 {
-    [Header("Materials Arrays")]
+    public PlayerStarsAndLevel gameData;
 
+
+    [Header("Materials Arrays")]
 
     // index của story parts hiện tại
     [SerializeField] int currentIndex = 0;
@@ -65,6 +68,12 @@ public class StoryManager : MonoBehaviour
 
         LoadFirstStoryPart();
 
+        // gọi tới data warehouse
+        QuestionData[] gameQuestion = gameData.LoadQuestionData("a_cat_and_a_bat-quiz-section.json");
+        for ( int i = 0; i < gameQuestion.Length; i ++)
+        {
+            storyParts[i].GetComponent<TextMeshProUGUI>().text = gameQuestion[i].q;
+        }
 
     }
 

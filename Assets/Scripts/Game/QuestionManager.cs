@@ -72,7 +72,7 @@ public class QuestionManager : MonoBehaviour
     [SerializeField] QuestionManager questionManager;
     [SerializeField] StoryManager storyManager;
 
-    PlayerData playerDataManager;
+
 
     void Awake()
     {
