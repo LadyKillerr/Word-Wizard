@@ -8,8 +8,11 @@ using UnityEngine;
 
 public class StoryManager : MonoBehaviour
 {
-    public PlayerStarsAndLevel gameData;
-
+    // nếu muốn chỉnh sửa data thì phải sửa trong file json nằm trong mục assets/StreamingAssets
+    [Header("Data-Warehouse")]
+    public PlayerDataWarehouse gameStoryData;
+    public List<TextMeshProUGUI> hiddenButtonsText;
+    public int storyId;
 
     [Header("Materials Arrays")]
 
@@ -69,12 +72,18 @@ public class StoryManager : MonoBehaviour
         LoadFirstStoryPart();
 
         // gọi tới data warehouse
-        QuestionData[] gameQuestion = gameData.LoadQuestionData("a_cat_and_a_bat-quiz-section.json");
-        for ( int i = 0; i < gameQuestion.Length; i ++)
+        StoryData[] gameStory = gameStoryData.LoadStoryData("story-section.json");
+        for ( int i = 0; i < gameStory.Length; i ++)
         {
-            storyParts[i].GetComponent<TextMeshProUGUI>().text = gameQuestion[i].q;
-        }
+            
+            // duyẹt qua các story trong storyPart và set text của chúng dựa trên file json
+            storyParts[i].GetComponent<TextMeshProUGUI>().text = gameStory[storyId].sentences[i];
 
+            // duyet qua các prefab nút trong list nút ẩn để set text của chúng thành chữ trong json file
+            hiddenButtonsText[i].GetComponent<TextMeshProUGUI>().text = gameStory[storyId].noun[i];
+        }
+        // storyId là để biết đang ở data truyện nào trong file json
+        
     }
 
     void Start()

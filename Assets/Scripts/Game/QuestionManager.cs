@@ -2,13 +2,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class QuestionManager : MonoBehaviour
 {
+
+
+
     [Header("Questions Section")]
     [SerializeField] int currentIndex = 0;
 
@@ -82,7 +85,12 @@ public class QuestionManager : MonoBehaviour
 
         LoadQuestion();
 
-
+        // k can thiet
+        //for ( int i = 0; i < gameQuestion.Length; i++)
+        //{
+        //    // in ra tiêu đề câu hỏi trong phần question
+        //    questions[i].GetComponent<TextMeshProUGUI>().text = gameQuestion[i].q;
+        //}
     }
 
     private void Update()
