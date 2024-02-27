@@ -9,8 +9,8 @@ using UnityEngine.UI;
 
 public class QuestionManager : MonoBehaviour
 {
-
-
+    PlayerDataWarehouse playerProgress;
+    [SerializeField] int starsReward;
 
     [Header("Questions Section")]
     [SerializeField] int currentIndex = 0;
@@ -79,7 +79,7 @@ public class QuestionManager : MonoBehaviour
 
     void Awake()
     {
-
+        playerProgress = FindObjectOfType<PlayerDataWarehouse>();
 
         quizSectionAudio = GetComponent<AudioSource>();
 
@@ -289,10 +289,12 @@ public class QuestionManager : MonoBehaviour
             isAnswered = false;
             isAnswerCorrect = false;
         }
-        else
+        else if (currentIndex >= 0 && currentIndex == questions.Length - 1 && isAnswerCorrect)
         {
+            // khi trả lời đúng câu hỏi cuối cùng
 
-
+            playerProgress.SavePlayerData("playerStars", starsReward);
+            Debug.Log("Testing effective");
             return;
         }
 

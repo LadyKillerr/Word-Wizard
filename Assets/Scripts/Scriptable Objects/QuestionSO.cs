@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static JSONLoader;
+
 
 [CreateAssetMenu(menuName = "Quiz Question", fileName = "New Question")]
 public class QuestionSO : ScriptableObject

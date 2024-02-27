@@ -80,7 +80,7 @@ public class StoryManager : MonoBehaviour
             storyParts[i].GetComponent<TextMeshProUGUI>().text = gameStory[storyId].sentences[i];
 
             // duyet qua các prefab nút trong list nút ẩn để set text của chúng thành chữ trong json file
-            hiddenButtonsText[i].GetComponent<TextMeshProUGUI>().text = gameStory[storyId].noun[i];
+            //hiddenButtonsText[i].GetComponent<TextMeshProUGUI>().text = gameStory[storyId].noun[i];
         }
         // storyId là để biết đang ở data truyện nào trong file json
         

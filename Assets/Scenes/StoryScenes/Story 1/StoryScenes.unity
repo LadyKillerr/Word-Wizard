@@ -1572,6 +1572,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d228efeedb148144a57468e2f278c48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  storyBooks: []
+  totalBooks: 0
 --- !u!1001 &558977367
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2536,6 +2538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7dfbca3cbef87a4d9671068e65ae80a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  starsReward: 100
   currentIndex: 0
   levelPrefName: CatAndTheBat
   questionText: {fileID: 8695092665039467577}
@@ -21090,7 +21093,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b075cfc2ce5c17048bebbce4ae51efb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionsFile: {fileID: 4900000, guid: 193e13a6431204b4196db4f05b0b05aa, type: 3}
 --- !u!114 &8695092665039467577
 MonoBehaviour:
   m_ObjectHideFlags: 0
