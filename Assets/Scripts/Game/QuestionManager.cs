@@ -58,11 +58,12 @@ public class QuestionManager : MonoBehaviour
     [SerializeField] float delayTime = 2f;
     [SerializeField] float delayTimeSmall = 1f;
 
-    [SerializeField] bool isReading;
+    [SerializeField] Button nextButton;
+    [SerializeField] float buttonOpacity = .5f;
     [SerializeField] bool isAnswered;
     [SerializeField] bool isAnswerCorrect;
 
-
+    
 
 
     [Header("Quiz Effects")]
@@ -100,20 +101,22 @@ public class QuestionManager : MonoBehaviour
 
     private void Update()
     {
-        CheckIsReading();
+        CheckIsAnswered();
     }
 
-    private void CheckIsReading()
+    void CheckIsAnswered()
     {
-        if (quizSectionAudio.isPlaying)
+        if (!isAnswerCorrect)
         {
-            isReading = true;
+            nextButton.GetComponent<Image>().color = new (255,255,255, buttonOpacity);
         }
-        else
+        else if (isAnswerCorrect)
         {
-            isReading = false;
+            nextButton.GetComponent<Image>().color = new(255, 255, 255, 1);
+
         }
     }
+
 
     void LoadQuestion()
     {
@@ -163,7 +166,7 @@ public class QuestionManager : MonoBehaviour
 
             Invoke("LoadNextQuestion", delayTime);
 
-            
+
             isAnswered = true;
             isAnswerCorrect = true;
         }
@@ -285,8 +288,8 @@ public class QuestionManager : MonoBehaviour
 
     public void LoadNextQuestion()
     {
-        rightAnswerPE.Stop();
         // questions.Length - 1 vì mảng bắt đầu từ 0, nếu để tới độ dài của mảng thì sẽ thừa 1
+        // nếu đã trả lời đúng thì mới cho next
         if (currentIndex >= 0 && currentIndex < questions.Length - 1 && isAnswerCorrect)
         {
             currentIndex++;
@@ -295,20 +298,23 @@ public class QuestionManager : MonoBehaviour
 
             LoadQuestion();
 
+            // dừng Particle Effects tung hoa 
+            rightAnswerPE.Stop();
+
             isAnswered = false;
             isAnswerCorrect = false;
         }
         else if (currentIndex >= 0 && currentIndex == questions.Length - 1 && isAnswerCorrect)
         {
             // khi trả lời đúng câu hỏi cuối cùng
-
+            // cho back lại story list (tạm thời là vậy, sau sẽ chạy mà báo điểm thường)
             StartCoroutine(LoadStoryList());
-            
-            
 
 
 
-            
+
+
+
         }
 
     }
@@ -317,10 +323,10 @@ public class QuestionManager : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(delayTime);
 
+        gameSceneLoader.LoadLevel(gameStoryListIndex);
         playerProgress.SavePlayerData("playerStars", starsReward);
         Debug.Log("Testing effective");
 
-        gameSceneLoader.LoadLevel(gameStoryListIndex);
 
     }
 
