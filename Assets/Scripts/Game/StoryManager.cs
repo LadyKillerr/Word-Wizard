@@ -185,12 +185,14 @@ public class StoryManager : MonoBehaviour
         // nếu index đã max (là part cuối trong 1 câu truyện)
         else if (currentIndex >= 0 && currentIndex >= storyParts.Length - 1 && !isReading)
         {
+            // tắt âm thanh màn stories
+            MuteAllAudioParts();
+
             // load ra màn hình câu hỏi trắc nghiệm, sẽ có câu hỏi riêng để ng chơi trả lời trắc nghiệm
             // ẩn hết màn hình câu hỏi đi 
             interactiveStorySection.SetActive(false);
 
-            // tắt âm thanh màn stories
-            MuteAllAudioParts();
+            
 
             // bật intersection
             ToggleIntersection();
@@ -321,7 +323,9 @@ public class StoryManager : MonoBehaviour
 
     void MuteAllAudioParts()
     {
-        storyAudioSource.Stop();
+        storyAudioSource.enabled = false;
+        storyAudioSource.enabled = true ;
+
     }
 
     public void PlayCurrentAudioParts()

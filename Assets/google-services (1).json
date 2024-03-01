@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "896639453591",
+    "project_id": "sunny-friends-story",
+    "storage_bucket": "sunny-friends-story.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:896639453591:android:27a53c1f86022177109cd2",
+        "android_client_info": {
+          "package_name": "sunnyfriends.stories.kids"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3mt7ZnuO4soF4_rIIC_5AC7Fd9x_W78Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

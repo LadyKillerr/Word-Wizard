@@ -124,7 +124,7 @@ public class PlayerDataWarehouse : MonoBehaviour
                     dataList[i].stars += value;
                 }
             }
-
+              
             string dataSave = "";
             for (int i = 0; i < dataList.Length; i++)
             {

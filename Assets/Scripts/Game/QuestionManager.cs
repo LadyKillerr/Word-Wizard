@@ -71,6 +71,9 @@ public class QuestionManager : MonoBehaviour
 
     // Components that are hidden
     AudioSource quizSectionAudio;
+    LoadScene gameSceneLoader;
+
+    [SerializeField] int gameStoryListIndex = 2;
 
     [SerializeField] QuestionManager questionManager;
     [SerializeField] StoryManager storyManager;
@@ -79,7 +82,7 @@ public class QuestionManager : MonoBehaviour
 
     void Awake()
     {
-        playerProgress = FindObjectOfType<PlayerDataWarehouse>();
+        playerProgress = FindAnyObjectByType<PlayerDataWarehouse>();
 
         quizSectionAudio = GetComponent<AudioSource>();
 
@@ -91,6 +94,8 @@ public class QuestionManager : MonoBehaviour
         //    // in ra tiêu đề câu hỏi trong phần question
         //    questions[i].GetComponent<TextMeshProUGUI>().text = gameQuestion[i].q;
         //}
+
+        gameSceneLoader = FindAnyObjectByType<LoadScene>();
     }
 
     private void Update()
@@ -131,11 +136,12 @@ public class QuestionManager : MonoBehaviour
 
         if (currentIndex <= questions.Length - 1 && isAnswerCorrect && currentIndex >= 0)
         {
-            Debug.Log("đã lưu dữ liệu vào trong PlayerPrefs");
-            // Khi hoàn thành level trong scene A
-            string levelName = levelPrefName; // Tên của level
-            PlayerPrefs.SetInt(levelName, 1); // Ghi lại trạng thái hoàn thành (1: true)
-            PlayerPrefs.Save(); // Lưu lại PlayerPrefs
+            //Debug.Log("đã lưu dữ liệu vào trong PlayerPrefs");
+            //// Khi hoàn thành level trong scene A
+            //string levelName = levelPrefName; // Tên của level
+            //PlayerPrefs.SetInt(levelName, 1); // Ghi lại trạng thái hoàn thành (1: true)
+            //PlayerPrefs.Save(); // Lưu lại PlayerPrefs
+
         }
 
     }
@@ -156,6 +162,8 @@ public class QuestionManager : MonoBehaviour
             answers[userAnswerIndex].GetComponent<Image>().sprite = rightAnswerSprite;
 
             Invoke("LoadNextQuestion", delayTime);
+
+            
             isAnswered = true;
             isAnswerCorrect = true;
         }
@@ -165,6 +173,7 @@ public class QuestionManager : MonoBehaviour
             // tạm thời khoá nút lại khoảng chừng 2s
             isAnswered = true;
             isAnswerCorrect = false;
+            StartCoroutine(ResetIsAnswered());
 
             // làm đth rung 1 tý
             Handheld.Vibrate();
@@ -173,7 +182,6 @@ public class QuestionManager : MonoBehaviour
 
 
 
-            Invoke("ResetIsAnswered", delayTimeSmall);
 
 
 
@@ -277,6 +285,7 @@ public class QuestionManager : MonoBehaviour
 
     public void LoadNextQuestion()
     {
+        rightAnswerPE.Stop();
         // questions.Length - 1 vì mảng bắt đầu từ 0, nếu để tới độ dài của mảng thì sẽ thừa 1
         if (currentIndex >= 0 && currentIndex < questions.Length - 1 && isAnswerCorrect)
         {
@@ -293,10 +302,25 @@ public class QuestionManager : MonoBehaviour
         {
             // khi trả lời đúng câu hỏi cuối cùng
 
-            playerProgress.SavePlayerData("playerStars", starsReward);
-            Debug.Log("Testing effective");
-            return;
+            StartCoroutine(LoadStoryList());
+            
+            
+
+
+
+            
         }
+
+    }
+
+    IEnumerator LoadStoryList()
+    {
+        yield return new WaitForSecondsRealtime(delayTime);
+
+        playerProgress.SavePlayerData("playerStars", starsReward);
+        Debug.Log("Testing effective");
+
+        gameSceneLoader.LoadLevel(gameStoryListIndex);
 
     }
 
@@ -332,8 +356,10 @@ public class QuestionManager : MonoBehaviour
         return currentIndex;
     }
 
-    void ResetIsAnswered()
+    IEnumerator ResetIsAnswered()
     {
+        yield return new WaitForSeconds(delayTime);
+
         isAnswered = false;
     }
 }

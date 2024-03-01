@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -23,14 +24,14 @@ public class LoadSettingPopup : MonoBehaviour
     // Screen Darken
     [SerializeField] GameObject screenDarken;
 
-    [Header("Audio Buttons status")]
+    [SerializeField] GameObject privacyPolicy;
+    [SerializeField] GameObject aboutUs;
 
-    [SerializeField] bool sfxIsActive = true;
-    [SerializeField] bool musicIsActive = true;
+    [SerializeField] bool isPrivacy = false;
+    [SerializeField] bool isAbout = false;
 
     [Header("Audio status")]
 
-    AudioSource backgroundMusic;
 
     [SerializeField] bool musicOn = true;
     [SerializeField] bool sfxOn = true;
@@ -45,7 +46,13 @@ public class LoadSettingPopup : MonoBehaviour
         audioManager = FindObjectOfType<AudioManager>();
         gameMusic = FindObjectOfType<BackgroundMusicPlayer>();
 
-        backgroundMusic = audioManager.GetComponentInChildren<AudioSource>();
+    }
+
+    private void Start()
+    {
+        CheckAudioButtonStatus();
+        
+
     }
 
     void Update()
@@ -53,6 +60,38 @@ public class LoadSettingPopup : MonoBehaviour
         // hàm update là không càn thiết trong trường hợp sử dụng chay void
         //HideDevingNoti();
         //ShowDevingNoti();
+
+    }
+
+    private void CheckAudioButtonStatus()
+    {
+        // kiểm tra nếu như gameMusic đang chạy âm thanh thì chỉnh biến bool và chuyển sprite của nút
+        if (gameMusic.GetComponent<AudioSource>().isPlaying)
+        {
+            musicOn = true;
+            musicButton.GetComponent<Image>().sprite = activatedMusicButtonSprite;
+
+        }
+        else if (!gameMusic.GetComponent<AudioSource>().isPlaying)
+        {
+            musicOn = false;
+            musicButton.GetComponent<Image>().sprite = disabledMusicButtonSprite;
+
+        }
+
+        // kiểm tra nếu audioManager đang active thì set lại bool và chỉnh lại nút 
+        if (audioManager.GetComponent<AudioSource>().enabled)
+        {
+            sfxOn = true;
+            sfxButton.GetComponent<Image>().sprite = activatedSoundButtonSprite;
+
+        }
+        else if (!(audioManager.GetComponent<AudioSource>().enabled))
+        {
+            sfxOn = false;
+            sfxButton.GetComponent<Image>().sprite = disabledSoundButtonSprite;
+
+        }
     }
 
     // ẩn hộp thông báo đi 
@@ -71,6 +110,34 @@ public class LoadSettingPopup : MonoBehaviour
         screenDarken.SetActive(true);
     }
 
+    public void TogglePrivacyWindow()
+    {
+        if (!isPrivacy)
+        {
+            privacyPolicy.SetActive(true);
+            isPrivacy = true;
+        }
+        else if (isPrivacy)
+        {
+            privacyPolicy.SetActive(false);
+            isPrivacy = false;
+        }
+    }
+
+    public void ToggleAboutUsWindow()
+    {
+        if (!isAbout)
+        {
+            aboutUs.SetActive(true);
+            isAbout = true;
+        }
+        else
+        {
+            aboutUs.SetActive(false);
+            isAbout = false;
+        }
+    }
+
     public void ToggleMusic()
     {
         if (musicOn)
@@ -85,7 +152,7 @@ public class LoadSettingPopup : MonoBehaviour
         }
         else if (!musicOn)
         {
-            gameMusic.GetComponent<AudioSource>().UnPause() ;
+            gameMusic.GetComponent<AudioSource>().UnPause();
             musicOn = true;
             musicButton.GetComponent<Image>().sprite = activatedMusicButtonSprite;
             Debug.Log("Da bat am nhac di r");
