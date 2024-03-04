@@ -19,15 +19,18 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioClip bugAudio;
     [SerializeField][Range(0, 1)] float bugAudioVolume = 1f;
 
-    
-    
-    
+    [SerializeField] AudioClip congratsAudio;
+    [SerializeField][Range(0, 1)] float congratsAudioVolume = 1f;
+
+
 
     AudioSource gameAudio;
 
     private void Awake()
     {
+#pragma warning disable CS0618 // Type or member is obsolete
         int instanceCount = FindObjectsOfType(GetType()).Length;
+#pragma warning restore CS0618 // Type or member is obsolete
 
         if (instanceCount > 1)
         {
@@ -79,5 +82,8 @@ public class AudioManager : MonoBehaviour
         PlayAudio(bugAudio, bugAudioVolume);
     }
 
-   
+    public void PlayCongratsClip()
+    {
+        PlayAudio(congratsAudio, congratsAudioVolume);
+    }
 }

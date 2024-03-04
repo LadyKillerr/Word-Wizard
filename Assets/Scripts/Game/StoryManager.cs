@@ -57,6 +57,9 @@ public class StoryManager : MonoBehaviour
     AudioManager gameAudioManager;
     [SerializeField] QuestionManager questionManager;
 
+    Vector2 startTouchPosition;
+    Vector2 endTouchPosition;
+
     // flow code: Awake sẽ là LoadFirstStoryPart, sau đó tiếp tục load part các index tiếp theo dần dần
 
     void Awake()
@@ -73,9 +76,9 @@ public class StoryManager : MonoBehaviour
 
         // gọi tới data warehouse
         StoryData[] gameStory = gameStoryData.LoadStoryData("story-section.json");
-        for ( int i = 0; i < gameStory.Length; i ++)
+        for (int i = 0; i < gameStory.Length; i++)
         {
-            
+
             // duyẹt qua các story trong storyPart và set text của chúng dựa trên file json
             storyParts[i].GetComponent<TextMeshProUGUI>().text = gameStory[storyId].sentences[i];
 
@@ -83,7 +86,7 @@ public class StoryManager : MonoBehaviour
             //hiddenButtonsText[i].GetComponent<TextMeshProUGUI>().text = gameStory[storyId].noun[i];
         }
         // storyId là để biết đang ở data truyện nào trong file json
-        
+
     }
 
     void Start()
@@ -94,6 +97,37 @@ public class StoryManager : MonoBehaviour
     private void Update()
     {
         CheckIsReading();
+
+        if (interactiveStorySection.activeSelf)
+        {
+            HandlerSwipeControl();
+
+        }
+    }
+
+    void HandlerSwipeControl()
+    {
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        {
+            startTouchPosition = Input.GetTouch(0).position;
+        }
+
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended)
+        {
+            endTouchPosition = Input.GetTouch(0).position;
+
+            // vuốt sang trái
+            if (endTouchPosition.x < startTouchPosition.x)
+            {
+                // xử lý hàm vuốt sang phải ở đây
+                NextPart();
+            }
+            else if (endTouchPosition.x > startTouchPosition.x)
+            {
+                // xử lý hàm vuốt sang trái ở đây 
+                PreviousPart();
+            }
+        }
     }
 
     private void CheckIsReading()
@@ -192,21 +226,21 @@ public class StoryManager : MonoBehaviour
             // ẩn hết màn hình câu hỏi đi 
             interactiveStorySection.SetActive(false);
 
-            
+
 
             // bật intersection
             ToggleIntersection();
 
-            
+
         }
     }
 
     // chức năng back lại trang cũ
     public void PreviousPart()
     {
-        if (currentIndex > 0 && currentIndex <= storyParts.Length - 1 )
+        if (currentIndex > 0 && currentIndex <= storyParts.Length - 1)
         {
-            
+
 
             // ẩn hình với truyện hiện tại đi
             HideCurrentImagePart();
@@ -248,7 +282,7 @@ public class StoryManager : MonoBehaviour
     //    StartCoroutine(LoadIntroAudio());
     //}
 
-   
+
 
     //IEnumerator LoadIntroAudio()
     //{
@@ -286,7 +320,7 @@ public class StoryManager : MonoBehaviour
 
         StartCoroutine(DisableIntersection());
 
-          
+
     }
 
     IEnumerator DisableIntersection()
@@ -324,7 +358,7 @@ public class StoryManager : MonoBehaviour
     void MuteAllAudioParts()
     {
         storyAudioSource.enabled = false;
-        storyAudioSource.enabled = true ;
+        storyAudioSource.enabled = true;
 
     }
 

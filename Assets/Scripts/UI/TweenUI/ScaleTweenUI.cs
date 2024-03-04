@@ -3,17 +3,32 @@ using UnityEngine;
 
 public class ScaleTweenUI : TweenUI
 {
-    [SerializeField] float startScale = 0f;
-    [SerializeField] float endScale = 1f;
-    protected override void Start()
+    public bool scaleOnStart;
+    [SerializeField] float showTime = 0.3f, hideTime = 0.2f;
+    [SerializeField] Ease showEase = Ease.OutBack, hideEase = Ease.InBack;
+    [SerializeField] Transform tweenGo;
+
+    void Start()
     {
           
-        base.Start();
+        
     }
 
-    public override void TweeningUI()
+    private void OnEnable()
     {
-        base.TweeningUI();
-        target.DOScale(Vector3.one * endScale, TweenTime).SetEase(_ease);
+        if (scaleOnStart)
+        {
+            
+            
+                if (tweenGo == null)
+                {
+                    tweenGo = transform;
+                }
+
+            tweenGo.localScale = Vector3.zero;
+            tweenGo.DOScale(1, showTime).SetEase(showEase);
+            
+        }
     }
+
 }

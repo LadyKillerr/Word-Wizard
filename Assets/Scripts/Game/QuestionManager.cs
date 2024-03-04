@@ -63,7 +63,7 @@ public class QuestionManager : MonoBehaviour
     [SerializeField] bool isAnswered;
     [SerializeField] bool isAnswerCorrect;
 
-    
+
 
 
     [Header("Quiz Effects")]
@@ -73,8 +73,16 @@ public class QuestionManager : MonoBehaviour
     // Components that are hidden
     AudioSource quizSectionAudio;
     LoadScene gameSceneLoader;
+    AudioManager audioManager;
 
-    [SerializeField] int gameStoryListIndex = 2;
+
+    [SerializeField] GameObject rewardWindow;
+
+    [SerializeField] int gameHomeIndex = 1;
+    [SerializeField] bool isRewarded;
+
+
+    [SerializeField] GameObject quizSection;
 
     [SerializeField] QuestionManager questionManager;
     [SerializeField] StoryManager storyManager;
@@ -84,7 +92,7 @@ public class QuestionManager : MonoBehaviour
     void Awake()
     {
         playerProgress = FindAnyObjectByType<PlayerDataWarehouse>();
-
+        audioManager = FindObjectOfType<AudioManager>();
         quizSectionAudio = GetComponent<AudioSource>();
 
         LoadQuestion();
@@ -108,7 +116,7 @@ public class QuestionManager : MonoBehaviour
     {
         if (!isAnswerCorrect)
         {
-            nextButton.GetComponent<Image>().color = new (255,255,255, buttonOpacity);
+            nextButton.GetComponent<Image>().color = new(255, 255, 255, buttonOpacity);
         }
         else if (isAnswerCorrect)
         {
@@ -126,7 +134,13 @@ public class QuestionManager : MonoBehaviour
         // Get ra câu hỏi theo index
         questionText.text = questions[currentIndex].GetQuestion();
 
-        LoadQuestionAudio();
+        if (quizSection.activeSelf)
+        {
+            LoadQuestionAudio();
+
+        }
+
+
 
         for (int i = 0; i < answers.Length; i++)
         {
@@ -145,6 +159,7 @@ public class QuestionManager : MonoBehaviour
             //PlayerPrefs.SetInt(levelName, 1); // Ghi lại trạng thái hoàn thành (1: true)
             //PlayerPrefs.Save(); // Lưu lại PlayerPrefs
 
+
         }
 
     }
@@ -154,6 +169,9 @@ public class QuestionManager : MonoBehaviour
         // nếu trả lời đúng
         if (userAnswerIndex == questions[currentIndex].GetCorrectAnswerIndex() && isAnswered == false)
         {
+            // dừng audio câu hỏi cho đỡ rối âm thanh
+            quizSectionAudio.Stop();
+
             // làm hiệu ứng tung hoa bằng particles
             rightAnswerPE.Play();
 
@@ -173,6 +191,9 @@ public class QuestionManager : MonoBehaviour
         // nếu trả lời sai 
         else if (userAnswerIndex != questions[currentIndex].GetCorrectAnswerIndex() && isAnswered == false)
         {
+            // dừng audio câu hỏi cho đỡ rối âm thanh
+            quizSectionAudio.Stop();
+
             // tạm thời khoá nút lại khoảng chừng 2s
             isAnswered = true;
             isAnswerCorrect = false;
@@ -194,6 +215,7 @@ public class QuestionManager : MonoBehaviour
 
             // chuyển ảnh của nút bấm sang ảnh mới
             answers[userAnswerIndex].GetComponent<Image>().sprite = wrongAnswerSprite;
+
 
 
         }
@@ -308,23 +330,55 @@ public class QuestionManager : MonoBehaviour
         {
             // khi trả lời đúng câu hỏi cuối cùng
             // cho back lại story list (tạm thời là vậy, sau sẽ chạy mà báo điểm thường)
-            StartCoroutine(LoadStoryList());
+            //StartCoroutine(LoadHome());
 
-
-
-
-
-
+            nextButton.GetComponent<Image>().color = new(255, 255, 255, buttonOpacity);
+            StartCoroutine(LoadRewardPopup());
+            audioManager.PlayCongratsClip();
         }
 
     }
 
-    IEnumerator LoadStoryList()
+    IEnumerator LoadRewardPopup()
     {
-        yield return new WaitForSecondsRealtime(delayTime);
+        yield return new WaitForSeconds(delayTimeSmall);
 
-        gameSceneLoader.LoadLevel(gameStoryListIndex);
+        if (!isRewarded)
+        {
+            rewardWindow.SetActive(true);
+            isRewarded = true;
+        }
+        else if (isRewarded)
+        {
+            rewardWindow.SetActive(false);
+            isRewarded = false;
+        }
+
+
+
+    }
+
+    public void HideRewardPopup()
+    {
+        if (isRewarded)
+        {
+            rewardWindow.SetActive(false);
+            isRewarded = false;
+        }
+
+        LoadHome();
+
+        audioManager.PlayButtonClip();
+    }
+
+    void LoadHome()
+    {
+
+
+        gameSceneLoader.LoadLevel(gameHomeIndex);
+
         playerProgress.SavePlayerData("playerStars", starsReward);
+
         Debug.Log("Testing effective");
 
 
