@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1ab1939d2f368e641878a54ffcfd081e
+guid: 9db2f42dea04fcd479549bcfed259cee
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8466920497789387095
-    second: trang 2,5_0
+      213: -3369764340370565565
+    second: trang 8_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: trang 2,5_0
+      name: trang 8_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1346
-        height: 754
+        width: 1466
+        height: 777
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 751c534455b808570800000000000000
-      internalID: 8466920497789387095
+      spriteID: 3461f6baf213c31d0800000000000000
+      internalID: -3369764340370565565
       vertices: []
       indices: 
       edges: []

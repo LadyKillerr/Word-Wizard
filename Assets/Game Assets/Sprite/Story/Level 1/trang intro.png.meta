@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 48a45df5dfa06c447ad844067cd5b31a
+guid: e7ace92fddf46574dbc95a83a409c476
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1264763460611974967
-    second: "trang 7+trang b\xECa_0"
-  - first:
-      213: 1183019760806160502
-    second: "trang 7+trang b\xECa_1"
+      213: -8621298491097481634
+    second: trang intro_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -142,35 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "trang 7+trang b\xECa_0"
+      name: trang intro_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 122
-        width: 1325
-        height: 840
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9c854556558a27ee0800000000000000
-      internalID: -1264763460611974967
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "trang 7+trang b\xECa_1"
-      rect:
-        serializedVersion: 2
-        x: 153
         y: 0
-        width: 1172
-        height: 132
+        width: 1112
+        height: 766
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6786e1d543eea6010800000000000000
-      internalID: 1183019760806160502
+      spriteID: e5ef58f23befa5880800000000000000
+      internalID: -8621298491097481634
       vertices: []
       indices: 
       edges: []

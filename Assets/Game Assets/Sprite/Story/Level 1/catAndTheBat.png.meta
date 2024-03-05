@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c978640e75dd67740be0254dd376c38a
+guid: 3365380c847612042a58c7f899a0ff5c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2593164870461091839
-    second: trang 3_0
+      213: -1893715964154736834
+    second: catAndTheBat_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: trang 3_0
+      name: catAndTheBat_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1280
-        height: 672
+        width: 374
+        height: 445
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fffead3e5b5ccf320800000000000000
-      internalID: 2593164870461091839
+      spriteID: e3f021b2d5b28b5e0800000000000000
+      internalID: -1893715964154736834
       vertices: []
       indices: 
       edges: []

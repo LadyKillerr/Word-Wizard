@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:896639453591:android:27a53c1f86022177109cd2",
+        "mobilesdk_app_id": "1:896639453591:android:e74c2ddf78103ec9109cd2",
         "android_client_info": {
-          "package_name": "sunnyfriends.stories.kids"
+          "package_name": "com.MeepoStudio.SunnyFriendsStories"
         }
       },
       "oauth_client": [],
