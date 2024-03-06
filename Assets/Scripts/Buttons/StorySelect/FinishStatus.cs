@@ -17,18 +17,18 @@ public class FinishStatus : MonoBehaviour
 
 
         // Kiểm tra trạng thái hoàn thành của level trong scene B
-        string levelName = levelPrefName; // Tên của level
-        int levelCompletion = PlayerPrefs.GetInt(levelName, 0); // Lấy giá trị trạng thái hoàn thành (0: false)
-        if (levelCompletion == 1)
-        {
-            // Level đã hoàn thành
-            Debug.Log("Level " + levelName + " đã hoàn thành!");
-        }
-        else
-        {
-            // Level chưa hoàn thành
-            Debug.Log("Level " + levelName + " chưa hoàn thành.");
-        }
+        //string levelName = levelPrefName; // Tên của level
+        //int levelCompletion = PlayerPrefs.GetInt(levelName, 0); // Lấy giá trị trạng thái hoàn thành (0: false)
+        //if (levelCompletion == 1)
+        //{
+        //    // Level đã hoàn thành
+        //    Debug.Log("Level " + levelName + " đã hoàn thành!");
+        //}
+        //else
+        //{
+        //    // Level chưa hoàn thành
+        //    Debug.Log("Level " + levelName + " chưa hoàn thành.");
+        //}
     }
 
 

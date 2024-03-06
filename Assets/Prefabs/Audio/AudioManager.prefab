@@ -53,7 +53,7 @@ MonoBehaviour:
   pageTurningVolume: 1
   bugAudio: {fileID: 8300000, guid: 029cc6cdeef998c4da13ca66a3a4b3c5, type: 3}
   bugAudioVolume: 1
-  congratsAudio: {fileID: 8300000, guid: 3df6402e1c1b23245903d52ed9b4df8e, type: 3}
+  congratsAudio: {fileID: 8300000, guid: 21045ed0fe409624692296d59692f4a1, type: 3}
   congratsAudioVolume: 1
 --- !u!82 &2228926844813087534
 AudioSource:

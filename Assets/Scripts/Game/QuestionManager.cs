@@ -16,7 +16,7 @@ public class QuestionManager : MonoBehaviour
     [SerializeField] int currentIndex = 0;
 
     // Tên Level để lưu vào PlayerPrefs
-    [SerializeField] string levelPrefName;
+    public string levelPrefName;
 
     // question Text
     [SerializeField] TextMeshProUGUI questionText;
@@ -68,7 +68,8 @@ public class QuestionManager : MonoBehaviour
 
     [Header("Quiz Effects")]
     [SerializeField] ParticleSystem rightAnswerPE;
-
+    [SerializeField] GameObject screenDarkenEffects;
+    [SerializeField] ParticleSystem finishLevelPE;
 
     // Components that are hidden
     AudioSource quizSectionAudio;
@@ -96,6 +97,7 @@ public class QuestionManager : MonoBehaviour
         quizSectionAudio = GetComponent<AudioSource>();
 
         LoadQuestion();
+
 
         // k can thiet
         //for ( int i = 0; i < gameQuestion.Length; i++)
@@ -144,23 +146,17 @@ public class QuestionManager : MonoBehaviour
 
         for (int i = 0; i < answers.Length; i++)
         {
+            // loop qua các đáp án và set answer cho chúng
             answers[i].GetComponent<Image>().sprite = defaultAnswerSprite;
 
+            // Get ra text của các button và set lại text của chúng 
             answersText = answers[i].GetComponentInChildren<TextMeshProUGUI>();
 
+            // set text theo answers
             answersText.text = questions[currentIndex].GetAnswer(i);
         }
 
-        if (currentIndex <= questions.Length - 1 && isAnswerCorrect && currentIndex >= 0)
-        {
-            //Debug.Log("đã lưu dữ liệu vào trong PlayerPrefs");
-            //// Khi hoàn thành level trong scene A
-            //string levelName = levelPrefName; // Tên của level
-            //PlayerPrefs.SetInt(levelName, 1); // Ghi lại trạng thái hoàn thành (1: true)
-            //PlayerPrefs.Save(); // Lưu lại PlayerPrefs
-
-
-        }
+        
 
     }
 
@@ -191,6 +187,11 @@ public class QuestionManager : MonoBehaviour
         // nếu trả lời sai 
         else if (userAnswerIndex != questions[currentIndex].GetCorrectAnswerIndex() && isAnswered == false)
         {
+            // làm đth rung 1 tý
+            Vibrator.Vibrate();
+            Debug.Log("Phone vibrate performed");
+
+
             // dừng audio câu hỏi cho đỡ rối âm thanh
             quizSectionAudio.Stop();
 
@@ -199,10 +200,8 @@ public class QuestionManager : MonoBehaviour
             isAnswerCorrect = false;
             StartCoroutine(ResetIsAnswered());
 
-            // làm đth rung 1 tý
-            Handheld.Vibrate();
+            
 
-            Debug.Log("Phone vibrate performed");
 
 
 
@@ -329,12 +328,21 @@ public class QuestionManager : MonoBehaviour
         else if (currentIndex >= 0 && currentIndex == questions.Length - 1 && isAnswerCorrect)
         {
             // khi trả lời đúng câu hỏi cuối cùng
-            // cho back lại story list (tạm thời là vậy, sau sẽ chạy mà báo điểm thường)
+            // cho back lại story list (tạm thời là vậy, sau sẽ chạy màn báo điểm thường)
             //StartCoroutine(LoadHome());
 
             nextButton.GetComponent<Image>().color = new(255, 255, 255, buttonOpacity);
+
+            screenDarkenEffects.SetActive(true);
             StartCoroutine(LoadRewardPopup());
+
+
             audioManager.PlayCongratsClip();
+
+            // lấy ra level pref name để set int trạng thái hoàn thành
+            PlayerPrefs.SetInt(levelPrefName, 1);
+
+            Debug.Log("Level Saved");
         }
 
     }
@@ -345,11 +353,13 @@ public class QuestionManager : MonoBehaviour
 
         if (!isRewarded)
         {
+            finishLevelPE.Play();
             rewardWindow.SetActive(true);
             isRewarded = true;
         }
         else if (isRewarded)
         {
+            finishLevelPE.Stop();
             rewardWindow.SetActive(false);
             isRewarded = false;
         }
@@ -364,6 +374,7 @@ public class QuestionManager : MonoBehaviour
         {
             rewardWindow.SetActive(false);
             isRewarded = false;
+            screenDarkenEffects.SetActive(false);
         }
 
         LoadHome();
