@@ -11,7 +11,7 @@ public class StoryManager : MonoBehaviour
     // nếu muốn chỉnh sửa data thì phải sửa trong file json nằm trong mục assets/StreamingAssets
     [Header("Data-Warehouse")]
     public PlayerDataWarehouse gameStoryData;
-    public List<TextMeshProUGUI> hiddenButtonsText;
+
     public int storyId;
 
     [Header("Materials Arrays")]
@@ -262,54 +262,6 @@ public class StoryManager : MonoBehaviour
             return;
         }
     }
-
-
-
-    //void LoadStoryIntro()
-    //{
-    //    // ẩn toàn bộ đi 
-    //    HideAllStoryParts();
-    //    HideAllImageParts();
-    //    MuteAllAudioParts();
-    //    HideAllHiddenButtons();
-
-
-
-
-
-    //    // load cảnh intro ra
-    //    LoadIntroSection();
-    //    StartCoroutine(LoadIntroAudio());
-    //}
-
-
-
-    //IEnumerator LoadIntroAudio()
-    //{
-    //    // bật âm thanh xong đợi cho âm thanh chạy, âm thanh chạy xong thì sang audio thứ 2 
-    //    storyAudioSource.PlayOneShot(introAudioClip1, introVolume);
-
-    //    yield return new WaitForSecondsRealtime(introAudioClip1.length + timeBetweenIntroAudio);
-
-
-    //    storyAudioSource.PlayOneShot(introAudioClip2, introVolume);
-
-    //    yield return new WaitForSecondsRealtime(introAudioClip2.length + timeBetweenIntroAudio);
-
-
-    //    // load cả 2 file audio xong thì bắt đầu vào câu truyện chính
-    //    LoadFirstStoryPart();
-    //}
-
-    //void LoadIntroSection()
-    //{
-    //    storyIntro.SetActive(true);    
-    //}
-
-    //void HideIntroSection()
-    //{
-    //    storyIntro.SetActive(false);
-    //}
 
     // bật đoạn giao giữa 2 scene story và quiz
     void ToggleIntersection()

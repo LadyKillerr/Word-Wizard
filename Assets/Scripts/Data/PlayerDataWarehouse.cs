@@ -102,11 +102,6 @@ public class PlayerDataWarehouse : MonoBehaviour
         }
     }
 
-    public void LoadPlayerData()
-    {
-
-    }
-
     public void SavePlayerData(string key, int value)
     {
         string filePath = Application.persistentDataPath + "/interactiveStoriesData.json";
