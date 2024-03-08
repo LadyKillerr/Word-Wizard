@@ -15,6 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/StoryList.unity
     guid: 97c06ecb711aae943a5334a8efc2cae0
   - enabled: 1
-    path: Assets/Scenes/StoryScenes/Story 1/StoryScenes.unity
+    path: Assets/Scenes/StoryScenes/Story 1/CatAndBat.unity
     guid: 18e9290c0c11dcf44b7a47b8f09941c8
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0
