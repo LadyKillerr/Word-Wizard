@@ -12,6 +12,7 @@ public class StarsNumberUI : MonoBehaviour
     PlayerDataWarehouse gameData;
 
     // Start is called before the first frame update
+    [System.Obsolete]
     void Awake()
     {
         gameData = FindObjectOfType<PlayerDataWarehouse>();

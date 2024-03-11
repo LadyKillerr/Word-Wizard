@@ -2,32 +2,34 @@ using UnityEngine;
 
 public class StatusManager : MonoBehaviour
 {
+    [Header("CatAndTheBat Story")]
     int catAndBatStatus;
+    [SerializeField] string levelPrefName;
     [SerializeField] GameObject catAndBatDone;
     [SerializeField] GameObject catAndBatPending;
 
     private void Awake()
     {
-        int catAndBatStatus = PlayerPrefs.GetInt("CatAndTheBat");
+
 
     }
 
     void Start()
     {
-        checkCatAndBat();
+        checkCatAndTheBat();
 
     }
 
 
     void Update()
     {
-        checkCatAndBat();
+        checkCatAndTheBat();
 
     }
 
-    void checkCatAndBat()
+    void checkCatAndTheBat()
     {
-        catAndBatStatus = PlayerPrefs.GetInt("CatAndTheBat");
+        catAndBatStatus = PlayerPrefs.GetInt(levelPrefName);
         if (catAndBatStatus == 1)
         {
             catAndBatDone.SetActive(true);

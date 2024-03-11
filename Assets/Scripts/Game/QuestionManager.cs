@@ -156,7 +156,7 @@ public class QuestionManager : MonoBehaviour
             answersText.text = questions[currentIndex].GetAnswer(i);
         }
 
-        
+
 
     }
 
@@ -200,7 +200,7 @@ public class QuestionManager : MonoBehaviour
             isAnswerCorrect = false;
             StartCoroutine(ResetIsAnswered());
 
-            
+
 
 
 
@@ -329,18 +329,27 @@ public class QuestionManager : MonoBehaviour
         {
             // khi trả lời đúng câu hỏi cuối cùng
             // cho back lại story list (tạm thời là vậy, sau sẽ chạy màn báo điểm thường)
-            //StartCoroutine(LoadHome());
+            // StartCoroutine(LoadHome());
 
             nextButton.GetComponent<Image>().color = new(255, 255, 255, buttonOpacity);
 
             screenDarkenEffects.SetActive(true);
-            StartCoroutine(LoadRewardPopup());
+
+            if (PlayerPrefs.GetInt(levelPrefName) == 0)
+            {
+                StartCoroutine(LoadRewardPopup());
+
+            }
 
 
             audioManager.PlayCongratsClip();
 
+            // QUAN TRỌNG
             // lấy ra level pref name để set int trạng thái hoàn thành
-            PlayerPrefs.SetInt(levelPrefName, 1);
+            if (PlayerPrefs.GetInt(levelPrefName) == 0)
+            {
+                PlayerPrefs.SetInt(levelPrefName, 1);
+            }
 
             Debug.Log("Level Saved");
         }
