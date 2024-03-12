@@ -1,0 +1,245 @@
+fileFormatVersion: 2
+guid: 690184e368237684189bd0b0cd25e477
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 172732910902168194
+    second: Dotted-Line-PNG-File_0
+  - first:
+      213: -2963798514107709805
+    second: Dotted-Line-PNG-File_1
+  - first:
+      213: 3706475985009843591
+    second: Dotted-Line-PNG-File_2
+  - first:
+      213: -4777645816138034116
+    second: Dotted-Line-PNG-File_3
+  - first:
+      213: 6229000524104411534
+    second: Dotted-Line-PNG-File_4
+  - first:
+      213: -4038195223817669639
+    second: Dotted-Line-PNG-File_5
+  - first:
+      213: 7808559325701433732
+    second: Dotted-Line-PNG-File_6
+  - first:
+      213: -8528389190084464061
+    second: Dotted-Line-PNG-File_7
+  - first:
+      213: 107097152779605384
+    second: Dotted-Line-PNG-File_8
+  - first:
+      213: -3289088710613920021
+    second: Dotted-Line-PNG-File_9
+  - first:
+      213: 7019644137473560130
+    second: Dotted-Line-PNG-File_10
+  - first:
+      213: -2101034525878173095
+    second: Dotted-Line-PNG-File_11
+  - first:
+      213: -7255195361539674644
+    second: Dotted-Line-PNG-File_12
+  - first:
+      213: -2505647683041166167
+    second: Dotted-Line-PNG-File_13
+  - first:
+      213: 4665321556049197262
+    second: Dotted-Line-PNG-File_14
+  - first:
+      213: -940393458546342609
+    second: Dotted-Line-PNG-File_15
+  - first:
+      213: -7260134509102493168
+    second: Dotted-Line-PNG-File_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Win64
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Dotted-Line-PNG-File_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 299
+        width: 595
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28ac753daaba56200800000000000000
+      internalID: 172732910902168194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Dotted-Line-PNG-File_0: 172732910902168194
+      Dotted-Line-PNG-File_1: -2963798514107709805
+      Dotted-Line-PNG-File_10: 7019644137473560130
+      Dotted-Line-PNG-File_11: -2101034525878173095
+      Dotted-Line-PNG-File_12: -7255195361539674644
+      Dotted-Line-PNG-File_13: -2505647683041166167
+      Dotted-Line-PNG-File_14: 4665321556049197262
+      Dotted-Line-PNG-File_15: -940393458546342609
+      Dotted-Line-PNG-File_16: -7260134509102493168
+      Dotted-Line-PNG-File_17: 179677545
+      Dotted-Line-PNG-File_2: 3706475985009843591
+      Dotted-Line-PNG-File_3: -4777645816138034116
+      Dotted-Line-PNG-File_4: 6229000524104411534
+      Dotted-Line-PNG-File_5: -4038195223817669639
+      Dotted-Line-PNG-File_6: 7808559325701433732
+      Dotted-Line-PNG-File_7: -8528389190084464061
+      Dotted-Line-PNG-File_8: 107097152779605384
+      Dotted-Line-PNG-File_9: -3289088710613920021
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

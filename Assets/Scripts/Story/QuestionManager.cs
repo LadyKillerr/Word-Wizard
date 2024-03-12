@@ -149,7 +149,7 @@ public class QuestionManager : MonoBehaviour
             // loop qua các đáp án và set answer cho chúng
             answers[i].GetComponent<Image>().sprite = defaultAnswerSprite;
 
-            // Get ra text của các button và set lại text của chúng 
+            // Get ra text của các buttons và set lại text của chúng 
             answersText = answers[i].GetComponentInChildren<TextMeshProUGUI>();
 
             // set text theo answers
@@ -307,6 +307,7 @@ public class QuestionManager : MonoBehaviour
         quizSectionAudio.Stop();
     }
 
+    // Xử lý điều sẽ xảy ra khi đã hết câu hỏi 
     public void LoadNextQuestion()
     {
         // questions.Length - 1 vì mảng bắt đầu từ 0, nếu để tới độ dài của mảng thì sẽ thừa 1
@@ -385,7 +386,7 @@ public class QuestionManager : MonoBehaviour
             isRewarded = false;
             screenDarkenEffects.SetActive(false);
         }
-
+        // LOAD RA MÀN HOME khi đã end game
         LoadHome();
 
         audioManager.PlayButtonClip();
