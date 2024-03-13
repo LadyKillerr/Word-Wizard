@@ -50,10 +50,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wordsLabel: {fileID: 7553764266999646635}
-  showingTime: 5
+  showingTime: 3
   isShowing: 0
   hiddenWordAudio: {fileID: 8300000, guid: 7e0096baec286264ea0f13740bb2077c, type: 3}
-  hiddenWordVolume: 0.8
+  hiddenWordVolume: 1
 --- !u!82 &3377154301382787697
 AudioSource:
   m_ObjectHideFlags: 0

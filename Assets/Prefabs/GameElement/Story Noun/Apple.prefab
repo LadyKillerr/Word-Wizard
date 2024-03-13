@@ -305,7 +305,7 @@ MonoBehaviour:
   showingTime: 5
   isShowing: 0
   hiddenWordAudio: {fileID: 8300000, guid: 14f163949e35177449bc44b43f5c0c34, type: 3}
-  hiddenWordVolume: 0.8
+  hiddenWordVolume: 1
 --- !u!82 &686598954798363994
 AudioSource:
   m_ObjectHideFlags: 0
