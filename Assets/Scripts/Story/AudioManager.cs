@@ -22,84 +22,84 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioClip congratsAudio;
     [SerializeField][Range(0, 1)] float congratsAudioVolume = 1f;
 
-    [Header("Vocabulary")]
-    [SerializeField] AudioClip aWord;
-    [SerializeField][Range(0, 1)] float aWordAudioVolume = 1f;
+    //[Header("Vocabulary")]
+    //[SerializeField] AudioClip aWord;
+    //[SerializeField][Range(0, 1)] float aWordAudioVolume = 1f;
 
-    [SerializeField] AudioClip bWord;
-    [SerializeField][Range(0, 1)] float bWordAudioVolume = 1f;
+    //[SerializeField] AudioClip bWord;
+    //[SerializeField][Range(0, 1)] float bWordAudioVolume = 1f;
 
-    [SerializeField] AudioClip cWord;
-    [SerializeField][Range(0, 1)] float cWordAudioVolume = 1f;
+    //[SerializeField] AudioClip cWord;
+    //[SerializeField][Range(0, 1)] float cWordAudioVolume = 1f;
 
-    [SerializeField] AudioClip dWord;
-    [SerializeField][Range(0, 1)] float dWordAudioVolume = 1f;
+    //[SerializeField] AudioClip dWord;
+    //[SerializeField][Range(0, 1)] float dWordAudioVolume = 1f;
 
-    [SerializeField] AudioClip eWord;
-    [SerializeField][Range(0, 1)] float eWordAudioVolume = 1f;
+    //[SerializeField] AudioClip eWord;
+    //[SerializeField][Range(0, 1)] float eWordAudioVolume = 1f;
 
-    [SerializeField] AudioClip fWord;
-    [SerializeField][Range(0, 1)] float fWordAudioVolume = 1f;
+    //[SerializeField] AudioClip fWord;
+    //[SerializeField][Range(0, 1)] float fWordAudioVolume = 1f;
 
-    [SerializeField] AudioClip gWord;
-    [SerializeField][Range(0, 1)] float gWordAudioVolume = 1f;
+    //[SerializeField] AudioClip gWord;
+    //[SerializeField][Range(0, 1)] float gWordAudioVolume = 1f;
 
-    [SerializeField] AudioClip hWord;
-    [SerializeField][Range(0, 1)] float hWordAudioVolume = 1f;
+    //[SerializeField] AudioClip hWord;
+    //[SerializeField][Range(0, 1)] float hWordAudioVolume = 1f;
 
-    [SerializeField] AudioClip iWord;
-    [SerializeField][Range(0, 1)] float iWordAudioVolume = 1f;
+    //[SerializeField] AudioClip iWord;
+    //[SerializeField][Range(0, 1)] float iWordAudioVolume = 1f;
 
-    [SerializeField] AudioClip jWord;
-    [SerializeField][Range(0, 1)] float jWordAudioVolume = 1f;
+    //[SerializeField] AudioClip jWord;
+    //[SerializeField][Range(0, 1)] float jWordAudioVolume = 1f;
 
-    [SerializeField] AudioClip kWord;
-    [SerializeField][Range(0, 1)] float kWordAudioVolume = 1f;
+    //[SerializeField] AudioClip kWord;
+    //[SerializeField][Range(0, 1)] float kWordAudioVolume = 1f;
 
-    [SerializeField] AudioClip lWord;
-    [SerializeField][Range(0, 1)] float lWordAudioVolume = 1f;
+    //[SerializeField] AudioClip lWord;
+    //[SerializeField][Range(0, 1)] float lWordAudioVolume = 1f;
 
-    [SerializeField] AudioClip mWord;
-    [SerializeField][Range(0, 1)] float mWordAudioVolume = 1f;
+    //[SerializeField] AudioClip mWord;
+    //[SerializeField][Range(0, 1)] float mWordAudioVolume = 1f;
 
-    [SerializeField] AudioClip nWord;
-    [SerializeField][Range(0, 1)] float nWordAudioVolume = 1f;
+    //[SerializeField] AudioClip nWord;
+    //[SerializeField][Range(0, 1)] float nWordAudioVolume = 1f;
 
-    [SerializeField] AudioClip oWord;
-    [SerializeField][Range(0, 1)] float oWordAudioVolume = 1f;
+    //[SerializeField] AudioClip oWord;
+    //[SerializeField][Range(0, 1)] float oWordAudioVolume = 1f;
 
-    [SerializeField] AudioClip pWord;
-    [SerializeField][Range(0, 1)] float pWordAudioVolume = 1f;
+    //[SerializeField] AudioClip pWord;
+    //[SerializeField][Range(0, 1)] float pWordAudioVolume = 1f;
 
-    [SerializeField] AudioClip qWord;
-    [SerializeField][Range(0, 1)] float qWordAudioVolume = 1f;
+    //[SerializeField] AudioClip qWord;
+    //[SerializeField][Range(0, 1)] float qWordAudioVolume = 1f;
 
-    [SerializeField] AudioClip rWord;
-    [SerializeField][Range(0, 1)] float rWordAudioVolume = 1f;
+    //[SerializeField] AudioClip rWord;
+    //[SerializeField][Range(0, 1)] float rWordAudioVolume = 1f;
 
-    [SerializeField] AudioClip sWord;
-    [SerializeField][Range(0, 1)] float sWordAudioVolume = 1f;
+    //[SerializeField] AudioClip sWord;
+    //[SerializeField][Range(0, 1)] float sWordAudioVolume = 1f;
 
-    [SerializeField] AudioClip tWord;
-    [SerializeField][Range(0, 1)] float tWordAudioVolume = 1f;
+    //[SerializeField] AudioClip tWord;
+    //[SerializeField][Range(0, 1)] float tWordAudioVolume = 1f;
 
-    [SerializeField] AudioClip uWord;
-    [SerializeField][Range(0, 1)] float uWordAudioVolume = 1f;
+    //[SerializeField] AudioClip uWord;
+    //[SerializeField][Range(0, 1)] float uWordAudioVolume = 1f;
 
-    [SerializeField] AudioClip vWord;
-    [SerializeField][Range(0, 1)] float vWordAudioVolume = 1f;
+    //[SerializeField] AudioClip vWord;
+    //[SerializeField][Range(0, 1)] float vWordAudioVolume = 1f;
 
-    [SerializeField] AudioClip wWord;
-    [SerializeField][Range(0, 1)] float wWordAudioVolume = 1f;
+    //[SerializeField] AudioClip wWord;
+    //[SerializeField][Range(0, 1)] float wWordAudioVolume = 1f;
 
-    [SerializeField] AudioClip xWord;
-    [SerializeField][Range(0, 1)] float xWordAudioVolume = 1f;
+    //[SerializeField] AudioClip xWord;
+    //[SerializeField][Range(0, 1)] float xWordAudioVolume = 1f;
 
-    [SerializeField] AudioClip yWord;
-    [SerializeField][Range(0, 1)] float yWordAudioVolume = 1f;
+    //[SerializeField] AudioClip yWord;
+    //[SerializeField][Range(0, 1)] float yWordAudioVolume = 1f;
 
-    [SerializeField] AudioClip zWord;
-    [SerializeField][Range(0, 1)] float zWordAudioVolume = 1f;
+    //[SerializeField] AudioClip zWord;
+    //[SerializeField][Range(0, 1)] float zWordAudioVolume = 1f;
 
 
     AudioSource gameAudio;
@@ -164,4 +164,103 @@ public class AudioManager : MonoBehaviour
     {
         PlayAudio(congratsAudio, congratsAudioVolume);
     }
+
+    //public void PlayWordA()
+    //{
+    //    PlayAudio(aWord, aWordAudioVolume);
+    //}
+
+    //public void PlayWordB()
+    //{
+    //    PlayAudio(bWord, bWordAudioVolume);
+    //}
+
+    //public void PlayWordC()
+    //{
+    //    PlayAudio(cWord, cWordAudioVolume);
+    //}
+
+    //public void PlayWordD()
+    //{
+    //    PlayAudio(dWord, dWordAudioVolume);
+    //}
+
+    //public void PlayWordE()
+    //{
+    //    PlayAudio(eWord, eWordAudioVolume);
+    //}
+
+    //public void PlayWordF()
+    //{
+    //    PlayAudio(fWord, fWordAudioVolume);
+    //}
+    //public void PlayWordG()
+    //{
+    //    PlayAudio(gWord, gWordAudioVolume);
+    //}
+
+    //public void PlayWordH()
+    //{
+    //    PlayAudio(hWord, hWordAudioVolume);
+    //}
+
+    //public void PlayWordI()
+    //{
+    //    PlayAudio(iWord, iWordAudioVolume);
+    //}
+
+    //public void PlayWordK()
+    //{
+    //    PlayAudio(kWord, kWordAudioVolume);
+    //}
+
+    //public void PlayWordL()
+    //{
+    //    PlayAudio(lWord, lWordAudioVolume);
+    //}
+
+    //public void PlayWordM()
+    //{
+    //    PlayAudio(mWord, mWordAudioVolume);
+    //}
+
+    //public void PlayWordN()
+    //{
+    //    PlayAudio(nWord, nWordAudioVolume);
+    //}
+
+    //public void PlayWordO()
+    //{
+    //    PlayAudio(oWord, oWordAudioVolume);
+    //}
+
+    //public void PlayWordP()
+    //{
+    //    PlayAudio(pWord, pWordAudioVolume);
+    //}
+
+    //public void PlayWordQ()
+    //{
+    //    PlayAudio(qWord, qWordAudioVolume);
+    //}
+    //public void PlayWordR()
+    //{
+    //    PlayAudio(rWord, rWordAudioVolume);
+    //}
+
+    //public void PlayWordS()
+    //{
+    //    PlayAudio(sWord, sWordAudioVolume);
+    //}
+
+    //public void PlayWordT()
+    //{
+    //    PlayAudio(tWord, tWordAudioVolume);
+    //}
+
+    //public void PlayWordU()
+    //{
+    //    PlayAudio(uWord, uWordAudioVolume);
+    //}
+
 }

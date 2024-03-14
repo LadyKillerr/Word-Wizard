@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 780d374ed4ddfdc48a01f2539d7bcf05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartAudio: {fileID: 8300000, guid: bfeb721b715ddd54d99ab6dcebee3e73, type: 3}
+  startAudio: {fileID: 8300000, guid: bfeb721b715ddd54d99ab6dcebee3e73, type: 3}
   startVolume: 1
   buttonAudio: {fileID: 8300000, guid: 883355f9c23f42940863dd4edd695442, type: 3}
   buttonVolume: 1
@@ -55,6 +55,58 @@ MonoBehaviour:
   bugAudioVolume: 1
   congratsAudio: {fileID: 8300000, guid: 21045ed0fe409624692296d59692f4a1, type: 3}
   congratsAudioVolume: 1
+  aWord: {fileID: 8300000, guid: dd660f7b909333b4898737fe1cb3bbe0, type: 3}
+  aWordAudioVolume: 1
+  bWord: {fileID: 8300000, guid: 8c2f1630913bf834aae7b21df1cc6335, type: 3}
+  bWordAudioVolume: 1
+  cWord: {fileID: 8300000, guid: 1c42831a0e50c9049b32dcd15450cf6b, type: 3}
+  cWordAudioVolume: 1
+  dWord: {fileID: 8300000, guid: 7d164a789384bdf45aa1738345e149f1, type: 3}
+  dWordAudioVolume: 1
+  eWord: {fileID: 8300000, guid: 3606f72dec9364a45852ef3e7ed176d8, type: 3}
+  eWordAudioVolume: 1
+  fWord: {fileID: 8300000, guid: 45416bdbb60920446ae9676330e31c12, type: 3}
+  fWordAudioVolume: 1
+  gWord: {fileID: 8300000, guid: 3cafa22f5fea5c741ba9ffd8e7609bf5, type: 3}
+  gWordAudioVolume: 1
+  hWord: {fileID: 8300000, guid: 7f688ff94cba3cf419bc4e701a85aa51, type: 3}
+  hWordAudioVolume: 1
+  iWord: {fileID: 8300000, guid: e9085ef9f3c25b74f8724b1d36eb7380, type: 3}
+  iWordAudioVolume: 1
+  jWord: {fileID: 8300000, guid: 01fc5cc9822faae42aa585b4b2be9058, type: 3}
+  jWordAudioVolume: 1
+  kWord: {fileID: 8300000, guid: c91cb24b92fc97f438b13929f9572a8a, type: 3}
+  kWordAudioVolume: 1
+  lWord: {fileID: 8300000, guid: 11ddc72e92cdff24e81ad6c5d10b6496, type: 3}
+  lWordAudioVolume: 1
+  mWord: {fileID: 8300000, guid: c3eb2581f38655c4d82d9bdd9db00722, type: 3}
+  mWordAudioVolume: 1
+  nWord: {fileID: 8300000, guid: 6cb0c0e123f0db14b8129c9c3d38aa88, type: 3}
+  nWordAudioVolume: 1
+  oWord: {fileID: 8300000, guid: f743c3851bfe97f48bb9eecc98231c96, type: 3}
+  oWordAudioVolume: 1
+  pWord: {fileID: 8300000, guid: b6be63a27d3792d40a04bdf076b7d680, type: 3}
+  pWordAudioVolume: 1
+  qWord: {fileID: 8300000, guid: 956bffc5977609a4390dbc8b09d82b28, type: 3}
+  qWordAudioVolume: 1
+  rWord: {fileID: 8300000, guid: 6089ed3d29595194e9b4eac0ba7f3166, type: 3}
+  rWordAudioVolume: 1
+  sWord: {fileID: 8300000, guid: 5aecd2e5b6d699f4cb3dc37aff42bea7, type: 3}
+  sWordAudioVolume: 1
+  tWord: {fileID: 8300000, guid: 3a6ffd409d256b4479e42a77760c1b92, type: 3}
+  tWordAudioVolume: 1
+  uWord: {fileID: 8300000, guid: 3d47f09d2b56f9544be13619bd93663d, type: 3}
+  uWordAudioVolume: 1
+  vWord: {fileID: 8300000, guid: d0c4b719e9b4bd242b148eeb3ce8766c, type: 3}
+  vWordAudioVolume: 1
+  wWord: {fileID: 8300000, guid: 741b6c7c43725d14c8bf9519e4f087db, type: 3}
+  wWordAudioVolume: 1
+  xWord: {fileID: 8300000, guid: f2f795612e62d534793dd7b329111908, type: 3}
+  xWordAudioVolume: 1
+  yWord: {fileID: 8300000, guid: 55572ce73921b5d42a4da73b9f3c2321, type: 3}
+  yWordAudioVolume: 1
+  zWord: {fileID: 8300000, guid: 84ab5039124702144b9a5d8b60b59550, type: 3}
+  zWordAudioVolume: 1
 --- !u!82 &2228926844813087534
 AudioSource:
   m_ObjectHideFlags: 0
