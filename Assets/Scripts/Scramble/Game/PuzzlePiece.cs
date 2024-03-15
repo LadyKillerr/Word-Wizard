@@ -1,4 +1,5 @@
 ﻿using DG.Tweening;
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -22,6 +23,8 @@ public class PuzzlePiece : MonoBehaviour
     RectTransform puzzlePieceTransform;
     Vector3 originalPosition;
 
+    Rigidbody2D puzzlePieceRigidbody;
+
     // khoảng cách từ chuột tới vật thể, khoá offset này lại thì vật sẽ đi theo chuột 
     Vector2 offset;
 
@@ -35,6 +38,8 @@ public class PuzzlePiece : MonoBehaviour
 
         // originalPosition là biến lưu vị trí gốc từ awake
         originalPosition = puzzlePieceTransform.position;
+
+        puzzlePieceRigidbody = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
@@ -49,35 +54,47 @@ public class PuzzlePiece : MonoBehaviour
 
     private void OnMouseDown()
     {
-        puzzlePieceAudio.PlayOneShot(wordAudioClip);
+        if (!puzzlePieceAudio.isPlaying)
+        {
+            puzzlePieceAudio.PlayOneShot(wordAudioClip);
 
+        }
+
+        tweenGo.localScale = startTweenScale;
+        tweenGo.DOScale(endTweenScale, showTime).SetEase(showEase);
+        isDragging = true;
 
         offset = GetMousePos() - (Vector2)transform.position;
 
     }
-     
-    private void OnMouseDrag()
-    {
-        isDragging = true;
-
-        tweenGo.localScale = startTweenScale;
-        tweenGo.DOScale(endTweenScale, showTime).SetEase(showEase);
-    }
 
     private void OnMouseUp()
     {
-        transform.position = originalPosition;
+        puzzlePieceTransform.position = originalPosition;
+
+
         isDragging = false;
 
+        CheckTouchingPuzzleSlot();
+        
+
         puzzlePieceAudio.PlayOneShot(wordDropSound);
+       
+
+
 
         StartCoroutine(ResetLocalScale());
 
     }
 
+    private void CheckTouchingPuzzleSlot()
+    {
+        if (puzzlePieceRigidbody)
+    }
+
     IEnumerator ResetLocalScale()
     {
-        yield return new WaitForSeconds(hideTime);
+        yield return new WaitForSeconds(.2f);
 
         tweenGo.localScale = puzzlePieceTransform.localScale;
         tweenGo.DOScale(startTweenScale, hideTime).SetEase(hideEase);

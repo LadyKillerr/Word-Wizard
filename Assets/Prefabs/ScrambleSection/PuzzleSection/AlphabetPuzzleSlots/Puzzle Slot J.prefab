@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2901906727828990666}
   - component: {fileID: 1258438467683785326}
   - component: {fileID: 8541480267282857663}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Puzzle Slot J
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 160}
+  m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &809295460661460969
 CanvasRenderer:
@@ -89,8 +89,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699d434b2707954448f911225b305f2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
   completeClip: {fileID: 8300000, guid: 01fc5cc9822faae42aa585b4b2be9058, type: 3}
+  wordName: 
 --- !u!82 &8541480267282857663
 AudioSource:
   m_ObjectHideFlags: 0

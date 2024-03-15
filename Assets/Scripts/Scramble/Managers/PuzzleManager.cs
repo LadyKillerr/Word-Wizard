@@ -7,15 +7,18 @@ public class PuzzleManager : MonoBehaviour
     [SerializeField] List<PuzzleSlots> slotPrefabs;
     [SerializeField] PuzzlePiece piecePrefabs;
     [SerializeField] Transform slotParent, pieceParent;
+    public List<string> puzzleAnswer;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Start()
     {
-        
+        for (int i = 0; i < slotPrefabs.Count; i++)
+        {
+            slotPrefabs[i].SetWordName(puzzleAnswer[i]);
+        }
+
     }
 
-    // Update is called once per frame
-    void Update()
+    void Spawn()
     {
         
     }
