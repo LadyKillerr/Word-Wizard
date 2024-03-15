@@ -89,7 +89,10 @@ public class PuzzlePiece : MonoBehaviour
 
     private void CheckTouchingPuzzleSlot()
     {
-        if (puzzlePieceRigidbody)
+        if (puzzlePieceRigidbody.IsTouchingLayers(LayerMask.GetMask("puzzleSlot")))
+        {
+
+        }
     }
 
     IEnumerator ResetLocalScale()
