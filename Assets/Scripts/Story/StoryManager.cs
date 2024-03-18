@@ -64,7 +64,7 @@ public class StoryManager : MonoBehaviour
 
     void Awake()
     {
-        gameAudioManager = FindObjectOfType<AudioManager>();
+        gameAudioManager = FindAnyObjectByType<AudioManager>();
 
         storyAudioSource = GetComponent<AudioSource>();
 
@@ -82,7 +82,7 @@ public class StoryManager : MonoBehaviour
             // duyẹt qua các story trong storyPart và set text của chúng dựa trên file json
             storyParts[i].GetComponent<TextMeshProUGUI>().text = gameStory[storyId].sentences[i];
 
-            // duyet qua các prefab nút trong list nút ẩn để set text của chúng thành chữ trong json file
+            // duyet qua các prefab nút trong list nút ẩn để set text của chúng thành chữ trong json file -- chưa làm
             //hiddenButtonsText[i].GetComponent<TextMeshProUGUI>().text = gameStory[storyId].noun[i];
         }
         // storyId là để biết đang ở data truyện nào trong file json

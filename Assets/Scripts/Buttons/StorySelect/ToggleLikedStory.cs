@@ -39,7 +39,7 @@ public class ToggleLikedStory : MonoBehaviour
 
             // kích hoạt tag cho thấy đã like bộ truyện này
             PlayerPrefs.SetInt(levelPrefLikedName, 1);
-            Debug.Log("Đã thích truyện con mèo ngu đần");
+
         }
     }
 

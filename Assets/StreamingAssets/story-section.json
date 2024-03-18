@@ -23,5 +23,31 @@
     "pie",
     "smile"
   ],
+},
+
+{
+  "id": "benny_the_bunny",
+  "story": "Benny The Bunny",
+  "sentences": [
+    "Benny The Bunny. A phonics story is told by Sunny Friends.",
+    "Benny the Bunny has a big blue bag.",
+    "He puts a bell, a basket, and a brush in the bag.",
+    "Benny goes to the barn.",
+    "He brushes the horse and feeds it some hay.",
+    "Benny plays with the birds and the butterflies.",
+    "He sings a song and dances with joy.",
+  ],
+  "noun": [
+    "bunny",
+    "bag",
+    "bell",
+    "basket",
+    "brush",
+    "barn",
+    "horse",
+    "hay",
+    "birds"
+  ],
 }
+
 ]

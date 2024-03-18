@@ -5418,7 +5418,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &276670035157681910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6972,7 +6972,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1784115769623935348
 GameObject:
   m_ObjectHideFlags: 0
@@ -7495,7 +7495,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 367e5970b9e22354a899fc437efa3798, type: 3}
+  m_Sprite: {fileID: -8229598120360318422, guid: 367e5970b9e22354a899fc437efa3798, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7827,7 +7827,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2746927106286462366 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 117626154964624011, guid: 1bff9fdae267e3a4fb352a2345dc849b, type: 3}
@@ -8342,7 +8342,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &3366933577694354524
 GameObject:
   m_ObjectHideFlags: 0
@@ -8521,7 +8521,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3608104522270443189
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8715,6 +8715,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1817822031248620066}
     m_Modifications:
+    - target: {fileID: 2082182574789307218, guid: db15447709ae2b94ca144ff6e48239ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6075151507569264920, guid: eb012c74e11a242429a6af5f5b971e49, type: 3}
     - target: {fileID: 4108240557565547991, guid: db15447709ae2b94ca144ff6e48239ac, type: 3}
       propertyPath: m_Name
       value: Exit Button
@@ -10852,7 +10856,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &7065022064603574958
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11824,7 +11828,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: A Cat and the Bat
+  m_text: Dung dz hahaha
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4ced626538778a642b1bc52f57f13874, type: 2}
   m_sharedMaterial: {fileID: 670191308552138572, guid: 4ced626538778a642b1bc52f57f13874, type: 2}

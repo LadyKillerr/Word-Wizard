@@ -1,0 +1,5 @@
+PLayerPref location: registry - meepoStudio - levelPrefName...
+Story Json Data: Assets/ Streaming Asset
+
+Scene 1: CatAndTheBat - CatAndTheBatLiked, 0 - !isComplete / 1 - isComplete / 2 Pending
+Scene 2: BennyTheBunny

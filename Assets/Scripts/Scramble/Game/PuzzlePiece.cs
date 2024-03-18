@@ -8,7 +8,7 @@ public class PuzzlePiece : MonoBehaviour
 {
     [Header("DotTween")]
     [SerializeField] float showTime = 0.3f, hideTime = 0.2f;
-    [SerializeField] Vector3 startTweenScale = new Vector3(1, 1, 1);
+    [SerializeField] Vector3 startTweenScale;
     [SerializeField] Vector3 endTweenScale = new Vector3(1.5f, 1.5f, 1.5f);
     [SerializeField] Ease showEase = Ease.OutBack, hideEase = Ease.InBack;
     [SerializeField] Transform tweenGo;
@@ -38,6 +38,8 @@ public class PuzzlePiece : MonoBehaviour
 
         // originalPosition là biến lưu vị trí gốc từ awake
         originalPosition = puzzlePieceTransform.position;
+
+        startTweenScale = puzzlePieceTransform.localScale;
 
         puzzlePieceRigidbody = GetComponent<Rigidbody2D>();
     }
