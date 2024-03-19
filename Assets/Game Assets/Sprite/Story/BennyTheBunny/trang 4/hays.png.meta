@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0f961ce29808fc441887b6aad6cbca80
+guid: 8885f45315c8d8e49b9c50731c53a7f3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 43226539016778518
-    second: demo_0
+      213: 6510917346108440498
+    second: hays_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,12 +72,12 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 256
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
-    crunchedCompression: 0
+    crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
     ignorePlatformSupport: 0
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: demo_0
+      name: hays_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1747
-        height: 809
+        width: 332
+        height: 148
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 613f6f6ee42999000800000000000000
-      internalID: 43226539016778518
+      spriteID: 2bff8b874dc6b5a50800000000000000
+      internalID: 6510917346108440498
       vertices: []
       indices: 
       edges: []
@@ -171,7 +171,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      hays_0: 6510917346108440498
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

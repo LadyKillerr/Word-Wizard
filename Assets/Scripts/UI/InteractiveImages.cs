@@ -15,15 +15,15 @@ public class InteractiveImages : MonoBehaviour
 
     [Header("Image Components")]
     RectTransform imageRectTransform;
-    AudioSource interactiveImageAudioSource;
-    [SerializeField] AudioClip imageAudioClip;
+    //AudioSource interactiveImageAudioSource;
+    //[SerializeField] AudioClip imageAudioClip;
 
     [SerializeField] bool isScaling;
 
     private void Awake()
     {
         imageRectTransform = GetComponent<RectTransform>();
-        interactiveImageAudioSource = GetComponent<AudioSource>();
+        //interactiveImageAudioSource = GetComponent<AudioSource>();
     }
 
     void Start()
@@ -43,11 +43,11 @@ public class InteractiveImages : MonoBehaviour
         if (isScaling == false)
         {
 
-            if (!interactiveImageAudioSource.isPlaying)
-            {
-                interactiveImageAudioSource.PlayOneShot(imageAudioClip);
+            //if (!interactiveImageAudioSource.isPlaying)
+            //{
+            //    interactiveImageAudioSource.PlayOneShot(imageAudioClip);
 
-            }
+            //}
 
             tweenGo.localScale = startTweenScale;
             tweenGo.DOScale(endTweenScale, showTime).SetEase(showEase);

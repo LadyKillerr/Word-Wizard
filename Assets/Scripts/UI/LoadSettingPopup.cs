@@ -43,8 +43,8 @@ public class LoadSettingPopup : MonoBehaviour
     {
         settingPopup.SetActive(false);
 
-        audioManager = FindObjectOfType<AudioManager>();
-        gameMusic = FindObjectOfType<BackgroundMusicPlayer>();
+        audioManager = FindAnyObjectByType<AudioManager>();
+        gameMusic = FindAnyObjectByType<BackgroundMusicPlayer>();
 
     }
 

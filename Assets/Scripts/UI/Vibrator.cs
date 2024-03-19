@@ -16,7 +16,8 @@ public static class Vibrator
     {
         if (IsAndroid())
         {
-            vibrator.Call("vibrate", miliseconds);
+            vibrator.Call("Vibrate", miliseconds);
+            Debug.Log("Vibrator have vibrate");
         }
         else
         {
@@ -28,7 +29,7 @@ public static class Vibrator
     {
         if (IsAndroid())
         {
-            vibrator.Call("vibrate");
+            vibrator.Call("Vibrate");
         }
     }
 

@@ -4,11 +4,11 @@ using UnityEngine;
 public class AuraSpinner : MonoBehaviour
 {
     [SerializeField] float spinningSpeed;
-    Transform auraTransform;
+    RectTransform auraTransform;
 
     void Start()
     {
-        auraTransform.GetComponent<Transform>();
+        auraTransform.GetComponent<RectTransform>();
 
         SpinningAura();
     }
