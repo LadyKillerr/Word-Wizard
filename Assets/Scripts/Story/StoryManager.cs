@@ -74,9 +74,17 @@ public class StoryManager : MonoBehaviour
 
         LoadFirstStoryPart();
 
+
         // gọi tới data warehouse
         StoryData[] gameStory = gameStoryData.LoadStoryData("story-section.json");
-        for (int i = 0; i < gameStory.Length; i++)
+        //Debug.Log(gameStory.Length);
+        //Debug.Log("StoryID: " + storyId);
+
+        // đếm xem data sentence của câu truyện thứ 2 có bnh câu
+        int sentenceCount = gameStory[storyId].sentences.Count;
+        //Debug.Log("Sentence Counting for story 2 " + sentenceCount);
+
+        for (int i = 0; i < sentenceCount; i++)
         {
 
             // duyẹt qua các story trong storyPart và set text của chúng dựa trên file json
@@ -222,11 +230,12 @@ public class StoryManager : MonoBehaviour
             // tắt âm thanh màn stories
             MuteAllAudioParts();
 
+
             // load ra màn hình câu hỏi trắc nghiệm, sẽ có câu hỏi riêng để ng chơi trả lời trắc nghiệm
             // ẩn hết màn hình câu hỏi đi 
             interactiveStorySection.SetActive(false);
 
-
+            gameAudioManager.PlayPageTurningClip();
 
             // bật intersection
             ToggleIntersection();
@@ -268,7 +277,7 @@ public class StoryManager : MonoBehaviour
     {
         intersectionSection.SetActive(true);
 
-        MuteAllAudioParts();
+
 
         StartCoroutine(DisableIntersection());
 

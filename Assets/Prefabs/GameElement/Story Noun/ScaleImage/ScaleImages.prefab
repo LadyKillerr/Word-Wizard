@@ -61,8 +61,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2086b514b9a3e85499d74c9a5b22f074, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showTime: 0.3
-  hideTime: 0.2
+  showTime: 2
+  hideTime: 2
   endTweenScale: {x: 0.12, y: 0.12, z: 0}
   showEase: 27
   hideEase: 26
