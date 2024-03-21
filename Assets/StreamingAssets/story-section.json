@@ -13,17 +13,7 @@
     "The cat makes an apple cake.",
     "The bat and the cat share the apple cake happily."
   ],
-  "noun": [
-    "cat",
-    "bat",
-    "hat",
-    "apple",
-    "cake",
-    "tree",
-    "pie",
-    "smile"
-  ],
-},
+  },
 
 {
   "id": "benny_the_bunny",
@@ -37,17 +27,22 @@
     "Benny plays with the birds and the butterflies.",
     "He sings a song and dances with joy.",
   ],
-  "noun": [
-    "bunny",
-    "bag",
-    "bell",
-    "basket",
-    "brush",
-    "barn",
-    "horse",
-    "hay",
-    "birds"
+  },
+
+{
+  "id": "casey_the_cat",
+  "story": "Casey The Cat",
+  "sentences": [
+    "Casey The Cat. A phonics story is told by Sunny Friends.",
+    "Casey helps her mom cook,",
+    "She stirs the soup with a big spoon.",
+    "She adds carrots and celery,",
+    "Cooking together is fun.",
+    "Casey wipes the table neatly,",
+    "Helping her mom is sweet.",
+    "Later, they cuddle up to eat,",
+    "Casey loves her mom very much.",
   ],
-}
+  }
 
 ]

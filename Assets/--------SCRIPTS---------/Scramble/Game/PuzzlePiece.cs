@@ -36,12 +36,19 @@ public class PuzzlePiece : MonoBehaviour
 
         puzzlePieceTransform = GetComponent<RectTransform>();
 
-        // originalPosition là biến lưu vị trí gốc từ awake
-        originalPosition = puzzlePieceTransform.position;
+        
 
         startTweenScale = puzzlePieceTransform.localScale;
 
         puzzlePieceRigidbody = GetComponent<Rigidbody2D>();
+    }
+
+    private void Start()
+    {
+        // originalPosition là biến lưu vị trí gốc từ awake
+        originalPosition = puzzlePieceTransform.position;
+        Debug.Log("Original Position: " + originalPosition);// originalPosition là biến lưu vị trí gốc từ awake
+
     }
 
     private void Update()

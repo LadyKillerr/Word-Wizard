@@ -30,6 +30,8 @@ MonoBehaviour:
     m_path: Assets/Scenes/StoryScenes/Story 1/CatAndTheBat.unity
   - m_enabled: 1
     m_path: Assets/Scenes/StoryScenes/Story 2/BennyTheBunny.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/StoryScenes/Story 3/CaseyTheCat.unity
   references:
     version: 2
     RefIds:

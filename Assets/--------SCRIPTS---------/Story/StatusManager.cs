@@ -14,11 +14,11 @@ public class StatusManager : MonoBehaviour
     [SerializeField] GameObject bennyBunnyDone;
     [SerializeField] GameObject bennyBunnyPending;
 
-    [Header("CalebTheCat Story")]
-    int calebTheCatStatus;
+    [Header("CasetTheCat Story")]
+    int caseyTheCatStatus;
     [SerializeField] string story3PrefName;
-    [SerializeField] GameObject calebTheCatDone;
-    [SerializeField] GameObject calebTheCatPending;
+    [SerializeField] GameObject caseyTheCatDone;
+    [SerializeField] GameObject caseyTheCatPending;
 
     private void Awake()
     {
@@ -32,7 +32,7 @@ public class StatusManager : MonoBehaviour
 
         checkBennyTheBunny();
 
-        checkCalebTheCat();
+        checkCaseyTheCat();
     }
 
 
@@ -40,7 +40,7 @@ public class StatusManager : MonoBehaviour
     {
         checkCatAndTheBat();
         checkBennyTheBunny();
-
+        checkCaseyTheCat();
     }
 
     void checkCatAndTheBat()
@@ -94,23 +94,23 @@ public class StatusManager : MonoBehaviour
         }
     }
 
-    void checkCalebTheCat()
+    void checkCaseyTheCat()
     {
-        calebTheCatStatus = PlayerPrefs.GetInt(story3PrefName);
-        if (calebTheCatStatus == 1)
+        caseyTheCatStatus = PlayerPrefs.GetInt(story3PrefName);
+        if (caseyTheCatStatus == 1)
         {
-            calebTheCatDone.SetActive(true);
-            calebTheCatPending.SetActive(false);
+            caseyTheCatDone.SetActive(true);
+            caseyTheCatPending.SetActive(false);
 
 
         }
-        else if (calebTheCatStatus == 2)
+        else if (caseyTheCatStatus == 2)
         {
-            calebTheCatDone.SetActive(false);
-            calebTheCatPending.SetActive(true);
+            caseyTheCatDone.SetActive(false);
+            caseyTheCatPending.SetActive(true);
 
         }
-        else if (calebTheCatStatus == 0)
+        else if (caseyTheCatStatus == 0)
         {
             bennyBunnyDone.SetActive(false);
             bennyBunnyPending.SetActive(false);
