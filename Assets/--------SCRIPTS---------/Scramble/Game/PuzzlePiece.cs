@@ -64,9 +64,14 @@ public class PuzzlePiece : MonoBehaviour
 
         tweenGo.localScale = startTweenScale;
         tweenGo.DOScale(endTweenScale, showTime).SetEase(showEase);
+
         isDragging = true;
 
-        offset = GetMousePos() - (Vector2)transform.position;
+        if (isDragging)
+        {
+            offset = GetMousePos() - (Vector2)transform.position;
+
+        }
 
     }
 
@@ -78,10 +83,10 @@ public class PuzzlePiece : MonoBehaviour
         isDragging = false;
 
         CheckTouchingPuzzleSlot();
-        
+
 
         puzzlePieceAudio.PlayOneShot(wordDropSound);
-       
+
 
 
 
@@ -91,7 +96,7 @@ public class PuzzlePiece : MonoBehaviour
 
     private void CheckTouchingPuzzleSlot()
     {
-        if (puzzlePieceRigidbody.IsTouchingLayers(LayerMask.GetMask("puzzleSlot")))
+        if (puzzlePieceRigidbody.IsTouchingLayers(LayerMask.GetMask("PuzzleSlot")))
         {
 
         }

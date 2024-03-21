@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class StatusManager : MonoBehaviour
 {
@@ -14,6 +14,12 @@ public class StatusManager : MonoBehaviour
     [SerializeField] GameObject bennyBunnyDone;
     [SerializeField] GameObject bennyBunnyPending;
 
+    [Header("CalebTheCat Story")]
+    int calebTheCatStatus;
+    [SerializeField] string story3PrefName;
+    [SerializeField] GameObject calebTheCatDone;
+    [SerializeField] GameObject calebTheCatPending;
+
     private void Awake()
     {
 
@@ -25,6 +31,8 @@ public class StatusManager : MonoBehaviour
         checkCatAndTheBat();
 
         checkBennyTheBunny();
+
+        checkCalebTheCat();
     }
 
 
@@ -40,6 +48,7 @@ public class StatusManager : MonoBehaviour
         catAndBatStatus = PlayerPrefs.GetInt(story1PrefName);
         if (catAndBatStatus == 1)
         {
+            // 1 là đã hoàn thành
             catAndBatDone.SetActive(true);
             catAndBatPending.SetActive(false);
 
@@ -47,12 +56,14 @@ public class StatusManager : MonoBehaviour
         }
         else if (catAndBatStatus == 2)
         {
+            // 2 là đang pending
             catAndBatDone.SetActive(false);
             catAndBatPending.SetActive(true);
 
         }
         else if (catAndBatStatus == 0)
         {
+            // 0 là chưa làm j, chưa đọc chưa xem chưa chạm vào
             catAndBatDone.SetActive(false);
             catAndBatPending.SetActive(false);
 
@@ -76,6 +87,30 @@ public class StatusManager : MonoBehaviour
 
         }
         else if (bennyTheBunnyStatus == 0)
+        {
+            bennyBunnyDone.SetActive(false);
+            bennyBunnyPending.SetActive(false);
+
+        }
+    }
+
+    void checkCalebTheCat()
+    {
+        calebTheCatStatus = PlayerPrefs.GetInt(story3PrefName);
+        if (calebTheCatStatus == 1)
+        {
+            calebTheCatDone.SetActive(true);
+            calebTheCatPending.SetActive(false);
+
+
+        }
+        else if (calebTheCatStatus == 2)
+        {
+            calebTheCatDone.SetActive(false);
+            calebTheCatPending.SetActive(true);
+
+        }
+        else if (calebTheCatStatus == 0)
         {
             bennyBunnyDone.SetActive(false);
             bennyBunnyPending.SetActive(false);
