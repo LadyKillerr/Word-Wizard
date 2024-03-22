@@ -1,19 +1,21 @@
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PuzzleManager : MonoBehaviour
 {
+    [Header("Prefabs của các ô trống")]
     [SerializeField] List<PuzzleSlots> slotPrefabs;
-    [SerializeField] PuzzlePiece piecePrefabs;
-    [SerializeField] Transform slotParent, pieceParent;
+
+    [Header("Đáp án của các ô trống đó")]
     public List<string> puzzleAnswer;
 
     private void Start()
     {
         for (int i = 0; i < slotPrefabs.Count; i++)
         {
-            slotPrefabs[i].SetWordName(puzzleAnswer[i]);
+            // set từ đã định cho các prefabs variant mình đặt vào 
+            slotPrefabs[i].SetWordName(puzzleAnswer[i]) ;
         }
 
     }

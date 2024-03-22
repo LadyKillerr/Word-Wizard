@@ -15,6 +15,8 @@ public class FilterManager : MonoBehaviour
     // all filter buttons menu
     [SerializeField] GameObject filterButtonsMenu;
 
+    // book count list
+    public List<GameObject> totalBooks;
 
     AudioManager audioManager;
 
@@ -22,7 +24,9 @@ public class FilterManager : MonoBehaviour
 
     void Awake()
     {
-        audioManager = FindObjectOfType<AudioManager>();
+        audioManager = FindAnyObjectByType<AudioManager>();
+
+
 
     }
 

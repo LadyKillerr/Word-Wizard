@@ -3,31 +3,44 @@ using UnityEngine;
 public class PuzzleSlots : MonoBehaviour
 {
     //[SerializeField] AudioSource puzzleSlotAudioSource;
-    [SerializeField] AudioClip completeClip;
-    public string wordName;
+
+    [SerializeField] string wordSlot;
 
 
     // hidden components
-    AudioSource puzzleSlotAudioSource;
+
+    void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.CompareTag("PuzzlePiece"))
+        {
+
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("PuzzlePiece"))
+        {
+
+        }
+    }
+
+
+
+
+
+
+
+
 
     public void SetWordName(string newWord)
     {
-        wordName = newWord;
+        wordSlot = newWord;
     }
 
     public string GetWordName()
     {
-        return wordName;
-    }
-
-    void Start()
-    {
-        puzzleSlotAudioSource = GetComponent<AudioSource>();
-    }
-
-    public void Placed()
-    {
-        puzzleSlotAudioSource.PlayOneShot(completeClip);
+        return wordSlot;
     }
 
 

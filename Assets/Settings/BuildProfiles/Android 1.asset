@@ -32,6 +32,12 @@ MonoBehaviour:
     m_path: Assets/Scenes/StoryScenes/Story 2/BennyTheBunny.unity
   - m_enabled: 1
     m_path: Assets/Scenes/StoryScenes/Story 3/CaseyTheCat.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/ScrambleScenes/ScrambleList.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/ScrambleScenes/Level 1/Game List.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/ScrambleScenes/Level 1/Scramble Game.unity
   references:
     version: 2
     RefIds:
