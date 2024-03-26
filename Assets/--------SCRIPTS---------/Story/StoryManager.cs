@@ -82,7 +82,6 @@ public class StoryManager : MonoBehaviour
 
         // đếm xem data sentence của câu truyện thứ 2 có bnh câu
         int sentenceCount = gameStory[storyId].sentences.Count;
-        //Debug.Log("Sentence Counting for story 2 " + sentenceCount);
 
         for (int i = 0; i < sentenceCount; i++)
         {
@@ -113,6 +112,7 @@ public class StoryManager : MonoBehaviour
         }
     }
 
+    // xử lý vuốt để qua màn
     void HandlerSwipeControl()
     {
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)

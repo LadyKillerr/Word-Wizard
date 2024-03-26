@@ -36,12 +36,12 @@ public class LoadScene : MonoBehaviour
         //{
             PlayStartAudio();
 
-        //}
-        //else
-        //{
-        //    PlayButtonAudio();
-        //}
     }
+//        else
+//        {
+//            PlayButtonAudio();
+//}
+//    }
 
     public IEnumerator LoadAsynchrounously(int sceneIndex)
     {

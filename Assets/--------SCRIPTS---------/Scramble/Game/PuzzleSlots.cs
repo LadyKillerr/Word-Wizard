@@ -1,13 +1,28 @@
+using System;
 using UnityEngine;
 
 public class PuzzleSlots : MonoBehaviour
 {
-    //[SerializeField] AudioSource puzzleSlotAudioSource;
+
+
 
     [SerializeField] string wordSlot;
 
+    public GameObject puzzleSlotGameObject;
 
     // hidden components
+
+
+
+    private void Awake()
+    {
+
+    }
+
+    private void Update()
+    {
+
+    }
 
     void OnTriggerStay2D(Collider2D other)
     {
@@ -25,23 +40,19 @@ public class PuzzleSlots : MonoBehaviour
         }
     }
 
-
-
-
-
-
-
-
-
-    public void SetWordName(string newWord)
-    {
-        wordSlot = newWord;
-    }
-
-    public string GetWordName()
+    public string GetPuzzleSlotText()
     {
         return wordSlot;
     }
+
+
+
+
+
+
+
+
+
 
 
 

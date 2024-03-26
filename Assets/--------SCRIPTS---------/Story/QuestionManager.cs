@@ -125,10 +125,12 @@ public class QuestionManager : MonoBehaviour
     {
         if (!isAnswerCorrect)
         {
+
             nextButton.GetComponent<Image>().color = new(255, 255, 255, buttonOpacity);
         }
         else if (isAnswerCorrect)
         {
+
             nextButton.GetComponent<Image>().color = new(255, 255, 255, 1);
 
         }
@@ -337,9 +339,6 @@ public class QuestionManager : MonoBehaviour
         else if (currentIndex >= 0 && currentIndex == questions.Length - 1 && isAnswerCorrect)
         {
             // khi trả lời đúng câu hỏi cuối cùng
-            // cho back lại story list (tạm thời là vậy, sau sẽ chạy màn báo điểm thường)
-            // StartCoroutine(LoadHome());
-
             nextButton.GetComponent<Image>().color = new(255, 255, 255, buttonOpacity);
 
 

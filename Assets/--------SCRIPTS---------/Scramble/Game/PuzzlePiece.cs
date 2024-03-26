@@ -42,6 +42,8 @@ public class PuzzlePiece : MonoBehaviour
     // hidden components 
     //AudioManager audioManager;
     AudioSource puzzlePieceAudio;
+    AudioManager audioManager;
+    PuzzleManager puzzleManager;
 
 
     RectTransform puzzlePieceTransform;
@@ -51,17 +53,20 @@ public class PuzzlePiece : MonoBehaviour
     // khoảng cách từ chuột tới vật thể, khoá offset này lại thì vật sẽ đi theo chuột 
     Vector2 offset;
 
-    // biến để lưu giá trị text của puzzleSlot Piece này chạm vào 
+    // biến để lưu giá trị text của puSzzleSlot Piece này chạm vào 
     string puzzleSlotText;
 
+    bool solvedPuzzle;
 
     private void Awake()
     {
+        audioManager = FindAnyObjectByType<AudioManager>();
+
         puzzlePieceAudio = GetComponent<AudioSource>();
 
         puzzlePieceTransform = GetComponent<RectTransform>();
 
-
+        puzzleManager = FindAnyObjectByType<PuzzleManager>();
 
         startTweenScale = puzzlePieceTransform.localScale;
 
@@ -72,7 +77,6 @@ public class PuzzlePiece : MonoBehaviour
     {
         // originalPosition là biến lưu vị trí gốc từ awake
         originalPosition = puzzlePieceTransform.position;
-
 
     }
 
@@ -97,37 +101,47 @@ public class PuzzlePiece : MonoBehaviour
 
             isInSlotsPosition = other.GetComponent<RectTransform>().position;
 
-            // lấy ra chữ cái đúng của puzzle Slot trong đề bài để so sánh
-            puzzleSlotText = other.gameObject.GetComponent<PuzzleSlots>().GetWordName();
-            
-            
+            puzzleSlotText = other.gameObject.GetComponent<PuzzleSlots>().GetPuzzleSlotText();
+
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("PuzzleSlot"))
+        {
+            isInSlots = false;
 
         }
     }
 
     private void CheckAllAnswer()
     {
-        bool solvedPuzzle = true;
-        for (int i = 0; i < puzzlePieceGameObject.transform.childCount; i ++)
-        {
-            // lặp qua từng phần tử trong GameObject PuzzlePiece kiểm tra, chỉ cần có 1 câu sai là biến thành false luôn
-            if(puzzlePieceGameObject.transform.GetChild(i).GetComponent<PuzzlePiece>().isAnswerCorrect == false)
-            {
-                Debug.Log("The Answer is still incorrect");
-                solvedPuzzle = false;
-            } 
+        solvedPuzzle = true;
 
-            if (solvedPuzzle)
+        for (int i = 0; i < puzzlePieceGameObject.transform.childCount; i++)
+        {
+            
+            // lặp qua từng phần tử trong GameObject PuzzlePiece kiểm tra, chỉ cần có 1 câu sai là biến thành false luôn
+            if (puzzlePieceGameObject.transform.GetChild(i).GetComponent<PuzzlePiece>().isAnswerCorrect == false )
             {
-                Debug.Log("The Answer is now correct! CHUAN");
+                Debug.Log(puzzlePieceGameObject.transform.GetChild(i).GetComponent<PuzzlePiece>().isAnswerCorrect);
+                Debug.Log("The Answer is INCORRECTmessage: ");
+
+                solvedPuzzle = false;
             }
 
         }
 
         // nếu không có câu sai nào thì đã trả lời đúng
-        if (solvedPuzzle)
+        if (solvedPuzzle == true)
         {
-            Debug.Log("Bạn đã trả lời đúng, xin chúc mừng!!!");
+
+
+            Debug.Log("Đã trả lời đúng hết các ô chữ.");
+
+            audioManager.PlayCongratsClip();
+
 
             StartCoroutine(PlayCongratsEffects());
         }
@@ -138,16 +152,13 @@ public class PuzzlePiece : MonoBehaviour
     {
         yield return new WaitForSeconds(delayTime);
 
+        puzzleManager.PlayTurtleAudio();
+
+
         Debug.Log("The Next Puzzle Appears");
     }
 
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("PuzzleSlot"))
-        {
-            isInSlots = false;
-        }
-    }
+    
 
     private void OnMouseDown()
     {
@@ -175,15 +186,19 @@ public class PuzzlePiece : MonoBehaviour
         // so sánh đáp án đúng với đáp án ghép vào của piece hiện tại
         if (wordPiece == puzzleSlotText)
         {
-            Debug.Log("Bạn đã xếp chữ đúng rùi");
+            Debug.Log("Bạn đã xếp chữ ĐÚNG rùi");
 
             isAnswerCorrect = true;
+
             CheckAllAnswer();
+            
         }
         else if (wordPiece != puzzleSlotText)
         {
 
             Debug.Log("Bạn đã xếp chữ SAIII rùi");
+            isAnswerCorrect = false;
+
         }
 
         isDragging = false;

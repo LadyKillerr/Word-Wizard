@@ -14,11 +14,23 @@ public class StatusManager : MonoBehaviour
     [SerializeField] GameObject bennyBunnyDone;
     [SerializeField] GameObject bennyBunnyPending;
 
-    [Header("CasetTheCat Story")]
+    [Header("CaseyTheCat Story")]
     int caseyTheCatStatus;
     [SerializeField] string story3PrefName;
     [SerializeField] GameObject caseyTheCatDone;
     [SerializeField] GameObject caseyTheCatPending;
+
+    [Header("DannyTheDog Story")]
+    int dannyTheDogStatus;
+    [SerializeField] string story4PrefName;
+    [SerializeField] GameObject dannyTheDogDone;
+    [SerializeField] GameObject dannyTheDogPending;
+
+    [Header("EllieTheElephant Story")]
+    int ellieTheElephant;
+    [SerializeField] string story5PrefName;
+    [SerializeField] GameObject ellieTheElephantDone;
+    [SerializeField] GameObject ellieTheElephantPending;
 
     private void Awake()
     {
@@ -33,14 +45,48 @@ public class StatusManager : MonoBehaviour
         checkBennyTheBunny();
 
         checkCaseyTheCat();
+
+        checkDannyTheDog();
+
+        checkEllieTheElephant();
     }
 
 
     void Update()
     {
-        checkCatAndTheBat();
-        checkBennyTheBunny();
-        checkCaseyTheCat();
+        //checkCatAndTheBat();
+        //checkBennyTheBunny();
+        //checkCaseyTheCat();
+        //checkDannyTheDog();
+
+
+    }
+
+    void checkEllieTheElephant()
+    {
+        ellieTheElephant = PlayerPrefs.GetInt(story5PrefName);
+        if (ellieTheElephant == 1)
+        {
+            // 1 là đã hoàn thành
+            ellieTheElephantDone.SetActive(true);
+            ellieTheElephantPending.SetActive(false);
+
+
+        }
+        else if (ellieTheElephant == 2)
+        {
+            // 2 là đang pending
+            ellieTheElephantDone.SetActive(false);
+            ellieTheElephantPending.SetActive(true);
+
+        }
+        else if (ellieTheElephant == 0)
+        {
+            // 0 là chưa làm j, chưa đọc chưa xem chưa chạm vào
+            ellieTheElephantDone.SetActive(false);
+            ellieTheElephantPending.SetActive(false);
+
+        }
     }
 
     void checkCatAndTheBat()
@@ -114,6 +160,33 @@ public class StatusManager : MonoBehaviour
         {
             bennyBunnyDone.SetActive(false);
             bennyBunnyPending.SetActive(false);
+
+        }
+    }
+
+    void checkDannyTheDog()
+    {
+        dannyTheDogStatus = PlayerPrefs.GetInt(story4PrefName);
+        if (catAndBatStatus == 1)
+        {
+            // 1 là đã hoàn thành
+            dannyTheDogDone.SetActive(true);
+            dannyTheDogPending.SetActive(false);
+
+
+        }
+        else if (dannyTheDogStatus == 2)
+        {
+            // 2 là đang pending
+            dannyTheDogDone.SetActive(false);
+            dannyTheDogPending.SetActive(true);
+
+        }
+        else if (dannyTheDogStatus == 0)
+        {
+            // 0 là chưa làm j, chưa đọc chưa xem chưa chạm vào
+            dannyTheDogDone.SetActive(false);
+            dannyTheDogPending.SetActive(false);
 
         }
     }

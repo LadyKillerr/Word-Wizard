@@ -1,27 +1,37 @@
-﻿using NUnit.Framework;
+﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PuzzleManager : MonoBehaviour
 {
-    [Header("Prefabs của các ô trống")]
-    [SerializeField] List<PuzzleSlots> slotPrefabs;
 
-    [Header("Đáp án của các ô trống đó")]
-    public List<string> puzzleAnswer;
+    AudioSource puzzleManagerAudioSource;
+
+    [SerializeField] AudioClip turtleWord;
+    [SerializeField][Range(0, 1)] float turtleAudio = 1f;
+
+    private void Awake()
+    {
+        puzzleManagerAudioSource = GetComponent<AudioSource>();
+    }
 
     private void Start()
     {
-        for (int i = 0; i < slotPrefabs.Count; i++)
-        {
-            // set từ đã định cho các prefabs variant mình đặt vào 
-            slotPrefabs[i].SetWordName(puzzleAnswer[i]) ;
-        }
-
+        
     }
 
-    void Spawn()
+    void PlayAudio(AudioClip clip, float volume)
     {
-        
+        if (!puzzleManagerAudioSource.isPlaying && puzzleManagerAudioSource.enabled == true)
+        {
+            puzzleManagerAudioSource.PlayOneShot(clip, volume);
+
+        }
+    }
+
+    public void PlayTurtleAudio()
+    {
+        PlayAudio(turtleWord, turtleAudio);
     }
 }

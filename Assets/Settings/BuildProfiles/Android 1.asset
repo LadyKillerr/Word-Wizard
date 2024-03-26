@@ -38,6 +38,10 @@ MonoBehaviour:
     m_path: Assets/Scenes/ScrambleScenes/Level 1/Game List.unity
   - m_enabled: 1
     m_path: Assets/Scenes/ScrambleScenes/Level 1/Scramble Game.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/StoryScenes/Story 4/DannyTheDog.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/StoryScenes/Story 5/EllieTheElephant.unity
   references:
     version: 2
     RefIds:
@@ -62,6 +66,6 @@ MonoBehaviour:
         m_DebugSymbolFormat: 5
         m_CurrentDeploymentTargetId: __builtin__target_default
         m_BuildType: 2
-        m_BuildAppBundle: 1
+        m_BuildAppBundle: 0
         m_IPAddressToConnect: 
         m_SymlinkSources: 0

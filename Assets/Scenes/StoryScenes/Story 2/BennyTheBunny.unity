@@ -843,6 +843,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5684622943801761703, guid: debf1deb06b5f9b4a817ddcd1519056e, type: 3}
   m_PrefabInstance: {fileID: 296545185}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &342348793 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5878468317824745860, guid: 582ee33b65f19444ba8b25b2753f610c, type: 3}
+  m_PrefabInstance: {fileID: 655702848131538184}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &357796876 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1269637511451998124, guid: 68d00ea7c435deb4d910c2160be7f4c9, type: 3}
@@ -1246,6 +1251,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   storyBooks: []
   totalBooks: 0
+--- !u!1 &589227582 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 620095624436706878, guid: 582ee33b65f19444ba8b25b2753f610c, type: 3}
+  m_PrefabInstance: {fileID: 655702848131538184}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &589227583 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7949580859674880166, guid: 582ee33b65f19444ba8b25b2753f610c, type: 3}
+  m_PrefabInstance: {fileID: 655702848131538184}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &691581916
 GameObject:
   m_ObjectHideFlags: 0
@@ -1745,6 +1760,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8deceb45de23bbe40aca089cefa8d9eb, type: 3}
+--- !u!1 &830236113 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9076166960693357233, guid: 684368741ae2e1346b84c7ea8f6d39bb, type: 3}
+  m_PrefabInstance: {fileID: 7625191746598486516}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &830236114 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6082156304089124787, guid: 684368741ae2e1346b84c7ea8f6d39bb, type: 3}
+  m_PrefabInstance: {fileID: 7625191746598486516}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &873002785 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3725899010278894139, guid: 9fb4d629f93ce5545aa13479ac2fa6cd, type: 3}
@@ -1892,9 +1917,9 @@ MonoBehaviour:
   isAnswerCorrect: 0
   rightAnswerPE: {fileID: 2141056465013880773}
   screenDarkenEffects: {fileID: 1045315370}
-  finishLevelPE: {fileID: 2065086387}
-  congratsWindow: {fileID: 3459180497282111373}
-  rewardWindow: {fileID: 1584190753}
+  finishLevelPE: {fileID: 342348793}
+  congratsWindow: {fileID: 589227582}
+  rewardWindow: {fileID: 830236113}
   gameHomeIndex: 1
   isRewarded: 0
   quizSection: {fileID: 3869443485622999389}
@@ -3128,11 +3153,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1578841999}
   m_CullTransparentMesh: 1
---- !u!1 &1584190753 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1229355389300360189, guid: 582ee33b65f19444ba8b25b2753f610c, type: 3}
-  m_PrefabInstance: {fileID: 655702848131538184}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1611380728
 GameObject:
   m_ObjectHideFlags: 0
@@ -4344,11 +4364,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7679465048629355749, guid: a3a9792792787a241a68697a6f1be169, type: 3}
   m_PrefabInstance: {fileID: 2058317956}
   m_PrefabAsset: {fileID: 0}
---- !u!198 &2065086387 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 6281986811459948133, guid: 582ee33b65f19444ba8b25b2753f610c, type: 3}
-  m_PrefabInstance: {fileID: 655702848131538184}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2086026034
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4517,11 +4532,6 @@ MonoBehaviour:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1146316414218292045, guid: 4d4e1dcfc468fac40beb3823981f1894, type: 3}
   m_PrefabInstance: {fileID: 2086026034}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &2096757343 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 6096567818553484391, guid: 582ee33b65f19444ba8b25b2753f610c, type: 3}
-  m_PrefabInstance: {fileID: 655702848131538184}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2129163834
 GameObject:
@@ -5725,7 +5735,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   showTime: 2
   hideTime: 2
-  endTweenScale: {x: 0.13, y: 0.13, z: 0}
+  endTweenScale: {x: 0.11, y: 0.11, z: 0}
   showEase: 27
   hideEase: 26
   tweenGo: {fileID: 3102957711299362707}
@@ -6246,7 +6256,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1784115769623935348
 GameObject:
   m_ObjectHideFlags: 0
@@ -6504,7 +6514,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2028334367207646210
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7334,7 +7344,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -14.2, y: -3.8}
+  m_AnchoredPosition: {x: -14.2, y: 0.4}
   m_SizeDelta: {x: 928.7729, y: 751}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &3108146005431148170
@@ -7529,11 +7539,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &3459180497282111373 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1032759721449750288, guid: 684368741ae2e1346b84c7ea8f6d39bb, type: 3}
-  m_PrefabInstance: {fileID: 7625191746598486516}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3470667098359886202
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11614,8 +11619,8 @@ RectTransform:
   - {fileID: 7263701135827388920}
   - {fileID: 6358201939004784152}
   - {fileID: 1045315371}
-  - {fileID: 2096757343}
-  - {fileID: 8472865476130975767}
+  - {fileID: 589227583}
+  - {fileID: 830236114}
   m_Father: {fileID: 2129163835}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -12017,11 +12022,6 @@ MonoBehaviour:
   TweenTime: 0.5
   TweenUIBefore: {fileID: 0}
   _ease: 27
---- !u!224 &8472865476130975767 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 6198972252262557374, guid: 684368741ae2e1346b84c7ea8f6d39bb, type: 3}
-  m_PrefabInstance: {fileID: 7625191746598486516}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8595437883762548197
 GameObject:
   m_ObjectHideFlags: 0

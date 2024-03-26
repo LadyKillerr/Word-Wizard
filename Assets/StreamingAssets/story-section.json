@@ -1,13 +1,13 @@
 [
  {
   "id": "a_cat_and_a_bat",
-  "story": "A Cat and a bat",
+  "story": "A Cat And A Bat",
   "sentences": [
     "A cat and a bat. A phonics story is told by Sunny Friends.",
     "A playful cat wears a big hat.",
     "He wants to eat apple cake.",
     "He goes to the apple tree.",
-    "The hat is too large, so he cannot climb the tree.",
+    "The hat is too large, so he cannot climb up the tree.",
     "A bat appears and says,'I will help.'",
     "The bat grabs the apple.",
     "The cat makes an apple cake.",
@@ -42,6 +42,37 @@
     "Helping her mom is sweet.",
     "Later, they cuddle up to eat,",
     "Casey loves her mom very much.",
+  ],
+  },
+
+{
+  "id": "danny_the_dog",
+  "story": "Danny The Dog",
+  "sentences": [
+    "Danny The Dog. A phonics story is told by Sunny Friends.",
+    "Fetching toys with wagging sides.",
+    "With crayons, he draws, colors so bright,",
+    "Spinning and dancing, a joyful sight.",
+    "Sharing his toys, his heart full of cheer,",
+    "Attentive in class, his mind clear.",
+    "With hugs he gives, spreading joy each day,",
+    "In Danny's world, learning lights the way.",
+  ],
+  },
+
+{
+  "id": "ellie_the_elephant",
+  "story": "Ellie The Elephant",
+  "sentences": [
+    "Ellie The Elephant. A phonics story is told by Sunny Friends.",
+    "Ellie the elephant wears a big red hat,",
+    "She hops and skips, just like that!",
+    "Eating apples, she's full of cheer,",
+    "Exploring with nothing to fear.",
+    "Ellie meets Eddie, a friendly bear,",
+    "They laugh and play, without a care.",
+    "Every day with friends, is full of fun,",
+    "Ellie's happy adventures have just begun!."
   ],
   }
 
