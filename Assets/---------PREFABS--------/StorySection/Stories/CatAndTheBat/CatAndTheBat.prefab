@@ -88,9 +88,117 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1093315414324342901, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: padding
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093315414324342901, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: widthScaleFactor
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093315414324342901, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: heightScaleFactor
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1840479998505288771, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: padding
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1840479998505288771, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: widthScaleFactor
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1840479998505288771, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: heightScaleFactor
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3133893419470244847, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: padding
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 3133893419470244847, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: widthScaleFactor
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3133893419470244847, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: heightScaleFactor
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005467512582483640, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: padding
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005467512582483640, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: widthScaleFactor
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005467512582483640, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: heightScaleFactor
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 4027432562029158805, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
       propertyPath: m_Name
-      value: Story Core Game Canvas Variant
+      value: CatAndTheBat
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615342511634613324, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: padding
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615342511634613324, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: widthScaleFactor
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615342511634613324, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: heightScaleFactor
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7158891812698415079, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: padding
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 7158891812698415079, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: widthScaleFactor
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7158891812698415079, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: heightScaleFactor
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7290782877810057316, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: padding
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 7290782877810057316, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: widthScaleFactor
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7290782877810057316, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: heightScaleFactor
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7498042034529352162, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: padding
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 7498042034529352162, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: widthScaleFactor
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7498042034529352162, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: heightScaleFactor
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7997901113844176351, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: padding
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 7997901113844176351, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: widthScaleFactor
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7997901113844176351, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: heightScaleFactor
+      value: 0.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

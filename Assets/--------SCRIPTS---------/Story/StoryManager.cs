@@ -57,10 +57,14 @@ public class StoryManager : MonoBehaviour
     AudioManager gameAudioManager;
     [SerializeField] QuestionManager questionManager;
 
+    // Swipe Handler
     Vector2 startTouchPosition;
     Vector2 endTouchPosition;
+    float swipeDistance;
+    [SerializeField] float swipeThreshold = 200f;
 
-    // flow code: Awake sẽ là LoadFirstStoryPart, sau đó tiếp tục load part các index tiếp theo dần dần
+
+    // flow code: Awake sẽ là LoadFirstStoryPart, sau đó tiếp tục load part các index tiếp theo dần dần thông qua nextPart và Previous Part
 
     void Awake()
     {
@@ -115,27 +119,40 @@ public class StoryManager : MonoBehaviour
     // xử lý vuốt để qua màn
     void HandlerSwipeControl()
     {
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        // kiểm tra xem có hàm touch nào được thực hiện hay không
+        if (Input.touchCount == 0) return;
+
+        Touch touch = Input.GetTouch(0);
+
+        // Luu vi tri touch bat dau khi cham vao man hinh 
+        if (touch.phase == TouchPhase.Began)
         {
-            startTouchPosition = Input.GetTouch(0).position;
+            startTouchPosition = touch.position;
         }
-
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended)
+        // kiểm tra khi touch kết thúc 
+        else if (touch.phase == TouchPhase.Ended)
         {
-            endTouchPosition = Input.GetTouch(0).position;
+            // luu vi tri khi touch kết thúc 
+            endTouchPosition = touch.position;
 
-            // vuốt sang trái
-            if (endTouchPosition.x < startTouchPosition.x)
+
+            // Tính toán xem khoảng cách giữa touch bắt đầu và touch kết thúc để biết người dùng swipe về bên nào
+            float swipeDistance = endTouchPosition.x - startTouchPosition.x;
+            Debug.Log(swipeDistance);
+
+            // so sánh khoảng cách đó với swipeThreshhold để biết khoảng cách có đủ lớn không 
+            if (swipeDistance < -Mathf.Epsilon && Mathf.Abs(swipeDistance) > swipeThreshold)
             {
-                // xử lý hàm vuốt sang phải ở đây
                 NextPart();
             }
-            else if (endTouchPosition.x > startTouchPosition.x)
+            else if (swipeDistance > Mathf.Epsilon && Mathf.Abs(swipeDistance) > swipeThreshold)
             {
-                // xử lý hàm vuốt sang trái ở đây 
                 PreviousPart();
+
             }
+
         }
+
     }
 
     private void CheckIsReading()

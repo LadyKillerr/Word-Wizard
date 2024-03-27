@@ -101,6 +101,7 @@ MonoBehaviour:
   questionSection: {fileID: 0}
   intersectionSection: {fileID: 0}
   questionManager: {fileID: 3773865013547298744}
+  swipeThreshold: 200
 --- !u!82 &3522078037996405468
 AudioSource:
   m_ObjectHideFlags: 0
