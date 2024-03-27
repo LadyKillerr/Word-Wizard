@@ -595,7 +595,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heightScaleFactor: 0.3
   widthScaleFactor: 0.75
-  padding: 200
+  padding: 120
 --- !u!114 &6354381975780164142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -953,7 +953,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heightScaleFactor: 0.3
   widthScaleFactor: 0.75
-  padding: 200
+  padding: 120
 --- !u!114 &4326875784832982541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1307,7 +1307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heightScaleFactor: 0.3
   widthScaleFactor: 0.75
-  padding: 200
+  padding: 120
 --- !u!114 &139415608449626959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1764,7 +1764,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heightScaleFactor: 0.3
   widthScaleFactor: 0.75
-  padding: 200
+  padding: 120
 --- !u!114 &1787928857480876726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2109,7 +2109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heightScaleFactor: 0.3
   widthScaleFactor: 0.75
-  padding: 200
+  padding: 120
 --- !u!114 &3920647689907030833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3566,7 +3566,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heightScaleFactor: 0.3
   widthScaleFactor: 0.75
-  padding: 200
+  padding: 120
 --- !u!114 &2052980873743388602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4350,6 +4350,7 @@ GameObject:
   - component: {fileID: 8778498259532228993}
   - component: {fileID: 1988872826284005793}
   - component: {fileID: 2939112739105269327}
+  - component: {fileID: 8220488451567637589}
   m_Layer: 5
   m_Name: AutoButton
   m_TagString: Untagged
@@ -4373,8 +4374,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 168, y: -128}
-  m_SizeDelta: {x: 150, y: 185}
+  m_AnchoredPosition: {x: 148, y: -138}
+  m_SizeDelta: {x: 130, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8778498259532228993
 CanvasRenderer:
@@ -4457,7 +4458,45 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1988872826284005793}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3518955357863942397, guid: ac62527c941b7204ebe2d7ac2ac0cd74, type: 3}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayButtonClip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8220488451567637589}
+        m_TargetAssemblyTypeName: ToggleAutoFlip, Assembly-CSharp
+        m_MethodName: ToggleAutoNext
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8220488451567637589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5536761105154994363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13809d050a0da6a4bb2364fb84542349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseAutoSprite: {fileID: -8852175839917554739, guid: 875848b9d6d4bea4d9950c78f09fd068, type: 3}
+  continueAutoSprite: {fileID: -4304121106098306773, guid: ad582dfda3ddc5942b6efa6ef057da69, type: 3}
 --- !u!1 &5712444071911078927
 GameObject:
   m_ObjectHideFlags: 0
@@ -4790,7 +4829,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heightScaleFactor: 0.3
   widthScaleFactor: 0.75
-  padding: 200
+  padding: 120
 --- !u!114 &8481546308894703691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6554,7 +6593,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heightScaleFactor: 0.3
   widthScaleFactor: 0.75
-  padding: 200
+  padding: 120
 --- !u!114 &6265329495251074098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6922,7 +6961,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heightScaleFactor: 0.3
   widthScaleFactor: 0.75
-  padding: 200
+  padding: 120
 --- !u!114 &2059394763929240061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9756,10 +9795,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 151406114400339988}
     m_Modifications:
-    - target: {fileID: 2082182574789307218, guid: db15447709ae2b94ca144ff6e48239ac, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -6075151507569264920, guid: eb012c74e11a242429a6af5f5b971e49, type: 3}
     - target: {fileID: 4108240557565547991, guid: db15447709ae2b94ca144ff6e48239ac, type: 3}
       propertyPath: m_Name
       value: Exit Button
@@ -9795,18 +9830,6 @@ PrefabInstance:
     - target: {fileID: 5290186518095246264, guid: db15447709ae2b94ca144ff6e48239ac, type: 3}
       propertyPath: m_SizeDelta.y
       value: 120
-      objectReference: {fileID: 0}
-    - target: {fileID: 5290186518095246264, guid: db15447709ae2b94ca144ff6e48239ac, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.1081067
-      objectReference: {fileID: 0}
-    - target: {fileID: 5290186518095246264, guid: db15447709ae2b94ca144ff6e48239ac, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.1081067
-      objectReference: {fileID: 0}
-    - target: {fileID: 5290186518095246264, guid: db15447709ae2b94ca144ff6e48239ac, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.1081067
       objectReference: {fileID: 0}
     - target: {fileID: 5290186518095246264, guid: db15447709ae2b94ca144ff6e48239ac, type: 3}
       propertyPath: m_LocalPosition.x

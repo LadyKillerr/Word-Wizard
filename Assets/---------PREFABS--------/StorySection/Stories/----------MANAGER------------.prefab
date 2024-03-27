@@ -95,13 +95,15 @@ MonoBehaviour:
   storyVolume: 1
   delayTime: 3
   delayTimeSmall: 0
-  intersectionTime: 1.5
+  intersectionTime: 2
   isReading: 0
   interactiveStorySection: {fileID: 0}
   questionSection: {fileID: 0}
   intersectionSection: {fileID: 0}
   questionManager: {fileID: 3773865013547298744}
   swipeThreshold: 200
+  isAutoNextPage: 0
+  autoFlipDelay: 3
 --- !u!82 &3522078037996405468
 AudioSource:
   m_ObjectHideFlags: 0

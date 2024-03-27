@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -63,11 +62,18 @@ public class StoryManager : MonoBehaviour
     float swipeDistance;
     [SerializeField] float swipeThreshold = 200f;
 
+    [Header("Auto Flip Page Function")]
+    // Auto Next Part boolean
+    [SerializeField] bool isAutoNextPage;
+    [SerializeField] float autoFlipDelay;
 
     // flow code: Awake sẽ là LoadFirstStoryPart, sau đó tiếp tục load part các index tiếp theo dần dần thông qua nextPart và Previous Part
 
     void Awake()
     {
+        isAutoNextPage = true;
+
+
         gameAudioManager = FindAnyObjectByType<AudioManager>();
 
         storyAudioSource = GetComponent<AudioSource>();
@@ -107,13 +113,47 @@ public class StoryManager : MonoBehaviour
 
     private void Update()
     {
-        CheckIsReading();
+        AutoNextPartOnRead();
 
         if (interactiveStorySection.activeSelf)
         {
             HandlerSwipeControl();
 
         }
+
+    }
+
+    private void AutoNextPartOnRead()
+    {
+        // nếu phần đọc truyện đang active và isReading && isAutoNextPage
+        if (interactiveStorySection.activeSelf && !isReading && isAutoNextPage)
+        {
+            StartCoroutine(AutoFlipPage());
+
+            isReading = true;
+        }
+    }
+
+    IEnumerator AutoFlipPage()
+    {
+        yield return new WaitForSeconds(delayTime);
+
+        Debug.Log("Auto Flip part on page activated");
+        if (isAutoNextPage)
+        {
+            NextPart();
+        }
+
+    }
+
+    public void ToggleAutoNextPart()
+    {
+        isAutoNextPage = !isAutoNextPage;
+    }
+
+    public bool GetIsAutoNext()
+    {
+        return isAutoNextPage;
     }
 
     // xử lý vuốt để qua màn
@@ -137,34 +177,29 @@ public class StoryManager : MonoBehaviour
 
 
             // Tính toán xem khoảng cách giữa touch bắt đầu và touch kết thúc để biết người dùng swipe về bên nào
-            float swipeDistance = endTouchPosition.x - startTouchPosition.x;
+            swipeDistance = endTouchPosition.x - startTouchPosition.x;
             Debug.Log(swipeDistance);
 
             // so sánh khoảng cách đó với swipeThreshhold để biết khoảng cách có đủ lớn không 
             if (swipeDistance < -Mathf.Epsilon && Mathf.Abs(swipeDistance) > swipeThreshold)
             {
+                Debug.Log("đang vuốt sang trái");
                 NextPart();
+
+                isAutoNextPage = false;
             }
             else if (swipeDistance > Mathf.Epsilon && Mathf.Abs(swipeDistance) > swipeThreshold)
             {
+                Debug.Log("đang vuốt sang phải");
                 PreviousPart();
+
+                isAutoNextPage = false;
+
 
             }
 
         }
 
-    }
-
-    private void CheckIsReading()
-    {
-        if (storyAudioSource.isPlaying)
-        {
-            isReading = true;
-        }
-        else
-        {
-            isReading = false;
-        }
     }
 
     void LoadFirstStoryPart()
@@ -172,26 +207,16 @@ public class StoryManager : MonoBehaviour
         // tắt hết đi và reset index
         HideAllStoryParts();
         HideAllImageParts();
-        MuteAllAudioParts();
+        MuteAudio();
         HideAllHiddenButtons();
 
         // reset index
         currentIndex = 0;
 
         // kích hoạt phần interactive story section
-        ActivateStoryPart();
+        ActivateStorySection();
 
-        // hiện story Parts đầu tiên
-        PlayCurrentStoryPart();
-
-        // hiện image parts đầu tiên 
-        PlayCurrentImagePart();
-
-        // bật hidden buttons section đầu tiên
-        PlayCurrentHiddenButtons();
-
-        // chạy âm thanh của trang truyện đầu tiên sau chừng delayTimeSmall
-        Invoke("PlayCurrentAudioParts", delayTimeSmall);
+        LoadParts();
     }
 
     // load ra part tương ứng với index
@@ -204,32 +229,34 @@ public class StoryManager : MonoBehaviour
 
         hiddenButtonsParts[currentIndex].SetActive(true);
 
-        // load ra âm thanh của index phù hợp sau chừng delayTimeSmall
-        Invoke("PlayCurrentAudioParts", delayTimeSmall);
+        PlayCurrentAudioParts();
+
+
+
     }
 
-
-    // Lien kết file và viết hàm set indexx = 9
-    // Set currentIndex về index cuối cùng của trang story
-    public void SetCurrentIndex()
+    void HideParts()
     {
-        currentIndex = storyParts.Length - 1;
-    }
+        storyParts[currentIndex].SetActive(false);
+        hiddenButtonsParts[currentIndex].SetActive(false);
+        imageParts[currentIndex].SetActive(false);
 
+        MuteAudio();
+    }
 
     // chức năng sang trang tiếp theo của trang sách
     public void NextPart()
     {
+        isReading = false;
         // nếu index chưa phải max (chưa phải part cuối trong 1 câu truyện)
         // trừ 1 vì bắt đầu từ mảng bắt đầu từ 0
         if (currentIndex >= 0 && currentIndex < storyParts.Length - 1 && !isReading)
         {
-
+            Debug.Log("Đang load next Part");
             // ẩn hình với truyện hiện tại đi
-            HideCurrentImagePart();
-            HideCurrentStoryPart();
-            HideCurrentHiddenButtons();
-            MuteAllAudioParts();
+            HideParts();
+
+            MuteAudio();
 
 
             currentIndex += 1;
@@ -245,7 +272,7 @@ public class StoryManager : MonoBehaviour
         else if (currentIndex >= 0 && currentIndex >= storyParts.Length - 1 && !isReading)
         {
             // tắt âm thanh màn stories
-            MuteAllAudioParts();
+            MuteAudio();
 
 
             // load ra màn hình câu hỏi trắc nghiệm, sẽ có câu hỏi riêng để ng chơi trả lời trắc nghiệm
@@ -264,15 +291,17 @@ public class StoryManager : MonoBehaviour
     // chức năng back lại trang cũ
     public void PreviousPart()
     {
+
+        isReading = false;
+
         if (currentIndex > 0 && currentIndex <= storyParts.Length - 1)
         {
 
+            Debug.Log("Đang load PREVIOUS Part");
 
             // ẩn hình với truyện hiện tại đi
-            HideCurrentImagePart();
-            HideCurrentStoryPart();
-            HideCurrentHiddenButtons();
-            MuteAllAudioParts();
+            HideParts();
+            MuteAudio();
 
             // giảm index đi để lùi trang truyện và trang tranh về trang trước 
             currentIndex -= 1;
@@ -294,11 +323,7 @@ public class StoryManager : MonoBehaviour
     {
         intersectionSection.SetActive(true);
 
-
-
         StartCoroutine(DisableIntersection());
-
-
     }
 
     IEnumerator DisableIntersection()
@@ -314,12 +339,6 @@ public class StoryManager : MonoBehaviour
         questionManager.LoadQuestionAudio();
     }
 
-
-    void PlayCurrentHiddenButtons()
-    {
-        hiddenButtonsParts[currentIndex].SetActive(true);
-    }
-
     void HideAllHiddenButtons()
     {
         foreach (GameObject part in hiddenButtonsParts)
@@ -328,13 +347,9 @@ public class StoryManager : MonoBehaviour
         }
     }
 
-    void HideCurrentHiddenButtons()
+    void MuteAudio()
     {
-        hiddenButtonsParts[currentIndex].SetActive(false);
-    }
-
-    void MuteAllAudioParts()
-    {
+        isReading = false;
         storyAudioSource.enabled = false;
         storyAudioSource.enabled = true;
 
@@ -344,29 +359,23 @@ public class StoryManager : MonoBehaviour
     {
         if (!storyAudioSource.isPlaying)
         {
+            isReading = true;
             storyAudioSource.PlayOneShot(audioParts[currentIndex], storyVolume);
-
+            StartCoroutine(StopReadingCoroutine(audioParts[currentIndex].length));
         }
         else { return; }
     }
 
-    void ActivateStoryPart()
+    IEnumerator StopReadingCoroutine(float clipLength)
+    {
+        yield return new WaitForSeconds(clipLength);
+
+        isReading = false;
+    }
+
+    void ActivateStorySection()
     {
         interactiveStorySection.SetActive(true);
-    }
-
-    void PlayCurrentStoryPart()
-    {
-        storyParts[currentIndex].SetActive(true);
-    }
-
-    void HideCurrentStoryPart()
-    {
-        if (currentIndex >= 0 && currentIndex <= storyParts.Length)
-        {
-            storyParts[currentIndex].SetActive(false);
-        }
-
     }
 
     void HideAllStoryParts()
@@ -375,16 +384,6 @@ public class StoryManager : MonoBehaviour
         {
             part.SetActive(false);
         }
-    }
-
-    void PlayCurrentImagePart()
-    {
-        imageParts[currentIndex].SetActive(true);
-    }
-
-    void HideCurrentImagePart()
-    {
-        imageParts[currentIndex].SetActive(false);
     }
 
     void HideAllImageParts()
@@ -420,19 +419,21 @@ public class StoryManager : MonoBehaviour
         // bật màn câu hỏi  
         interactiveStorySection.SetActive(true);
 
-        // hiện story Parts tương ứng
-        PlayCurrentStoryPart();
-
-        // hiện image parts tương ứng
-        PlayCurrentImagePart();
-
-        // bật hidden buttons section tương ứng 
-        PlayCurrentHiddenButtons();
+        LoadParts();
 
         // tắt âm thanh linh tinh
-        MuteAllAudioParts();
+        MuteAudio();
 
         // chạy âm thanh của index hiện tại
         PlayCurrentAudioParts();
     }
+
+
+    // Lien kết file và viết hàm set indexx = 9
+    // Set currentIndex về index cuối cùng của trang story
+    public void SetCurrentIndex()
+    {
+        currentIndex = storyParts.Length - 1;
+    }
+
 }

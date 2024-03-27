@@ -112,6 +112,18 @@ PrefabInstance:
       propertyPath: heightScaleFactor
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 2939112739105269327, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939112739105269327, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939112739105269327, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3133893419470244847, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
       propertyPath: padding
       value: 200
