@@ -6,17 +6,17 @@ using UnityEngine.UI;
 
 public class QuizQuestionsUI : MonoBehaviour
 {
-    [SerializeField] QuestionManager questionManager;
+    QuestionManager questionManager;
 
     TextMeshProUGUI questionNumberText;
-
- 
 
     int totalQuestions;
     int currentQuestion;
 
     void Awake()
     {
+        questionManager = FindAnyObjectByType<QuestionManager>();
+
         // Get ra UI questionNumber hiện tại
         questionNumberText = GetComponent<TextMeshProUGUI>();
 

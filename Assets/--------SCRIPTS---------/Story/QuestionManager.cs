@@ -21,11 +21,11 @@ public class QuestionManager : MonoBehaviour
     // question Text
     [SerializeField] TextMeshProUGUI questionText;
 
-    // questions arrays
-    [SerializeField] QuestionSO[] questions;
+    // questionsSO arrays
+    [SerializeField] QuestionSO[] questionsSO;
 
     [Header("Answers Section")]
-    [SerializeField] GameObject[] answers;
+    [SerializeField] GameObject[] answersButton;
 
     [Header("Answers Audio")]
     // số câu hỏi hiện tại sẽ là key để answer1Audio shift theo
@@ -33,7 +33,6 @@ public class QuestionManager : MonoBehaviour
     [SerializeField] AudioClip[] answer2Audio;
     [SerializeField] AudioClip[] answer3Audio;
     [SerializeField] AudioClip[] answer4Audio;
-    [SerializeField] AudioClip[] answer5Audio;
 
 
     [SerializeField][Range(0, 1)] float answersAudioVolume;
@@ -88,7 +87,10 @@ public class QuestionManager : MonoBehaviour
     [SerializeField] QuestionManager questionManager;
     [SerializeField] StoryManager storyManager;
 
-
+    public void ActivatePendingStatus()
+    {
+        PlayerPrefs.SetInt(levelPrefName, 2);
+    }
 
     void Awake()
     {
@@ -105,7 +107,7 @@ public class QuestionManager : MonoBehaviour
         //for ( int i = 0; i < gameQuestion.Length; i++)
         //{
         //    // in ra tiêu đề câu hỏi trong phần question
-        //    questions[i].GetComponent<TextMeshProUGUI>().text = gameQuestion[i].q;
+        //    questionsSO[i].GetComponent<TextMeshProUGUI>().text = gameQuestion[i].q;
         //}
 
         gameSceneLoader = FindAnyObjectByType<LoadScene>();
@@ -137,13 +139,15 @@ public class QuestionManager : MonoBehaviour
     }
 
 
+
+
     void LoadQuestion()
     {
         isAnswerCorrect = false;
         isAnswered = false;
 
         // Get ra câu hỏi theo index
-        questionText.text = questions[currentIndex].GetQuestion();
+        questionText.text = questionsSO[currentIndex].GetQuestion();
 
         if (quizSection.activeSelf)
         {
@@ -153,16 +157,16 @@ public class QuestionManager : MonoBehaviour
 
 
 
-        for (int i = 0; i < answers.Length; i++)
+        for (int i = 0; i < answersButton.Length; i++)
         {
             // loop qua các đáp án và set answer cho chúng
-            answers[i].GetComponent<Image>().sprite = defaultAnswerSprite;
+            answersButton[i].GetComponent<Image>().sprite = defaultAnswerSprite;
 
             // Get ra text của các buttons và set lại text của chúng 
-            answersText = answers[i].GetComponentInChildren<TextMeshProUGUI>();
+            answersText = answersButton[i].GetComponentInChildren<TextMeshProUGUI>();
 
-            // set text theo answers
-            answersText.text = questions[currentIndex].GetAnswer(i);
+            // set text theo answersButton
+            answersText.text = questionsSO[currentIndex].GetAnswer(i);
         }
 
 
@@ -172,7 +176,7 @@ public class QuestionManager : MonoBehaviour
     public void OnAnswerSelected(int userAnswerIndex)
     {
         // nếu trả lời đúng
-        if (userAnswerIndex == questions[currentIndex].GetCorrectAnswerIndex() && isAnswered == false)
+        if (userAnswerIndex == questionsSO[currentIndex].GetCorrectAnswerIndex() && isAnswered == false)
         {
             // dừng audio câu hỏi cho đỡ rối âm thanh
             quizSectionAudio.Stop();
@@ -185,7 +189,7 @@ public class QuestionManager : MonoBehaviour
 
 
             // chuyển ảnh của nút bấm sang ảnh mới
-            answers[userAnswerIndex].GetComponent<Image>().sprite = rightAnswerSprite;
+            answersButton[userAnswerIndex].GetComponent<Image>().sprite = rightAnswerSprite;
 
             Invoke("LoadNextQuestion", delayTime);
 
@@ -194,7 +198,7 @@ public class QuestionManager : MonoBehaviour
             isAnswerCorrect = true;
         }
         // nếu trả lời sai 
-        else if (userAnswerIndex != questions[currentIndex].GetCorrectAnswerIndex() && isAnswered == false)
+        else if (userAnswerIndex != questionsSO[currentIndex].GetCorrectAnswerIndex() && isAnswered == false)
         {
             // làm đth rung 1 tý
             Handheld.Vibrate();
@@ -210,22 +214,12 @@ public class QuestionManager : MonoBehaviour
             isAnswerCorrect = false;
             StartCoroutine(ResetIsAnswered());
 
-
-
-
-
-
-
-
-
             // chạy hiệu ứng âm thanh trả lời sai
             quizSectionAudio.PlayOneShot(wrongAnswerClip, wrongAudio);
 
 
             // chuyển ảnh của nút bấm sang ảnh mới
-            answers[userAnswerIndex].GetComponent<Image>().sprite = wrongAnswerSprite;
-
-
+            answersButton[userAnswerIndex].GetComponent<Image>().sprite = wrongAnswerSprite;
 
         }
     }
@@ -286,16 +280,16 @@ public class QuestionManager : MonoBehaviour
                 else { return; }
 
                 break;
-            case 4:
-                if (!quizSectionAudio.isPlaying && answer5Audio[currentIndex] != null)
-                {
-                    // chạy âm thanh đáp án của câu hỏi 4
-                    quizSectionAudio.PlayOneShot(answer5Audio[index], answersAudioVolume);
+            //case 4:
+            //    if (!quizSectionAudio.isPlaying && answer5Audio[currentIndex] != null)
+            //    {
+            //        // chạy âm thanh đáp án của câu hỏi 4
+            //        quizSectionAudio.PlayOneShot(answer5Audio[index], answersAudioVolume);
 
-                }
-                else { return; }
+            //    }
+            //    else { return; }
 
-                break;
+            //    break;
                 //case 5:
                 //    if (!quizSectionAudio.isPlaying && answer6Audio[currentIndex] != null)
                 //    {
@@ -320,9 +314,9 @@ public class QuestionManager : MonoBehaviour
     // Xử lý điều sẽ xảy ra khi đã hết câu hỏi 
     public void LoadNextQuestion()
     {
-        // questions.Length - 1 vì mảng bắt đầu từ 0, nếu để tới độ dài của mảng thì sẽ thừa 1
+        // questionsSO.Length - 1 vì mảng bắt đầu từ 0, nếu để tới độ dài của mảng thì sẽ thừa 1
         // nếu đã trả lời đúng thì mới cho next
-        if (currentIndex >= 0 && currentIndex < questions.Length - 1 && isAnswerCorrect)
+        if (currentIndex >= 0 && currentIndex < questionsSO.Length - 1 && isAnswerCorrect)
         {
             currentIndex++;
 
@@ -336,7 +330,7 @@ public class QuestionManager : MonoBehaviour
             isAnswered = false;
             isAnswerCorrect = false;
         }
-        else if (currentIndex >= 0 && currentIndex == questions.Length - 1 && isAnswerCorrect)
+        else if (currentIndex >= 0 && currentIndex == questionsSO.Length - 1 && isAnswerCorrect)
         {
             // khi trả lời đúng câu hỏi cuối cùng
             nextButton.GetComponent<Image>().color = new(255, 255, 255, buttonOpacity);
@@ -430,7 +424,7 @@ public class QuestionManager : MonoBehaviour
 
     public void LoadPreviousQuestions()
     {
-        if (currentIndex > 0 && currentIndex <= questions.Length)
+        if (currentIndex > 0 && currentIndex <= questionsSO.Length)
         {
             MuteAudio();
 
@@ -452,7 +446,7 @@ public class QuestionManager : MonoBehaviour
 
     public int GetTotalQuestions()
     {
-        return questions.Length;
+        return questionsSO.Length;
     }
 
     public int GetCurrentIndex()
@@ -462,7 +456,7 @@ public class QuestionManager : MonoBehaviour
 
     IEnumerator ResetIsAnswered()
     {
-        yield return new WaitForSeconds(delayTime);
+        yield return new WaitForSeconds(1);
 
         isAnswered = false;
     }

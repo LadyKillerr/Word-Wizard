@@ -100,6 +100,10 @@ PrefabInstance:
       propertyPath: heightScaleFactor
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 1635398244155398177, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 137.27002
+      objectReference: {fileID: 0}
     - target: {fileID: 1840479998505288771, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
       propertyPath: padding
       value: 200
@@ -111,6 +115,10 @@ PrefabInstance:
     - target: {fileID: 1840479998505288771, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
       propertyPath: heightScaleFactor
       value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845496630085481773, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 137.27002
       objectReference: {fileID: 0}
     - target: {fileID: 2939112739105269327, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -136,6 +144,10 @@ PrefabInstance:
       propertyPath: heightScaleFactor
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 3154926510024888697, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 137.27002
+      objectReference: {fileID: 0}
     - target: {fileID: 4005467512582483640, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
       propertyPath: padding
       value: 200
@@ -152,6 +164,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: CatAndTheBat
       objectReference: {fileID: 0}
+    - target: {fileID: 4336498325522400607, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 118
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436002958095020324, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 137.27002
+      objectReference: {fileID: 0}
+    - target: {fileID: 5381647537558071896, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 137.27002
+      objectReference: {fileID: 0}
     - target: {fileID: 5615342511634613324, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
       propertyPath: padding
       value: 200
@@ -163,6 +187,10 @@ PrefabInstance:
     - target: {fileID: 5615342511634613324, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
       propertyPath: heightScaleFactor
       value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053493184879097501, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 137.27002
       objectReference: {fileID: 0}
     - target: {fileID: 7158891812698415079, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
       propertyPath: padding
@@ -200,6 +228,10 @@ PrefabInstance:
       propertyPath: heightScaleFactor
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 7735504060572518368, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 137.27002
+      objectReference: {fileID: 0}
     - target: {fileID: 7997901113844176351, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
       propertyPath: padding
       value: 200
@@ -211,6 +243,10 @@ PrefabInstance:
     - target: {fileID: 7997901113844176351, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
       propertyPath: heightScaleFactor
       value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8568394737975516987, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 137.27002
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

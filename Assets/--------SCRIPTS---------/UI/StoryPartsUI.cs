@@ -9,7 +9,7 @@ public class StoryPartsUI : MonoBehaviour
 {
 
 
-    [SerializeField] StoryManager storyManager;
+    StoryManager storyManager;
 
     TextMeshProUGUI storyProgressUI;
 
@@ -18,6 +18,8 @@ public class StoryPartsUI : MonoBehaviour
 
     void Awake()
     {
+        storyManager = FindAnyObjectByType<StoryManager>();
+
         // Get ra TextMeshPro component
         storyProgressUI = GetComponent<TextMeshProUGUI>();
 

@@ -22,12 +22,12 @@ public class ToggleAutoFlip : MonoBehaviour
         if (storyManager.GetIsAutoNext())
         {
             autoButtonImage.sprite = continueAutoSprite;
-            Debug.Log("Continue is good");
+
         }
         else if (!storyManager.GetIsAutoNext())
         {
             autoButtonImage.sprite = pauseAutoSprite;
-            Debug.Log("Continue is BAD");
+
 
         }
     }

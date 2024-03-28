@@ -67,11 +67,12 @@ public class StoryManager : MonoBehaviour
     [SerializeField] bool isAutoNextPage;
     [SerializeField] float autoFlipDelay;
 
+
+    public bool isCheating = false;
     // flow code: Awake sẽ là LoadFirstStoryPart, sau đó tiếp tục load part các index tiếp theo dần dần thông qua nextPart và Previous Part
 
     void Awake()
     {
-        isAutoNextPage = true;
 
 
         gameAudioManager = FindAnyObjectByType<AudioManager>();
@@ -139,7 +140,7 @@ public class StoryManager : MonoBehaviour
         yield return new WaitForSeconds(delayTime);
 
         Debug.Log("Auto Flip part on page activated");
-        if (isAutoNextPage)
+        if (isAutoNextPage && !storyAudioSource.isPlaying)
         {
             NextPart();
         }
@@ -178,19 +179,22 @@ public class StoryManager : MonoBehaviour
 
             // Tính toán xem khoảng cách giữa touch bắt đầu và touch kết thúc để biết người dùng swipe về bên nào
             swipeDistance = endTouchPosition.x - startTouchPosition.x;
-            Debug.Log(swipeDistance);
+
 
             // so sánh khoảng cách đó với swipeThreshhold để biết khoảng cách có đủ lớn không 
-            if (swipeDistance < -Mathf.Epsilon && Mathf.Abs(swipeDistance) > swipeThreshold)
+            if (swipeDistance < -Mathf.Epsilon 
+                && Mathf.Abs(swipeDistance) > swipeThreshold 
+                && (!storyAudioSource.isPlaying
+                || isCheating))
             {
-                Debug.Log("đang vuốt sang trái");
+
                 NextPart();
 
                 isAutoNextPage = false;
             }
-            else if (swipeDistance > Mathf.Epsilon && Mathf.Abs(swipeDistance) > swipeThreshold)
+            else if (swipeDistance > Mathf.Epsilon && Mathf.Abs(swipeDistance) > swipeThreshold )
             {
-                Debug.Log("đang vuốt sang phải");
+
                 PreviousPart();
 
                 isAutoNextPage = false;
@@ -252,7 +256,7 @@ public class StoryManager : MonoBehaviour
         // trừ 1 vì bắt đầu từ mảng bắt đầu từ 0
         if (currentIndex >= 0 && currentIndex < storyParts.Length - 1 && !isReading)
         {
-            Debug.Log("Đang load next Part");
+
             // ẩn hình với truyện hiện tại đi
             HideParts();
 

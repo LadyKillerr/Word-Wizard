@@ -29,11 +29,11 @@ public class QuestionSO : ScriptableObject
     //    {
     //        if (i == result.correctAnswerIndex)
     //        {
-    //            result.answers[i] = question.correct_answer;
+    //            result.answersButton[i] = question.correct_answer;
     //        }
     //        else
     //        {
-    //            result.answers[i] = question.incorrect_answers[currentIncorrectIndex++];
+    //            result.answersButton[i] = question.incorrect_answers[currentIncorrectIndex++];
     //        }
     //    }
 
