@@ -834,7 +834,7 @@ MonoBehaviour:
   questionSection: {fileID: 1817283365843941529}
   intersectionSection: {fileID: 4339720875041343164}
   questionManager: {fileID: 2882006760164207894}
-  swipeThreshold: 200
+  swipeThreshold: 0
   isAutoNextPage: 1
   autoFlipDelay: 3
   isCheating: 1
@@ -5297,8 +5297,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13809d050a0da6a4bb2364fb84542349, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseAutoSprite: {fileID: -8852175839917554739, guid: 875848b9d6d4bea4d9950c78f09fd068, type: 3}
-  continueAutoSprite: {fileID: -4304121106098306773, guid: ad582dfda3ddc5942b6efa6ef057da69, type: 3}
+  pauseAutoSprite: {fileID: -4304121106098306773, guid: ad582dfda3ddc5942b6efa6ef057da69, type: 3}
+  continueAutoSprite: {fileID: -8852175839917554739, guid: 875848b9d6d4bea4d9950c78f09fd068, type: 3}
 --- !u!1 &5712444071911078927
 GameObject:
   m_ObjectHideFlags: 0

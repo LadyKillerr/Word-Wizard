@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StoryManager : MonoBehaviour
 {
@@ -66,7 +67,7 @@ public class StoryManager : MonoBehaviour
     [SerializeField] bool isAutoNextPage;
     [SerializeField] float autoFlipDelay;
 
-
+    [SerializeField] Image testImage;
     public bool isCheating = false;
     // flow code: Awake sẽ là LoadFirstStoryPart, sau đó tiếp tục load part các index tiếp theo dần dần thông qua nextPart và Previous Part
 
@@ -115,11 +116,11 @@ public class StoryManager : MonoBehaviour
     {
         AutoNextPartOnRead();
 
-        if (interactiveStorySection.activeSelf)
-        {
+        //if (interactiveStorySection.activeSelf)
+        //{
             HandlerSwipeControl();
 
-        }
+        //}
 
     }
 
@@ -159,50 +160,63 @@ public class StoryManager : MonoBehaviour
     // xử lý vuốt để qua màn
     void HandlerSwipeControl()
     {
-        // kiểm tra xem có hàm touch nào được thực hiện hay không
-        if (Input.touchCount == 0) return;
-
-        Touch touch = Input.GetTouch(0);
-
-        // Luu vi tri touch bat dau khi cham vao man hinh 
-        if (touch.phase == TouchPhase.Began)
-        {
-            startTouchPosition = touch.position;
-        }
-        // kiểm tra khi touch kết thúc 
-        else if (touch.phase == TouchPhase.Ended)
-        {
-            // luu vi tri khi touch kết thúc 
-            endTouchPosition = touch.position;
+        
+        //if (interactiveStorySection.activeSelf)
+        //{
 
 
-            // Tính toán xem khoảng cách giữa touch bắt đầu và touch kết thúc để biết người dùng swipe về bên nào
-            swipeDistance = endTouchPosition.x - startTouchPosition.x;
+            // kiểm tra xem có hàm touch nào được thực hiện hay không
+            //if (Input.touchCount == 0) return;
 
+            Touch touch = Input.GetTouch(0);
 
-            // so sánh khoảng cách đó với swipeThreshhold để biết khoảng cách có đủ lớn không 
-            if (swipeDistance < -Mathf.Epsilon 
-                && Mathf.Abs(swipeDistance) > swipeThreshold 
-                && (!storyAudioSource.isPlaying
-                || isCheating))
+            testImage.color = Color.red;
+
+            Debug.Log("hihihihih");
+            // Luu vi tri touch bat dau khi cham vao man hinh 
+            if (touch.phase == TouchPhase.Began)
             {
-
-                NextPart();
-
-                isAutoNextPage = false;
-            }
-            else if (swipeDistance > Mathf.Epsilon && Mathf.Abs(swipeDistance) > swipeThreshold )
-            {
-
-                PreviousPart();
-
-                isAutoNextPage = false;
-
+                startTouchPosition = touch.position;
+                testImage.color = Color.red;
 
             }
+            // kiểm tra khi touch kết thúc 
+            else if (touch.phase == TouchPhase.Ended)
+            {
+                // luu vi tri khi touch kết thúc 
+                endTouchPosition = touch.position;
+                testImage.color = Color.white;
 
-        }
 
+                // Tính toán xem khoảng cách giữa touch bắt đầu và touch kết thúc để biết người dùng swipe về bên nào
+                swipeDistance = endTouchPosition.x - startTouchPosition.x;
+
+
+                // so sánh khoảng cách đó với swipeThreshhold để biết khoảng cách có đủ lớn không 
+                if (swipeDistance < -Mathf.Epsilon
+                    && Mathf.Abs(swipeDistance) > swipeThreshold
+                    && (!storyAudioSource.isPlaying
+                    || isCheating))
+                {
+                    testImage.color = Color.green;
+
+                    NextPart();
+
+                    isAutoNextPage = false;
+                }
+                else if (swipeDistance > Mathf.Epsilon && Mathf.Abs(swipeDistance) > swipeThreshold)
+                {
+
+                    PreviousPart();
+                    testImage.color = Color.blue;
+
+                    isAutoNextPage = false;
+
+
+                }
+
+            }
+        //}
     }
 
     void LoadFirstStoryPart()

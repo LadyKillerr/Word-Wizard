@@ -75,6 +75,24 @@
     "Every day with friends, is full of fun,",
     "Ellie's happy adventures have just begun!."
   ],
-  }
+  },
+
+{
+  "id": "freddy_the_fish",
+  "story": "Freddy The Fish",
+  "sentences": [
+    "Freddy The Fish. A phonics story is told by Sunny Friends.",
+    "Freddy the fish dives in the sea's embrace,",
+    "Where Fiona, his friend, finds her place.",
+    "With playful flips and joyful hops,",
+    "They explore the ocean's hidden shops.",
+    "Together they seek food divine,",
+    "In the shimmering depths where treasures shine.",
+    "Through laughter and fun, their friendship is spun,",
+    "Fiona and Freddy, under the golden sun."
+  ],
+},
+
+
 
 ]

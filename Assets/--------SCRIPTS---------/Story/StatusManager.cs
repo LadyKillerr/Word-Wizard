@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class StatusManager : MonoBehaviour
 {
@@ -27,10 +28,16 @@ public class StatusManager : MonoBehaviour
     [SerializeField] GameObject dannyTheDogPending;
 
     [Header("EllieTheElephant Story")]
-    int ellieTheElephant;
+    int ellieTheElephantStatus;
     [SerializeField] string story5PrefName;
     [SerializeField] GameObject ellieTheElephantDone;
     [SerializeField] GameObject ellieTheElephantPending;
+
+    [Header("FreddyTheFish Story")]
+    int freddyTheFishStatus;
+    [SerializeField] string story6PrefName;
+    [SerializeField] GameObject freddyTheFishDone;
+    [SerializeField] GameObject freddyTheFishPending;
 
     private void Awake()
     {
@@ -49,23 +56,14 @@ public class StatusManager : MonoBehaviour
         checkDannyTheDog();
 
         checkEllieTheElephant();
+
+        checkFreddyTheFish();
     }
 
-
-    void Update()
+    private void checkFreddyTheFish()
     {
-        //checkCatAndTheBat();
-        //checkBennyTheBunny();
-        //checkCaseyTheCat();
-        //checkDannyTheDog();
-
-
-    }
-
-    void checkEllieTheElephant()
-    {
-        ellieTheElephant = PlayerPrefs.GetInt(story5PrefName);
-        if (ellieTheElephant == 1)
+        freddyTheFishStatus = PlayerPrefs.GetInt(story5PrefName);
+        if (freddyTheFishStatus == 1)
         {
             // 1 là đã hoàn thành
             ellieTheElephantDone.SetActive(true);
@@ -73,14 +71,41 @@ public class StatusManager : MonoBehaviour
 
 
         }
-        else if (ellieTheElephant == 2)
+        else if (freddyTheFishStatus == 2)
         {
             // 2 là đang pending
             ellieTheElephantDone.SetActive(false);
             ellieTheElephantPending.SetActive(true);
 
         }
-        else if (ellieTheElephant == 0)
+        else if (freddyTheFishStatus == 0)
+        {
+            // 0 là chưa làm j, chưa đọc chưa xem chưa chạm vào
+            ellieTheElephantDone.SetActive(false);
+            ellieTheElephantPending.SetActive(false);
+
+        }
+    }
+
+    void checkEllieTheElephant()
+    {
+        ellieTheElephantStatus = PlayerPrefs.GetInt(story5PrefName);
+        if (ellieTheElephantStatus == 1)
+        {
+            // 1 là đã hoàn thành
+            ellieTheElephantDone.SetActive(true);
+            ellieTheElephantPending.SetActive(false);
+
+
+        }
+        else if (ellieTheElephantStatus == 2)
+        {
+            // 2 là đang pending
+            ellieTheElephantDone.SetActive(false);
+            ellieTheElephantPending.SetActive(true);
+
+        }
+        else if (ellieTheElephantStatus == 0)
         {
             // 0 là chưa làm j, chưa đọc chưa xem chưa chạm vào
             ellieTheElephantDone.SetActive(false);

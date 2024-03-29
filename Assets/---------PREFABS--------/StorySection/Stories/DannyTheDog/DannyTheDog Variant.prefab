@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 174268483643615523, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_text
+      value: With crayons, he draws, colors so bright,
+      objectReference: {fileID: 0}
     - target: {fileID: 249786267636866302, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -88,6 +92,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1023070372421913467, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_text
+      value: Fetching toys with wagging sides.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1049041261070555106, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_text
+      value: Danny The Dog. A phonics story is told by Sunny Friends.
+      objectReference: {fileID: 0}
     - target: {fileID: 1300103595453756745, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -142,7 +154,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1884113212923774729, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
       propertyPath: storyId
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1884113212923774729, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
       propertyPath: audioParts.Array.size
@@ -500,6 +512,14 @@ PrefabInstance:
       propertyPath: loadingPercent
       value: 
       objectReference: {fileID: 8395841524672193407}
+    - target: {fileID: 4291220825705791037, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_text
+      value: In Danny's world, learning lights the way.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4419528850458994023, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_text
+      value: Attentive in class, his mind clear.
+      objectReference: {fileID: 0}
     - target: {fileID: 4545630830829492724, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
@@ -612,6 +632,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -6123004202851401083, guid: af723221d423f9d46bb43935cb3a6556, type: 3}
+    - target: {fileID: 5508013601407918490, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_text
+      value: With hugs he gives, spreading joy each day,
+      objectReference: {fileID: 0}
     - target: {fileID: 5891994263666346229, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -635,6 +659,10 @@ PrefabInstance:
     - target: {fileID: 5891994263666346229, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -727.125
+      objectReference: {fileID: 0}
+    - target: {fileID: 6211932805589299903, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_text
+      value: Sharing his toys, his heart full of cheer,
       objectReference: {fileID: 0}
     - target: {fileID: 6468678287773303638, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
       propertyPath: m_AnchorMax.y
@@ -663,6 +691,10 @@ PrefabInstance:
     - target: {fileID: 6590128087752668167, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
       propertyPath: m_SortingLayer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6617744768493275525, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_text
+      value: Spinning and dancing, a joyful sight.
       objectReference: {fileID: 0}
     - target: {fileID: 7012281809691278671, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
       propertyPath: m_Sprite
@@ -731,6 +763,10 @@ PrefabInstance:
     - target: {fileID: 8349255844576320553, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
       propertyPath: m_SortingLayer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391008210815672016, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_text
+      value: Danny the dog, off to school he strides,
       objectReference: {fileID: 0}
     - target: {fileID: 8814225544692817986, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
       propertyPath: m_IsActive

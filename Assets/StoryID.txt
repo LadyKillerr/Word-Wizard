@@ -11,3 +11,5 @@ Scene 4: DannyTheDog
 - storyID: 3
 Scene 5: EllieTheElephant
 - storyID: 4
+Scene 6: FreddyTheFish
+- storyID: 5

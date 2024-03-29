@@ -31,17 +31,21 @@ public class LoadScene : MonoBehaviour
     public void LoadLevel(int sceneIndex)
     {
         StartCoroutine(LoadAsynchrounously(sceneIndex));
+
+        PlayStartAudio();
     }
 
 
     public IEnumerator LoadAsynchrounously(int sceneIndex)
     {
-        yield return new WaitForSecondsRealtime(0.5f);
+        
 
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
 
         while (!operation.isDone)
         {
+            
+
             float progress = Mathf.Clamp01(operation.progress / .9f);
 
             loadingScreen.SetActive(true);
@@ -49,7 +53,7 @@ public class LoadScene : MonoBehaviour
             loadingBar.value = progress;
             loadingPercent.text = progress * 100 + "%";
 
-            
+            yield return null;
         }
     }
 

@@ -22,7 +22,7 @@ MonoBehaviour:
     m_path: Assets/Scenes/Intro.unity
   - m_enabled: 1
     m_path: Assets/Scenes/Home.unity
-  - m_enabled: 1
+  - m_enabled: 0
     m_path: Assets/Scenes/GameMenu.unity
   - m_enabled: 1
     m_path: Assets/Scenes/StoryScenes/StoryList.unity
@@ -36,6 +36,8 @@ MonoBehaviour:
     m_path: Assets/Scenes/StoryScenes/Story 4/DannyTheDog.unity
   - m_enabled: 1
     m_path: Assets/Scenes/StoryScenes/Story 5/EllieTheElephant.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/StoryScenes/Story 6/FreddyTheFish.unity
   references:
     version: 2
     RefIds:
@@ -58,7 +60,7 @@ MonoBehaviour:
         m_ExportAsGoogleAndroidProject: 0
         m_DebugSymbolLevel: 1
         m_DebugSymbolFormat: 5
-        m_CurrentDeploymentTargetId: __builtin__target_default
+        m_CurrentDeploymentTargetId: __builtin__target_all
         m_BuildType: 2
         m_BuildAppBundle: 0
         m_IPAddressToConnect: 

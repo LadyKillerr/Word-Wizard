@@ -191,11 +191,11 @@ public class QuestionManager : MonoBehaviour
             // chuyển ảnh của nút bấm sang ảnh mới
             answersButton[userAnswerIndex].GetComponent<Image>().sprite = rightAnswerSprite;
 
-            Invoke("LoadNextQuestion", delayTime);
 
 
             isAnswered = true;
             isAnswerCorrect = true;
+            Invoke("LoadNextQuestion", delayTime);
         }
         // nếu trả lời sai 
         else if (userAnswerIndex != questionsSO[currentIndex].GetCorrectAnswerIndex() && isAnswered == false)
@@ -339,11 +339,12 @@ public class QuestionManager : MonoBehaviour
             if (PlayerPrefs.GetInt(levelPrefName) == 0)
             {
                 StartCoroutine(LoadRewardPopup());
-                
 
+                congratsWindow.SetActive(false);
             }
             else if (PlayerPrefs.GetInt(levelPrefName) != 0)
             {
+                rewardWindow.SetActive(false);
                 StartCoroutine(LoadCongratsPopup());
             }
 

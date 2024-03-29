@@ -333,6 +333,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: EllieTheElephant
       objectReference: {fileID: 0}
+    - target: {fileID: 5852888057240783159, guid: 364a70449065db4458b81f803606faa9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1235289767}
+    - target: {fileID: 5852888057240783159, guid: 364a70449065db4458b81f803606faa9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayButtonClip
+      objectReference: {fileID: 0}
     - target: {fileID: 6777495483135541870, guid: 364a70449065db4458b81f803606faa9, type: 3}
       propertyPath: levelPrefName
       value: EllieTheElephant
