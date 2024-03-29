@@ -31,20 +31,13 @@ public class LoadScene : MonoBehaviour
     public void LoadLevel(int sceneIndex)
     {
         StartCoroutine(LoadAsynchrounously(sceneIndex));
-
-        //if (sceneIndex == 1 || sceneIndex == 2)
-        //{
-            PlayStartAudio();
-
     }
-//        else
-//        {
-//            PlayButtonAudio();
-//}
-//    }
+
 
     public IEnumerator LoadAsynchrounously(int sceneIndex)
     {
+        yield return new WaitForSecondsRealtime(0.5f);
+
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
 
         while (!operation.isDone)
@@ -56,7 +49,7 @@ public class LoadScene : MonoBehaviour
             loadingBar.value = progress;
             loadingPercent.text = progress * 100 + "%";
 
-            yield return null;
+            
         }
     }
 
@@ -70,32 +63,7 @@ public class LoadScene : MonoBehaviour
         gameAudio.PlayButtonClip();
     }
 
-    //public void LoadMainMenu()
-    //{
-    //    // load ra scene menu
-    //    SceneManager.LoadScene(HomeMenu);
-
-    //    //gameAudio.PlayButtonAudio();
-
-    //}
-
-    //public void StartPlayButtonSound()
-    //{
-
-    //}
-
-    //public void LoadLoadingScreen()
-    //{
-    //    SceneManager.LoadScene(LoadingScreen);
-
-    //    //gameAudio.PlayButtonAudio();
-
-    //}
-
-    //public void LoadCoreGame()
-    //{
-    //    SceneManager.LoadScene(CoreGameplay);
-    //}
+    
 
 
 }

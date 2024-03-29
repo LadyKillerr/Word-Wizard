@@ -35,7 +35,6 @@ public class StoryManager : MonoBehaviour
 
     [Header("Question time before continue")]
     [SerializeField] float delayTime = 3f;
-    [SerializeField] float delayTimeSmall = .5f;
     [SerializeField] float intersectionTime = 1.5f;
 
     [SerializeField] bool isReading;
