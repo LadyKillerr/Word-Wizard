@@ -58,7 +58,7 @@ public class QuestionManager : MonoBehaviour
     [SerializeField] float delayTimeSmall = 1f;
 
     [SerializeField] Button nextButton;
-    [SerializeField] float buttonOpacity = .5f;
+    [SerializeField] float fadedButtonOpacity = .5f;
     [SerializeField] bool isAnswered;
     [SerializeField] bool isAnswerCorrect;
 
@@ -89,7 +89,15 @@ public class QuestionManager : MonoBehaviour
 
     public void ActivatePendingStatus()
     {
-        PlayerPrefs.SetInt(levelPrefName, 2);
+        if (PlayerPrefs.GetInt(levelPrefName) == 1)
+        {
+            return;
+        }
+        else
+        {
+            PlayerPrefs.SetInt(levelPrefName, 2);
+
+        }
     }
 
     void Awake()
@@ -128,7 +136,7 @@ public class QuestionManager : MonoBehaviour
         if (!isAnswerCorrect)
         {
 
-            nextButton.GetComponent<Image>().color = new(255, 255, 255, buttonOpacity);
+            nextButton.GetComponent<Image>().color = new(255, 255, 255, fadedButtonOpacity);
         }
         else if (isAnswerCorrect)
         {
@@ -280,16 +288,16 @@ public class QuestionManager : MonoBehaviour
                 else { return; }
 
                 break;
-            //case 4:
-            //    if (!quizSectionAudio.isPlaying && answer5Audio[currentIndex] != null)
-            //    {
-            //        // chạy âm thanh đáp án của câu hỏi 4
-            //        quizSectionAudio.PlayOneShot(answer5Audio[index], answersAudioVolume);
+                //case 4:
+                //    if (!quizSectionAudio.isPlaying && answer5Audio[currentIndex] != null)
+                //    {
+                //        // chạy âm thanh đáp án của câu hỏi 4
+                //        quizSectionAudio.PlayOneShot(answer5Audio[index], answersAudioVolume);
 
-            //    }
-            //    else { return; }
+                //    }
+                //    else { return; }
 
-            //    break;
+                //    break;
                 //case 5:
                 //    if (!quizSectionAudio.isPlaying && answer6Audio[currentIndex] != null)
                 //    {
@@ -332,83 +340,37 @@ public class QuestionManager : MonoBehaviour
         }
         else if (currentIndex >= 0 && currentIndex == questionsSO.Length - 1 && isAnswerCorrect)
         {
+            nextButton.GetComponent<Image>().color = new(255, 255, 255, fadedButtonOpacity);
+
+
             // khi trả lời đúng câu hỏi cuối cùng
-            nextButton.GetComponent<Image>().color = new(255, 255, 255, buttonOpacity);
-
-
-            if (PlayerPrefs.GetInt(levelPrefName) == 0)
-            {
-                StartCoroutine(LoadRewardPopup());
-
-                congratsWindow.SetActive(false);
-            }
-            else if (PlayerPrefs.GetInt(levelPrefName) != 0)
-            {
-                rewardWindow.SetActive(false);
-                StartCoroutine(LoadCongratsPopup());
-            }
-
-
-
-
+            StartCoroutine(LoadVictorySreen());
         }
 
     }
 
-    IEnumerator LoadCongratsPopup()
+    IEnumerator LoadVictorySreen()
     {
         yield return new WaitForSeconds(delayTimeSmall);
 
-        congratsWindow.SetActive(true);
         finishLevelPE.Play();
-
         screenDarkenEffects.SetActive(true);
         audioManager.PlayCongratsClip();
-    }
 
-    IEnumerator LoadRewardPopup()
-    {
-        yield return new WaitForSeconds(delayTimeSmall);
-
-        if (!isRewarded)
+        if (!isRewarded && PlayerPrefs.GetInt(levelPrefName) != 0)
         {
-            rewardWindow.SetActive(true);
-            finishLevelPE.Play();
-
-            screenDarkenEffects.SetActive(true);
-            audioManager.PlayCongratsClip();
-
-            // Set int thành 1 ý là đã hoàn thành
-            PlayerPrefs.SetInt(levelPrefName, 1);
-
-            Debug.Log("Level Saved");
-
             isRewarded = true;
+            congratsWindow.SetActive(true);
         }
-        else if (isRewarded)
+        else if (!isRewarded && PlayerPrefs.GetInt(levelPrefName) == 0)
         {
-            rewardWindow.SetActive(false);
-            finishLevelPE.Stop();
-            isRewarded = false;
+            isRewarded = true;
+            rewardWindow.SetActive(true);
+            LoadHome();
         }
-
-
-
     }
 
-    public void HideRewardPopup()
-    {
-        if (isRewarded)
-        {
-            rewardWindow.SetActive(false);
-            isRewarded = false;
-            screenDarkenEffects.SetActive(false);
-        }
-        // LOAD RA MÀN HOME khi đã end game
-        LoadHome();
 
-        audioManager.PlayButtonClip();
-    }
 
     void LoadHome()
     {

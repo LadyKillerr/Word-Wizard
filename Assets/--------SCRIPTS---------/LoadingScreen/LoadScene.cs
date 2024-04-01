@@ -7,13 +7,6 @@ using UnityEngine.UI;
 
 public class LoadScene : MonoBehaviour
 {
-    //[Header("Game Scene Index - change this according to scene build settings")]
-    //[SerializeField] int Intro ;
-    //[SerializeField] int LoadingScreen ;
-    //[SerializeField] int HomeMenu;
-    //[SerializeField] int StoriesList;
-    //[SerializeField] int CoreGameplay;
-
     [Header("Level Loader Section")]
 
     [SerializeField] GameObject loadingScreen;
@@ -21,18 +14,19 @@ public class LoadScene : MonoBehaviour
     //[SerializeField] Image loadingBarImage; // dùng khi chị Khánh gửi chữ Loading
     [SerializeField] TextMeshProUGUI loadingPercent;
 
-    AudioManager gameAudio;
+
 
     private void Awake()
     {
-        gameAudio = FindAnyObjectByType<AudioManager>();
+
     }
 
     public void LoadLevel(int sceneIndex)
     {
+
+
         StartCoroutine(LoadAsynchrounously(sceneIndex));
 
-        PlayStartAudio();
     }
 
 
@@ -56,18 +50,6 @@ public class LoadScene : MonoBehaviour
             yield return null;
         }
     }
-
-    void PlayStartAudio()
-    {
-        gameAudio.PlayStartAudio();
-    }
-
-    void PlayButtonAudio()
-    {
-        gameAudio.PlayButtonClip();
-    }
-
     
-
 
 }

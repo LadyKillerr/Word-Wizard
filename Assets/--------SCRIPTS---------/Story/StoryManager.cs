@@ -5,6 +5,7 @@ using System.IO;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class StoryManager : MonoBehaviour
 {
@@ -59,7 +60,8 @@ public class StoryManager : MonoBehaviour
     // Swipe Handler
     Vector2 startTouchPosition;
     Vector2 endTouchPosition;
-    float swipeDistance;
+    public float swipeDistance;
+
     [SerializeField] float swipeThreshold = 200f;
 
     [Header("Auto Flip Page Function")]
@@ -67,9 +69,17 @@ public class StoryManager : MonoBehaviour
     [SerializeField] bool isAutoNextPage;
     [SerializeField] float autoFlipDelay;
 
-    [SerializeField] Image testImage;
+    //[SerializeField] Image testImage;
     public bool isCheating = false;
     // flow code: Awake sẽ là LoadFirstStoryPart, sau đó tiếp tục load part các index tiếp theo dần dần thông qua nextPart và Previous Part
+
+    [Header("Flip Page Buttons")]
+    [SerializeField] Button nextButton;
+    [SerializeField] Button backButton;
+
+    [SerializeField] float backButtonOpacity;
+    [SerializeField] float nextButtonOpacity;
+
 
     void Awake()
     {
@@ -107,20 +117,102 @@ public class StoryManager : MonoBehaviour
 
     }
 
-    void Start()
-    {
-
-    }
 
     private void Update()
     {
         AutoNextPartOnRead();
+        CheckBackButton();
+        CheckNextButton();
 
-        //if (interactiveStorySection.activeSelf)
-        //{
-            HandlerSwipeControl();
+        if (interactiveStorySection.activeSelf)
+        {
+            //kiểm tra xem có hàm touch nào được thực hiện hay không
+            if (Input.touchCount == 0) return;
 
-        //}
+            Touch touch = Input.touches[0];
+
+            //testImage.color = Color.red;
+
+            // Luu vi tri touch bat dau khi cham vao man hinh 
+            if (touch.phase == TouchPhase.Began)
+            {
+                startTouchPosition = touch.position;
+                //testImage.color = Color.red;
+
+            }
+            // kiểm tra khi touch kết thúc 
+            else if (touch.phase == TouchPhase.Ended)
+            {
+                // luu vi tri khi touch kết thúc 
+                endTouchPosition = touch.position;
+                //testImage.color = Color.white;
+
+
+                // Tính toán xem khoảng cách giữa touch bắt đầu và touch kết thúc để biết người dùng swipe về bên nào
+                swipeDistance = endTouchPosition.x - startTouchPosition.x;
+
+
+                // so sánh khoảng cách đó với swipeThreshhold để biết khoảng cách có đủ lớn không 
+                if (swipeDistance < -Mathf.Epsilon
+                    && Mathf.Abs(swipeDistance) > swipeThreshold
+                    && (!storyAudioSource.isPlaying || isCheating))
+                {
+                    //testImage.color = Color.green;
+
+                    NextPart();
+
+                    isAutoNextPage = false;
+
+                    // Chạy hàm vuốt sang trái
+                }
+                else if (swipeDistance > Mathf.Epsilon && Mathf.Abs(swipeDistance) > swipeThreshold)
+                {
+
+                    PreviousPart();
+                    //testImage.color = Color.blue;
+
+                    isAutoNextPage = false;
+
+                    // chạy hàm vuốt sang phải
+
+                }
+
+            }
+        }
+
+
+
+
+    }
+
+    void CheckBackButton()
+    {
+        if (currentIndex == 0)
+        {
+            backButton.GetComponent<Button>().interactable = false;
+            backButton.GetComponent<Image>().color = new Color(255, 255, 255, backButtonOpacity);
+        }
+        else
+        {
+            backButton.GetComponent<Button>().interactable = true;
+            backButton.GetComponent<Image>().color = new Color(255, 255, 255, 255);
+        }
+    }
+
+    void CheckNextButton()
+    {
+        if ( storyAudioSource.isPlaying || !isCheating)
+        {
+            nextButton.GetComponent<Image>().color = new Color(255, 255, 255, nextButtonOpacity);
+            nextButton.GetComponent<Button>().interactable = false;
+        }
+        else
+        {
+            nextButton.GetComponent<Button>().interactable = true;
+            nextButton.GetComponent<Image>().color = new Color(255, 255, 255, 255);
+
+
+        }
 
     }
 
@@ -142,6 +234,7 @@ public class StoryManager : MonoBehaviour
         Debug.Log("Auto Flip part on page activated");
         if (isAutoNextPage && !storyAudioSource.isPlaying)
         {
+            Debug.Log("Tự động sang trang");
             NextPart();
         }
 
@@ -155,68 +248,6 @@ public class StoryManager : MonoBehaviour
     public bool GetIsAutoNext()
     {
         return isAutoNextPage;
-    }
-
-    // xử lý vuốt để qua màn
-    void HandlerSwipeControl()
-    {
-        
-        //if (interactiveStorySection.activeSelf)
-        //{
-
-
-            // kiểm tra xem có hàm touch nào được thực hiện hay không
-            //if (Input.touchCount == 0) return;
-
-            Touch touch = Input.GetTouch(0);
-
-            testImage.color = Color.red;
-
-            Debug.Log("hihihihih");
-            // Luu vi tri touch bat dau khi cham vao man hinh 
-            if (touch.phase == TouchPhase.Began)
-            {
-                startTouchPosition = touch.position;
-                testImage.color = Color.red;
-
-            }
-            // kiểm tra khi touch kết thúc 
-            else if (touch.phase == TouchPhase.Ended)
-            {
-                // luu vi tri khi touch kết thúc 
-                endTouchPosition = touch.position;
-                testImage.color = Color.white;
-
-
-                // Tính toán xem khoảng cách giữa touch bắt đầu và touch kết thúc để biết người dùng swipe về bên nào
-                swipeDistance = endTouchPosition.x - startTouchPosition.x;
-
-
-                // so sánh khoảng cách đó với swipeThreshhold để biết khoảng cách có đủ lớn không 
-                if (swipeDistance < -Mathf.Epsilon
-                    && Mathf.Abs(swipeDistance) > swipeThreshold
-                    && (!storyAudioSource.isPlaying
-                    || isCheating))
-                {
-                    testImage.color = Color.green;
-
-                    NextPart();
-
-                    isAutoNextPage = false;
-                }
-                else if (swipeDistance > Mathf.Epsilon && Mathf.Abs(swipeDistance) > swipeThreshold)
-                {
-
-                    PreviousPart();
-                    testImage.color = Color.blue;
-
-                    isAutoNextPage = false;
-
-
-                }
-
-            }
-        //}
     }
 
     void LoadFirstStoryPart()
@@ -313,8 +344,6 @@ public class StoryManager : MonoBehaviour
 
         if (currentIndex > 0 && currentIndex <= storyParts.Length - 1)
         {
-
-            Debug.Log("Đang load PREVIOUS Part");
 
             // ẩn hình với truyện hiện tại đi
             HideParts();

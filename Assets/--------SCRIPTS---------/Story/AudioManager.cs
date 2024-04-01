@@ -41,11 +41,11 @@ public class AudioManager : MonoBehaviour
         {
             DontDestroyOnLoad(gameObject);
         }
+        gameAudio = GetComponent<AudioSource>();
     }
 
     void Start()
     {
-        gameAudio = GetComponent<AudioSource>();
 
         // lấy ra vị trí của camera để làm điểm phát audio
         // cameraPosition = Camera.main.transform.position;
@@ -55,11 +55,13 @@ public class AudioManager : MonoBehaviour
     // hàm dùng chung để chạy tất cả các clip âm thanh được lưu ở đây
     void PlayAudio(AudioClip clip, float volume)
     {
-        if (!gameAudio.isPlaying && gameAudio.enabled == true)
+        if (gameAudio != null )
         {
             gameAudio.PlayOneShot(clip, volume);
 
         }
+
+
     }
 
     public void PlayStartAudio()

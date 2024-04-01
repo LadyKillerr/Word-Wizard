@@ -119,67 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &7921003
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8049477708003762280, guid: b872e7da7b75d364ea5b231f8bad9eac, type: 3}
-      propertyPath: m_Name
-      value: MusicPlayer
-      objectReference: {fileID: 0}
-    - target: {fileID: 8049477708003762280, guid: b872e7da7b75d364ea5b231f8bad9eac, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8970261392319137663, guid: b872e7da7b75d364ea5b231f8bad9eac, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8970261392319137663, guid: b872e7da7b75d364ea5b231f8bad9eac, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8970261392319137663, guid: b872e7da7b75d364ea5b231f8bad9eac, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8970261392319137663, guid: b872e7da7b75d364ea5b231f8bad9eac, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8970261392319137663, guid: b872e7da7b75d364ea5b231f8bad9eac, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8970261392319137663, guid: b872e7da7b75d364ea5b231f8bad9eac, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8970261392319137663, guid: b872e7da7b75d364ea5b231f8bad9eac, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8970261392319137663, guid: b872e7da7b75d364ea5b231f8bad9eac, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8970261392319137663, guid: b872e7da7b75d364ea5b231f8bad9eac, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8970261392319137663, guid: b872e7da7b75d364ea5b231f8bad9eac, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b872e7da7b75d364ea5b231f8bad9eac, type: 3}
 --- !u!1 &147218562
 GameObject:
   m_ObjectHideFlags: 0
@@ -730,7 +669,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 50ccd6892a83e344f8b53d0c172da773, type: 3}
+  m_Sprite: {fileID: 21300000, guid: de36cf1303367a847a694e5fb488caca, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -924,7 +863,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 804789874}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d228efeedb148144a57468e2f278c48, type: 3}
   m_Name: 
@@ -1030,7 +969,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1598831156}
         m_TargetAssemblyTypeName: LoadSettingPopup, Assembly-CSharp
-        m_MethodName: ToggleButtonAudio
+        m_MethodName: HideSettingPopup
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1042,7 +981,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1598831156}
         m_TargetAssemblyTypeName: LoadSettingPopup, Assembly-CSharp
-        m_MethodName: HideSettingPopup
+        m_MethodName: ToggleButtonAudio
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2287,7 +2226,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 50ccd6892a83e344f8b53d0c172da773, type: 3}
+  m_Sprite: {fileID: 21300000, guid: de36cf1303367a847a694e5fb488caca, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3835,7 +3774,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3156033875615701390, guid: ac62527c941b7204ebe2d7ac2ac0cd74, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3518955357863942397, guid: ac62527c941b7204ebe2d7ac2ac0cd74, type: 3}
       propertyPath: startVolume
@@ -4810,7 +4749,6 @@ SceneRoots:
   - {fileID: 4360321078701445227}
   - {fileID: 1532510839}
   - {fileID: 1837089690068042239}
-  - {fileID: 7921003}
   - {fileID: 804789876}
   - {fileID: 1199322168}
   - {fileID: 1598831157}

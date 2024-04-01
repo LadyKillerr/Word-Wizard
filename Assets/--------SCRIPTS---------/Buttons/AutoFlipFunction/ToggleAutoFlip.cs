@@ -6,12 +6,12 @@ public class ToggleAutoFlip : MonoBehaviour
     StoryManager storyManager;
     Image autoButtonImage;
 
-
     [SerializeField] Sprite pauseAutoSprite;
     [SerializeField] Sprite continueAutoSprite;
 
     private void Awake()
     {
+
         autoButtonImage = GetComponent<Image>();
 
         storyManager = FindAnyObjectByType<StoryManager>();
@@ -34,6 +34,7 @@ public class ToggleAutoFlip : MonoBehaviour
 
     public void ToggleAutoNext()
     {
+
         storyManager.ToggleAutoNextPart();
         Debug.Log("đã chuyển đổi isAutoNextPart");
     }

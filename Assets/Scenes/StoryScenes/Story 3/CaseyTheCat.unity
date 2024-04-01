@@ -317,17 +317,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2725823694618931271, guid: c02169f9a7aa70a4d8610c256a3441e0, type: 3}
   m_PrefabInstance: {fileID: 712373549130711165}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1450738453 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8835323555893537771, guid: c02169f9a7aa70a4d8610c256a3441e0, type: 3}
-  m_PrefabInstance: {fileID: 712373549130711165}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 780d374ed4ddfdc48a01f2539d7bcf05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1651200216 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 675090974179637358, guid: c02169f9a7aa70a4d8610c256a3441e0, type: 3}
@@ -557,16 +546,24 @@ PrefabInstance:
       value: LoadAnswerAudio
       objectReference: {fileID: 0}
     - target: {fileID: 1664763538630300946, guid: c02169f9a7aa70a4d8610c256a3441e0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1664763538630300946, guid: c02169f9a7aa70a4d8610c256a3441e0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1664763538630300946, guid: c02169f9a7aa70a4d8610c256a3441e0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1450738453}
+      objectReference: {fileID: 712373549130711166}
     - target: {fileID: 1664763538630300946, guid: c02169f9a7aa70a4d8610c256a3441e0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 712373549130711166}
     - target: {fileID: 1664763538630300946, guid: c02169f9a7aa70a4d8610c256a3441e0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PlayStartAudio
+      value: ActivatePendingStatus
       objectReference: {fileID: 0}
     - target: {fileID: 1664763538630300946, guid: c02169f9a7aa70a4d8610c256a3441e0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -575,6 +572,10 @@ PrefabInstance:
     - target: {fileID: 1664763538630300946, guid: c02169f9a7aa70a4d8610c256a3441e0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: QuestionManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1664763538630300946, guid: c02169f9a7aa70a4d8610c256a3441e0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2085518108287953341, guid: c02169f9a7aa70a4d8610c256a3441e0, type: 3}
       propertyPath: m_Name

@@ -35,7 +35,7 @@ public class ToggleLikedStory : MonoBehaviour
         {
             heartsImage.SetActive(true);
 
-            gameAudio.PlayButtonClip();
+            //gameAudio.PlayButtonClip();
 
             // kích hoạt tag cho thấy đã like bộ truyện này
             PlayerPrefs.SetInt(levelPrefLikedName, 1);
