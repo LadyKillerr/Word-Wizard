@@ -13,3 +13,7 @@ Scene 5: EllieTheElephant
 - storyID: 4
 Scene 6: FreddyTheFish
 - storyID: 5
+Scene 7: GinaTheGoose
+- storyID: 6
+Scene 8: HenryTheHedgehog
+- storyID: 7

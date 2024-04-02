@@ -360,7 +360,11 @@ public class StoryManager : MonoBehaviour
             // giảm index đi để lùi trang truyện và trang tranh về trang trước 
             currentIndex -= 1;
 
-            audioManager.PlayPageTurningClip();
+            if (audioManager != null)
+            {
+                audioManager.PlayPageTurningClip();
+
+            }
 
             // load ra trang tương ứng với index mới trừ đó
             LoadParts();

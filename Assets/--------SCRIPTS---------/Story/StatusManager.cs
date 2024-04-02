@@ -40,6 +40,12 @@ public class StatusManager : MonoBehaviour
     [SerializeField] GameObject freddyTheFishDone;
     [SerializeField] GameObject freddyTheFishPending;
 
+    [Header("GinaTheGoose Story")]
+    int ginaTheGooseStatus;
+    [SerializeField] string story7PrefName;
+    [SerializeField] GameObject ginaTheGooseDone;
+    [SerializeField] GameObject ginaTheGoosePending;
+
     private void Awake()
     {
 
@@ -59,11 +65,32 @@ public class StatusManager : MonoBehaviour
         CheckEllieTheElephant();
 
         CheckFreddyTheFish();
+
+        CheckGinaTheGoose();
     }
 
-    private void Update()
+    private void CheckGinaTheGoose()
     {
+        ginaTheGooseStatus = PlayerPrefs.GetInt(story7PrefName);
 
+        switch (ginaTheGooseStatus)
+        {
+            case 0:
+                // 0 là chưa làm j, chưa đọc chưa xem chưa chạm vào
+                ginaTheGooseDone.SetActive(false);
+                ginaTheGoosePending.SetActive(false);
+                break;
+            case 1:
+                // 1 là đã hoàn thành, đã đọc và nhận thưởng xong
+                ginaTheGooseDone.SetActive(true);
+                ginaTheGoosePending.SetActive(false);
+                break;
+            case 2:
+                // 2 là đang pending, đã đọc nhưng vẫn còn dở dang và không đọc tới cuối 
+                ginaTheGooseDone.SetActive(false);
+                ginaTheGoosePending.SetActive(true);
+                break;
+        }
     }
 
     private void CheckFreddyTheFish()

@@ -38,6 +38,8 @@ MonoBehaviour:
     m_path: Assets/Scenes/StoryScenes/Story 5/EllieTheElephant.unity
   - m_enabled: 1
     m_path: Assets/Scenes/StoryScenes/Story 6/FreddyTheFish.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/StoryScenes/Story 7/GinaTheGoose.unity
   references:
     version: 2
     RefIds:
