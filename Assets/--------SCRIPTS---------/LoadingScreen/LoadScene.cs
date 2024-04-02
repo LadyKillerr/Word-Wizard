@@ -14,16 +14,19 @@ public class LoadScene : MonoBehaviour
     //[SerializeField] Image loadingBarImage; // dùng khi chị Khánh gửi chữ Loading
     [SerializeField] TextMeshProUGUI loadingPercent;
 
+    AudioManager audioManager;
 
-
-    private void Awake()
+    private void Start()
     {
-
+        audioManager = FindAnyObjectByType<AudioManager>();
     }
 
     public void LoadLevel(int sceneIndex)
     {
-
+        if (audioManager != null)
+        {
+            audioManager.PlayStartAudio();
+        }
 
         StartCoroutine(LoadAsynchrounously(sceneIndex));
 

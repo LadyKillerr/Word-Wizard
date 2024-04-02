@@ -333,6 +333,10 @@ PrefabInstance:
       value: CaseyTheCat
       objectReference: {fileID: 0}
     - target: {fileID: 2882006760164207894, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: delayTimeSmall
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882006760164207894, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
       propertyPath: questionsSO.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -572,6 +576,42 @@ PrefabInstance:
       propertyPath: m_text
       value: Casey loves her mom very much.
       objectReference: {fileID: 0}
+    - target: {fileID: 4327680679092935994, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4327680679092935994, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4327680679092935994, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 931012401928578366}
+    - target: {fileID: 4327680679092935994, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2544173124306609322}
+    - target: {fileID: 4327680679092935994, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ActivatePendingStatus
+      objectReference: {fileID: 0}
+    - target: {fileID: 4327680679092935994, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: LoadLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4327680679092935994, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: QuestionManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4327680679092935994, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: LoadScene, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4327680679092935994, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4419528850458994023, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
       propertyPath: m_text
       value: Helping her mom is sweet.
@@ -736,6 +776,42 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -4944068189733832494, guid: 5ba94ac718adc9b49ae0da10847f3c9c, type: 3}
+    - target: {fileID: 8316662667386527289, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8316662667386527289, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8316662667386527289, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 931012401928578366}
+    - target: {fileID: 8316662667386527289, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2544173124306609322}
+    - target: {fileID: 8316662667386527289, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ActivatePendingStatus
+      objectReference: {fileID: 0}
+    - target: {fileID: 8316662667386527289, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: LoadLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 8316662667386527289, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: QuestionManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8316662667386527289, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: LoadScene, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8316662667386527289, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8349255844576320553, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
       propertyPath: m_SortingLayer
       value: 0
@@ -768,6 +844,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2837332749643292921, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
   m_PrefabInstance: {fileID: 3104509805284493352}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &931012401928578366 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2882006760164207894, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+  m_PrefabInstance: {fileID: 3104509805284493352}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7dfbca3cbef87a4d9671068e65ae80a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &931874973749746853 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2881107912713639053, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
@@ -793,6 +880,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3873427645010794091, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
   m_PrefabInstance: {fileID: 3104509805284493352}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2544173124306609322 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 602313303604538498, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+  m_PrefabInstance: {fileID: 3104509805284493352}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79f95cfef57922e45b2c664cdef259ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2564824242195390570 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 616282001601652802, guid: 9dcd445763820094e82799fa1932f74d, type: 3}

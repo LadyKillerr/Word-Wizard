@@ -279,7 +279,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1532189416
+--- !u!1001 &2043946297
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -367,14 +367,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1653691582190799886, guid: 7ac45802ff71754448cc75b2c8681075, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -135.17493
-      objectReference: {fileID: 0}
-    - target: {fileID: 1653691582190799886, guid: 7ac45802ff71754448cc75b2c8681075, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 59.60498
-      objectReference: {fileID: 0}
     - target: {fileID: 4551123833693966137, guid: 7ac45802ff71754448cc75b2c8681075, type: 3}
       propertyPath: m_Name
       value: CatAndTheBat
@@ -394,4 +386,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 1319636756}
   - {fileID: 1056357421}
-  - {fileID: 1532189416}
+  - {fileID: 2043946297}

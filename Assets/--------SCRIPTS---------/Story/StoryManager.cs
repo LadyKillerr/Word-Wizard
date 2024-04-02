@@ -54,7 +54,7 @@ public class StoryManager : MonoBehaviour
 
     // Components
     AudioSource storyAudioSource;
-    AudioManager gameAudioManager;
+    AudioManager audioManager;
     [SerializeField] QuestionManager questionManager;
 
     // Swipe Handler
@@ -85,7 +85,7 @@ public class StoryManager : MonoBehaviour
     {
 
 
-        gameAudioManager = FindAnyObjectByType<AudioManager>();
+        audioManager = FindAnyObjectByType<AudioManager>();
 
         storyAudioSource = GetComponent<AudioSource>();
 
@@ -201,7 +201,7 @@ public class StoryManager : MonoBehaviour
 
     void CheckNextButton()
     {
-        if ( storyAudioSource.isPlaying || !isCheating)
+        if (storyAudioSource.isPlaying || !isCheating)
         {
             nextButton.GetComponent<Image>().color = new Color(255, 255, 255, nextButtonOpacity);
             nextButton.GetComponent<Button>().interactable = false;
@@ -231,7 +231,7 @@ public class StoryManager : MonoBehaviour
     {
         yield return new WaitForSeconds(delayTime);
 
-        Debug.Log("Auto Flip part on page activated");
+
         if (isAutoNextPage && !storyAudioSource.isPlaying)
         {
             Debug.Log("Tự động sang trang");
@@ -309,7 +309,11 @@ public class StoryManager : MonoBehaviour
 
             currentIndex += 1;
 
-            gameAudioManager.PlayPageTurningClip();
+            if (audioManager != null)
+            {
+                audioManager.PlayPageTurningClip();
+
+            }
 
             // tăng index lên sau khi đã ẩn hình với ảnh hiện tại đi
             LoadParts();
@@ -327,7 +331,11 @@ public class StoryManager : MonoBehaviour
             // ẩn hết màn hình câu hỏi đi 
             interactiveStorySection.SetActive(false);
 
-            gameAudioManager.PlayPageTurningClip();
+            if (audioManager != null)
+            {
+                audioManager.PlayPageTurningClip();
+
+            }
 
             // bật intersection
             ToggleIntersection();
@@ -352,7 +360,7 @@ public class StoryManager : MonoBehaviour
             // giảm index đi để lùi trang truyện và trang tranh về trang trước 
             currentIndex -= 1;
 
-            gameAudioManager.PlayPageTurningClip();
+            audioManager.PlayPageTurningClip();
 
             // load ra trang tương ứng với index mới trừ đó
             LoadParts();

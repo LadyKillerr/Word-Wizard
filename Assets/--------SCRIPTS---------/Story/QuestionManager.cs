@@ -72,13 +72,12 @@ public class QuestionManager : MonoBehaviour
 
     // Components that are hidden
     AudioSource quizSectionAudio;
-    LoadScene gameSceneLoader;
+
     AudioManager audioManager;
 
     [SerializeField] GameObject congratsWindow;
     [SerializeField] GameObject rewardWindow;
 
-    [SerializeField] int gameHomeIndex = 1;
     [SerializeField] bool isRewarded;
 
 
@@ -110,15 +109,6 @@ public class QuestionManager : MonoBehaviour
 
         congratsWindow.SetActive(false);
         rewardWindow.SetActive(false);
-
-        // k can thiet
-        //for ( int i = 0; i < gameQuestion.Length; i++)
-        //{
-        //    // in ra tiêu đề câu hỏi trong phần question
-        //    questionsSO[i].GetComponent<TextMeshProUGUI>().text = gameQuestion[i].q;
-        //}
-
-        gameSceneLoader = FindAnyObjectByType<LoadScene>();
     }
 
     private void Start()
@@ -203,7 +193,7 @@ public class QuestionManager : MonoBehaviour
 
             isAnswered = true;
             isAnswerCorrect = true;
-            Invoke("LoadNextQuestion", delayTime);
+            Invoke(nameof(LoadNextQuestion), delayTime);
         }
         // nếu trả lời sai 
         else if (userAnswerIndex != questionsSO[currentIndex].GetCorrectAnswerIndex() && isAnswered == false)
@@ -288,26 +278,7 @@ public class QuestionManager : MonoBehaviour
                 else { return; }
 
                 break;
-                //case 4:
-                //    if (!quizSectionAudio.isPlaying && answer5Audio[currentIndex] != null)
-                //    {
-                //        // chạy âm thanh đáp án của câu hỏi 4
-                //        quizSectionAudio.PlayOneShot(answer5Audio[index], answersAudioVolume);
-
-                //    }
-                //    else { return; }
-
-                //    break;
-                //case 5:
-                //    if (!quizSectionAudio.isPlaying && answer6Audio[currentIndex] != null)
-                //    {
-                //        // chạy âm thanh đáp án của câu hỏi 5
-                //        quizSectionAudio.PlayOneShot(answer6Audio[index], answersAudioVolume);
-
-                //    }
-                //    else { return; }
-
-                //    break;
+                
 
 
 
@@ -357,32 +328,29 @@ public class QuestionManager : MonoBehaviour
         screenDarkenEffects.SetActive(true);
         audioManager.PlayCongratsClip();
 
-        if (!isRewarded && PlayerPrefs.GetInt(levelPrefName) != 0)
+        // kiểm tra trong player pref nếu level hiện tại có status là hoàn thành (== 1)
+        if (!isRewarded && PlayerPrefs.GetInt(levelPrefName) == 1)
         {
             isRewarded = true;
+
+            // chạy màn chúc mừng (không cộng điểm)
             congratsWindow.SetActive(true);
+
+            rewardWindow.SetActive(false);
         }
-        else if (!isRewarded && PlayerPrefs.GetInt(levelPrefName) == 0)
+        //kiểm tra trong player pref nếu level hiện tại có status là chưa hoàn thành(0 hoặc 2)
+        else if (!isRewarded && PlayerPrefs.GetInt(levelPrefName) != 1)
         {
             isRewarded = true;
             rewardWindow.SetActive(true);
-            LoadHome();
+            congratsWindow.SetActive(false);
+
+            // tang sao cho nguoi choi
+            playerProgress.SavePlayerData("playerStars", starsReward);
+
+            // lưu vào biến là đã hoàn thành
+            PlayerPrefs.SetInt(levelPrefName, 1);
         }
-    }
-
-
-
-    void LoadHome()
-    {
-
-
-        gameSceneLoader.LoadLevel(gameHomeIndex);
-
-        playerProgress.SavePlayerData("playerStars", starsReward);
-
-        Debug.Log("Testing effective");
-
-
     }
 
     public void LoadPreviousQuestions()
@@ -419,7 +387,7 @@ public class QuestionManager : MonoBehaviour
 
     IEnumerator ResetIsAnswered()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(delayTimeSmall);
 
         isAnswered = false;
     }

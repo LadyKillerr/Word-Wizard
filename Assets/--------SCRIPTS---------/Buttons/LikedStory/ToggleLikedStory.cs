@@ -13,7 +13,7 @@ public class ToggleLikedStory : MonoBehaviour
 
     void Awake()
     {
-        gameAudio = FindAnyObjectByType<AudioManager>();    
+        gameAudio = FindAnyObjectByType<AudioManager>();
     }
 
     public void ToggleHeartsImage()
@@ -23,7 +23,11 @@ public class ToggleLikedStory : MonoBehaviour
         {
             heartsImage.SetActive(false);
 
-            gameAudio.PlayButtonClip();
+            if (gameAudio != null)
+            {
+                gameAudio.PlayButtonClip();
+
+            }
 
             // kích hoạt tín hiệu cho thấy đã bỏ like bộ truyện này
             PlayerPrefs.SetInt(levelPrefLikedName, 0);
@@ -35,7 +39,11 @@ public class ToggleLikedStory : MonoBehaviour
         {
             heartsImage.SetActive(true);
 
-            //gameAudio.PlayButtonClip();
+            if (gameAudio != null)
+            {
+                gameAudio.PlayButtonClip();
+
+            }
 
             // kích hoạt tag cho thấy đã like bộ truyện này
             PlayerPrefs.SetInt(levelPrefLikedName, 1);

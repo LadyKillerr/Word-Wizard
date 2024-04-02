@@ -5,18 +5,26 @@ public class AudioGetter : MonoBehaviour
     AudioManager audioManager;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         audioManager = FindAnyObjectByType<AudioManager>();
     }
-    
+
     public void PlayButtonClip()
     {
-        audioManager.PlayButtonClip();
+        if (audioManager != null)
+        {
+            audioManager.PlayButtonClip();
+
+        }
     }
 
     public void PlayStartClip()
     {
-        audioManager.PlayStartAudio();
+        if (audioManager != null)
+        {
+            audioManager.PlayStartAudio();
+
+        }
     }
 }

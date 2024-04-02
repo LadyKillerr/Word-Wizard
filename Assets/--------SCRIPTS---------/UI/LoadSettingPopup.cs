@@ -50,16 +50,18 @@ public class LoadSettingPopup : MonoBehaviour
 
     private void Start()
     {
-        CheckAudioButtonStatus();
-        
+        if (gameMusic != null)
+        {
+            CheckAudioButtonStatus();
+
+        }
+
 
     }
 
     void Update()
     {
-        // hàm update là không càn thiết trong trường hợp sử dụng chay void
-        //HideDevingNoti();
-        //ShowDevingNoti();
+
 
     }
 
@@ -155,7 +157,7 @@ public class LoadSettingPopup : MonoBehaviour
             gameMusic.GetComponent<AudioSource>().UnPause();
             musicOn = true;
             musicButton.GetComponent<Image>().sprite = activatedMusicButtonSprite;
-            Debug.Log("Da bat am nhac di r");
+            Debug.Log("Da bat am nhac len r");
 
         }
     }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class StatusManager : MonoBehaviour
@@ -47,172 +48,170 @@ public class StatusManager : MonoBehaviour
 
     void Start()
     {
-        checkCatAndTheBat();
+        CheckCatAndTheBat();
 
-        checkBennyTheBunny();
+        CheckBennyTheBunny();
 
-        checkCaseyTheCat();
+        CheckCaseyTheCat();
 
-        checkDannyTheDog();
+        CheckDannyTheDog();
 
-        checkEllieTheElephant();
+        CheckEllieTheElephant();
 
-        checkFreddyTheFish();
+        CheckFreddyTheFish();
     }
 
-    private void checkFreddyTheFish()
+    private void Update()
     {
-        freddyTheFishStatus = PlayerPrefs.GetInt(story5PrefName);
-        if (freddyTheFishStatus == 1)
+
+    }
+
+    private void CheckFreddyTheFish()
+    {
+        freddyTheFishStatus = PlayerPrefs.GetInt(story6PrefName);
+
+        switch (freddyTheFishStatus)
         {
-            // 1 là đã hoàn thành
-            ellieTheElephantDone.SetActive(true);
-            ellieTheElephantPending.SetActive(false);
-
-
-        }
-        else if (freddyTheFishStatus == 2)
-        {
-            // 2 là đang pending
-            ellieTheElephantDone.SetActive(false);
-            ellieTheElephantPending.SetActive(true);
-
-        }
-        else if (freddyTheFishStatus == 0)
-        {
-            // 0 là chưa làm j, chưa đọc chưa xem chưa chạm vào
-            ellieTheElephantDone.SetActive(false);
-            ellieTheElephantPending.SetActive(false);
-
+            case 0:
+                // 0 là chưa làm j, chưa đọc chưa xem chưa chạm vào
+                freddyTheFishDone.SetActive(false);
+                freddyTheFishPending.SetActive(false);
+                break;
+            case 1:
+                // 1 là đã hoàn thành, đã đọc và nhận thưởng xong
+                freddyTheFishDone.SetActive(true);
+                freddyTheFishPending.SetActive(false);
+                break;
+            case 2:
+                // 2 là đang pending, đã đọc nhưng vẫn còn dở dang và không đọc tới cuối 
+                freddyTheFishDone.SetActive(false);
+                freddyTheFishPending.SetActive(true);
+                break;
         }
     }
 
-    void checkEllieTheElephant()
+    void CheckEllieTheElephant()
     {
         ellieTheElephantStatus = PlayerPrefs.GetInt(story5PrefName);
-        if (ellieTheElephantStatus == 1)
+
+        switch (ellieTheElephantStatus)
         {
-            // 1 là đã hoàn thành
-            ellieTheElephantDone.SetActive(true);
-            ellieTheElephantPending.SetActive(false);
-
-
-        }
-        else if (ellieTheElephantStatus == 2)
-        {
-            // 2 là đang pending
-            ellieTheElephantDone.SetActive(false);
-            ellieTheElephantPending.SetActive(true);
-
-        }
-        else if (ellieTheElephantStatus == 0)
-        {
-            // 0 là chưa làm j, chưa đọc chưa xem chưa chạm vào
-            ellieTheElephantDone.SetActive(false);
-            ellieTheElephantPending.SetActive(false);
-
+            case 0:
+                // 0 là chưa làm j, chưa đọc chưa xem chưa chạm vào
+                ellieTheElephantDone.SetActive(false);
+                ellieTheElephantPending.SetActive(false);
+                break;
+            case 1:
+                // 1 là đã hoàn thành, đã đọc và nhận thưởng xong
+                ellieTheElephantDone.SetActive(true);
+                ellieTheElephantPending.SetActive(false);
+                break;
+            case 2:
+                // 2 là đang pending, đã đọc nhưng vẫn còn dở dang và không đọc tới cuối 
+                ellieTheElephantDone.SetActive(false);
+                ellieTheElephantPending.SetActive(true);
+                break;
         }
     }
 
-    void checkCatAndTheBat()
-    {
-        catAndBatStatus = PlayerPrefs.GetInt(story1PrefName);
-        if (catAndBatStatus == 1)
-        {
-            // 1 là đã hoàn thành
-            catAndBatDone.SetActive(true);
-            catAndBatPending.SetActive(false);
-
-
-        }
-        else if (catAndBatStatus == 2)
-        {
-            // 2 là đang pending
-            catAndBatDone.SetActive(false);
-            catAndBatPending.SetActive(true);
-
-        }
-        else if (catAndBatStatus == 0)
-        {
-            // 0 là chưa làm j, chưa đọc chưa xem chưa chạm vào
-            catAndBatDone.SetActive(false);
-            catAndBatPending.SetActive(false);
-
-        }
-    }
-
-    void checkBennyTheBunny()
-    {
-        bennyTheBunnyStatus = PlayerPrefs.GetInt(story1PrefName);
-        if (bennyTheBunnyStatus == 1)
-        {
-            bennyBunnyDone.SetActive(true);
-            bennyBunnyPending.SetActive(false);
-
-
-        }
-        else if (bennyTheBunnyStatus == 2)
-        {
-            bennyBunnyDone.SetActive(false);
-            bennyBunnyPending.SetActive(true);
-
-        }
-        else if (bennyTheBunnyStatus == 0)
-        {
-            bennyBunnyDone.SetActive(false);
-            bennyBunnyPending.SetActive(false);
-
-        }
-    }
-
-    void checkCaseyTheCat()
-    {
-        caseyTheCatStatus = PlayerPrefs.GetInt(story3PrefName);
-        if (caseyTheCatStatus == 1)
-        {
-            caseyTheCatDone.SetActive(true);
-            caseyTheCatPending.SetActive(false);
-
-
-        }
-        else if (caseyTheCatStatus == 2)
-        {
-            caseyTheCatDone.SetActive(false);
-            caseyTheCatPending.SetActive(true);
-
-        }
-        else if (caseyTheCatStatus == 0)
-        {
-            bennyBunnyDone.SetActive(false);
-            bennyBunnyPending.SetActive(false);
-
-        }
-    }
-
-    void checkDannyTheDog()
+    void CheckDannyTheDog()
     {
         dannyTheDogStatus = PlayerPrefs.GetInt(story4PrefName);
-        if (catAndBatStatus == 1)
+
+        switch (dannyTheDogStatus)
         {
-            // 1 là đã hoàn thành
-            dannyTheDogDone.SetActive(true);
-            dannyTheDogPending.SetActive(false);
-
-
+            case 0:
+                // 0 là chưa làm j, chưa đọc chưa xem chưa chạm vào
+                dannyTheDogDone.SetActive(false);
+                dannyTheDogPending.SetActive(false);
+                break;
+            case 1:
+                // 1 là đã hoàn thành, đã đọc và nhận thưởng xong
+                dannyTheDogDone.SetActive(true);
+                dannyTheDogPending.SetActive(false);
+                break;
+            case 2:
+                // 2 là đang pending, đã đọc nhưng vẫn còn dở dang và không đọc tới cuối 
+                dannyTheDogDone.SetActive(false);
+                dannyTheDogPending.SetActive(true);
+                break;
         }
-        else if (dannyTheDogStatus == 2)
-        {
-            // 2 là đang pending
-            dannyTheDogDone.SetActive(false);
-            dannyTheDogPending.SetActive(true);
 
-        }
-        else if (dannyTheDogStatus == 0)
-        {
-            // 0 là chưa làm j, chưa đọc chưa xem chưa chạm vào
-            dannyTheDogDone.SetActive(false);
-            dannyTheDogPending.SetActive(false);
+    }
 
+    void CheckCaseyTheCat()
+    {
+        caseyTheCatStatus = PlayerPrefs.GetInt(story3PrefName);
+
+        switch (caseyTheCatStatus)
+        {
+            case 0:
+                // 0 là chưa làm j, chưa đọc chưa xem chưa chạm vào
+                caseyTheCatDone.SetActive(false);
+                caseyTheCatPending.SetActive(false);
+                break;
+            case 1:
+                // 1 là đã hoàn thành, đã đọc và nhận thưởng xong
+                caseyTheCatDone.SetActive(true);
+                caseyTheCatPending.SetActive(false);
+                break;
+            case 2:
+                // 2 là đang pending, đã đọc nhưng vẫn còn dở dang và không đọc tới cuối 
+                caseyTheCatDone.SetActive(false);
+                caseyTheCatPending.SetActive(true);
+                break;
         }
     }
+
+    void CheckBennyTheBunny()
+    {
+        bennyTheBunnyStatus = PlayerPrefs.GetInt(story2PrefName);
+
+        switch (bennyTheBunnyStatus)
+        {
+            case 0:
+                // 0 là chưa làm j, chưa đọc chưa xem chưa chạm vào
+                bennyBunnyDone.SetActive(false);
+                bennyBunnyPending.SetActive(false);
+                break;
+            case 1:
+                // 1 là đã hoàn thành, đã đọc và nhận thưởng xong
+                bennyBunnyDone.SetActive(true);
+                bennyBunnyPending.SetActive(false);
+                break;
+            case 2:
+                // 2 là đang pending, đã đọc nhưng vẫn còn dở dang và không đọc tới cuối 
+                bennyBunnyDone.SetActive(false);
+                bennyBunnyPending.SetActive(true);
+                break;
+        }
+    }
+
+    void CheckCatAndTheBat()
+    {
+        catAndBatStatus = PlayerPrefs.GetInt(story1PrefName);
+
+        switch (catAndBatStatus)
+        {
+            case 0:
+                // 0 là chưa làm j, chưa đọc chưa xem chưa chạm vào
+                catAndBatDone.SetActive(false);
+                catAndBatPending.SetActive(false);
+                break;
+            case 1:
+                // 1 là đã hoàn thành, đã đọc và nhận thưởng xong
+                catAndBatDone.SetActive(true);
+                catAndBatPending.SetActive(false);
+                break;
+            case 2:
+                // 2 là đang pending, đã đọc nhưng vẫn còn dở dang và không đọc tới cuối 
+                catAndBatDone.SetActive(false);
+                catAndBatPending.SetActive(true);
+                break;
+        }
+    }
+
+    
+
+    
 }
