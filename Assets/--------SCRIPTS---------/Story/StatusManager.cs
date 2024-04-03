@@ -5,46 +5,58 @@ using UnityEngine;
 public class StatusManager : MonoBehaviour
 {
     [Header("CatAndTheBat Story")]
-    int catAndBatStatus;
     [SerializeField] string story1PrefName;
     [SerializeField] GameObject catAndBatDone;
     [SerializeField] GameObject catAndBatPending;
+    int catAndBatStatus;
 
     [Header("BennyTheBunny Story")]
-    int bennyTheBunnyStatus;
     [SerializeField] string story2PrefName;
     [SerializeField] GameObject bennyBunnyDone;
     [SerializeField] GameObject bennyBunnyPending;
+    int bennyTheBunnyStatus;
 
     [Header("CaseyTheCat Story")]
-    int caseyTheCatStatus;
     [SerializeField] string story3PrefName;
     [SerializeField] GameObject caseyTheCatDone;
     [SerializeField] GameObject caseyTheCatPending;
+    int caseyTheCatStatus;
 
     [Header("DannyTheDog Story")]
-    int dannyTheDogStatus;
     [SerializeField] string story4PrefName;
     [SerializeField] GameObject dannyTheDogDone;
     [SerializeField] GameObject dannyTheDogPending;
+    int dannyTheDogStatus;
 
     [Header("EllieTheElephant Story")]
-    int ellieTheElephantStatus;
     [SerializeField] string story5PrefName;
     [SerializeField] GameObject ellieTheElephantDone;
     [SerializeField] GameObject ellieTheElephantPending;
+    int ellieTheElephantStatus;
 
     [Header("FreddyTheFish Story")]
-    int freddyTheFishStatus;
     [SerializeField] string story6PrefName;
     [SerializeField] GameObject freddyTheFishDone;
     [SerializeField] GameObject freddyTheFishPending;
+    int freddyTheFishStatus;
 
     [Header("GinaTheGoose Story")]
-    int ginaTheGooseStatus;
     [SerializeField] string story7PrefName;
     [SerializeField] GameObject ginaTheGooseDone;
     [SerializeField] GameObject ginaTheGoosePending;
+    int ginaTheGooseStatus;
+
+    [Header("HenryTheHedgehog")]
+    [SerializeField] string story8PrefName;
+    [SerializeField] GameObject henryTheHedgehogDone;
+    [SerializeField] GameObject henryTheHedgehogPending;
+    int henryTheHedgehogStatus;
+
+    [Header("GinaTheGoose Story")]
+    [SerializeField] string story9PrefName;
+    [SerializeField] GameObject ivyTheIguanaDone;
+    [SerializeField] GameObject ivyTheIguanaPending;
+    int ivyTheIguanaStatus;
 
     private void Awake()
     {
@@ -67,6 +79,58 @@ public class StatusManager : MonoBehaviour
         CheckFreddyTheFish();
 
         CheckGinaTheGoose();
+
+        CheckHenryTheHedgehog();
+
+        CheckIvyTheIguana();
+    }
+
+    private void CheckIvyTheIguana()
+    {
+        ivyTheIguanaStatus = PlayerPrefs.GetInt(story9PrefName);
+
+        switch (ivyTheIguanaStatus)
+        {
+            case 0:
+                // 0 là chưa làm j, chưa đọc chưa xem chưa chạm vào
+                ivyTheIguanaDone.SetActive(false);
+                ivyTheIguanaPending.SetActive(false);
+                break;
+            case 1:
+                // 1 là đã hoàn thành, đã đọc và nhận thưởng xong
+                ivyTheIguanaDone.SetActive(true);
+                ivyTheIguanaPending.SetActive(false);
+                break;
+            case 2:
+                // 2 là đang pending, đã đọc nhưng vẫn còn dở dang và không đọc tới cuối 
+                ivyTheIguanaDone.SetActive(false);
+                ivyTheIguanaPending.SetActive(true);
+                break;
+        }
+    }
+
+    private void CheckHenryTheHedgehog()
+    {
+        henryTheHedgehogStatus = PlayerPrefs.GetInt(story8PrefName);
+
+        switch (henryTheHedgehogStatus)
+        {
+            case 0:
+                // 0 là chưa làm j, chưa đọc chưa xem chưa chạm vào
+                henryTheHedgehogDone.SetActive(false);
+                henryTheHedgehogPending.SetActive(false);
+                break;
+            case 1:
+                // 1 là đã hoàn thành, đã đọc và nhận thưởng xong
+                henryTheHedgehogDone.SetActive(true);
+                henryTheHedgehogPending.SetActive(false);
+                break;
+            case 2:
+                // 2 là đang pending, đã đọc nhưng vẫn còn dở dang và không đọc tới cuối 
+                henryTheHedgehogDone.SetActive(false);
+                henryTheHedgehogPending.SetActive(true);
+                break;
+        }
     }
 
     private void CheckGinaTheGoose()

@@ -80,6 +80,7 @@ public class StoryManager : MonoBehaviour
     [SerializeField] float backButtonOpacity;
     [SerializeField] float nextButtonOpacity;
 
+    public Image testImage;
 
     void Awake()
     {
@@ -115,115 +116,160 @@ public class StoryManager : MonoBehaviour
         }
         // storyId là để biết đang ở data truyện nào trong file json
 
+
+        StartCoroutine(AutoNextPartOnRead());
+
+        StartCoroutine(CheckBackButton());
+
+        StartCoroutine(CheckNextButton());
+
+        StartCoroutine(SwipeHandler());
+
+    }
+    //private void OnMouseDown()
+    //{
+    //    testImage.color = Color.red;
+    //}
+
+    //private void OnMouseUp()
+    //{
+    //    testImage.color = Color.green;
+    //}
+
+    public void Update()
+    {
+        
     }
 
-
-    private void Update()
+    IEnumerator SwipeHandler()
     {
-        AutoNextPartOnRead();
-        CheckBackButton();
-        CheckNextButton();
-
-        if (interactiveStorySection.activeSelf)
+        while (true)
         {
-            //kiểm tra xem có hàm touch nào được thực hiện hay không
-            if (Input.touchCount == 0) return;
 
-            Touch touch = Input.touches[0];
-
-            //testImage.color = Color.red;
-
-            // Luu vi tri touch bat dau khi cham vao man hinh 
-            if (touch.phase == TouchPhase.Began)
+            if (interactiveStorySection.activeSelf && Input.touchCount > 0)
             {
-                startTouchPosition = touch.position;
+                //kiểm tra xem có hàm touch nào được thực hiện hay không
+                Touch touch = Input.GetTouch(0);
+
                 //testImage.color = Color.red;
 
+                // Luu vi tri touch bat dau khi cham vao man hinh 
+                if (touch.phase == TouchPhase.Began)
+                {
+                    startTouchPosition = touch.position;
+                    //testImage.color = Color.red;
+
+                }
+                // kiểm tra khi touch kết thúc 
+                else if (touch.phase == TouchPhase.Ended)
+                {
+                    // luu vi tri khi touch kết thúc 
+                    endTouchPosition = touch.position;
+                    //testImage.color = Color.white;
+
+
+                    // Tính toán xem khoảng cách giữa touch bắt đầu và touch kết thúc để biết người dùng swipe về bên nào
+                    swipeDistance = endTouchPosition.x - startTouchPosition.x;
+
+
+                    // so sánh khoảng cách đó với swipeThreshhold để biết khoảng cách có đủ lớn không 
+                    if (swipeDistance < -Mathf.Epsilon
+                        && Mathf.Abs(swipeDistance) > swipeThreshold
+                        && (!storyAudioSource.isPlaying || isCheating))
+                    {
+                        //testImage.color = Color.green;
+
+                        NextPart();
+
+                        isAutoNextPage = false;
+
+                        // Chạy hàm vuốt sang trái
+                    }
+                    else if (swipeDistance > Mathf.Epsilon && Mathf.Abs(swipeDistance) > swipeThreshold)
+                    {
+
+                        PreviousPart();
+                        //testImage.color = Color.blue;
+
+                        isAutoNextPage = false;
+
+                        // chạy hàm vuốt sang phải
+
+                    }
+
+                }
             }
-            // kiểm tra khi touch kết thúc 
-            else if (touch.phase == TouchPhase.Ended)
+
+            yield return null;
+        }
+    }
+
+    //private void TestingInUpdate()
+    //{
+    //    if (testImage.color == Color.white)
+    //    {
+    //        testImage.color = Color.green;
+    //    }
+    //    else if (testImage.color == Color.green)
+    //    {
+    //        testImage.color = Color.white;
+    //    }
+    //}
+
+    IEnumerator CheckBackButton()
+    {
+        while (true)
+        {
+            if (currentIndex == 0)
             {
-                // luu vi tri khi touch kết thúc 
-                endTouchPosition = touch.position;
-                //testImage.color = Color.white;
+                backButton.GetComponent<Button>().interactable = false;
+                backButton.GetComponent<Image>().color = new Color(255, 255, 255, backButtonOpacity);
+            }
+            else
+            {
+                backButton.GetComponent<Button>().interactable = true;
+                backButton.GetComponent<Image>().color = new Color(255, 255, 255, 255);
+            }
+            yield return null;
 
+        }
+    }
 
-                // Tính toán xem khoảng cách giữa touch bắt đầu và touch kết thúc để biết người dùng swipe về bên nào
-                swipeDistance = endTouchPosition.x - startTouchPosition.x;
+    IEnumerator CheckNextButton()
+    {
+        while (true)
+        {
 
+            if (storyAudioSource.isPlaying || !isCheating)
+            {
+                nextButton.GetComponent<Image>().color = new Color(255, 255, 255, nextButtonOpacity);
+                nextButton.GetComponent<Button>().interactable = false;
+            }
+            else
+            {
+                nextButton.GetComponent<Button>().interactable = true;
+                nextButton.GetComponent<Image>().color = new Color(255, 255, 255, 255);
 
-                // so sánh khoảng cách đó với swipeThreshhold để biết khoảng cách có đủ lớn không 
-                if (swipeDistance < -Mathf.Epsilon
-                    && Mathf.Abs(swipeDistance) > swipeThreshold
-                    && (!storyAudioSource.isPlaying || isCheating))
-                {
-                    //testImage.color = Color.green;
-
-                    NextPart();
-
-                    isAutoNextPage = false;
-
-                    // Chạy hàm vuốt sang trái
-                }
-                else if (swipeDistance > Mathf.Epsilon && Mathf.Abs(swipeDistance) > swipeThreshold)
-                {
-
-                    PreviousPart();
-                    //testImage.color = Color.blue;
-
-                    isAutoNextPage = false;
-
-                    // chạy hàm vuốt sang phải
-
-                }
 
             }
-        }
-
-
-
-
-    }
-
-    void CheckBackButton()
-    {
-        if (currentIndex == 0)
-        {
-            backButton.GetComponent<Button>().interactable = false;
-            backButton.GetComponent<Image>().color = new Color(255, 255, 255, backButtonOpacity);
-        }
-        else
-        {
-            backButton.GetComponent<Button>().interactable = true;
-            backButton.GetComponent<Image>().color = new Color(255, 255, 255, 255);
-        }
-    }
-
-    void CheckNextButton()
-    {
-        if (storyAudioSource.isPlaying || !isCheating)
-        {
-            nextButton.GetComponent<Image>().color = new Color(255, 255, 255, nextButtonOpacity);
-            nextButton.GetComponent<Button>().interactable = false;
-        }
-        else
-        {
-            nextButton.GetComponent<Button>().interactable = true;
-            nextButton.GetComponent<Image>().color = new Color(255, 255, 255, 255);
-
+            yield return null;
 
         }
 
     }
 
-    private void AutoNextPartOnRead()
+    IEnumerator AutoNextPartOnRead()
     {
-        // nếu phần đọc truyện đang active và isReading && isAutoNextPage
-        if (interactiveStorySection.activeSelf && !isReading && isAutoNextPage)
+        while (true)
         {
-            StartCoroutine(AutoFlipPage());
+            // nếu phần đọc truyện đang active và isReading && isAutoNextPage
+            if (interactiveStorySection.activeSelf && !isReading && isAutoNextPage)
+            {
+                StartCoroutine(AutoFlipPage());
 
-            isReading = true;
+                isReading = true;
+            }
+        yield return null;
         }
     }
 

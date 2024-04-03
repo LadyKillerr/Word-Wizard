@@ -118,7 +118,11 @@ public class QuestionManager : MonoBehaviour
 
     private void Update()
     {
-        CheckIsAnswered();
+        if (quizSection.activeSelf)
+        {
+            CheckIsAnswered();
+
+        }
     }
 
     void CheckIsAnswered()
@@ -278,7 +282,7 @@ public class QuestionManager : MonoBehaviour
                 else { return; }
 
                 break;
-                
+
 
 
 
@@ -326,7 +330,12 @@ public class QuestionManager : MonoBehaviour
 
         finishLevelPE.Play();
         screenDarkenEffects.SetActive(true);
-        audioManager.PlayCongratsClip();
+
+        if (audioManager != null)
+        {
+            audioManager.PlayCongratsClip();
+
+        }
 
         // kiểm tra trong player pref nếu level hiện tại có status là hoàn thành (== 1)
         if (!isRewarded && PlayerPrefs.GetInt(levelPrefName) == 1)

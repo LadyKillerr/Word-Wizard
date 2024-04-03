@@ -40,6 +40,10 @@ MonoBehaviour:
     m_path: Assets/Scenes/StoryScenes/Story 6/FreddyTheFish.unity
   - m_enabled: 1
     m_path: Assets/Scenes/StoryScenes/Story 7/GinaTheGoose.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/StoryScenes/Story 8/HenryTheHedgehog.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/StoryScenes/Story 9/IvyTheIguana.unity
   references:
     version: 2
     RefIds:

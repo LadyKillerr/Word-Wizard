@@ -12,13 +12,15 @@ using Unity.VisualScripting;
 public class PlayerDataWarehouse : MonoBehaviour
 {
     public List<GameObject> storyBooks;
-    [SerializeField] int totalBooks;
+    //[SerializeField] int totalBooks;
 
     private void Awake()
     {
-        totalBooks = storyBooks.Count;
+        //totalBooks = storyBooks.Count;
 
+#pragma warning disable CS0618 // Type or member is obsolete
         int instanceCount = FindObjectsOfType(GetType()).Length;
+#pragma warning restore CS0618 // Type or member is obsolete
 
         if (instanceCount > 1)
         {
@@ -35,17 +37,17 @@ public class PlayerDataWarehouse : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(LoadPlayerProgress());
+        //StartCoroutine(LoadPlayerProgress());
     }
 
-    IEnumerator LoadPlayerProgress()
-    {
+    //IEnumerator LoadPlayerProgress()
+    //{
 
-        yield return new WaitForSeconds(.1f);
+    //    yield return new WaitForSeconds(.1f);
 
-        SavePlayerData("abc", 1);
+    //    SavePlayerData("abc", 1);
 
-    }
+    //}
 
     // dùng tên tương ứng với các data trong streamingAssets
 
@@ -102,7 +104,9 @@ public class PlayerDataWarehouse : MonoBehaviour
         }
     }
 
-    public void SavePlayerData(string key, int value)
+    public void SavePlayerData(
+        string key, 
+        int value)
     {
         string filePath = Application.persistentDataPath + "/interactiveStoriesData.json";
         string jsonData = File.Exists(filePath) ? File.ReadAllText(filePath) : "";
@@ -119,7 +123,7 @@ public class PlayerDataWarehouse : MonoBehaviour
                     dataList[i].stars += value;
                 }
             }
-              
+
             string dataSave = "";
             for (int i = 0; i < dataList.Length; i++)
             {
@@ -145,21 +149,21 @@ public class PlayerDataWarehouse : MonoBehaviour
             List<PlayerProgressData> playerProgresses = new List<PlayerProgressData>();
 
             PlayerProgressData timesPlayed = new PlayerProgressData();
-            timesPlayed.numberPlayed = "playerStars";
+            //timesPlayed.numberPlayed = "playerStars";
             timesPlayed.stars = 0;
 
-            playerProgresses.Add(timesPlayed);
+            //playerProgresses.Add(timesPlayed);
 
-            for (int i = 0; i < totalBooks; i++)
-            {
-                PlayerProgressData saveStoryProgress = new PlayerProgressData();
+            //for (int i = 0; i < totalBooks; i++)
+            //{
+            //    PlayerProgressData saveStoryProgress = new PlayerProgressData();
 
-                saveStoryProgress.numberPlayed = "StoryProgress" + i;
+            //    saveStoryProgress.numberPlayed = "StoryProgress" + i;
 
-                saveStoryProgress.stars = 0;
+            //    saveStoryProgress.stars = 0;
 
-                playerProgresses.Add(saveStoryProgress);
-            }
+            //    playerProgresses.Add(saveStoryProgress);
+            //}
 
             string dataSave = "";
             for (int i = 0; i < playerProgresses.Count; i++)

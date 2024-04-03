@@ -371,6 +371,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BennyTheBunny
       objectReference: {fileID: 0}
+    - target: {fileID: 3981951613208261484, guid: 4bc60b8377d45894f801398f1cac373e, type: 3}
+      propertyPath: levelPrefName
+      value: BennyTheBunny
+      objectReference: {fileID: 0}
     - target: {fileID: 9047152932652497837, guid: 4bc60b8377d45894f801398f1cac373e, type: 3}
       propertyPath: m_Camera
       value: 
