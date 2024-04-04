@@ -57,36 +57,15 @@ public class StoryManager : MonoBehaviour
     AudioManager audioManager;
     [SerializeField] QuestionManager questionManager;
 
-    // Swipe Handler
-    Vector2 startTouchPosition;
-    Vector2 endTouchPosition;
-    public float swipeDistance;
-
-    [SerializeField] float swipeThreshold = 200f;
-
-    [Header("Auto Flip Page Function")]
-    // Auto Next Part boolean
-    [SerializeField] bool isAutoNextPage = true;
-    [SerializeField] float autoFlipDelay;
-
-    //[SerializeField] Image testImage;
     public bool isCheating = false;
     // flow code: Awake sẽ là LoadFirstStoryPart, sau đó tiếp tục load part các index tiếp theo dần dần thông qua nextPart và Previous Part
-
-    [Header("Flip Page Buttons")]
-    [SerializeField] Button nextButton;
-    [SerializeField] Button backButton;
-
-    [SerializeField] float backButtonOpacity;
-    [SerializeField] float nextButtonOpacity;
-
-    public Image testImage;
 
     // Devlopment only zone
     public bool GetIsCheating()
     {
         return isCheating;
     }
+    //
 
     void Awake()
     {

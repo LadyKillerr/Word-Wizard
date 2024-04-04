@@ -58,14 +58,23 @@ public class FilterManager : MonoBehaviour
             isShow = true;
             filterButtonsMenu.SetActive(true);
 
-            audioManager.PlayButtonClip();
+            if (audioManager != null)
+            {
+                audioManager.PlayButtonClip();
+
+            }
 
         }
         else
         {
             isShow = false;
             filterButtonsMenu.SetActive(false);
-            audioManager.PlayButtonClip();
+
+            if (audioManager != null)
+            {
+                audioManager.PlayButtonClip();
+
+            }
 
         }
     }

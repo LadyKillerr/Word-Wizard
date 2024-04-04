@@ -90,7 +90,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1884113212923774729, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
       propertyPath: storyId
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1884113212923774729, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
       propertyPath: audioParts.Array.size

@@ -304,6 +304,10 @@ PrefabInstance:
       value: IvyTheIguana
       objectReference: {fileID: 0}
     - target: {fileID: 5334519844417368909, guid: ad222f60b4ba0b64b9b9cfa0d8c42668, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -386
+      objectReference: {fileID: 0}
+    - target: {fileID: 5334519844417368909, guid: ad222f60b4ba0b64b9b9cfa0d8c42668, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 167.79993
       objectReference: {fileID: 0}

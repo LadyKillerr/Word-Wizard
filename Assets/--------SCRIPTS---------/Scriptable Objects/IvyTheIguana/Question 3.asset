@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8e75d6bb2d668b4ab617b6f08ebfe63, type: 3}
   m_Name: Question 3
   m_EditorClassIdentifier: 
-  question: Enter your question text here
+  question: What does Ivy use to express her creativity?
   answers:
-  - 
-  - 
-  - 
-  - 
-  correctAnswersIndex: 0
+  - Toys
+  - Colors and paints
+  - Musical instruments
+  - Building blocks
+  correctAnswersIndex: 1

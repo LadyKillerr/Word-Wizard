@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8e75d6bb2d668b4ab617b6f08ebfe63, type: 3}
   m_Name: Question 4
   m_EditorClassIdentifier: 
-  question: Enter your question text here
+  question: How does Ivy's storytelling affect others?
   answers:
-  - 
-  - 
-  - 
-  - 
-  correctAnswersIndex: 0
+  - It makes them sad
+  - It inspires them
+  - It makes them angry
+  - It bores them
+  correctAnswersIndex: 1

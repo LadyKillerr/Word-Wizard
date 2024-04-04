@@ -745,7 +745,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3b0dd5bdb49173644bf70f65433954c1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7e99a720366004f41a7eabf7d17cc9b7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -868,8 +868,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d228efeedb148144a57468e2f278c48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  storyBooks: []
-  totalBooks: 0
 --- !u!4 &804789876
 Transform:
   m_ObjectHideFlags: 0

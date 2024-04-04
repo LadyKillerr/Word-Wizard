@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8e75d6bb2d668b4ab617b6f08ebfe63, type: 3}
   m_Name: Question 1
   m_EditorClassIdentifier: 
-  question: 
+  question: How does Ivy's treehouse appear to her?
   answers:
-  - 
-  - 
-  - 
-  - 
-  correctAnswersIndex: 0
+  - Gloomy
+  - Crowded
+  - Ordinary
+  - Magical
+  correctAnswersIndex: 3

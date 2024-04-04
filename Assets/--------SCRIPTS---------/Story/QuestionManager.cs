@@ -106,9 +106,6 @@ public class QuestionManager : MonoBehaviour
         quizSectionAudio = GetComponent<AudioSource>();
 
         isRewarded = false;
-
-        congratsWindow.SetActive(false);
-        rewardWindow.SetActive(false);
     }
 
     private void Start()
@@ -139,9 +136,6 @@ public class QuestionManager : MonoBehaviour
 
         }
     }
-
-
-
 
     void LoadQuestion()
     {
@@ -192,8 +186,6 @@ public class QuestionManager : MonoBehaviour
 
             // chuyển ảnh của nút bấm sang ảnh mới
             answersButton[userAnswerIndex].GetComponent<Image>().sprite = rightAnswerSprite;
-
-
 
             isAnswered = true;
             isAnswerCorrect = true;
