@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class ToggleAutoFlip : MonoBehaviour
 {
-    StoryManager storyManager;
+    SwipeHandler swipeHandler;
     Image autoButtonImage;
 
     [SerializeField] Sprite pauseAutoSprite;
@@ -14,17 +14,17 @@ public class ToggleAutoFlip : MonoBehaviour
 
         autoButtonImage = GetComponent<Image>();
 
-        storyManager = FindAnyObjectByType<StoryManager>();
+        swipeHandler = FindAnyObjectByType<SwipeHandler>();
     }
 
     private void Update()
     {
-        if (storyManager.GetIsAutoNext())
+        if (swipeHandler.GetIsAutoNext())
         {
             autoButtonImage.sprite = continueAutoSprite;
 
         }
-        else if (!storyManager.GetIsAutoNext())
+        else if (!swipeHandler.GetIsAutoNext())
         {
             autoButtonImage.sprite = pauseAutoSprite;
 
@@ -35,7 +35,7 @@ public class ToggleAutoFlip : MonoBehaviour
     public void ToggleAutoNext()
     {
 
-        storyManager.ToggleAutoNextPart();
+        swipeHandler.ToggleAutoNextPart();
         Debug.Log("đã chuyển đổi isAutoNextPart");
     }
 }

@@ -11,7 +11,7 @@ using Unity.VisualScripting;
 
 public class PlayerDataWarehouse : MonoBehaviour
 {
-    public List<GameObject> storyBooks;
+    //public List<GameObject> storyBooks;
     //[SerializeField] int totalBooks;
 
     private void Awake()

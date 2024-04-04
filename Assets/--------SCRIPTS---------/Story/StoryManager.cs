@@ -39,7 +39,7 @@ public class StoryManager : MonoBehaviour
     [SerializeField] float delayTime = 3f;
     [SerializeField] float intersectionTime = 1.5f;
 
-    [SerializeField] bool isReading;
+    public bool isReading;
 
     [Header("Game Session Zone")]
 
@@ -66,7 +66,7 @@ public class StoryManager : MonoBehaviour
 
     [Header("Auto Flip Page Function")]
     // Auto Next Part boolean
-    [SerializeField] bool isAutoNextPage;
+    [SerializeField] bool isAutoNextPage = true;
     [SerializeField] float autoFlipDelay;
 
     //[SerializeField] Image testImage;
@@ -81,6 +81,12 @@ public class StoryManager : MonoBehaviour
     [SerializeField] float nextButtonOpacity;
 
     public Image testImage;
+
+    // Devlopment only zone
+    public bool GetIsCheating()
+    {
+        return isCheating;
+    }
 
     void Awake()
     {
@@ -115,185 +121,6 @@ public class StoryManager : MonoBehaviour
             //hiddenButtonsText[i].GetComponent<TextMeshProUGUI>().text = gameStory[storyId].noun[i];
         }
         // storyId là để biết đang ở data truyện nào trong file json
-
-
-        StartCoroutine(AutoNextPartOnRead());
-
-        StartCoroutine(CheckBackButton());
-
-        StartCoroutine(CheckNextButton());
-
-        StartCoroutine(SwipeHandler());
-
-    }
-    //private void OnMouseDown()
-    //{
-    //    testImage.color = Color.red;
-    //}
-
-    //private void OnMouseUp()
-    //{
-    //    testImage.color = Color.green;
-    //}
-
-    public void Update()
-    {
-        
-    }
-
-    IEnumerator SwipeHandler()
-    {
-        while (true)
-        {
-
-            if (interactiveStorySection.activeSelf && Input.touchCount > 0)
-            {
-                //kiểm tra xem có hàm touch nào được thực hiện hay không
-                Touch touch = Input.GetTouch(0);
-
-                //testImage.color = Color.red;
-
-                // Luu vi tri touch bat dau khi cham vao man hinh 
-                if (touch.phase == TouchPhase.Began)
-                {
-                    startTouchPosition = touch.position;
-                    //testImage.color = Color.red;
-
-                }
-                // kiểm tra khi touch kết thúc 
-                else if (touch.phase == TouchPhase.Ended)
-                {
-                    // luu vi tri khi touch kết thúc 
-                    endTouchPosition = touch.position;
-                    //testImage.color = Color.white;
-
-
-                    // Tính toán xem khoảng cách giữa touch bắt đầu và touch kết thúc để biết người dùng swipe về bên nào
-                    swipeDistance = endTouchPosition.x - startTouchPosition.x;
-
-
-                    // so sánh khoảng cách đó với swipeThreshhold để biết khoảng cách có đủ lớn không 
-                    if (swipeDistance < -Mathf.Epsilon
-                        && Mathf.Abs(swipeDistance) > swipeThreshold
-                        && (!storyAudioSource.isPlaying || isCheating))
-                    {
-                        //testImage.color = Color.green;
-
-                        NextPart();
-
-                        isAutoNextPage = false;
-
-                        // Chạy hàm vuốt sang trái
-                    }
-                    else if (swipeDistance > Mathf.Epsilon && Mathf.Abs(swipeDistance) > swipeThreshold)
-                    {
-
-                        PreviousPart();
-                        //testImage.color = Color.blue;
-
-                        isAutoNextPage = false;
-
-                        // chạy hàm vuốt sang phải
-
-                    }
-
-                }
-            }
-
-            yield return null;
-        }
-    }
-
-    //private void TestingInUpdate()
-    //{
-    //    if (testImage.color == Color.white)
-    //    {
-    //        testImage.color = Color.green;
-    //    }
-    //    else if (testImage.color == Color.green)
-    //    {
-    //        testImage.color = Color.white;
-    //    }
-    //}
-
-    IEnumerator CheckBackButton()
-    {
-        while (true)
-        {
-            if (currentIndex == 0)
-            {
-                backButton.GetComponent<Button>().interactable = false;
-                backButton.GetComponent<Image>().color = new Color(255, 255, 255, backButtonOpacity);
-            }
-            else
-            {
-                backButton.GetComponent<Button>().interactable = true;
-                backButton.GetComponent<Image>().color = new Color(255, 255, 255, 255);
-            }
-            yield return null;
-
-        }
-    }
-
-    IEnumerator CheckNextButton()
-    {
-        while (true)
-        {
-
-            if (storyAudioSource.isPlaying || !isCheating)
-            {
-                nextButton.GetComponent<Image>().color = new Color(255, 255, 255, nextButtonOpacity);
-                nextButton.GetComponent<Button>().interactable = false;
-            }
-            else
-            {
-                nextButton.GetComponent<Button>().interactable = true;
-                nextButton.GetComponent<Image>().color = new Color(255, 255, 255, 255);
-
-
-            }
-            yield return null;
-
-        }
-
-    }
-
-    IEnumerator AutoNextPartOnRead()
-    {
-        while (true)
-        {
-            // nếu phần đọc truyện đang active và isReading && isAutoNextPage
-            if (interactiveStorySection.activeSelf && !isReading && isAutoNextPage)
-            {
-                StartCoroutine(AutoFlipPage());
-
-                isReading = true;
-            }
-        yield return null;
-        }
-    }
-
-    IEnumerator AutoFlipPage()
-    {
-        yield return new WaitForSeconds(delayTime);
-
-
-        if (isAutoNextPage && !storyAudioSource.isPlaying)
-        {
-            Debug.Log("Tự động sang trang");
-            NextPart();
-        }
-
-    }
-
-    public void ToggleAutoNextPart()
-    {
-        isAutoNextPage = !isAutoNextPage;
-    }
-
-    public bool GetIsAutoNext()
-    {
-        return isAutoNextPage;
     }
 
     void LoadFirstStoryPart()
@@ -538,6 +365,16 @@ public class StoryManager : MonoBehaviour
     public void SetCurrentIndex()
     {
         currentIndex = storyParts.Length - 1;
+    }
+
+    public bool GetIsReading()
+    {
+        return isReading;
+    }
+
+    public void SetIsReading(bool value)
+    {
+        isReading = value;
     }
 
 }
