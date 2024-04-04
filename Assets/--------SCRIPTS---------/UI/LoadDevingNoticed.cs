@@ -40,6 +40,7 @@ public class LoadDevingNoticed : MonoBehaviour
         underDevelopmentNoti.SetActive(true);
         NotiText.SetActive(true);
         screenDarken.SetActive(true);
+        Handheld.Vibrate();
     }
 
     

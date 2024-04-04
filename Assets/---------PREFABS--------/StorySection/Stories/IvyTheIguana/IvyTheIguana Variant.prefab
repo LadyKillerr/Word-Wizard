@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 174268483643615523, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_text
+      value: She sings and swings with joy and grace,
+      objectReference: {fileID: 0}
     - target: {fileID: 249786267636866302, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -87,6 +91,14 @@ PrefabInstance:
     - target: {fileID: 249786267636866302, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1023070372421913467, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_text
+      value: Dreams of adventures, reaching the sky.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1049041261070555106, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_text
+      value: Ivy The Iguana. A phonics story is told by Sunny Friends.
       objectReference: {fileID: 0}
     - target: {fileID: 1884113212923774729, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
       propertyPath: storyId
@@ -396,6 +408,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: IvyTheIguana Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4291220825705791037, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_text
+      value: Inspiring dreams under moon's soft light.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4419528850458994023, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_text
+      value: Crafting wonders, both big and great.
+      objectReference: {fileID: 0}
     - target: {fileID: 4633810210211004483, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -404,6 +424,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -6123004202851401083, guid: 6ad934bb2adb51844ad8b4dfcebb0255, type: 3}
+    - target: {fileID: 5508013601407918490, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_text
+      value: Her stories weave tales of delight,
+      objectReference: {fileID: 0}
+    - target: {fileID: 6211932805589299903, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_text
+      value: With colors and paints, she loves to create,
+      objectReference: {fileID: 0}
+    - target: {fileID: 6617744768493275525, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_text
+      value: In her leafy haven, a magical place.
+      objectReference: {fileID: 0}
     - target: {fileID: 7012281809691278671, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -420,6 +452,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -4944068189733832494, guid: 4f11e66fa1ad25d47bdfce73b45ff249, type: 3}
+    - target: {fileID: 8391008210815672016, guid: 9dcd445763820094e82799fa1932f74d, type: 3}
+      propertyPath: m_text
+      value: Ivy the iguana, in her treehouse high,
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
