@@ -196,7 +196,6 @@ public class QuestionManager : MonoBehaviour
         {
             // làm đth rung 1 tý
             Handheld.Vibrate();
-
             Debug.Log("Phone vibrate performed");
 
 

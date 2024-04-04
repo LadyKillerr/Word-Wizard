@@ -194,6 +194,7 @@ public class StoryManager : MonoBehaviour
 
 
         }
+        
     }
 
     // chức năng back lại trang cũ
