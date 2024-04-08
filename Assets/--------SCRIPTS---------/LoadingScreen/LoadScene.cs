@@ -14,6 +14,8 @@ public class LoadScene : MonoBehaviour
     //[SerializeField] Image loadingBarImage; // dùng khi chị Khánh gửi chữ Loading
     [SerializeField] TextMeshProUGUI loadingPercent;
 
+    [SerializeField] float delayTime;
+
     AudioManager audioManager;
 
     private void Start()
@@ -23,15 +25,31 @@ public class LoadScene : MonoBehaviour
 
     public void LoadLevel(int sceneIndex)
     {
-        if (audioManager != null)
-        {
-            audioManager.PlayStartAudio();
-        }
+        LoadAudio();
 
         StartCoroutine(LoadAsynchrounously(sceneIndex));
 
     }
 
+    public void IntroLoadLevel (int sceneIndex)
+    {
+        StartCoroutine(StartLoading(sceneIndex));
+
+    }
+
+    IEnumerator StartLoading(int sceneIndex)
+    {
+        yield return new WaitForSeconds(delayTime);
+        StartCoroutine(LoadAsynchrounously(sceneIndex));
+    }
+
+    void LoadAudio()
+    {
+        if (audioManager != null)
+        {
+            audioManager.PlayStartAudio();
+        }
+    }
 
     public IEnumerator LoadAsynchrounously(int sceneIndex)
     {

@@ -22,8 +22,6 @@ MonoBehaviour:
     m_path: Assets/Scenes/Intro.unity
   - m_enabled: 1
     m_path: Assets/Scenes/Home.unity
-  - m_enabled: 0
-    m_path: Assets/Scenes/GameMenu.unity
   - m_enabled: 1
     m_path: Assets/Scenes/StoryScenes/StoryList.unity
   - m_enabled: 1
@@ -44,6 +42,8 @@ MonoBehaviour:
     m_path: Assets/Scenes/StoryScenes/Story 8/HenryTheHedgehog.unity
   - m_enabled: 1
     m_path: Assets/Scenes/StoryScenes/Story 9/IvyTheIguana.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/GameMenu.unity
   references:
     version: 2
     RefIds:

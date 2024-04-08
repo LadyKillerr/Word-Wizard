@@ -22,7 +22,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioClip congratsAudio;
     [SerializeField][Range(0, 1)] float congratsAudioVolume = 1f;
 
-
+    [SerializeField] AudioClip balloonPoppinAudio;
+    [SerializeField][Range(0, 1)] float balloonPoppinAudioVolume = 1f;
 
     AudioSource gameAudio;
 
@@ -69,11 +70,6 @@ public class AudioManager : MonoBehaviour
         PlayAudio(startAudio, startVolume);
     }
 
-    public void PlayOkayAudio()
-    {
-        AudioSource.PlayClipAtPoint(startAudio, Camera.main.transform.position);
-    }
-
     public void PlayButtonClip()
     {
         PlayAudio(buttonAudio, buttonVolume);
@@ -93,6 +89,13 @@ public class AudioManager : MonoBehaviour
     {
         PlayAudio(congratsAudio, congratsAudioVolume);
     }
+
+    public void PlayBalloonPoppinAudio()
+    {
+        PlayAudio(balloonPoppinAudio, balloonPoppinAudioVolume);
+    }
+
+
 
     //public void PlayWordA()
     //{
