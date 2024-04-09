@@ -33,7 +33,7 @@ public class QuestionManager : MonoBehaviour
     [SerializeField] AudioClip[] answer2Audio;
     [SerializeField] AudioClip[] answer3Audio;
     [SerializeField] AudioClip[] answer4Audio;
-
+    [SerializeField] float timeBeforeAudioPlay = 0.5f;
 
     [SerializeField][Range(0, 1)] float answersAudioVolume;
     [SerializeField] Sprite wrongAnswerSprite;
@@ -46,7 +46,7 @@ public class QuestionManager : MonoBehaviour
     [SerializeField] AudioClip rightAnswerClip;
     [SerializeField][Range(0, 1)] float rightAudio;
 
-    [Header("Quiz Section")]
+    [Header("Question Section")]
     [SerializeField] AudioClip[] questionsAudio;
     [SerializeField][Range(0, 1)] float quizQuestionsAudioVolume;
 
@@ -58,6 +58,7 @@ public class QuestionManager : MonoBehaviour
     [SerializeField] float delayTimeSmall = 1f;
 
     [SerializeField] Button nextButton;
+    [SerializeField] Button backButton;
     [SerializeField] float fadedButtonOpacity = .5f;
     [SerializeField] bool isAnswered;
     [SerializeField] bool isAnswerCorrect;
@@ -86,6 +87,8 @@ public class QuestionManager : MonoBehaviour
     [SerializeField] QuestionManager questionManager;
     [SerializeField] StoryManager storyManager;
 
+    LoadScene levelLoader;
+
     public void ActivatePendingStatus()
     {
         if (PlayerPrefs.GetInt(levelPrefName) == 1)
@@ -101,6 +104,7 @@ public class QuestionManager : MonoBehaviour
 
     void Awake()
     {
+        levelLoader = FindAnyObjectByType<LoadScene>();
         playerProgress = FindAnyObjectByType<PlayerDataWarehouse>();
         audioManager = FindAnyObjectByType<AudioManager>();
         quizSectionAudio = GetComponent<AudioSource>();
@@ -124,17 +128,44 @@ public class QuestionManager : MonoBehaviour
 
     void CheckIsAnswered()
     {
-        if (!isAnswerCorrect)
+        if (!isAnswerCorrect )
         {
-
+            nextButton.interactable = false;
             nextButton.GetComponent<Image>().color = new(255, 255, 255, fadedButtonOpacity);
         }
         else if (isAnswerCorrect)
         {
+            nextButton.interactable = true;
 
             nextButton.GetComponent<Image>().color = new(255, 255, 255, 1);
 
         }
+        else if (currentIndex == questionsSO.Length)
+        {
+            nextButton.interactable = false;
+            nextButton.GetComponent<Image>().color = new(255, 255, 255, fadedButtonOpacity);
+
+        }
+
+        if (currentIndex == 0)
+        {
+            backButton.interactable = false;
+
+            backButton.GetComponent<Image>().color = new(255, 255, 255, fadedButtonOpacity);
+        }
+        
+        else 
+        {
+            backButton.interactable = true;
+
+            backButton.GetComponent<Image>().color = new(255, 255, 255, 1);
+
+        }
+    }
+
+    public void StartLoadQuestionAudio()
+    {
+        StartCoroutine(LoadQuestionAudio());
     }
 
     void LoadQuestion()
@@ -147,7 +178,8 @@ public class QuestionManager : MonoBehaviour
 
         if (quizSection.activeSelf)
         {
-            LoadQuestionAudio();
+
+            StartLoadQuestionAudio();
 
         }
 
@@ -217,14 +249,16 @@ public class QuestionManager : MonoBehaviour
         }
     }
 
-    public void LoadQuestionAudio()
+
+    public IEnumerator LoadQuestionAudio()
     {
+        yield return new WaitForSeconds(timeBeforeAudioPlay);
         if (!quizSectionAudio.isPlaying && quizSection.activeSelf)
         {
             quizSectionAudio.PlayOneShot(questionsAudio[currentIndex], quizQuestionsAudioVolume);
 
         }
-        else { return; }
+        else { yield return null; }
     }
 
     // bật âm thanh của đáp án
@@ -368,11 +402,32 @@ public class QuestionManager : MonoBehaviour
         {
             MuteAudio();
 
-            storyManager.ToggleLastStoryPart(storyManager.GetLastPartIndex());
+            if (storyManager != null)
+            {
+                storyManager.ToggleLastStoryPart(storyManager.GetLastPartIndex());
 
+            }
 
+            if (storyManager == null)
+            {
+                return;
+            }
         }
         else { return; }
+    }
+
+    public void LoadScene(int sceneIndex)
+    {
+        levelLoader.LoadLevel(sceneIndex);
+    }
+
+    public void LoadButtonAudio()
+    {
+        if (audioManager != null)
+        {
+            audioManager.PlayButtonClip();
+
+        }
     }
 
     public int GetTotalQuestions()

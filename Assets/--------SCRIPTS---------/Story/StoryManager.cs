@@ -247,7 +247,7 @@ public class StoryManager : MonoBehaviour
         questionSection.SetActive(true);
 
         // bật âm thanh câu hỏi trắc nghiệm 
-        questionManager.LoadQuestionAudio();
+        questionManager.StartLoadQuestionAudio();
     }
 
     void HideAllHiddenButtons()
@@ -339,6 +339,10 @@ public class StoryManager : MonoBehaviour
         PlayCurrentAudioParts();
     }
 
+    public void LoadButtonAudio()
+    {
+        audioManager.PlayButtonClip();
+    }
 
     // Lien kết file và viết hàm set indexx = 9
     // Set currentIndex về index cuối cùng của trang story

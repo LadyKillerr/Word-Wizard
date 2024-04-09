@@ -44,6 +44,8 @@ MonoBehaviour:
     m_path: Assets/Scenes/StoryScenes/Story 9/IvyTheIguana.unity
   - m_enabled: 1
     m_path: Assets/Scenes/GameMenu.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/QuizScenes/QuizList.unity
   references:
     version: 2
     RefIds:

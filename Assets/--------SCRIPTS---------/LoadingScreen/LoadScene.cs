@@ -14,7 +14,7 @@ public class LoadScene : MonoBehaviour
     //[SerializeField] Image loadingBarImage; // dùng khi chị Khánh gửi chữ Loading
     [SerializeField] TextMeshProUGUI loadingPercent;
 
-    [SerializeField] float delayTime;
+    float delayTime = 1f;
 
     AudioManager audioManager;
 
