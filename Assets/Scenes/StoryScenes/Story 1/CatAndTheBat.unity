@@ -447,6 +447,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2925875432692193656, guid: ff7a894996f02d6449bb9fb330404f59, type: 3}
+      propertyPath: m_text
+      value: A cat and a bat. A phonics story is told by Sunny Friends.
+      objectReference: {fileID: 0}
     - target: {fileID: 3026624099592609883, guid: ff7a894996f02d6449bb9fb330404f59, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

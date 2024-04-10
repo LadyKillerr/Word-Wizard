@@ -44,13 +44,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2b96e6c52a97cb4eb30861921338cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transitionsAnim: {fileID: 0}
   quizCanvas: {fileID: 0}
   quizList: {fileID: 0}
   catAndTheBatPrefab: {fileID: 1042879203720019926, guid: 8ed797e2b98e8fc46a935ca4b97e45d0, type: 3}
   bennyTheBunnyPrefab: {fileID: 2532814451011172891, guid: 41aaae229949d5943b993908ad99f3cc, type: 3}
   caseyTheCatPrefab: {fileID: 1858584965847212685, guid: 7045c3fc18f7576478c58c6404b90776, type: 3}
   dannyTheDogPrefab: {fileID: 1312518434388053203, guid: c97f55eb1a4c5be4ea5390a640f0e671, type: 3}
-  ellieTheElephantPrefab: {fileID: 6492327511182389308, guid: 91b5baf6b7dd4b44395a0e8bd1851611, type: 3}
+  ellieTheElephantPrefab: {fileID: 1136597121505211909, guid: d55ae1bf0a6a0814c880c51565c996cc, type: 3}
   freddyTheFishPrefab: {fileID: 2277583956279470527, guid: 034d0e5b0691af44ea86aecb697117a7, type: 3}
   ginaTheGoosePrefab: {fileID: 7697718935166230998, guid: 2c2bbccaef032f14c8068894793fe7ef, type: 3}
   henryTheHedgehogPrefab: {fileID: 1797114564111179103, guid: 5421db48dd8ba0d46a945b95bbef3414, type: 3}

@@ -192,7 +192,11 @@ public class LoadSettingPopup : MonoBehaviour
 
     public void ToggleButtonAudio()
     {
-        audioManager.PlayButtonClip();
+        if (audioManager != null)
+        {
+            audioManager.PlayButtonClip();
+
+        }
     }
 
 

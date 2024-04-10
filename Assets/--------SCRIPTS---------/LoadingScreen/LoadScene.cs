@@ -14,13 +14,16 @@ public class LoadScene : MonoBehaviour
     //[SerializeField] Image loadingBarImage; // dùng khi chị Khánh gửi chữ Loading
     [SerializeField] TextMeshProUGUI loadingPercent;
 
-    float delayTime = 1f;
+    float delayTime = 1.5f;
 
     AudioManager audioManager;
+    Animator transitionsAnim;
 
-    private void Start()
+    private void Awake()
     {
         audioManager = FindAnyObjectByType<AudioManager>();
+
+        transitionsAnim = FindAnyObjectByType<Animator>();
     }
 
     public void LoadLevel(int sceneIndex)
@@ -31,7 +34,20 @@ public class LoadScene : MonoBehaviour
 
     }
 
-    public void IntroLoadLevel (int sceneIndex)
+    public void LoadLevelWithAnim(int sceneIndex)
+    {
+        if (transitionsAnim != null && transitionsAnim.enabled)
+        {
+            transitionsAnim.SetTrigger("end");
+
+            // đợi 1s để anim chạy thì sẽ load luôn
+            StartCoroutine(LoadAsyncWithoutLoadingScreen(sceneIndex));
+
+        }
+    }
+
+    // hàm này dành cho intro load vào game 
+    public void IntroLoadLevel(int sceneIndex)
     {
         StartCoroutine(StartLoading(sceneIndex));
 
@@ -43,23 +59,14 @@ public class LoadScene : MonoBehaviour
         StartCoroutine(LoadAsynchrounously(sceneIndex));
     }
 
-    void LoadAudio()
-    {
-        if (audioManager != null)
-        {
-            audioManager.PlayStartAudio();
-        }
-    }
-
     public IEnumerator LoadAsynchrounously(int sceneIndex)
     {
-        
 
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
 
         while (!operation.isDone)
         {
-            
+            Debug.Log("The Game is loading");
 
             float progress = Mathf.Clamp01(operation.progress / .9f);
 
@@ -71,6 +78,28 @@ public class LoadScene : MonoBehaviour
             yield return null;
         }
     }
-    
+
+    // hàm này sẽ load có đợi 1s để anim chạy
+    public IEnumerator LoadAsyncWithoutLoadingScreen(int sceneIndex)
+    {
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadSceneAsync(sceneIndex);
+
+
+    }
+
+
+
+
+
+
+
+    void LoadAudio()
+    {
+        if (audioManager != null)
+        {
+            audioManager.PlayStartAudio();
+        }
+    }
 
 }

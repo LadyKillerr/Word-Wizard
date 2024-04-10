@@ -1,15 +1,19 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class QuizOnlyManager : MonoBehaviour
 {
+
     // hidden components
     GameObject spawnedObject;
     RectTransform rectTransform;
     AudioManager audioManager;
 
+    [Header("Open Components")]
+    [SerializeField] GameObject transitionsAnim;
     public Canvas quizCanvas;
-
     [SerializeField] GameObject quizList;
+    [SerializeField] GameObject quizSpawnTarget;
 
     [Header("Quiz only Prefabs")]
     [SerializeField] GameObject catAndTheBatPrefab;
@@ -24,7 +28,9 @@ public class QuizOnlyManager : MonoBehaviour
 
     private void Awake()
     {
+        transitionsAnim.GetComponent<Animator>().SetTrigger("start");
         audioManager = FindAnyObjectByType<AudioManager>();
+
     }
 
     void Start()
@@ -37,9 +43,25 @@ public class QuizOnlyManager : MonoBehaviour
 
     }
 
-    public void ToggleQuizSection(int quizValue)
+    public void StartToggleQuizSection(int quizValue)
     {
+        // bắt đầu đợi 2s để anim chạy
+        StartCoroutine(ToggleQuizSection(quizValue));
+
+        // anim chạy trong khoảng 2.5s (  1.5s start + 1s end)
+        transitionsAnim.GetComponent<Animator>().SetTrigger("end");
+
+        StartCoroutine(ResetTransitionGameObject());
+    }
+
+    IEnumerator ToggleQuizSection(int quizValue)
+    {
+        // ngưng load tầm 2s để anim chạy, sau 2.5s (1.5s cho start, 1s cho end) thì sẽ bdau hiện ra quiz 
+        yield return new WaitForSeconds(1.5f);
+        
+        // sau khi đợi 1.5s để start anim chạy xong -> màn đen xì sẽ bdau load ra question
         quizList.SetActive(false);
+
         if (audioManager != null)
         {
             audioManager.PlayStartAudio();
@@ -52,7 +74,7 @@ public class QuizOnlyManager : MonoBehaviour
                 // instantiate ra cái quiz section tương ứng ( CatAndTheBat section sẽ là 0 giống trong StoryID.txt)
 
                 // Instantiate GameObject
-                spawnedObject = Instantiate(catAndTheBatPrefab, quizCanvas.transform);
+                spawnedObject = Instantiate(catAndTheBatPrefab, quizSpawnTarget.transform);
 
                 // Thiết lập RectTransform của GameObject
                 rectTransform = spawnedObject.GetComponent<RectTransform>();
@@ -190,5 +212,22 @@ public class QuizOnlyManager : MonoBehaviour
 
 
         }
+
+        // tiếp tục đợi 1s để load anim start
+        yield return new WaitForSeconds(.5f);
+    }
+
+    IEnumerator ResetTransitionGameObject()
+    {
+        yield return new WaitForSeconds(4);
+
+        transitionsAnim.SetActive(false);
+        transitionsAnim.GetComponent<Animator>().enabled = false;
+    }
+
+    public void ActivateQuizAnim()
+    {
+        transitionsAnim.SetActive(true);
+        transitionsAnim.GetComponent<Animator>().enabled = true;
     }
 }

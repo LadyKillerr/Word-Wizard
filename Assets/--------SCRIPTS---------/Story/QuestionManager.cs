@@ -89,6 +89,8 @@ public class QuestionManager : MonoBehaviour
 
     LoadScene levelLoader;
 
+    Animator transitionsAnim;
+
     public void ActivatePendingStatus()
     {
         if (PlayerPrefs.GetInt(levelPrefName) == 1)
@@ -110,6 +112,8 @@ public class QuestionManager : MonoBehaviour
         quizSectionAudio = GetComponent<AudioSource>();
 
         isRewarded = false;
+
+        transitionsAnim = FindAnyObjectByType<Animator>();
     }
 
     private void Start()
@@ -128,7 +132,7 @@ public class QuestionManager : MonoBehaviour
 
     void CheckIsAnswered()
     {
-        if (!isAnswerCorrect )
+        if (!isAnswerCorrect)
         {
             nextButton.interactable = false;
             nextButton.GetComponent<Image>().color = new(255, 255, 255, fadedButtonOpacity);
@@ -153,8 +157,8 @@ public class QuestionManager : MonoBehaviour
 
             backButton.GetComponent<Image>().color = new(255, 255, 255, fadedButtonOpacity);
         }
-        
-        else 
+
+        else
         {
             backButton.interactable = true;
 
@@ -163,10 +167,6 @@ public class QuestionManager : MonoBehaviour
         }
     }
 
-    public void StartLoadQuestionAudio()
-    {
-        StartCoroutine(LoadQuestionAudio());
-    }
 
     void LoadQuestion()
     {
@@ -182,8 +182,6 @@ public class QuestionManager : MonoBehaviour
             StartLoadQuestionAudio();
 
         }
-
-
 
         for (int i = 0; i < answersButton.Length; i++)
         {
@@ -249,12 +247,27 @@ public class QuestionManager : MonoBehaviour
         }
     }
 
+    public void StartLoadQuestionAudio()
+    {
+        StartCoroutine(LoadQuestionAudio());
+    }
 
     public IEnumerator LoadQuestionAudio()
     {
-        yield return new WaitForSeconds(timeBeforeAudioPlay);
-        if (!quizSectionAudio.isPlaying && quizSection.activeSelf)
+        Debug.Log("transitionsAnim status: " + transitionsAnim.isActiveAndEnabled);
+        // nếu có anim transitions thì phải đợi hết anim mới load audio vào 
+        if (transitionsAnim.enabled && !quizSectionAudio.isPlaying && (transitionsAnim != null && transitionsAnim.enabled))
         {
+            yield return new WaitForSeconds(1.5f);
+            quizSectionAudio.PlayOneShot(questionsAudio[currentIndex], quizQuestionsAudioVolume);
+            Debug.Log("Có load anim cùng audio");
+            
+        }
+        // nếu không có anim transitions thì chạy bthg 
+        else if (!quizSectionAudio.isPlaying && quizSection.activeSelf && (transitionsAnim == null || !transitionsAnim.enabled))
+        {
+            Debug.Log("Load audio luôn mà không phải chờ đợi");
+
             quizSectionAudio.PlayOneShot(questionsAudio[currentIndex], quizQuestionsAudioVolume);
 
         }
@@ -418,9 +431,32 @@ public class QuestionManager : MonoBehaviour
 
     public void LoadScene(int sceneIndex)
     {
-        levelLoader.LoadLevel(sceneIndex);
-    }
+        // nếu có transitions anim
+        if (transitionsAnim != null && !quizSectionAudio.isPlaying)
+        {
+            QuizOnlyManager quizOnlyManager = FindAnyObjectByType<QuizOnlyManager>();
 
+            if (quizOnlyManager != null)
+            {
+                quizOnlyManager.ActivateQuizAnim();
+            }
+
+            transitionsAnim.SetTrigger("end");
+
+            // thì chạy coroutine đợi để anim chạy xong r mới load
+            levelLoader.LoadLevelWithAnim(sceneIndex);
+
+            Debug.Log("Run transitions anim before reload scene");
+        }
+        // còn nếu không phải đang ở màn có transitions anim thì load luôn
+        else
+        {
+            levelLoader.LoadLevel(sceneIndex);
+            Debug.Log("Trying to load scene 13");
+
+        }
+
+    }
     public void LoadButtonAudio()
     {
         if (audioManager != null)

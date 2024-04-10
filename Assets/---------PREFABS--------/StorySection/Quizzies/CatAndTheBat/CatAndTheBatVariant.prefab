@@ -301,6 +301,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: aba0886890c563c4fb569024e8fd9162, type: 3}
     - target: {fileID: 9218491732988587656, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218491732988587656, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218491732988587656, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 7655076492698551357}
@@ -310,11 +318,11 @@ PrefabInstance:
       objectReference: {fileID: 7655076492698551357}
     - target: {fileID: 9218491732988587656, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ActivatePendingStatus
+      value: LoadScene
       objectReference: {fileID: 0}
     - target: {fileID: 9218491732988587656, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: LoadScene
+      value: ActivatePendingStatus
       objectReference: {fileID: 0}
     - target: {fileID: 9218491732988587656, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -322,7 +330,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9218491732988587656, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
