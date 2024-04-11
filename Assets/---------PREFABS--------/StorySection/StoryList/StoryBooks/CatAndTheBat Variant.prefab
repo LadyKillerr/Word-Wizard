@@ -14,11 +14,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2724418658143706670, guid: 12df3394cd53d2f479544f43fb749425, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadLevel
+      value: StartToggleQuizSection
+      objectReference: {fileID: 0}
+    - target: {fileID: 2724418658143706670, guid: 12df3394cd53d2f479544f43fb749425, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: QuizOnlyManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2724418658143706670, guid: 12df3394cd53d2f479544f43fb749425, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4526191797764413228, guid: 12df3394cd53d2f479544f43fb749425, type: 3}
       propertyPath: levelPrefLikedName

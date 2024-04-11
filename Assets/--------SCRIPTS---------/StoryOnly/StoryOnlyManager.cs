@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class QuizOnlyManager : MonoBehaviour
+public class StoryOnlyManager : MonoBehaviour
 {
 
     // hidden components
@@ -11,9 +11,8 @@ public class QuizOnlyManager : MonoBehaviour
 
     [Header("Open Components")]
     [SerializeField] GameObject transitionsAnim;
-    public Canvas quizCanvas;
-    [SerializeField] GameObject quizList;
-    [SerializeField] GameObject quizSpawnTarget;
+    [SerializeField] GameObject storyList;
+    [SerializeField] GameObject storySpawnTarget;
 
     [Header("Quiz only Prefabs")]
     [SerializeField] GameObject catAndTheBatPrefab;
@@ -43,10 +42,10 @@ public class QuizOnlyManager : MonoBehaviour
 
     }
 
-    public void StartToggleQuizSection(int quizValue)
+    public void StartToggleStorySection(int quizValue)
     {
         // bắt đầu đợi 2s để anim chạy
-        StartCoroutine(ToggleQuizSection(quizValue));
+        StartCoroutine(ToggleStorySection(quizValue));
 
         // anim chạy trong khoảng 1.5s 
         transitionsAnim.GetComponent<Animator>().SetTrigger("end");
@@ -54,13 +53,13 @@ public class QuizOnlyManager : MonoBehaviour
         StartCoroutine(ResetTransitionGameObject());
     }
 
-    IEnumerator ToggleQuizSection(int quizValue)
+    IEnumerator ToggleStorySection(int quizValue)
     {
         // ngưng load tầm 1.5s để anim chạy, xong thì sẽ bdau hiện ra quiz 
         yield return new WaitForSeconds(1.5f);
-        
+
         // sau khi đợi 1.5s để start anim chạy xong -> màn đen xì sẽ bdau load ra question
-        quizList.SetActive(false);
+        storyList.SetActive(false);
 
         if (audioManager != null)
         {
@@ -68,53 +67,69 @@ public class QuizOnlyManager : MonoBehaviour
 
         }
 
+
+
         switch (quizValue)
         {
             case 0:
                 // instantiate ra cái quiz section tương ứng ( CatAndTheBat section sẽ là 0 giống trong StoryID.txt)
 
                 // Instantiate GameObject
-                spawnedObject = Instantiate(catAndTheBatPrefab, quizSpawnTarget.transform);
+                spawnedObject = Instantiate(catAndTheBatPrefab, storySpawnTarget.transform);
+
+                Canvas canvas = catAndTheBatPrefab.GetComponent<Canvas>();
+
+                if(canvas != null)
+{
+                    // Gán RenderMode là ScreenSpaceCamera và Render Camera là Camera.main
+                    canvas.renderMode = RenderMode.ScreenSpaceCamera;
+                    canvas.worldCamera = Camera.main;
+                }
+                else
+                {
+                    Debug.Log("Khong tim thay canvas");
+                }
+
                 break;
 
             case 1:
                 // Instantiate GameObject
-                spawnedObject = Instantiate(bennyTheBunnyPrefab, quizSpawnTarget.transform);
+                spawnedObject = Instantiate(bennyTheBunnyPrefab, storySpawnTarget.transform);
                 break;
 
             case 2:
                 // Instantiate GameObject
-                spawnedObject = Instantiate(caseyTheCatPrefab, quizSpawnTarget.transform);
+                spawnedObject = Instantiate(caseyTheCatPrefab, storySpawnTarget.transform);
                 break;
 
             case 3:
                 // Instantiate GameObject
-                spawnedObject = Instantiate(dannyTheDogPrefab, quizSpawnTarget.transform);
+                spawnedObject = Instantiate(dannyTheDogPrefab, storySpawnTarget.transform);
                 break;
 
             case 4:
                 // Instantiate GameObject
-                spawnedObject = Instantiate(ellieTheElephantPrefab, quizSpawnTarget.transform);
+                spawnedObject = Instantiate(ellieTheElephantPrefab, storySpawnTarget.transform);
                 break;
 
             case 5:
                 // Instantiate GameObject
-                spawnedObject = Instantiate(freddyTheFishPrefab, quizSpawnTarget.transform);
+                spawnedObject = Instantiate(freddyTheFishPrefab, storySpawnTarget.transform);
                 break;
 
             case 6:
                 // Instantiate GameObject
-                spawnedObject = Instantiate(ginaTheGoosePrefab, quizSpawnTarget.transform);
+                spawnedObject = Instantiate(ginaTheGoosePrefab, storySpawnTarget.transform);
                 break;
 
             case 7:
                 // Instantiate GameObject
-                spawnedObject = Instantiate(henryTheHedgehogPrefab, quizSpawnTarget.transform);
+                spawnedObject = Instantiate(henryTheHedgehogPrefab, storySpawnTarget.transform);
                 break;
 
             case 8:
                 // Instantiate GameObject
-                spawnedObject = Instantiate(ivyTheIguanaPrefab, quizSpawnTarget.transform);
+                spawnedObject = Instantiate(ivyTheIguanaPrefab, storySpawnTarget.transform);
                 break;
         }
 
@@ -131,14 +146,10 @@ public class QuizOnlyManager : MonoBehaviour
     // sau khi chạy lần đầu vào thì phải tắt anim đi không thì các câu hỏi sau cũng phải chờ
     IEnumerator ResetTransitionGameObject()
     {
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(4);
 
-        
         transitionsAnim.SetActive(false);
         transitionsAnim.GetComponent<Animator>().enabled = false;
-
-        Debug.Log("Killed The ANIM thing");
-        
     }
 
     public void ActivateQuizAnim()
@@ -146,4 +157,5 @@ public class QuizOnlyManager : MonoBehaviour
         transitionsAnim.SetActive(true);
         transitionsAnim.GetComponent<Animator>().enabled = true;
     }
+
 }

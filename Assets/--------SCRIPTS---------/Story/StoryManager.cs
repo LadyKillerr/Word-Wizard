@@ -37,7 +37,8 @@ public class StoryManager : MonoBehaviour
 
     [Header("Question time before continue")]
     [SerializeField] float delayTime = 3f;
-    [SerializeField] float intersectionTime = 1.5f;
+    // 1.5s anim end + 1s anim start
+    [SerializeField] float intersectionTime = 2.5f;
 
     public bool isReading;
 
@@ -181,7 +182,7 @@ public class StoryManager : MonoBehaviour
 
             // load ra màn hình câu hỏi trắc nghiệm, sẽ có câu hỏi riêng để ng chơi trả lời trắc nghiệm
             // ẩn hết màn hình câu hỏi đi 
-            interactiveStorySection.SetActive(false);
+            //interactiveStorySection.SetActive(false);
 
             if (audioManager != null)
             {
@@ -191,7 +192,8 @@ public class StoryManager : MonoBehaviour
 
             // bật intersection
             ToggleIntersection();
-
+            
+            
 
         }
         
@@ -234,20 +236,24 @@ public class StoryManager : MonoBehaviour
     {
         intersectionSection.SetActive(true);
 
+        intersectionSection.GetComponent<Animator>().SetTrigger("end");
+
         StartCoroutine(DisableIntersection());
     }
 
     IEnumerator DisableIntersection()
     {
-        yield return new WaitForSecondsRealtime(intersectionTime);
-
-        intersectionSection.SetActive(false);
-
-        // bật màn hình câu hỏi
+        // đợi chạy anim end trước - sau 1.5s mới load quiz vào 
+        yield return new WaitForSeconds(1.5f);
+        interactiveStorySection.SetActive(false);
         questionSection.SetActive(true);
 
         // bật âm thanh câu hỏi trắc nghiệm 
         questionManager.StartLoadQuestionAudio();
+
+        // đợi chạy xong anim start - r mới kill intersect screen đi 
+        yield return new WaitForSeconds(1f);
+        intersectionSection.SetActive(false);
     }
 
     void HideAllHiddenButtons()

@@ -66,7 +66,7 @@ public class SwipeHandler : MonoBehaviour
         yield return new WaitForSeconds(autoFlipDelay);
 
 
-        if (isAutoNextPage  && !storyAudioSource.isPlaying)
+        if (isAutoNextPage  && !storyAudioSource.isPlaying && interactiveStorySection.activeSelf)
         {
             Debug.Log("Tự động sang trang");
             storyManager.NextPart();

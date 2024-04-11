@@ -150,7 +150,7 @@ PrefabInstance:
       objectReference: {fileID: 1856013682}
     - target: {fileID: 3078703327825896613, guid: c4b608ba6fe304d4e88495a4eabd4059, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToggleQuizSection
+      value: StartToggleQuizSection
       objectReference: {fileID: 0}
     - target: {fileID: 3078703327825896613, guid: c4b608ba6fe304d4e88495a4eabd4059, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -1495,7 +1495,7 @@ PrefabInstance:
       objectReference: {fileID: 1856013682}
     - target: {fileID: 4194915201097695988, guid: 95711dc3bed12b04c97e0976019ab200, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToggleQuizSection
+      value: StartToggleQuizSection
       objectReference: {fileID: 0}
     - target: {fileID: 4194915201097695988, guid: 95711dc3bed12b04c97e0976019ab200, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -3154,7 +3154,7 @@ PrefabInstance:
       objectReference: {fileID: 1856013682}
     - target: {fileID: 4486721765081015895, guid: 0edb5c783d13b3149a1f9e7731f54dfe, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToggleQuizSection
+      value: StartToggleQuizSection
       objectReference: {fileID: 0}
     - target: {fileID: 4486721765081015895, guid: 0edb5c783d13b3149a1f9e7731f54dfe, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -3742,7 +3742,7 @@ PrefabInstance:
       objectReference: {fileID: 1856013682}
     - target: {fileID: 7981224864061926083, guid: 760ead16823fb384c95667a4d41518e9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToggleQuizSection
+      value: StartToggleQuizSection
       objectReference: {fileID: 0}
     - target: {fileID: 7981224864061926083, guid: 760ead16823fb384c95667a4d41518e9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -4067,7 +4067,7 @@ PrefabInstance:
       objectReference: {fileID: 1856013682}
     - target: {fileID: 8199982682129184799, guid: b352199c7c0d09c4597de3a092a337d7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToggleQuizSection
+      value: StartToggleQuizSection
       objectReference: {fileID: 0}
     - target: {fileID: 8199982682129184799, guid: b352199c7c0d09c4597de3a092a337d7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -4391,7 +4391,7 @@ PrefabInstance:
       objectReference: {fileID: 1856013682}
     - target: {fileID: 6891482617599614211, guid: b0f25c7c44aa44c469eb60170ac73c21, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToggleQuizSection
+      value: StartToggleQuizSection
       objectReference: {fileID: 0}
     - target: {fileID: 6891482617599614211, guid: b0f25c7c44aa44c469eb60170ac73c21, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -4436,7 +4436,7 @@ PrefabInstance:
       objectReference: {fileID: 1856013682}
     - target: {fileID: 4260292650119978624, guid: 67b2ca5496dbda945a2e703cb69c5da9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToggleQuizSection
+      value: StartToggleQuizSection
       objectReference: {fileID: 0}
     - target: {fileID: 4260292650119978624, guid: 67b2ca5496dbda945a2e703cb69c5da9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -4560,32 +4560,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 1033628714347965264}
     m_Modifications:
     - target: {fileID: 3116277806340442352, guid: df605bbd47553ef4ebd8bd838438bdb3, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3116277806340442352, guid: df605bbd47553ef4ebd8bd838438bdb3, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3116277806340442352, guid: df605bbd47553ef4ebd8bd838438bdb3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1856013682}
     - target: {fileID: 3116277806340442352, guid: df605bbd47553ef4ebd8bd838438bdb3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: StartToggleQuizSection
-      objectReference: {fileID: 0}
-    - target: {fileID: 3116277806340442352, guid: df605bbd47553ef4ebd8bd838438bdb3, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: QuizOnlyManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 3116277806340442352, guid: df605bbd47553ef4ebd8bd838438bdb3, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3116277806340442352, guid: df605bbd47553ef4ebd8bd838438bdb3, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3391700039744600763, guid: df605bbd47553ef4ebd8bd838438bdb3, type: 3}
       propertyPath: m_Name
@@ -4856,7 +4836,7 @@ PrefabInstance:
       objectReference: {fileID: 1856013682}
     - target: {fileID: 2842579756382282192, guid: 9b36254e374d53644a167b3b5b578f9e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToggleQuizSection
+      value: StartToggleQuizSection
       objectReference: {fileID: 0}
     - target: {fileID: 2842579756382282192, guid: 9b36254e374d53644a167b3b5b578f9e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName

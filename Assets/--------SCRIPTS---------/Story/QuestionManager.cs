@@ -33,7 +33,8 @@ public class QuestionManager : MonoBehaviour
     [SerializeField] AudioClip[] answer2Audio;
     [SerializeField] AudioClip[] answer3Audio;
     [SerializeField] AudioClip[] answer4Audio;
-    [SerializeField] float timeBeforeAudioPlay = 0.5f;
+
+    [SerializeField] float timeBeforeAudioPlay = 1f;
 
     [SerializeField][Range(0, 1)] float answersAudioVolume;
     [SerializeField] Sprite wrongAnswerSprite;
@@ -153,11 +154,19 @@ public class QuestionManager : MonoBehaviour
 
         if (currentIndex == 0)
         {
-            backButton.interactable = false;
+            if (storyManager != null)
+            {
+                backButton.interactable = true;
+                backButton.GetComponent<Image>().color = new(255, 255, 255, 1);
 
-            backButton.GetComponent<Image>().color = new(255, 255, 255, fadedButtonOpacity);
+
+            }
+            else if (storyManager == null)
+            {
+                backButton.interactable = false;
+                backButton.GetComponent<Image>().color = new(255, 255, 255, fadedButtonOpacity);
+            }
         }
-
         else
         {
             backButton.interactable = true;
@@ -254,19 +263,22 @@ public class QuestionManager : MonoBehaviour
 
     public IEnumerator LoadQuestionAudio()
     {
-        Debug.Log("transitionsAnim status: " + transitionsAnim.isActiveAndEnabled);
+        //Debug.Log("transitionsAnim status: " + transitionsAnim.isActiveAndEnabled);
         // nếu có anim transitions thì phải đợi hết anim mới load audio vào 
-        if (transitionsAnim.enabled && !quizSectionAudio.isPlaying && (transitionsAnim != null && transitionsAnim.enabled))
+        if (!quizSectionAudio.isPlaying && (transitionsAnim != null && transitionsAnim.enabled))
         {
-            yield return new WaitForSeconds(1.5f);
+            // thời gian đợi trước khi tự động đọc audio của câu đầu tiên(đợi để anim chạy xong)
+            yield return new WaitForSeconds(timeBeforeAudioPlay);
+
             quizSectionAudio.PlayOneShot(questionsAudio[currentIndex], quizQuestionsAudioVolume);
-            Debug.Log("Có load anim cùng audio");
             
+            Debug.Log("Có load anim cùng audio");
+
         }
         // nếu không có anim transitions thì chạy bthg 
         else if (!quizSectionAudio.isPlaying && quizSection.activeSelf && (transitionsAnim == null || !transitionsAnim.enabled))
         {
-            Debug.Log("Load audio luôn mà không phải chờ đợi");
+            Debug.Log("Load audio luôn mà không phải chờ đợi anim");
 
             quizSectionAudio.PlayOneShot(questionsAudio[currentIndex], quizQuestionsAudioVolume);
 
@@ -287,7 +299,7 @@ public class QuestionManager : MonoBehaviour
                     quizSectionAudio.PlayOneShot(answer1Audio[index], answersAudioVolume);
 
                 }
-                else { return; }
+
 
                 break;
             case 1:
@@ -297,7 +309,7 @@ public class QuestionManager : MonoBehaviour
                     quizSectionAudio.PlayOneShot(answer2Audio[index], answersAudioVolume);
 
                 }
-                else { return; }
+
 
                 break;
             case 2:
@@ -307,7 +319,7 @@ public class QuestionManager : MonoBehaviour
                     quizSectionAudio.PlayOneShot(answer3Audio[index], answersAudioVolume);
 
                 }
-                else { return; }
+
 
                 break;
             case 3:
@@ -317,7 +329,7 @@ public class QuestionManager : MonoBehaviour
                     quizSectionAudio.PlayOneShot(answer4Audio[index], answersAudioVolume);
 
                 }
-                else { return; }
+
 
                 break;
 
@@ -348,6 +360,8 @@ public class QuestionManager : MonoBehaviour
             // dừng Particle Effects tung hoa 
             rightAnswerPE.Stop();
 
+
+
             isAnswered = false;
             isAnswerCorrect = false;
         }
@@ -357,12 +371,12 @@ public class QuestionManager : MonoBehaviour
 
 
             // khi trả lời đúng câu hỏi cuối cùng
-            StartCoroutine(LoadVictorySreen());
+            StartCoroutine(LoadVictoryScreen());
         }
 
     }
 
-    IEnumerator LoadVictorySreen()
+    IEnumerator LoadVictoryScreen()
     {
         yield return new WaitForSeconds(delayTimeSmall);
 
@@ -421,7 +435,7 @@ public class QuestionManager : MonoBehaviour
 
             }
 
-            if (storyManager == null)
+            else if (storyManager == null)
             {
                 return;
             }
@@ -431,13 +445,16 @@ public class QuestionManager : MonoBehaviour
 
     public void LoadScene(int sceneIndex)
     {
+        finishLevelPE.Stop();
+
         // nếu có transitions anim
-        if (transitionsAnim != null && !quizSectionAudio.isPlaying)
+        if (transitionsAnim != null)
         {
             QuizOnlyManager quizOnlyManager = FindAnyObjectByType<QuizOnlyManager>();
 
             if (quizOnlyManager != null)
             {
+                // bật lại quiz Anim để chạy anim
                 quizOnlyManager.ActivateQuizAnim();
             }
 
