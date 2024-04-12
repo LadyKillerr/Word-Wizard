@@ -26,9 +26,6 @@ public class StoryManager : MonoBehaviour
     // mảng chứa các hình ảnh tương ứng với câu truyện đó
     [SerializeField] GameObject[] imageParts;
 
-    // mảng chứa các nút bấm tương tác tương ứng với trang ảnh minh hoạ
-    [SerializeField] GameObject[] hiddenButtonsParts;
-
     // mảng chứa các audio tương ứng với câu truyện
     [SerializeField] AudioClip[] audioParts;
 
@@ -54,6 +51,8 @@ public class StoryManager : MonoBehaviour
     [SerializeField] GameObject intersectionSection;
 
     // Components
+    Animator transitionsAnim;
+    LoadScene levelLoader;
     AudioSource storyAudioSource;
     AudioManager audioManager;
     [SerializeField] QuestionManager questionManager;
@@ -70,7 +69,8 @@ public class StoryManager : MonoBehaviour
 
     void Awake()
     {
-
+        levelLoader = FindAnyObjectByType<LoadScene>();
+        transitionsAnim = FindAnyObjectByType<Animator>();
 
         audioManager = FindAnyObjectByType<AudioManager>();
 
@@ -103,13 +103,44 @@ public class StoryManager : MonoBehaviour
         // storyId là để biết đang ở data truyện nào trong file json
     }
 
+    public void LoadSceneWithAnim(int sceneIndex)
+    {
+
+        // nếu có transitions anim
+        if (transitionsAnim != null)
+        {
+            StoryOnlyManager storyOnlyManager = FindAnyObjectByType<StoryOnlyManager>();
+
+            if (storyOnlyManager != null)
+            {
+                // bật lại component quiz Anim để chạy anim
+                storyOnlyManager.ActivateQuizAnim();
+            }
+
+            // chạy animation end (chuyển màn)
+            transitionsAnim.SetTrigger("end");
+
+            // thì chạy coroutine đợi để anim chạy xong r mới load
+            levelLoader.LoadLevelWithAnim(sceneIndex);
+
+            Debug.Log("Run transitions anim before reload scene");
+        }
+        // còn nếu không phải đang ở màn có transitions anim thì load luôn(sử dụng loading screen)
+        else
+        {
+            levelLoader.LoadLevel(sceneIndex);
+            Debug.Log("Trying to load scene 13");
+
+        }
+
+    }
+
     void LoadFirstStoryPart()
     {
         // tắt hết đi và reset index
         HideAllStoryParts();
         HideAllImageParts();
         MuteAudio();
-        HideAllHiddenButtons();
 
         // reset index
         currentIndex = 0;
@@ -128,8 +159,6 @@ public class StoryManager : MonoBehaviour
 
         imageParts[currentIndex].SetActive(true);
 
-        hiddenButtonsParts[currentIndex].SetActive(true);
-
         PlayCurrentAudioParts();
 
 
@@ -139,7 +168,7 @@ public class StoryManager : MonoBehaviour
     void HideParts()
     {
         storyParts[currentIndex].SetActive(false);
-        hiddenButtonsParts[currentIndex].SetActive(false);
+
         imageParts[currentIndex].SetActive(false);
 
         MuteAudio();
@@ -192,11 +221,11 @@ public class StoryManager : MonoBehaviour
 
             // bật intersection
             ToggleIntersection();
-            
-            
+
+
 
         }
-        
+
     }
 
     // chức năng back lại trang cũ
@@ -254,14 +283,6 @@ public class StoryManager : MonoBehaviour
         // đợi chạy xong anim start - r mới kill intersect screen đi 
         yield return new WaitForSeconds(1f);
         intersectionSection.SetActive(false);
-    }
-
-    void HideAllHiddenButtons()
-    {
-        foreach (GameObject part in hiddenButtonsParts)
-        {
-            part.SetActive(false);
-        }
     }
 
     void MuteAudio()
@@ -347,7 +368,11 @@ public class StoryManager : MonoBehaviour
 
     public void LoadButtonAudio()
     {
-        audioManager.PlayButtonClip();
+        if (audioManager != null)
+        {
+            audioManager.PlayButtonClip();
+
+        }
     }
 
     // Lien kết file và viết hàm set indexx = 9
@@ -366,5 +391,6 @@ public class StoryManager : MonoBehaviour
     {
         isReading = value;
     }
+
 
 }

@@ -77,18 +77,9 @@ public class StoryOnlyManager : MonoBehaviour
                 // Instantiate GameObject
                 spawnedObject = Instantiate(catAndTheBatPrefab, storySpawnTarget.transform);
 
-                Canvas canvas = catAndTheBatPrefab.GetComponent<Canvas>();
+               
 
-                if(canvas != null)
-{
-                    // Gán RenderMode là ScreenSpaceCamera và Render Camera là Camera.main
-                    canvas.renderMode = RenderMode.ScreenSpaceCamera;
-                    canvas.worldCamera = Camera.main;
-                }
-                else
-                {
-                    Debug.Log("Khong tim thay canvas");
-                }
+                
 
                 break;
 
@@ -133,9 +124,6 @@ public class StoryOnlyManager : MonoBehaviour
                 break;
         }
 
-        // Thiết lập RectTransform của GameObject
-        rectTransform = spawnedObject.GetComponent<RectTransform>();
-
         // Set Anchor để gameObject neo full màn hình
         rectTransform.anchorMin = Vector2.zero;
         rectTransform.anchorMax = Vector2.one;
@@ -146,7 +134,7 @@ public class StoryOnlyManager : MonoBehaviour
     // sau khi chạy lần đầu vào thì phải tắt anim đi không thì các câu hỏi sau cũng phải chờ
     IEnumerator ResetTransitionGameObject()
     {
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(2.5f);
 
         transitionsAnim.SetActive(false);
         transitionsAnim.GetComponent<Animator>().enabled = false;

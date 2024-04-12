@@ -260,24 +260,24 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7822098288838830745}
         m_TargetAssemblyTypeName: QuestionManager, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 13
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 7822098288838830745}
-        m_TargetAssemblyTypeName: QuestionManager, Assembly-CSharp
         m_MethodName: ActivatePendingStatus
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7822098288838830745}
+        m_TargetAssemblyTypeName: QuestionManager, Assembly-CSharp
+        m_MethodName: LoadSceneWithAnim
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -12684,6 +12684,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 7822098288838830745}
+    - target: {fileID: 1369354923789957271, guid: 684368741ae2e1346b84c7ea8f6d39bb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadSceneWithAnim
+      objectReference: {fileID: 0}
+    - target: {fileID: 1369354923789957271, guid: 684368741ae2e1346b84c7ea8f6d39bb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: QuestionManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 1382798977300301822, guid: 684368741ae2e1346b84c7ea8f6d39bb, type: 3}
       propertyPath: m_Name
       value: CongratsWindow
@@ -12799,6 +12807,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 7822098288838830745}
+    - target: {fileID: 6347842223848596400, guid: 582ee33b65f19444ba8b25b2753f610c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadSceneWithAnim
+      objectReference: {fileID: 0}
+    - target: {fileID: 6347842223848596400, guid: 582ee33b65f19444ba8b25b2753f610c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: QuestionManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 6468041955559887402, guid: 582ee33b65f19444ba8b25b2753f610c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

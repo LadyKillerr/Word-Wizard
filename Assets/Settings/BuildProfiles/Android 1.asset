@@ -23,27 +23,9 @@ MonoBehaviour:
   - m_enabled: 1
     m_path: Assets/Scenes/Home.unity
   - m_enabled: 1
-    m_path: Assets/Scenes/StoryScenes/StoryList.unity
-  - m_enabled: 1
-    m_path: Assets/Scenes/StoryScenes/Story 1/CatAndTheBat.unity
-  - m_enabled: 1
-    m_path: Assets/Scenes/StoryScenes/Story 2/BennyTheBunny.unity
-  - m_enabled: 1
-    m_path: Assets/Scenes/StoryScenes/Story 3/CaseyTheCat.unity
-  - m_enabled: 1
-    m_path: Assets/Scenes/StoryScenes/Story 4/DannyTheDog.unity
-  - m_enabled: 1
-    m_path: Assets/Scenes/StoryScenes/Story 5/EllieTheElephant.unity
-  - m_enabled: 1
-    m_path: Assets/Scenes/StoryScenes/Story 6/FreddyTheFish.unity
-  - m_enabled: 1
-    m_path: Assets/Scenes/StoryScenes/Story 7/GinaTheGoose.unity
-  - m_enabled: 1
-    m_path: Assets/Scenes/StoryScenes/Story 8/HenryTheHedgehog.unity
-  - m_enabled: 1
-    m_path: Assets/Scenes/StoryScenes/Story 9/IvyTheIguana.unity
-  - m_enabled: 1
     m_path: Assets/Scenes/GameMenu.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/StoryScenes/StoryList.unity
   - m_enabled: 1
     m_path: Assets/Scenes/QuizScenes/QuizList.unity
   references:

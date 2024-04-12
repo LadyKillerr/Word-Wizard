@@ -14,7 +14,9 @@ public class LoadScene : MonoBehaviour
     //[SerializeField] Image loadingBarImage; // dùng khi chị Khánh gửi chữ Loading
     [SerializeField] TextMeshProUGUI loadingPercent;
 
-    float delayTime = 1.5f;
+    [Header("Animation Timer")]
+    [SerializeField] float endAnimTime = 1f;
+    [SerializeField] float startAnimTime = 1f;
 
     AudioManager audioManager;
     Animator transitionsAnim;
@@ -34,11 +36,17 @@ public class LoadScene : MonoBehaviour
 
     }
 
+    // Load Scene khác với anim "end" ( sẽ đợi 1s để anim chạy r mới load scene)
     public void LoadLevelWithAnim(int sceneIndex)
     {
         if (transitionsAnim != null && transitionsAnim.enabled)
         {
             transitionsAnim.SetTrigger("end");
+
+            if (audioManager != null)
+            {
+                audioManager.PlayStartAudio();
+            }
 
             // đợi 1s để anim chạy thì sẽ load luôn
             StartCoroutine(LoadAsyncWithoutLoadingScreen(sceneIndex));
@@ -46,18 +54,17 @@ public class LoadScene : MonoBehaviour
         }
     }
 
-    // hàm này dành cho intro load vào game 
-    public void IntroLoadLevel(int sceneIndex)
+
+
+    // hàm này sẽ load có đợi 1s để anim chạy
+    public IEnumerator LoadAsyncWithoutLoadingScreen(int sceneIndex)
     {
-        StartCoroutine(StartLoading(sceneIndex));
+        yield return new WaitForSeconds(endAnimTime);
+        SceneManager.LoadSceneAsync(sceneIndex);
+
 
     }
 
-    IEnumerator StartLoading(int sceneIndex)
-    {
-        yield return new WaitForSeconds(delayTime);
-        StartCoroutine(LoadAsynchrounously(sceneIndex));
-    }
 
     public IEnumerator LoadAsynchrounously(int sceneIndex)
     {
@@ -79,16 +86,30 @@ public class LoadScene : MonoBehaviour
         }
     }
 
-    // hàm này sẽ load có đợi 1s để anim chạy
-    public IEnumerator LoadAsyncWithoutLoadingScreen(int sceneIndex)
+
+
+
+    // 2 hàm này dành cho intro load vào game 
+    public void IntroLoadGame(int sceneIndex)
     {
-        yield return new WaitForSeconds(1);
-        SceneManager.LoadSceneAsync(sceneIndex);
+        if (transitionsAnim != null && transitionsAnim.enabled)
+        {
+            // đợi 1s để anim chạy thì sẽ load luôn
+            StartCoroutine(IntroLoadAsync(sceneIndex));
 
-
+        }
     }
 
+    IEnumerator IntroLoadAsync(int sceneIndex)
+    {
+        // 1s chạy anim nổ bóng 1s chạy anim transitions -> tổng là 2s
+        yield return new WaitForSeconds(endAnimTime);
+        transitionsAnim.SetTrigger("end");
 
+        yield return new WaitForSeconds(endAnimTime);
+        SceneManager.LoadSceneAsync(sceneIndex);
+
+    }
 
 
 

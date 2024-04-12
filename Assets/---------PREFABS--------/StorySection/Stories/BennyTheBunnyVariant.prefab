@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &66253131754008143
+--- !u!1001 &7606708908408660367
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -35,66 +35,66 @@ PrefabInstance:
     - target: {fileID: 769255408365071368, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -6316773895489952934, guid: ad3a750a4c9ed874ab53e6a92a8b8bd2, type: 3}
+      objectReference: {fileID: -4633661227068839893, guid: fea5a747956d6a04e914ba071ed8aa30, type: 3}
     - target: {fileID: 848696220241531568, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 2565560953177711962, guid: f7eb4d0b890d2ed478affbc2fc6b4563, type: 3}
+      objectReference: {fileID: -1814417996657713510, guid: 7d520f002065e5e449c5e20c4c54f205, type: 3}
     - target: {fileID: 1260301211301265960, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: storyId
-      value: 8
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1260301211301265960, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: audioParts.Array.size
-      value: 9
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1260301211301265960, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: imageParts.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1260301211301265960, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: storyParts.Array.size
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1260301211301265960, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'audioParts.Array.data[0]'
       value: 
-      objectReference: {fileID: 8300000, guid: d992ce5e4f3b5134ea0586770a42ac7c, type: 3}
+      objectReference: {fileID: 8300000, guid: ba237cf0f5c4e3748aee4236e37ffbbc, type: 3}
     - target: {fileID: 1260301211301265960, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'audioParts.Array.data[1]'
       value: 
-      objectReference: {fileID: 8300000, guid: e2f242303b19f034798d2e462f6f6139, type: 3}
+      objectReference: {fileID: 8300000, guid: 68b31e1296c88834580ecab3be7ce3ae, type: 3}
     - target: {fileID: 1260301211301265960, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'audioParts.Array.data[2]'
       value: 
-      objectReference: {fileID: 8300000, guid: ac62242cd10b41346bc8adf2d4dab027, type: 3}
+      objectReference: {fileID: 8300000, guid: 020d8182bc36eab42bd7bf9c6088b825, type: 3}
     - target: {fileID: 1260301211301265960, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'audioParts.Array.data[3]'
       value: 
-      objectReference: {fileID: 8300000, guid: 8676630e352406940be6995256bcccd8, type: 3}
+      objectReference: {fileID: 8300000, guid: a5773d0ed3291704db919d062cb73b28, type: 3}
     - target: {fileID: 1260301211301265960, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'audioParts.Array.data[4]'
       value: 
-      objectReference: {fileID: 8300000, guid: bba2d3107ceb41d45862a14a5385df2e, type: 3}
+      objectReference: {fileID: 8300000, guid: 5076d28c20502d448b296c9af3ea3f43, type: 3}
     - target: {fileID: 1260301211301265960, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'audioParts.Array.data[5]'
       value: 
-      objectReference: {fileID: 8300000, guid: 26123762b9e8dae46a225c65bb62f98a, type: 3}
+      objectReference: {fileID: 8300000, guid: f7636a1aaccd9a14e9c3ba458cf7ba17, type: 3}
     - target: {fileID: 1260301211301265960, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'audioParts.Array.data[6]'
       value: 
-      objectReference: {fileID: 8300000, guid: 0580940181bc58b4db3ec71aa189b16a, type: 3}
-    - target: {fileID: 1260301211301265960, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
-      propertyPath: 'audioParts.Array.data[7]'
-      value: 
-      objectReference: {fileID: 8300000, guid: c182382e4fa46bf4aa0f84099ac9fd6d, type: 3}
-    - target: {fileID: 1260301211301265960, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
-      propertyPath: 'audioParts.Array.data[8]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 4a6eabba6cc889649aa9b3adb70fa896, type: 3}
+      objectReference: {fileID: 8300000, guid: 5dd3a48482170784dba683a6b26f13a6, type: 3}
     - target: {fileID: 1425242604769763240, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -6123004202851401083, guid: 6ad934bb2adb51844ad8b4dfcebb0255, type: 3}
+      objectReference: {fileID: -313468949865127446, guid: 69e24d112a5ab6e42aaf580c2af00efd, type: 3}
     - target: {fileID: 1641350864142792626, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -733957381588149730, guid: 1aa4b4f4421abff4184b0d42c9a6790d, type: 3}
+      objectReference: {fileID: -6941544053462928447, guid: 4eb000e8d26b05049950c0c022a4c3f6, type: 3}
     - target: {fileID: 1919457721324800252, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_Name
-      value: IvyTheIguana Variant
+      value: BennyTheBunnyVariant
       objectReference: {fileID: 0}
     - target: {fileID: 2241318914916167470, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_AnchorMax.y
@@ -123,7 +123,7 @@ PrefabInstance:
     - target: {fileID: 2470230497725969701, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -9188632694670991214, guid: dc3d2deab1edb29488d35a89bb29373b, type: 3}
+      objectReference: {fileID: 2593164870461091839, guid: 353eb619b4fc36b47a5187cb27d0bf19, type: 3}
     - target: {fileID: 2535026045087684705, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -166,7 +166,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2535026045087684705, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 90
+      value: 90.00023
       objectReference: {fileID: 0}
     - target: {fileID: 2535026045087684705, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -174,15 +174,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2535026045087684705, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2535026045087684705, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2535026045087684705, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2535026045087684705, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -204,10 +204,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2778210053684433427, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -5910228175204626835, guid: bd2db8a0d76bd264d838fd3c1af032ab, type: 3}
     - target: {fileID: 2794367401903990404, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -291,7 +287,7 @@ PrefabInstance:
     - target: {fileID: 5939250506484976080, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -4944068189733832494, guid: 4f11e66fa1ad25d47bdfce73b45ff249, type: 3}
+      objectReference: {fileID: 1202199674138918743, guid: a57319a071ec9624b95725d9a9fa9112, type: 3}
     - target: {fileID: 6255202906718135663, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -319,7 +315,7 @@ PrefabInstance:
     - target: {fileID: 6506457764194497636, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -4747168201815162448, guid: 0817658dd8c83e249bd4d4b1b9c5cdc9, type: 3}
+      objectReference: {fileID: -4633661227068839893, guid: fea5a747956d6a04e914ba071ed8aa30, type: 3}
     - target: {fileID: 7149797056146681877, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -346,7 +342,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7190754561829458267, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: levelPrefName
-      value: IvyTheIguana
+      value: BennyTheBunny
       objectReference: {fileID: 0}
     - target: {fileID: 7190754561829458267, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: questionsSO.Array.size
@@ -375,99 +371,99 @@ PrefabInstance:
     - target: {fileID: 7190754561829458267, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'questionsSO.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: 47f15c4441b1a0247bb01ae7ab691cb6, type: 2}
+      objectReference: {fileID: 11400000, guid: be8897b9bd306f94f847643584ba7a5f, type: 2}
     - target: {fileID: 7190754561829458267, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'questionsSO.Array.data[1]'
       value: 
-      objectReference: {fileID: 11400000, guid: d77a2079d2e794b41a24e4e4f601346a, type: 2}
+      objectReference: {fileID: 11400000, guid: b9b6b322379aab44c815c7feacfb6123, type: 2}
     - target: {fileID: 7190754561829458267, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'questionsSO.Array.data[2]'
       value: 
-      objectReference: {fileID: 11400000, guid: feeb8d8a8704fb042822d0c5256434de, type: 2}
+      objectReference: {fileID: 11400000, guid: 3c942f2522aa18a4fa61e61663d970ec, type: 2}
     - target: {fileID: 7190754561829458267, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'questionsSO.Array.data[3]'
       value: 
-      objectReference: {fileID: 11400000, guid: 0a8a6ef67b3098f45b35f5e65dd52116, type: 2}
+      objectReference: {fileID: 11400000, guid: 4ef9fcac62a097147bdfd47ea7550e1a, type: 2}
     - target: {fileID: 7190754561829458267, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'answer1Audio.Array.data[0]'
       value: 
-      objectReference: {fileID: 8300000, guid: 9a2ca3d2387e6d84fba90a354974d3b2, type: 3}
+      objectReference: {fileID: 8300000, guid: 8c14dce0c1410194c81b5a15913a6840, type: 3}
     - target: {fileID: 7190754561829458267, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'answer1Audio.Array.data[1]'
       value: 
-      objectReference: {fileID: 8300000, guid: d4ab682dd96ecac4da51588a645be9c4, type: 3}
+      objectReference: {fileID: 8300000, guid: 3925d8978ad47cc439aed0cbbd5a2d28, type: 3}
     - target: {fileID: 7190754561829458267, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'answer1Audio.Array.data[2]'
       value: 
-      objectReference: {fileID: 8300000, guid: edde74dd43849b14da69a2dc19ccfc32, type: 3}
+      objectReference: {fileID: 8300000, guid: fd7982866042f0642a88ffc443e0ef81, type: 3}
     - target: {fileID: 7190754561829458267, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'answer1Audio.Array.data[3]'
       value: 
-      objectReference: {fileID: 8300000, guid: e53930b27c59f6c498565d1dd323091e, type: 3}
+      objectReference: {fileID: 8300000, guid: 332d285bf91fc9c499670c3cbaf90f6f, type: 3}
     - target: {fileID: 7190754561829458267, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'answer2Audio.Array.data[0]'
       value: 
-      objectReference: {fileID: 8300000, guid: 6cc3e4b2b8ea23f4081176366b1a2daa, type: 3}
+      objectReference: {fileID: 8300000, guid: 8a436a3eea524fe4fa6696f9f41dc508, type: 3}
     - target: {fileID: 7190754561829458267, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'answer2Audio.Array.data[1]'
       value: 
-      objectReference: {fileID: 8300000, guid: 46278f70398f280488bbc41f4463f4eb, type: 3}
+      objectReference: {fileID: 8300000, guid: e37bd4ef85f875744a83edebe674d786, type: 3}
     - target: {fileID: 7190754561829458267, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'answer2Audio.Array.data[2]'
       value: 
-      objectReference: {fileID: 8300000, guid: 7d2b12fca524a134ea890d54fe5fb02f, type: 3}
+      objectReference: {fileID: 8300000, guid: 914b1799e1dea474ea3de9f2d9f5f2bd, type: 3}
     - target: {fileID: 7190754561829458267, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'answer2Audio.Array.data[3]'
       value: 
-      objectReference: {fileID: 8300000, guid: fcc7feca50e0bad42882d33242e4d51e, type: 3}
+      objectReference: {fileID: 8300000, guid: 20d5c56d074330941b4cceabb087722b, type: 3}
     - target: {fileID: 7190754561829458267, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'answer3Audio.Array.data[0]'
       value: 
-      objectReference: {fileID: 8300000, guid: a5531f2aea1be084ea53e64db57cb9bc, type: 3}
+      objectReference: {fileID: 8300000, guid: 5bce453c0e3f00340a3af4e05b5f80d8, type: 3}
     - target: {fileID: 7190754561829458267, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'answer3Audio.Array.data[1]'
       value: 
-      objectReference: {fileID: 8300000, guid: 9444fc2dff6f06e42b3ab864ef8563a4, type: 3}
+      objectReference: {fileID: 8300000, guid: e9cac04bc426ae34dbdfc53013170661, type: 3}
     - target: {fileID: 7190754561829458267, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'answer3Audio.Array.data[2]'
       value: 
-      objectReference: {fileID: 8300000, guid: 1b7ffef0ddc43e54aa200be982f6ff48, type: 3}
+      objectReference: {fileID: 8300000, guid: 41c08905f2db4cc49bcaac18c86fd427, type: 3}
     - target: {fileID: 7190754561829458267, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'answer3Audio.Array.data[3]'
       value: 
-      objectReference: {fileID: 8300000, guid: 21b09a8e08088fa4f8ce171efe2a3dce, type: 3}
+      objectReference: {fileID: 8300000, guid: e44bc7431d6242048aa02a01078e884f, type: 3}
     - target: {fileID: 7190754561829458267, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'answer4Audio.Array.data[0]'
       value: 
-      objectReference: {fileID: 8300000, guid: a44da84d119d4de448166b944dab929a, type: 3}
+      objectReference: {fileID: 8300000, guid: 6ba75a54ea5c980419ea220aa6aed231, type: 3}
     - target: {fileID: 7190754561829458267, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'answer4Audio.Array.data[1]'
       value: 
-      objectReference: {fileID: 8300000, guid: d47c3df27e5b1d84d9649c921dc1de70, type: 3}
+      objectReference: {fileID: 8300000, guid: b290e1affe435184e8c53785e663d0ca, type: 3}
     - target: {fileID: 7190754561829458267, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'answer4Audio.Array.data[2]'
       value: 
-      objectReference: {fileID: 8300000, guid: 83168b32f6747e94d83f09fa9af9639c, type: 3}
+      objectReference: {fileID: 8300000, guid: 8bc6af263cd51d345b449ddd8e4b1438, type: 3}
     - target: {fileID: 7190754561829458267, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'answer4Audio.Array.data[3]'
       value: 
-      objectReference: {fileID: 8300000, guid: 178d8bde68c22d346ab4e314fd4c32b0, type: 3}
+      objectReference: {fileID: 8300000, guid: 92f4f89cf6390234b8a36a293f1df9cb, type: 3}
     - target: {fileID: 7190754561829458267, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'questionsAudio.Array.data[0]'
       value: 
-      objectReference: {fileID: 8300000, guid: 60444626a8050254c9e77c4e96a95d39, type: 3}
+      objectReference: {fileID: 8300000, guid: d1bc9d7e82b974c459df43f48cd7968a, type: 3}
     - target: {fileID: 7190754561829458267, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'questionsAudio.Array.data[1]'
       value: 
-      objectReference: {fileID: 8300000, guid: b803526f45dd74c46a55dc3b5477263d, type: 3}
+      objectReference: {fileID: 8300000, guid: a29c30c85bf7e2747a27749b5966bf0f, type: 3}
     - target: {fileID: 7190754561829458267, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'questionsAudio.Array.data[2]'
       value: 
-      objectReference: {fileID: 8300000, guid: 3eaf9bc000873894f8434afd097fef54, type: 3}
+      objectReference: {fileID: 8300000, guid: a8d00c1f9962dfe4d8d6441902e0e343, type: 3}
     - target: {fileID: 7190754561829458267, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'questionsAudio.Array.data[3]'
       value: 
-      objectReference: {fileID: 8300000, guid: a2ff879e169577a4db5e9dbf6521e4f5, type: 3}
+      objectReference: {fileID: 8300000, guid: 55665ee7cda6fc540982c02f2a81ad22, type: 3}
     - target: {fileID: 8356392378336566795, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -495,9 +491,13 @@ PrefabInstance:
     - target: {fileID: 8534337645335599026, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -6316773895489952934, guid: ad3a750a4c9ed874ab53e6a92a8b8bd2, type: 3}
+      objectReference: {fileID: -4633661227068839893, guid: fea5a747956d6a04e914ba071ed8aa30, type: 3}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7164767127614376664, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+    - {fileID: 6673995385388574506, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+    - {fileID: 5403269809800224772, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+    - {fileID: 1168470340762262742, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc5536502aed27448bf434de1f2406dc, type: 3}

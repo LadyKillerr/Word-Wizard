@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &66253131754008143
+--- !u!1001 &1315849681526377100
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -32,17 +32,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -439.7318
       objectReference: {fileID: 0}
+    - target: {fileID: 748925141747150178, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 769255408365071368, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -6316773895489952934, guid: ad3a750a4c9ed874ab53e6a92a8b8bd2, type: 3}
+      objectReference: {fileID: -6316773895489952934, guid: 3a5a2c7f71995804c9d1cbe419205847, type: 3}
     - target: {fileID: 848696220241531568, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 2565560953177711962, guid: f7eb4d0b890d2ed478affbc2fc6b4563, type: 3}
+      objectReference: {fileID: 2565560953177711962, guid: b58f6ac5be504f24ca7154b3ee51a2f7, type: 3}
     - target: {fileID: 1260301211301265960, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: storyId
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1260301211301265960, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: audioParts.Array.size
@@ -87,14 +91,14 @@ PrefabInstance:
     - target: {fileID: 1425242604769763240, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -6123004202851401083, guid: 6ad934bb2adb51844ad8b4dfcebb0255, type: 3}
+      objectReference: {fileID: -6123004202851401083, guid: bd6568d2104966644b0d076637ce4b4a, type: 3}
     - target: {fileID: 1641350864142792626, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -733957381588149730, guid: 1aa4b4f4421abff4184b0d42c9a6790d, type: 3}
+      objectReference: {fileID: -733957381588149730, guid: ec3e0410d71f61f49b7f8de73c7a62e9, type: 3}
     - target: {fileID: 1919457721324800252, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_Name
-      value: IvyTheIguana Variant
+      value: HenryTheHedgehog Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2241318914916167470, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_AnchorMax.y
@@ -123,7 +127,7 @@ PrefabInstance:
     - target: {fileID: 2470230497725969701, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -9188632694670991214, guid: dc3d2deab1edb29488d35a89bb29373b, type: 3}
+      objectReference: {fileID: -9188632694670991214, guid: c11a711ed7c0d5e4b846c520d84550ab, type: 3}
     - target: {fileID: 2535026045087684705, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -207,7 +211,7 @@ PrefabInstance:
     - target: {fileID: 2778210053684433427, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -5910228175204626835, guid: bd2db8a0d76bd264d838fd3c1af032ab, type: 3}
+      objectReference: {fileID: -5910228175204626835, guid: d664f4c5c8eb665498d80a23ff9b0a0f, type: 3}
     - target: {fileID: 2794367401903990404, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -291,7 +295,7 @@ PrefabInstance:
     - target: {fileID: 5939250506484976080, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -4944068189733832494, guid: 4f11e66fa1ad25d47bdfce73b45ff249, type: 3}
+      objectReference: {fileID: -4944068189733832494, guid: 91c20ad102b7eb341995a23b07f87242, type: 3}
     - target: {fileID: 6255202906718135663, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -319,7 +323,7 @@ PrefabInstance:
     - target: {fileID: 6506457764194497636, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -4747168201815162448, guid: 0817658dd8c83e249bd4d4b1b9c5cdc9, type: 3}
+      objectReference: {fileID: -4747168201815162448, guid: 811baabb65326044799687d942cc43b7, type: 3}
     - target: {fileID: 7149797056146681877, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -346,7 +350,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7190754561829458267, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: levelPrefName
-      value: IvyTheIguana
+      value: HenryTheHedgehog
       objectReference: {fileID: 0}
     - target: {fileID: 7190754561829458267, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: questionsSO.Array.size
@@ -375,19 +379,19 @@ PrefabInstance:
     - target: {fileID: 7190754561829458267, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'questionsSO.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: 47f15c4441b1a0247bb01ae7ab691cb6, type: 2}
+      objectReference: {fileID: 11400000, guid: 67aa94c0be2a3bc4b979aa1697d9d1b7, type: 2}
     - target: {fileID: 7190754561829458267, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'questionsSO.Array.data[1]'
       value: 
-      objectReference: {fileID: 11400000, guid: d77a2079d2e794b41a24e4e4f601346a, type: 2}
+      objectReference: {fileID: 11400000, guid: a8e85ffd5924d6149ac7b19bd5a8c130, type: 2}
     - target: {fileID: 7190754561829458267, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'questionsSO.Array.data[2]'
       value: 
-      objectReference: {fileID: 11400000, guid: feeb8d8a8704fb042822d0c5256434de, type: 2}
+      objectReference: {fileID: 11400000, guid: c3e71e3a664ca084db8f265d9c2417b1, type: 2}
     - target: {fileID: 7190754561829458267, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'questionsSO.Array.data[3]'
       value: 
-      objectReference: {fileID: 11400000, guid: 0a8a6ef67b3098f45b35f5e65dd52116, type: 2}
+      objectReference: {fileID: 11400000, guid: 8432341a8d0afb94787297d8ba3584ca, type: 2}
     - target: {fileID: 7190754561829458267, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'answer1Audio.Array.data[0]'
       value: 
@@ -495,7 +499,7 @@ PrefabInstance:
     - target: {fileID: 8534337645335599026, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -6316773895489952934, guid: ad3a750a4c9ed874ab53e6a92a8b8bd2, type: 3}
+      objectReference: {fileID: -4747168201815162448, guid: 811baabb65326044799687d942cc43b7, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

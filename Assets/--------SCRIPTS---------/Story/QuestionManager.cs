@@ -443,7 +443,7 @@ public class QuestionManager : MonoBehaviour
         else { return; }
     }
 
-    public void LoadScene(int sceneIndex)
+    public void LoadSceneWithAnim(int sceneIndex)
     {
         finishLevelPE.Stop();
 
@@ -454,10 +454,11 @@ public class QuestionManager : MonoBehaviour
 
             if (quizOnlyManager != null)
             {
-                // bật lại quiz Anim để chạy anim
+                // bật lại component quiz Anim để chạy anim
                 quizOnlyManager.ActivateQuizAnim();
             }
 
+            // chạy animation end (chuyển màn)
             transitionsAnim.SetTrigger("end");
 
             // thì chạy coroutine đợi để anim chạy xong r mới load
@@ -465,7 +466,7 @@ public class QuestionManager : MonoBehaviour
 
             Debug.Log("Run transitions anim before reload scene");
         }
-        // còn nếu không phải đang ở màn có transitions anim thì load luôn
+        // còn nếu không phải đang ở màn có transitions anim thì load luôn(sử dụng loading screen)
         else
         {
             levelLoader.LoadLevel(sceneIndex);
