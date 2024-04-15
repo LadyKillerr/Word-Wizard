@@ -608,6 +608,10 @@ PrefabInstance:
       propertyPath: loadingPercent
       value: 
       objectReference: {fileID: 319418005}
+    - target: {fileID: 2370778240128235345, guid: b95edb86509958c46b0a57659f2e55f1, type: 3}
+      propertyPath: transitionsAnim
+      value: 
+      objectReference: {fileID: 852419766}
     - target: {fileID: 5083871127124482728, guid: b95edb86509958c46b0a57659f2e55f1, type: 3}
       propertyPath: m_Name
       value: LevelLoader
@@ -947,6 +951,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &852419766 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 793418819895483507, guid: c494ab7d3dd90c24d97f98aa7625973b, type: 3}
+  m_PrefabInstance: {fileID: 4917623778699699999}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1010916359
 GameObject:
   m_ObjectHideFlags: 0

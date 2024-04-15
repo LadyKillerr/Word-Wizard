@@ -263,6 +263,10 @@ public class StoryManager : MonoBehaviour
     // bật đoạn giao giữa 2 scene story và quiz
     void ToggleIntersection()
     {
+        // tắt cái audioSource trên intersect đi để ngăn không cho âm thanh phát ra sớm
+        intersectionSection.GetComponent<AudioSource>().enabled = false;
+
+        // kích hoạt intersec
         intersectionSection.SetActive(true);
 
         intersectionSection.GetComponent<Animator>().SetTrigger("end");
@@ -272,13 +276,13 @@ public class StoryManager : MonoBehaviour
 
     IEnumerator DisableIntersection()
     {
+        yield return new WaitForSeconds(0.5f);
+        intersectionSection.GetComponent<AudioSource>().enabled = true;
+
         // đợi chạy anim end trước - sau 1.5s mới load quiz vào 
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1f);
         interactiveStorySection.SetActive(false);
         questionSection.SetActive(true);
-
-        // bật âm thanh câu hỏi trắc nghiệm 
-        questionManager.StartLoadQuestionAudio();
 
         // đợi chạy xong anim start - r mới kill intersect screen đi 
         yield return new WaitForSeconds(1f);

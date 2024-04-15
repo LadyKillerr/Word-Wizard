@@ -125,10 +125,10 @@ public class StoryOnlyManager : MonoBehaviour
         }
 
         // Set Anchor để gameObject neo full màn hình
-        rectTransform.anchorMin = Vector2.zero;
-        rectTransform.anchorMax = Vector2.one;
-        rectTransform.anchoredPosition = Vector2.zero;
-        rectTransform.sizeDelta = Vector2.zero;
+        //rectTransform.anchorMin = Vector2.zero;
+        //rectTransform.anchorMax = Vector2.one;
+        //rectTransform.anchoredPosition = Vector2.zero;
+        //rectTransform.sizeDelta = Vector2.zero;
     }
 
     // sau khi chạy lần đầu vào thì phải tắt anim đi không thì các câu hỏi sau cũng phải chờ

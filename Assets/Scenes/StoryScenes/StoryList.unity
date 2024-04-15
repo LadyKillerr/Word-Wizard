@@ -195,7 +195,19 @@ PrefabInstance:
     - target: {fileID: 3078703327825896613, guid: c4b608ba6fe304d4e88495a4eabd4059, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1256695601}
+      objectReference: {fileID: 247466734}
+    - target: {fileID: 3078703327825896613, guid: c4b608ba6fe304d4e88495a4eabd4059, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartToggleStorySection
+      objectReference: {fileID: 0}
+    - target: {fileID: 3078703327825896613, guid: c4b608ba6fe304d4e88495a4eabd4059, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: StoryOnlyManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3078703327825896613, guid: c4b608ba6fe304d4e88495a4eabd4059, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3357226046530033390, guid: c4b608ba6fe304d4e88495a4eabd4059, type: 3}
       propertyPath: m_Name
       value: DannyTheDog
@@ -981,6 +993,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6628111374024982852, guid: c494ab7d3dd90c24d97f98aa7625973b, type: 3}
   m_PrefabInstance: {fileID: 1475765128}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &476284030 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 793418819895483507, guid: c494ab7d3dd90c24d97f98aa7625973b, type: 3}
+  m_PrefabInstance: {fileID: 1475765128}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &494260980 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5161334417343915931, guid: b352199c7c0d09c4597de3a092a337d7, type: 3}
@@ -1583,6 +1600,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d228efeedb148144a57468e2f278c48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  storyBooks: []
+  totalBooks: 0
 --- !u!4 &741416361
 Transform:
   m_ObjectHideFlags: 0
@@ -1613,7 +1632,19 @@ PrefabInstance:
     - target: {fileID: 4194915201097695988, guid: 95711dc3bed12b04c97e0976019ab200, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1256695601}
+      objectReference: {fileID: 247466734}
+    - target: {fileID: 4194915201097695988, guid: 95711dc3bed12b04c97e0976019ab200, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartToggleStorySection
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194915201097695988, guid: 95711dc3bed12b04c97e0976019ab200, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: StoryOnlyManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194915201097695988, guid: 95711dc3bed12b04c97e0976019ab200, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4474843234227204287, guid: 95711dc3bed12b04c97e0976019ab200, type: 3}
       propertyPath: m_Name
       value: GinaTheGoose
@@ -2658,6 +2689,10 @@ PrefabInstance:
       propertyPath: loadingPercent
       value: 
       objectReference: {fileID: 1094373551900491452}
+    - target: {fileID: 2370778240128235345, guid: b95edb86509958c46b0a57659f2e55f1, type: 3}
+      propertyPath: transitionsAnim
+      value: 
+      objectReference: {fileID: 476284030}
     - target: {fileID: 5083871127124482728, guid: b95edb86509958c46b0a57659f2e55f1, type: 3}
       propertyPath: m_Name
       value: LevelLoader
@@ -3263,14 +3298,18 @@ PrefabInstance:
     - target: {fileID: 4486721765081015895, guid: 0edb5c783d13b3149a1f9e7731f54dfe, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1256695601}
+      objectReference: {fileID: 247466734}
     - target: {fileID: 4486721765081015895, guid: 0edb5c783d13b3149a1f9e7731f54dfe, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadLevel
+      value: StartToggleStorySection
+      objectReference: {fileID: 0}
+    - target: {fileID: 4486721765081015895, guid: 0edb5c783d13b3149a1f9e7731f54dfe, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: StoryOnlyManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4486721765081015895, guid: 0edb5c783d13b3149a1f9e7731f54dfe, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 7
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6517979632415035631, guid: 0edb5c783d13b3149a1f9e7731f54dfe, type: 3}
       propertyPath: m_Pivot.x
@@ -3824,7 +3863,19 @@ PrefabInstance:
     - target: {fileID: 7981224864061926083, guid: 760ead16823fb384c95667a4d41518e9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1256695601}
+      objectReference: {fileID: 247466734}
+    - target: {fileID: 7981224864061926083, guid: 760ead16823fb384c95667a4d41518e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartToggleStorySection
+      objectReference: {fileID: 0}
+    - target: {fileID: 7981224864061926083, guid: 760ead16823fb384c95667a4d41518e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: StoryOnlyManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7981224864061926083, guid: 760ead16823fb384c95667a4d41518e9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 9183940524760856227, guid: 760ead16823fb384c95667a4d41518e9, type: 3}
       propertyPath: m_Name
       value: FreddyTheFish
@@ -4125,7 +4176,19 @@ PrefabInstance:
     - target: {fileID: 8199982682129184799, guid: b352199c7c0d09c4597de3a092a337d7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1256695601}
+      objectReference: {fileID: 247466734}
+    - target: {fileID: 8199982682129184799, guid: b352199c7c0d09c4597de3a092a337d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartToggleStorySection
+      objectReference: {fileID: 0}
+    - target: {fileID: 8199982682129184799, guid: b352199c7c0d09c4597de3a092a337d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: StoryOnlyManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8199982682129184799, guid: b352199c7c0d09c4597de3a092a337d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 9020523329543864406, guid: b352199c7c0d09c4597de3a092a337d7, type: 3}
       propertyPath: m_Name
       value: HenryTheHedgehog
@@ -4425,7 +4488,19 @@ PrefabInstance:
     - target: {fileID: 6891482617599614211, guid: b0f25c7c44aa44c469eb60170ac73c21, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1256695601}
+      objectReference: {fileID: 247466734}
+    - target: {fileID: 6891482617599614211, guid: b0f25c7c44aa44c469eb60170ac73c21, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartToggleStorySection
+      objectReference: {fileID: 0}
+    - target: {fileID: 6891482617599614211, guid: b0f25c7c44aa44c469eb60170ac73c21, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: StoryOnlyManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6891482617599614211, guid: b0f25c7c44aa44c469eb60170ac73c21, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4446,7 +4521,19 @@ PrefabInstance:
     - target: {fileID: 4260292650119978624, guid: 67b2ca5496dbda945a2e703cb69c5da9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1256695601}
+      objectReference: {fileID: 247466734}
+    - target: {fileID: 4260292650119978624, guid: 67b2ca5496dbda945a2e703cb69c5da9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartToggleStorySection
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260292650119978624, guid: 67b2ca5496dbda945a2e703cb69c5da9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: StoryOnlyManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260292650119978624, guid: 67b2ca5496dbda945a2e703cb69c5da9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 9113061267309789736, guid: 67b2ca5496dbda945a2e703cb69c5da9, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4733,7 +4820,19 @@ PrefabInstance:
     - target: {fileID: 2842579756382282192, guid: 9b36254e374d53644a167b3b5b578f9e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1256695601}
+      objectReference: {fileID: 247466734}
+    - target: {fileID: 2842579756382282192, guid: 9b36254e374d53644a167b3b5b578f9e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartToggleStorySection
+      objectReference: {fileID: 0}
+    - target: {fileID: 2842579756382282192, guid: 9b36254e374d53644a167b3b5b578f9e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: StoryOnlyManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2842579756382282192, guid: 9b36254e374d53644a167b3b5b578f9e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4846530049976784744, guid: 9b36254e374d53644a167b3b5b578f9e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

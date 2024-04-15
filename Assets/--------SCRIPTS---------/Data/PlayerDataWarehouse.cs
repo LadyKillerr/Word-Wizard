@@ -11,12 +11,12 @@ using Unity.VisualScripting;
 
 public class PlayerDataWarehouse : MonoBehaviour
 {
-    //public List<GameObject> storyBooks;
-    //[SerializeField] int totalBooks;
+    public List<GameObject> storyBooks;
+    [SerializeField] int totalBooks;
 
     private void Awake()
     {
-        //totalBooks = storyBooks.Count;
+        totalBooks = storyBooks.Count;
 
 #pragma warning disable CS0618 // Type or member is obsolete
         int instanceCount = FindObjectsOfType(GetType()).Length;
@@ -149,21 +149,21 @@ public class PlayerDataWarehouse : MonoBehaviour
             List<PlayerProgressData> playerProgresses = new List<PlayerProgressData>();
 
             PlayerProgressData timesPlayed = new PlayerProgressData();
-            //timesPlayed.numberPlayed = "playerStars";
+            timesPlayed.numberPlayed = "playerStars";
             timesPlayed.stars = 0;
 
-            //playerProgresses.Add(timesPlayed);
+            playerProgresses.Add(timesPlayed);
 
-            //for (int i = 0; i < totalBooks; i++)
-            //{
-            //    PlayerProgressData saveStoryProgress = new PlayerProgressData();
+            for (int i = 0; i < totalBooks; i++)
+            {
+                PlayerProgressData saveStoryProgress = new PlayerProgressData();
 
-            //    saveStoryProgress.numberPlayed = "StoryProgress" + i;
+                saveStoryProgress.numberPlayed = "StoryProgress" + i;
 
-            //    saveStoryProgress.stars = 0;
+                saveStoryProgress.stars = 0;
 
-            //    playerProgresses.Add(saveStoryProgress);
-            //}
+                playerProgresses.Add(saveStoryProgress);
+            }
 
             string dataSave = "";
             for (int i = 0; i < playerProgresses.Count; i++)

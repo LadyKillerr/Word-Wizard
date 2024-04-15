@@ -912,6 +912,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d228efeedb148144a57468e2f278c48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  storyBooks: []
+  totalBooks: 0
 --- !u!4 &804789876
 Transform:
   m_ObjectHideFlags: 0
@@ -3197,6 +3199,10 @@ PrefabInstance:
       propertyPath: loadingPercent
       value: 
       objectReference: {fileID: 1488668226}
+    - target: {fileID: 2370778240128235345, guid: b95edb86509958c46b0a57659f2e55f1, type: 3}
+      propertyPath: transitionsAnim
+      value: 
+      objectReference: {fileID: 8848154024128604725}
     - target: {fileID: 5083871127124482728, guid: b95edb86509958c46b0a57659f2e55f1, type: 3}
       propertyPath: m_Name
       value: LevelLoader
@@ -4942,6 +4948,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c3b888343b9c43a96d9a765eeccc1, type: 3}
+--- !u!95 &8848154024128604725 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4266212968060603643, guid: eb6c3b888343b9c43a96d9a765eeccc1, type: 3}
+  m_PrefabInstance: {fileID: 8848154024128604724}
+  m_PrefabAsset: {fileID: 0}
 --- !u!222 &8997250408426877103
 CanvasRenderer:
   m_ObjectHideFlags: 0

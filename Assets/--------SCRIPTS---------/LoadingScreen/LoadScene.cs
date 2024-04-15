@@ -19,13 +19,13 @@ public class LoadScene : MonoBehaviour
     [SerializeField] float startAnimTime = 1f;
 
     AudioManager audioManager;
-    Animator transitionsAnim;
+    [SerializeField] Animator transitionsAnim;
 
     private void Awake()
     {
         audioManager = FindAnyObjectByType<AudioManager>();
 
-        transitionsAnim = FindAnyObjectByType<Animator>();
+        transitionsAnim.SetTrigger("start");
     }
 
     public void LoadLevel(int sceneIndex)
