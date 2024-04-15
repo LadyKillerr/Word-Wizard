@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadAnswerAudio
       objectReference: {fileID: 0}
+    - target: {fileID: 340409730741866141, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 633013497534337394, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
       propertyPath: m_Name
       value: CatAndTheBatVariant
@@ -114,7 +118,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
       propertyPath: questionsSO.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
       propertyPath: answer1Audio.Array.size
@@ -126,10 +130,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
       propertyPath: answer3Audio.Array.size
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
       propertyPath: answer4Audio.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: answer5Audio.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: answer6Audio.Array.size
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
@@ -151,9 +163,17 @@ PrefabInstance:
     - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
       propertyPath: 'questionsSO.Array.data[2]'
       value: 
-      objectReference: {fileID: 11400000, guid: 155894d176368d0488cb4690643e679c, type: 2}
+      objectReference: {fileID: 11400000, guid: 650a439acb402e24fa61c323b6875376, type: 2}
     - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
       propertyPath: 'questionsSO.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: e48960b3de3c15a48a3942d356100f65, type: 2}
+    - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: 'questionsSO.Array.data[4]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 155894d176368d0488cb4690643e679c, type: 2}
+    - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: 'questionsSO.Array.data[5]'
       value: 
       objectReference: {fileID: 11400000, guid: 11b1817c901c6ed4fbcbf6e1cf7d4bda, type: 2}
     - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
@@ -250,6 +270,38 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 2001af81eb67b164f994b896b393ca33, type: 3}
     - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
       propertyPath: 'answer4Audio.Array.data[7]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 89dc1a48a75256649b84d36fb2948000, type: 3}
+    - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: 'answer5Audio.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 92b5355843af9e84082deb483bd321d1, type: 3}
+    - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: 'answer5Audio.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 53cd1e8d0a10c324b9513a6aa51e9ad8, type: 3}
+    - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: 'answer5Audio.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: adce157c5ab1b774ea49fff86599266d, type: 3}
+    - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: 'answer5Audio.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 2cfd83cce05836e4285d2ee3fe4e3cb7, type: 3}
+    - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: 'answer6Audio.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 5c0471f741f8ec349870b3996b3903fb, type: 3}
+    - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: 'answer6Audio.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 00374b80a79cac04288bafa9b0fc5ade, type: 3}
+    - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: 'answer6Audio.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 2001af81eb67b164f994b896b393ca33, type: 3}
+    - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: 'answer6Audio.Array.data[3]'
       value: 
       objectReference: {fileID: 8300000, guid: 89dc1a48a75256649b84d36fb2948000, type: 3}
     - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}

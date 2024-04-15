@@ -33,6 +33,9 @@ public class QuestionManager : MonoBehaviour
     [SerializeField] AudioClip[] answer2Audio;
     [SerializeField] AudioClip[] answer3Audio;
     [SerializeField] AudioClip[] answer4Audio;
+    [SerializeField] AudioClip[] answer5Audio;
+    [SerializeField] AudioClip[] answer6Audio;
+
 
     [SerializeField] float timeBeforeAudioPlay = 1f;
 
@@ -305,7 +308,7 @@ public class QuestionManager : MonoBehaviour
             case 1:
                 if (!quizSectionAudio.isPlaying && answer2Audio[currentIndex] != null)
                 {
-                    // chạy âm thanh đáp án của câu hỏi 1
+                    // chạy âm thanh đáp án của câu hỏi 2
                     quizSectionAudio.PlayOneShot(answer2Audio[index], answersAudioVolume);
 
                 }
@@ -315,7 +318,7 @@ public class QuestionManager : MonoBehaviour
             case 2:
                 if (!quizSectionAudio.isPlaying && answer3Audio[currentIndex] != null)
                 {
-                    // chạy âm thanh đáp án của câu hỏi 2
+                    // chạy âm thanh đáp án của câu hỏi 3
                     quizSectionAudio.PlayOneShot(answer3Audio[index], answersAudioVolume);
 
                 }
@@ -325,7 +328,7 @@ public class QuestionManager : MonoBehaviour
             case 3:
                 if (!quizSectionAudio.isPlaying && answer4Audio[currentIndex] != null)
                 {
-                    // chạy âm thanh đáp án của câu hỏi 3
+                    // chạy âm thanh đáp án của câu hỏi 4
                     quizSectionAudio.PlayOneShot(answer4Audio[index], answersAudioVolume);
 
                 }
@@ -333,6 +336,27 @@ public class QuestionManager : MonoBehaviour
 
                 break;
 
+            case 4:
+                if (!quizSectionAudio.isPlaying && answer4Audio[currentIndex] != null)
+                {
+                    // chạy âm thanh đáp án của câu hỏi 4
+                    quizSectionAudio.PlayOneShot(answer5Audio[index], answersAudioVolume);
+
+                }
+
+
+                break;
+
+            case 5:
+                if (!quizSectionAudio.isPlaying && answer4Audio[currentIndex] != null)
+                {
+                    // chạy âm thanh đáp án của câu hỏi 4
+                    quizSectionAudio.PlayOneShot(answer6Audio[index], answersAudioVolume);
+
+                }
+
+
+                break;
 
 
 

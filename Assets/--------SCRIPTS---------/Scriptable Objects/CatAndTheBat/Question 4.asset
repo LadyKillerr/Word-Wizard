@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8e75d6bb2d668b4ab617b6f08ebfe63, type: 3}
   m_Name: Question 4
   m_EditorClassIdentifier: 
-  question: What do the bat and the cat share together?
+  question: Who helps the cat when he cannot reach the apple?
   answers:
-  - An apple
-  - An apple cake
-  - A hat
-  - An apple tree
-  correctAnswersIndex: 1
+  - Bat
+  - Dog
+  - Bird
+  - Mouse
+  correctAnswersIndex: 0
