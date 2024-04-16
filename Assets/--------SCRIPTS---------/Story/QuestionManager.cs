@@ -469,12 +469,15 @@ public class QuestionManager : MonoBehaviour
 
     public void LoadSceneWithAnim(int sceneIndex)
     {
-        finishLevelPE.Stop();
+        finishLevelPE.Stop() ;
+        finishLevelPE.Clear() ;
+
+
 
         // nếu có transitions anim
         if (transitionsAnim != null)
         {
-            QuizOnlyManager quizOnlyManager = FindAnyObjectByType<QuizOnlyManager>();
+            PrefabsSpawner quizOnlyManager = FindAnyObjectByType<PrefabsSpawner>();
 
             if (quizOnlyManager != null)
             {

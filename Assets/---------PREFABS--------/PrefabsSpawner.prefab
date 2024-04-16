@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5416072664980545666
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7757303900912074736}
+  - component: {fileID: 4700197694918542899}
+  m_Layer: 0
+  m_Name: PrefabsSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7757303900912074736
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5416072664980545666}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4700197694918542899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5416072664980545666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7713d748e1482494392b9ddda9ae2ec0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transitionsAnim: {fileID: 0}
+  scrollView: {fileID: 0}
+  buttonFrame: {fileID: 0}
+  storySpawnTarget: {fileID: 0}
+  catAndTheBatPrefab: {fileID: 1042879203720019926, guid: 8ed797e2b98e8fc46a935ca4b97e45d0, type: 3}
+  bennyTheBunnyPrefab: {fileID: 2532814451011172891, guid: 41aaae229949d5943b993908ad99f3cc, type: 3}
+  caseyTheCatPrefab: {fileID: 1858584965847212685, guid: 7045c3fc18f7576478c58c6404b90776, type: 3}
+  dannyTheDogPrefab: {fileID: 1312518434388053203, guid: c97f55eb1a4c5be4ea5390a640f0e671, type: 3}
+  ellieTheElephantPrefab: {fileID: 1136597121505211909, guid: d55ae1bf0a6a0814c880c51565c996cc, type: 3}
+  freddyTheFishPrefab: {fileID: 2277583956279470527, guid: 034d0e5b0691af44ea86aecb697117a7, type: 3}
+  ginaTheGoosePrefab: {fileID: 7697718935166230998, guid: 2c2bbccaef032f14c8068894793fe7ef, type: 3}
+  henryTheHedgehogPrefab: {fileID: 1797114564111179103, guid: 5421db48dd8ba0d46a945b95bbef3414, type: 3}
+  ivyTheIguanaPrefab: {fileID: 8759444472507253543, guid: 75d11d136aa29d849a75c9424ca3713e, type: 3}

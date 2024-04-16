@@ -77,10 +77,14 @@ public class LoadScene : MonoBehaviour
 
             float progress = Mathf.Clamp01(operation.progress / .9f);
 
+            if( loadingScreen != null)
+            {
             loadingScreen.SetActive(true);
-
             loadingBar.value = progress;
             loadingPercent.text = progress * 100 + "%";
+
+            }
+
 
             yield return null;
         }

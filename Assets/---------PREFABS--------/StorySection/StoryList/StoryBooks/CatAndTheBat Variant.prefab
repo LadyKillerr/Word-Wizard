@@ -108,6 +108,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5054813477867402429, guid: 12df3394cd53d2f479544f43fb749425, type: 3}
+      propertyPath: storyPrefName
+      value: CatAndTheBat
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

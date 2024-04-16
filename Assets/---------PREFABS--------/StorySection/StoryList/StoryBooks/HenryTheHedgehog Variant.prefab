@@ -232,6 +232,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5054813477867402429, guid: 12df3394cd53d2f479544f43fb749425, type: 3}
+      propertyPath: storyPrefName
+      value: HenryTheHedgehog
+      objectReference: {fileID: 0}
     - target: {fileID: 5236702920812611817, guid: 12df3394cd53d2f479544f43fb749425, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -171.00003

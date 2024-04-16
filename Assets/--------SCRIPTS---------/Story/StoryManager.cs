@@ -109,12 +109,12 @@ public class StoryManager : MonoBehaviour
         // nếu có transitions anim
         if (transitionsAnim != null)
         {
-            StoryOnlyManager storyOnlyManager = FindAnyObjectByType<StoryOnlyManager>();
+            PrefabsSpawner prefabsSpawner = FindAnyObjectByType<PrefabsSpawner>();
 
-            if (storyOnlyManager != null)
+            if (prefabsSpawner != null)
             {
                 // bật lại component quiz Anim để chạy anim
-                storyOnlyManager.ActivateQuizAnim();
+                prefabsSpawner.ActivateQuizAnim();
             }
 
             // chạy animation end (chuyển màn)
@@ -123,13 +123,14 @@ public class StoryManager : MonoBehaviour
             // thì chạy coroutine đợi để anim chạy xong r mới load
             levelLoader.LoadLevelWithAnim(sceneIndex);
 
+
             Debug.Log("Run transitions anim before reload scene");
         }
         // còn nếu không phải đang ở màn có transitions anim thì load luôn(sử dụng loading screen)
         else
         {
             levelLoader.LoadLevel(sceneIndex);
-            Debug.Log("Trying to load scene 13");
+            Debug.Log("Cant not find TransitionsAnim");
 
         }
 
