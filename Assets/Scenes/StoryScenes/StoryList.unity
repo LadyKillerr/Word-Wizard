@@ -646,6 +646,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 330520153440786290, guid: 95711dc3bed12b04c97e0976019ab200, type: 3}
   m_PrefabInstance: {fileID: 1266354848003621523}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1932974875 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5693872985733455128, guid: c494ab7d3dd90c24d97f98aa7625973b, type: 3}
+  m_PrefabInstance: {fileID: 4663743560994619401}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2032967509 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3513359430721128767, guid: 67b2ca5496dbda945a2e703cb69c5da9, type: 3}
@@ -1040,14 +1045,14 @@ PrefabInstance:
     - target: {fileID: 4194915201097695988, guid: 95711dc3bed12b04c97e0976019ab200, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4700197695414414027}
     - target: {fileID: 4194915201097695988, guid: 95711dc3bed12b04c97e0976019ab200, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StartToggleStorySection
+      value: StartTogglePrefabsSpawning
       objectReference: {fileID: 0}
     - target: {fileID: 4194915201097695988, guid: 95711dc3bed12b04c97e0976019ab200, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: StoryOnlyManager, Assembly-CSharp
+      value: PrefabsSpawner, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4194915201097695988, guid: 95711dc3bed12b04c97e0976019ab200, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
@@ -1171,14 +1176,14 @@ PrefabInstance:
     - target: {fileID: 3078703327825896613, guid: c4b608ba6fe304d4e88495a4eabd4059, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4700197695414414027}
     - target: {fileID: 3078703327825896613, guid: c4b608ba6fe304d4e88495a4eabd4059, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StartToggleStorySection
+      value: StartTogglePrefabsSpawning
       objectReference: {fileID: 0}
     - target: {fileID: 3078703327825896613, guid: c4b608ba6fe304d4e88495a4eabd4059, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: StoryOnlyManager, Assembly-CSharp
+      value: PrefabsSpawner, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3078703327825896613, guid: c4b608ba6fe304d4e88495a4eabd4059, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
@@ -1338,14 +1343,14 @@ PrefabInstance:
     - target: {fileID: 2525833541280090368, guid: 0edb5c783d13b3149a1f9e7731f54dfe, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4700197695414414027}
     - target: {fileID: 2525833541280090368, guid: 0edb5c783d13b3149a1f9e7731f54dfe, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StartToggleStorySection
+      value: StartTogglePrefabsSpawning
       objectReference: {fileID: 0}
     - target: {fileID: 2525833541280090368, guid: 0edb5c783d13b3149a1f9e7731f54dfe, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: StoryOnlyManager, Assembly-CSharp
+      value: PrefabsSpawner, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2525833541280090368, guid: 0edb5c783d13b3149a1f9e7731f54dfe, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
@@ -1752,14 +1757,14 @@ PrefabInstance:
     - target: {fileID: 2842579756382282192, guid: 9b36254e374d53644a167b3b5b578f9e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4700197695414414027}
     - target: {fileID: 2842579756382282192, guid: 9b36254e374d53644a167b3b5b578f9e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StartToggleStorySection
+      value: StartTogglePrefabsSpawning
       objectReference: {fileID: 0}
     - target: {fileID: 2842579756382282192, guid: 9b36254e374d53644a167b3b5b578f9e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: StoryOnlyManager, Assembly-CSharp
+      value: PrefabsSpawner, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2842579756382282192, guid: 9b36254e374d53644a167b3b5b578f9e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
@@ -2211,14 +2216,14 @@ PrefabInstance:
     - target: {fileID: 6891482617599614211, guid: b0f25c7c44aa44c469eb60170ac73c21, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4700197695414414027}
     - target: {fileID: 6891482617599614211, guid: b0f25c7c44aa44c469eb60170ac73c21, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StartToggleStorySection
+      value: StartTogglePrefabsSpawning
       objectReference: {fileID: 0}
     - target: {fileID: 6891482617599614211, guid: b0f25c7c44aa44c469eb60170ac73c21, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: StoryOnlyManager, Assembly-CSharp
+      value: PrefabsSpawner, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6891482617599614211, guid: b0f25c7c44aa44c469eb60170ac73c21, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
@@ -2613,6 +2618,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4700197695414414027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5416072664465640570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7713d748e1482494392b9ddda9ae2ec0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transitionsAnim: {fileID: 1932974875}
+  scrollView: {fileID: 5290276413154581080}
+  buttonFrame: {fileID: 1386493431728014322}
+  storySpawnTarget: {fileID: 1880692838094184699}
+  catAndTheBatPrefab: {fileID: 1684999996213541621, guid: 2e2a15e117dce2144a800278d407162e, type: 3}
+  bennyTheBunnyPrefab: {fileID: 8301046516828432755, guid: 43ad34c61a512b046b9ac30f4ab072ec, type: 3}
+  caseyTheCatPrefab: {fileID: 4409028031627362431, guid: 62e2361e07f95ba48a87b3aee1f7dc1c, type: 3}
+  dannyTheDogPrefab: {fileID: 6174679466945558889, guid: e8df5b503f611f04aa84036cac57d6c0, type: 3}
+  ellieTheElephantPrefab: {fileID: 4531366284385276437, guid: 357f1584b7e23a94faebcd11e1d5183e, type: 3}
+  freddyTheFishPrefab: {fileID: 6480827614423448847, guid: 9df8de95e01ee324d9cbb5e11b4fd7ad, type: 3}
+  ginaTheGoosePrefab: {fileID: 3966089207075927313, guid: 98bf6b061bd449e4aa34eab16a9bfeaf, type: 3}
+  henryTheHedgehogPrefab: {fileID: 639967379815842416, guid: 9ae4fa5fd1c1b8a47a284b22fbd9bcff, type: 3}
+  ivyTheIguanaPrefab: {fileID: 1893808173388031667, guid: 0adacce6c11b67843b62952866bb8ca6, type: 3}
 --- !u!1 &4765957781632910689
 GameObject:
   m_ObjectHideFlags: 0
@@ -2849,14 +2879,14 @@ PrefabInstance:
     - target: {fileID: 8199982682129184799, guid: b352199c7c0d09c4597de3a092a337d7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4700197695414414027}
     - target: {fileID: 8199982682129184799, guid: b352199c7c0d09c4597de3a092a337d7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StartToggleStorySection
+      value: StartTogglePrefabsSpawning
       objectReference: {fileID: 0}
     - target: {fileID: 8199982682129184799, guid: b352199c7c0d09c4597de3a092a337d7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: StoryOnlyManager, Assembly-CSharp
+      value: PrefabsSpawner, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8199982682129184799, guid: b352199c7c0d09c4597de3a092a337d7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
@@ -2871,6 +2901,23 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b352199c7c0d09c4597de3a092a337d7, type: 3}
+--- !u!1 &5416072664465640570
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7757303901479392008}
+  - component: {fileID: 4700197695414414027}
+  m_Layer: 0
+  m_Name: PrefabsSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &5429867875123752291
 GameObject:
   m_ObjectHideFlags: 0
@@ -2928,14 +2975,14 @@ PrefabInstance:
     - target: {fileID: 1893924918536549520, guid: 67b2ca5496dbda945a2e703cb69c5da9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4700197695414414027}
     - target: {fileID: 1893924918536549520, guid: 67b2ca5496dbda945a2e703cb69c5da9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StartToggleStorySection
+      value: StartTogglePrefabsSpawning
       objectReference: {fileID: 0}
     - target: {fileID: 1893924918536549520, guid: 67b2ca5496dbda945a2e703cb69c5da9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: StoryOnlyManager, Assembly-CSharp
+      value: PrefabsSpawner, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1893924918536549520, guid: 67b2ca5496dbda945a2e703cb69c5da9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
@@ -3798,6 +3845,21 @@ RectTransform:
   m_AnchoredPosition: {x: 88, y: -355.5}
   m_SizeDelta: {x: 174, y: 113}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!4 &7757303901479392008
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5416072664465640570}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7808070647068670435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3916,14 +3978,14 @@ PrefabInstance:
     - target: {fileID: 3116277806340442352, guid: df605bbd47553ef4ebd8bd838438bdb3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4700197695414414027}
     - target: {fileID: 3116277806340442352, guid: df605bbd47553ef4ebd8bd838438bdb3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StartToggleStorySection
+      value: StartTogglePrefabsSpawning
       objectReference: {fileID: 0}
     - target: {fileID: 3116277806340442352, guid: df605bbd47553ef4ebd8bd838438bdb3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: StoryOnlyManager, Assembly-CSharp
+      value: PrefabsSpawner, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3391700039744600763, guid: df605bbd47553ef4ebd8bd838438bdb3, type: 3}
       propertyPath: m_Name
@@ -4224,14 +4286,14 @@ PrefabInstance:
     - target: {fileID: 8889377991899202792, guid: 760ead16823fb384c95667a4d41518e9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4700197695414414027}
     - target: {fileID: 8889377991899202792, guid: 760ead16823fb384c95667a4d41518e9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StartToggleStorySection
+      value: StartTogglePrefabsSpawning
       objectReference: {fileID: 0}
     - target: {fileID: 8889377991899202792, guid: 760ead16823fb384c95667a4d41518e9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: StoryOnlyManager, Assembly-CSharp
+      value: PrefabsSpawner, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8889377991899202792, guid: 760ead16823fb384c95667a4d41518e9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
@@ -4440,3 +4502,4 @@ SceneRoots:
   - {fileID: 1824426018}
   - {fileID: 741416361}
   - {fileID: 348981182}
+  - {fileID: 7757303901479392008}

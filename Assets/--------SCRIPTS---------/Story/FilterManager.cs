@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class FilterManager : MonoBehaviour
 {
+    [SerializeField] List<GameObject> filterButtons;
+
     // filter buttons
     [SerializeField] GameObject allButton;
     [SerializeField] GameObject newButton;
@@ -12,37 +14,32 @@ public class FilterManager : MonoBehaviour
     [SerializeField] GameObject heartsButton;
     [SerializeField] GameObject checkButton;
 
+    [SerializeField] float pullUpAnim = 1f;
     // all filter buttons menu
-    [SerializeField] GameObject filterButtonsMenu;
+
 
     // book count list
-    public List<GameObject> totalBooks;
+    //public List<GameObject> totalBooks;
 
     AudioManager audioManager;
+    Animator allButtonAnimator;
 
-    bool isShow;
+    Image filterButtonsImage;
+    Animator filterButtonsAnimator;
+
+
 
     void Awake()
     {
         audioManager = FindAnyObjectByType<AudioManager>();
 
-
-
+        allButtonAnimator = allButton.GetComponent<Animator>();
+        
     }
 
     void Start()
     {
 
-        isShow = false;
-
-        filterButtonsMenu.SetActive(false);
-
-        // ẩn các nút khác đi chỉ để lại nút all
-        allButton.SetActive(true);
-        newButton.SetActive(false);
-        hourglassButton.SetActive(false);
-        heartsButton.SetActive(false);
-        checkButton.SetActive(false);
     }
 
 
@@ -51,100 +48,169 @@ public class FilterManager : MonoBehaviour
 
     }
 
-    public void ShowFilterButtons()
+    void FindActiveButton()
     {
-        if (!isShow)
+        for (int i = 0; i < filterButtons.Count; i++)
         {
-            isShow = true;
-            filterButtonsMenu.SetActive(true);
-
-            if (audioManager != null)
+            if (filterButtons[i].activeSelf)
             {
-                audioManager.PlayButtonClip();
+                filterButtonsAnimator = filterButtons[i].GetComponent<Animator>();
+                filterButtonsImage = filterButtons[i].GetComponent<Image>();
 
+
+                Debug.Log("Đã tìm thấy animator hiện tại");
+                break;
             }
-
-        }
-        else
-        {
-            isShow = false;
-            filterButtonsMenu.SetActive(false);
-
-            if (audioManager != null)
-            {
-                audioManager.PlayButtonClip();
-
-            }
-
+            
         }
     }
 
-    public void ShowAllBooks()
+    IEnumerator DisableAllButtons()
     {
-        // ẩn các nút khác đi chỉ để lại nút all
-        allButton.SetActive(true);
-        newButton.SetActive(false);
-        hourglassButton.SetActive(false);
-        heartsButton.SetActive(false);
-        checkButton.SetActive(false);
+        yield return new WaitForSeconds(pullUpAnim);
+        for (int i = 0; i < filterButtons.Count; i++)
+        {
+            filterButtons[i].SetActive(false);
+        }
+    }
 
-        // ấn vào r thì tắt menu filter buttons đi và chỉnh lại biến bool, bật âm thanh
-        TurnOffFilterMenu();
+    public void FilterAllBooks()
+    {
+
+        FindActiveButton();
+
+
+        filterButtonsAnimator.SetTrigger("Normal");
+        filterButtonsImage.color = new Color(255, 255, 255, 0);
+
+        // đợi 1s để anim chạy r sau đó mới tắt hết đi
+        StartCoroutine(DisableAllButtons());
+
+
+        // kích hoạt nút new lên thay thế nút All - sau 1s sẽ bị kill đi
+        allButton.SetActive(true);
+
+        // set active lại sau khi bị kill đi 
+        StartCoroutine(ToggleAllButtons());
     }
 
     public void FilterNewBooks()
     {
-        allButton.SetActive(false);
-        newButton.SetActive(true);
-        hourglassButton.SetActive(false);
-        heartsButton.SetActive(false);
-        checkButton.SetActive(false);
+        FindActiveButton();
 
-        TurnOffFilterMenu();
+
+        filterButtonsAnimator.SetTrigger("Normal");
+        filterButtonsImage.color = new Color(255, 255, 255, 0);
+
+        // đợi 1s để anim chạy r sau đó mới tắt hết đi
+        StartCoroutine(DisableAllButtons()); ;
+
+
+        // kích hoạt nút new lên thay thế nút All
+        newButton.SetActive(true);
+
+        StartCoroutine(ToggleNewButtons());
+
+
+
     }
 
     public void FilterHourglassBooks()
     {
-        allButton.SetActive(false);
-        newButton.SetActive(false);
-        hourglassButton.SetActive(true);
-        heartsButton.SetActive(false);
-        checkButton.SetActive(false);
+        FindActiveButton();
 
-        TurnOffFilterMenu();
+
+        filterButtonsAnimator.SetTrigger("Normal");
+        filterButtonsImage.color = new Color(255, 255, 255, 0);
+
+        // đợi 1s để anim chạy r sau đó mới tắt hết đi
+        StartCoroutine(DisableAllButtons());
+
+
+        // kích hoạt nút new lên thay thế nút All - sau 1s sẽ bị kill đi
+        hourglassButton.SetActive(true);
+
+        // set active lại sau khi bị kill đi 
+        StartCoroutine(ToggleHourglassButtons());
+
     }
 
     public void FilterHeartsBooks()
     {
-        allButton.SetActive(false);
-        newButton.SetActive(false);
-        hourglassButton.SetActive(false);
-        heartsButton.SetActive(true);
-        checkButton.SetActive(false);
+        FindActiveButton();
 
-        TurnOffFilterMenu();
+
+        filterButtonsAnimator.SetTrigger("Normal");
+        filterButtonsImage.color = new Color(255, 255, 255, 0);
+
+        // đợi 1s để anim chạy r sau đó mới tắt hết đi
+        StartCoroutine(DisableAllButtons());
+
+
+        // kích hoạt nút new lên thay thế nút All - sau 1s sẽ bị kill đi
+        heartsButton.SetActive(true);
+
+        // set active lại sau khi bị kill đi 
+        StartCoroutine(ToggleHeartsButtons());
     }
 
     public void FilterCheckBooks()
     {
-        allButton.SetActive(false);
-        newButton.SetActive(false);
-        hourglassButton.SetActive(false);
-        heartsButton.SetActive(false);
+        FindActiveButton();
+
+
+        filterButtonsAnimator.SetTrigger("Normal");
+        filterButtonsImage.color = new Color(1, 1, 1, 0);
+
+        // đợi 1s để anim chạy r sau đó mới tắt hết đi
+        StartCoroutine(DisableAllButtons());
+
+
+        // kích hoạt nút new lên thay thế nút All - sau 1s sẽ bị kill đi
         checkButton.SetActive(true);
 
-        TurnOffFilterMenu();
+        // set active lại sau khi bị kill đi 
+        StartCoroutine(ToggleCheckButtons());
     }
 
-    void TurnOffFilterMenu()
+    IEnumerator ToggleAllButtons()
     {
-        isShow = false;
-        filterButtonsMenu.SetActive(false);
+        yield return new WaitForSeconds(pullUpAnim);
 
-        if (audioManager != null)
-        {
-            audioManager.PlayButtonClip();
+        allButton.SetActive(true);
 
-        }
     }
+
+    IEnumerator ToggleNewButtons()
+    {
+        yield return new WaitForSeconds(pullUpAnim);
+
+        newButton.SetActive(true);
+
+    }
+
+    IEnumerator ToggleHourglassButtons()
+    {
+        yield return new WaitForSeconds(pullUpAnim);
+
+        hourglassButton.SetActive(true);
+
+    }
+
+    IEnumerator ToggleHeartsButtons()
+    {
+        yield return new WaitForSeconds(pullUpAnim);
+
+        heartsButton.SetActive(true);
+
+    }
+
+    IEnumerator ToggleCheckButtons()
+    {
+        yield return new WaitForSeconds(pullUpAnim);
+
+        checkButton.SetActive(true);
+
+    }
+
 }
