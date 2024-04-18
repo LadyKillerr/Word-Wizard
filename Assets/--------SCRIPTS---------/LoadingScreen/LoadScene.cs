@@ -25,7 +25,11 @@ public class LoadScene : MonoBehaviour
     {
         audioManager = FindAnyObjectByType<AudioManager>();
 
-        transitionsAnim.SetTrigger("start");
+        if (transitionsAnim != null)
+        {
+            transitionsAnim.SetTrigger("start");
+
+        }
     }
 
     public void LoadLevel(int sceneIndex)
@@ -47,6 +51,7 @@ public class LoadScene : MonoBehaviour
             {
                 audioManager.PlayStartAudio();
             }
+            Debug.Log("Đã nhận lệnh load lại scene With Anim trong level LOADER");
 
             // đợi 1s để anim chạy thì sẽ load luôn
             StartCoroutine(LoadAsyncWithoutLoadingScreen(sceneIndex));
@@ -77,11 +82,11 @@ public class LoadScene : MonoBehaviour
 
             float progress = Mathf.Clamp01(operation.progress / .9f);
 
-            if( loadingScreen != null)
+            if (loadingScreen != null)
             {
-            loadingScreen.SetActive(true);
-            loadingBar.value = progress;
-            loadingPercent.text = progress * 100 + "%";
+                loadingScreen.SetActive(true);
+                loadingBar.value = progress;
+                loadingPercent.text = progress * 100 + "%";
 
             }
 
@@ -110,7 +115,7 @@ public class LoadScene : MonoBehaviour
         yield return new WaitForSeconds(endAnimTime);
         transitionsAnim.SetTrigger("end");
 
-        yield return new WaitForSeconds(endAnimTime);
+        yield return new WaitForSeconds(startAnimTime);
         SceneManager.LoadSceneAsync(sceneIndex);
 
     }

@@ -266,7 +266,7 @@ public class QuestionManager : MonoBehaviour
 
     public IEnumerator LoadQuestionAudio()
     {
-        //Debug.Log("transitionsAnim status: " + transitionsAnim.isActiveAndEnabled);
+        // Debug.Log("transitionsAnim status: " + transitionsAnim.isActiveAndEnabled);
         // nếu có anim transitions thì phải đợi hết anim mới load audio vào 
         if (!quizSectionAudio.isPlaying && (transitionsAnim != null && transitionsAnim.enabled))
         {
@@ -274,7 +274,7 @@ public class QuestionManager : MonoBehaviour
             yield return new WaitForSeconds(timeBeforeAudioPlay);
 
             quizSectionAudio.PlayOneShot(questionsAudio[currentIndex], quizQuestionsAudioVolume);
-            
+
             Debug.Log("Có load anim cùng audio");
 
         }
@@ -469,24 +469,21 @@ public class QuestionManager : MonoBehaviour
 
     public void LoadSceneWithAnim(int sceneIndex)
     {
-        finishLevelPE.Stop() ;
-        finishLevelPE.Clear() ;
+        finishLevelPE.Stop();
+        finishLevelPE.Clear();
 
 
 
         // nếu có transitions anim
         if (transitionsAnim != null)
         {
-            PrefabsSpawner quizOnlyManager = FindAnyObjectByType<PrefabsSpawner>();
+            PrefabsSpawner prefabSpawner = FindAnyObjectByType<PrefabsSpawner>();
 
-            if (quizOnlyManager != null)
+            if (prefabSpawner != null)
             {
                 // bật lại component quiz Anim để chạy anim
-                quizOnlyManager.ActivateQuizAnim();
+                prefabSpawner.ActivateQuizAnim();
             }
-
-            // chạy animation end (chuyển màn)
-            transitionsAnim.SetTrigger("end");
 
             // thì chạy coroutine đợi để anim chạy xong r mới load
             levelLoader.LoadLevelWithAnim(sceneIndex);

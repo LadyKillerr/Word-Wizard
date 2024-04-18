@@ -56,9 +56,6 @@ public class FilterManager : MonoBehaviour
             {
                 filterButtonsAnimator = filterButtons[i].GetComponent<Animator>();
                 filterButtonsImage = filterButtons[i].GetComponent<Image>();
-
-
-                Debug.Log("Đã tìm thấy animator hiện tại");
                 break;
             }
             
@@ -71,6 +68,7 @@ public class FilterManager : MonoBehaviour
         for (int i = 0; i < filterButtons.Count; i++)
         {
             filterButtons[i].SetActive(false);
+            filterButtons[i].GetComponent<Image>().color = new Color(1, 1, 1, 1);
         }
     }
 
@@ -82,6 +80,9 @@ public class FilterManager : MonoBehaviour
 
         filterButtonsAnimator.SetTrigger("Normal");
         filterButtonsImage.color = new Color(255, 255, 255, 0);
+
+
+        Debug.Log("đã đổi màu nút hiện tại");
 
         // đợi 1s để anim chạy r sau đó mới tắt hết đi
         StartCoroutine(DisableAllButtons());
@@ -100,7 +101,8 @@ public class FilterManager : MonoBehaviour
 
 
         filterButtonsAnimator.SetTrigger("Normal");
-        filterButtonsImage.color = new Color(255, 255, 255, 0);
+        filterButtonsImage.color = new Color(1, 1, 1, 0);
+
 
         // đợi 1s để anim chạy r sau đó mới tắt hết đi
         StartCoroutine(DisableAllButtons()); ;
@@ -121,7 +123,8 @@ public class FilterManager : MonoBehaviour
 
 
         filterButtonsAnimator.SetTrigger("Normal");
-        filterButtonsImage.color = new Color(255, 255, 255, 0);
+        filterButtonsImage.color = new Color(1, 1, 1, 0);
+
 
         // đợi 1s để anim chạy r sau đó mới tắt hết đi
         StartCoroutine(DisableAllButtons());
@@ -141,7 +144,8 @@ public class FilterManager : MonoBehaviour
 
 
         filterButtonsAnimator.SetTrigger("Normal");
-        filterButtonsImage.color = new Color(255, 255, 255, 0);
+        filterButtonsImage.color = new Color(1, 1, 1, 0);
+
 
         // đợi 1s để anim chạy r sau đó mới tắt hết đi
         StartCoroutine(DisableAllButtons());
@@ -158,11 +162,11 @@ public class FilterManager : MonoBehaviour
     {
         FindActiveButton();
 
-
+        // trigger anim và tắt opacity di để nút mờ đi -> hiện ra đc nút ở dưới
         filterButtonsAnimator.SetTrigger("Normal");
         filterButtonsImage.color = new Color(1, 1, 1, 0);
 
-        // đợi 1s để anim chạy r sau đó mới tắt hết đi
+        // đợi 1s để anim chạy r sau đó mới tắt hết đi - và bật lại opacity để lần sau bật vẫn lên
         StartCoroutine(DisableAllButtons());
 
 

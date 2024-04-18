@@ -163,4 +163,9 @@ public class SwipeHandler : MonoBehaviour
     {
         return isAutoNextPage;
     }
+
+    public void SetIsAutoNextPage(bool nextPageValue)
+    {
+        isAutoNextPage = nextPageValue;
+    }
 }

@@ -35,7 +35,7 @@ public class StoryManager : MonoBehaviour
     [Header("Question time before continue")]
     [SerializeField] float delayTime = 3f;
     // 1.5s anim end + 1s anim start
-    [SerializeField] float intersectionTime = 2.5f;
+
 
     public bool isReading;
 
@@ -51,10 +51,11 @@ public class StoryManager : MonoBehaviour
     [SerializeField] GameObject intersectionSection;
 
     // Components
-    Animator transitionsAnim;
+    [SerializeField] Animator transitionsAnim;
     LoadScene levelLoader;
     AudioSource storyAudioSource;
     AudioManager audioManager;
+    SwipeHandler swipeHandler;
     [SerializeField] QuestionManager questionManager;
 
     public bool isCheating = false;
@@ -76,9 +77,12 @@ public class StoryManager : MonoBehaviour
 
         storyAudioSource = GetComponent<AudioSource>();
 
+        swipeHandler = FindAnyObjectByType<SwipeHandler>();
+
         questionSection.SetActive(false);
 
         intersectionSection.SetActive(false);
+
 
         LoadFirstStoryPart();
 
@@ -116,9 +120,6 @@ public class StoryManager : MonoBehaviour
                 // bật lại component quiz Anim để chạy anim
                 prefabsSpawner.ActivateQuizAnim();
             }
-
-            // chạy animation end (chuyển màn)
-            transitionsAnim.SetTrigger("end");
 
             // thì chạy coroutine đợi để anim chạy xong r mới load
             levelLoader.LoadLevelWithAnim(sceneIndex);
@@ -189,6 +190,8 @@ public class StoryManager : MonoBehaviour
 
             MuteAudio();
 
+            // nếu để ở đây cứ sang trang là tắt auto next
+            //swipeHandler.SetIsAutoNextPage(false);
 
             currentIndex += 1;
 
@@ -251,6 +254,8 @@ public class StoryManager : MonoBehaviour
 
             }
 
+            //swipeHandler.SetIsAutoNextPage(false);
+
             // load ra trang tương ứng với index mới trừ đó
             LoadParts();
         }
@@ -267,7 +272,7 @@ public class StoryManager : MonoBehaviour
         // tắt cái audioSource trên intersect đi để ngăn không cho âm thanh phát ra sớm
         intersectionSection.GetComponent<AudioSource>().enabled = false;
 
-        // kích hoạt intersec
+        // kích hoạt intersect
         intersectionSection.SetActive(true);
 
         intersectionSection.GetComponent<Animator>().SetTrigger("end");
@@ -288,6 +293,9 @@ public class StoryManager : MonoBehaviour
         // đợi chạy xong anim start - r mới kill intersect screen đi 
         yield return new WaitForSeconds(1f);
         intersectionSection.SetActive(false);
+
+        // đoạn này bắt đầu đọc âm thanh question 
+        questionManager.StartLoadQuestionAudio();
     }
 
     void MuteAudio()
@@ -315,6 +323,8 @@ public class StoryManager : MonoBehaviour
 
         isReading = false;
     }
+
+    
 
     void ActivateStorySection()
     {

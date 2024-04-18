@@ -32,10 +32,16 @@ public class PrefabsSpawner : MonoBehaviour
 
     }
 
-    public void StartTogglePrefabsSpawning(int quizValue)
+    public void StartTogglePrefabsSpawning(int prefabsIndex)
     {
+        if (audioManager != null)
+        {
+            audioManager.PlayStartAudio();
+
+        }
+
         // bắt đầu đợi 2s để anim chạy
-        StartCoroutine(TooglePrefabsSpawning(quizValue));
+        StartCoroutine(TooglePrefabsSpawning(prefabsIndex));
 
         // anim chạy trong khoảng 1.5s 
         transitionsAnim.GetComponent<Animator>().SetTrigger("end");
@@ -52,11 +58,7 @@ public class PrefabsSpawner : MonoBehaviour
         scrollView.SetActive(false);
         buttonFrame.SetActive(false);
 
-        if (audioManager != null)
-        {
-            audioManager.PlayStartAudio();
-
-        }
+        
 
 
 

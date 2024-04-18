@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   question: Who helps the cat when he cannot reach the apple?
   answers:
-  - Bat
-  - Dog
-  - Bird
-  - Mouse
+  - A Bat
+  - A Dog
+  - A Bird
+  - A Mouse
   correctAnswersIndex: 0
