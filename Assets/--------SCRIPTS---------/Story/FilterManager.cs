@@ -34,17 +34,6 @@ public class FilterManager : MonoBehaviour
         audioManager = FindAnyObjectByType<AudioManager>();
 
         allButtonAnimator = allButton.GetComponent<Animator>();
-        
-    }
-
-    void Start()
-    {
-
-    }
-
-
-    void Update()
-    {
 
     }
 
@@ -58,7 +47,7 @@ public class FilterManager : MonoBehaviour
                 filterButtonsImage = filterButtons[i].GetComponent<Image>();
                 break;
             }
-            
+
         }
     }
 
@@ -93,6 +82,8 @@ public class FilterManager : MonoBehaviour
 
         // set active lại sau khi bị kill đi 
         StartCoroutine(ToggleAllButtons());
+        ToggleButtonClip();
+
     }
 
     public void FilterNewBooks()
@@ -114,6 +105,7 @@ public class FilterManager : MonoBehaviour
         StartCoroutine(ToggleNewButtons());
 
 
+        ToggleButtonClip();
 
     }
 
@@ -135,6 +127,7 @@ public class FilterManager : MonoBehaviour
 
         // set active lại sau khi bị kill đi 
         StartCoroutine(ToggleHourglassButtons());
+        ToggleButtonClip();
 
     }
 
@@ -156,6 +149,8 @@ public class FilterManager : MonoBehaviour
 
         // set active lại sau khi bị kill đi 
         StartCoroutine(ToggleHeartsButtons());
+        ToggleButtonClip();
+
     }
 
     public void FilterCheckBooks()
@@ -175,6 +170,8 @@ public class FilterManager : MonoBehaviour
 
         // set active lại sau khi bị kill đi 
         StartCoroutine(ToggleCheckButtons());
+
+        ToggleButtonClip();
     }
 
     IEnumerator ToggleAllButtons()
@@ -215,6 +212,16 @@ public class FilterManager : MonoBehaviour
 
         checkButton.SetActive(true);
 
+    }
+
+    void ToggleButtonClip()
+    {
+
+        if (audioManager != null)
+        {
+
+            audioManager.PlayButtonClip();
+        }
     }
 
 }

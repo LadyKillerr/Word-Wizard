@@ -10,8 +10,9 @@ public class PrefabsSpawner : MonoBehaviour
 
     [Header("Open Components")]
     [SerializeField] GameObject transitionsAnim;
-    [SerializeField] GameObject scrollView;
-    [SerializeField] GameObject buttonFrame;
+    [SerializeField] GameObject storyListPanel;
+
+
     [SerializeField] GameObject storySpawnTarget;
 
     [Header("Prefabs to Spawn")]
@@ -55,8 +56,7 @@ public class PrefabsSpawner : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
 
         // sau khi đợi 1.5s để start anim chạy xong -> màn đen xì sẽ bdau load ra question
-        scrollView.SetActive(false);
-        buttonFrame.SetActive(false);
+        storyListPanel.SetActive(false);
 
         
 

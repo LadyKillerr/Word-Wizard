@@ -139,7 +139,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1141,7 +1141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13809d050a0da6a4bb2364fb84542349, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseAutoSprite: {fileID: -4304121106098306773, guid: ad582dfda3ddc5942b6efa6ef057da69, type: 3}
+  pauseAutoSprite: {fileID: 21300000, guid: 113c4f72311ffe64d8c22363e7696738, type: 3}
   continueAutoSprite: {fileID: 21300000, guid: 26b515dc55e04cb46a5fbae6185b6219, type: 3}
 --- !u!1 &1919457721324800252
 GameObject:
@@ -6329,14 +6329,14 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
-        m_MethodName: LoadLevelWithAnim
+      - m_Target: {fileID: 7190754561829458267}
+        m_TargetAssemblyTypeName: QuestionManager, Assembly-CSharp
+        m_MethodName: LoadSceneWithAnim
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -6703,8 +6703,8 @@ MonoBehaviour:
   rightAudio: 0.5
   questionsAudio: []
   quizQuestionsAudioVolume: 1
-  delayTime: 3
-  delayTimeSmall: 1
+  delayTime: 2.5
+  delayTimeSmall: 0.75
   nextButton: {fileID: 903602636405194000}
   backButton: {fileID: 4716595498430561412}
   fadedButtonOpacity: 0.5
@@ -6716,6 +6716,7 @@ MonoBehaviour:
   congratsWindow: {fileID: 7259819042675744161}
   rewardWindow: {fileID: 208309456526443171}
   isRewarded: 0
+  isFinish: 0
   quizSection: {fileID: 4051812505583224562}
   questionManager: {fileID: 7190754561829458267}
   storyManager: {fileID: 1260301211301265960}

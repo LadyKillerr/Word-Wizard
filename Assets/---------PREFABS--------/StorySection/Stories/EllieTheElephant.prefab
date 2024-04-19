@@ -156,10 +156,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2581426708049603049, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: She hops and skips, just like that!
+      objectReference: {fileID: 0}
     - target: {fileID: 2778210053684433427, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -5910228175204626835, guid: 89adb8658110f14499fd10a22a163bf7, type: 3}
+    - target: {fileID: 3193532544673304272, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: Ellie's happy adventures have just begun!.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538852769835136124, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: Ellie the elephant wears a big red hat,
+      objectReference: {fileID: 0}
+    - target: {fileID: 5296154456189003040, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: They laugh and play, without a care.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5434125150526677499, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: Eating apples, she's full of cheer,
+      objectReference: {fileID: 0}
+    - target: {fileID: 5517242031456603487, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: Exploring with nothing to fear.
+      objectReference: {fileID: 0}
     - target: {fileID: 5939250506484976080, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -168,6 +192,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -4747168201815162448, guid: 63ac193ec9c740a42a684c092001f815, type: 3}
+    - target: {fileID: 6563306869916312052, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: Ellie meets Eddie, a friendly bear,
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804830911636312136, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: Every day with friends, is full of fun,
+      objectReference: {fileID: 0}
     - target: {fileID: 7190754561829458267, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: levelPrefName
       value: EllieTheElephant
@@ -292,6 +324,10 @@ PrefabInstance:
       propertyPath: 'questionsAudio.Array.data[3]'
       value: 
       objectReference: {fileID: 8300000, guid: f367d269a211a0e448b2cbde754024cf, type: 3}
+    - target: {fileID: 8199124760661431113, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: Ellie The Elephant. A phonics story is told by Sunny Friends.
+      objectReference: {fileID: 0}
     - target: {fileID: 8534337645335599026, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_Sprite
       value: 

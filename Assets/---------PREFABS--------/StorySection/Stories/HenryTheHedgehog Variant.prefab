@@ -208,6 +208,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2581426708049603049, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: Helping at home, as busy as can be.
+      objectReference: {fileID: 0}
     - target: {fileID: 2778210053684433427, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -236,13 +240,33 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -670.2368
       objectReference: {fileID: 0}
+    - target: {fileID: 3193532544673304272, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: Henry hearing that, his smile wide.
+      objectReference: {fileID: 0}
     - target: {fileID: 4051812505583224562, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4538852769835136124, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: Henry the hedgehog hops with glee,
+      objectReference: {fileID: 0}
     - target: {fileID: 4698994611462040449, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5296154456189003040, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: Watching her mom closely, to understand.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5434125150526677499, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: He hangs clothes up, with a joyful leap,
+      objectReference: {fileID: 0}
+    - target: {fileID: 5517242031456603487, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: But a treasure falls out, from the heap.
       objectReference: {fileID: 0}
     - target: {fileID: 5589429467208134401, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_AnchorMax.y
@@ -324,6 +348,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -4747168201815162448, guid: 811baabb65326044799687d942cc43b7, type: 3}
+    - target: {fileID: 6563306869916312052, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: With Mom by his side, he lends a hand,
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804830911636312136, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: At day's end, mom says 'Thank you',
+      objectReference: {fileID: 0}
     - target: {fileID: 7149797056146681877, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -472,6 +504,10 @@ PrefabInstance:
       propertyPath: 'questionsAudio.Array.data[3]'
       value: 
       objectReference: {fileID: 8300000, guid: a2ff879e169577a4db5e9dbf6521e4f5, type: 3}
+    - target: {fileID: 8199124760661431113, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: Henry The Hedgehog. A phonics story is told by Sunny Friends.
+      objectReference: {fileID: 0}
     - target: {fileID: 8356392378336566795, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1

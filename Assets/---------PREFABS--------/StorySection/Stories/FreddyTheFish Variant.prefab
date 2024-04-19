@@ -156,10 +156,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2581426708049603049, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: Where Fiona, his friend, finds her place.
+      objectReference: {fileID: 0}
     - target: {fileID: 2778210053684433427, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -5910228175204626835, guid: 574c8cc9aba1c8f40b9dbc9e49d7c05e, type: 3}
+    - target: {fileID: 3193532544673304272, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: Fiona and Freddy, under the golden sun.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538852769835136124, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: Freddy the fish dives in the sea's embrace,
+      objectReference: {fileID: 0}
+    - target: {fileID: 5296154456189003040, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: In the shimmering depths where treasures shine.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5434125150526677499, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: With playful flips and joyful hops,
+      objectReference: {fileID: 0}
+    - target: {fileID: 5517242031456603487, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: They explore the ocean's hidden shops.
+      objectReference: {fileID: 0}
     - target: {fileID: 5939250506484976080, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -168,6 +192,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -4747168201815162448, guid: 4530a64ef30e29942b3d182cfd2f896d, type: 3}
+    - target: {fileID: 6563306869916312052, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: Together they seek food divine,
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804830911636312136, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: Through laughter and fun, their friendship is spun,
+      objectReference: {fileID: 0}
     - target: {fileID: 7190754561829458267, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: levelPrefName
       value: FreddyTheFish
@@ -292,6 +324,10 @@ PrefabInstance:
       propertyPath: 'questionsAudio.Array.data[3]'
       value: 
       objectReference: {fileID: 8300000, guid: 15336935611dae94aa6430f04a40b22a, type: 3}
+    - target: {fileID: 8199124760661431113, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: Freddy The Fish. A phonics story is told by Sunny Friends.
+      objectReference: {fileID: 0}
     - target: {fileID: 8534337645335599026, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_Sprite
       value: 

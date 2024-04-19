@@ -84,7 +84,7 @@ public class QuestionManager : MonoBehaviour
     [SerializeField] GameObject rewardWindow;
 
     [SerializeField] bool isRewarded;
-
+    [SerializeField] bool isFinish;
 
     [SerializeField] GameObject quizSection;
 
@@ -122,6 +122,7 @@ public class QuestionManager : MonoBehaviour
 
     private void Start()
     {
+        isFinish = false;
         LoadQuestion();
     }
 
@@ -132,27 +133,38 @@ public class QuestionManager : MonoBehaviour
             CheckIsAnswered();
 
         }
+
+
     }
 
     void CheckIsAnswered()
     {
+        // nếu trả lời sai
         if (!isAnswerCorrect)
         {
             nextButton.interactable = false;
             nextButton.GetComponent<Image>().color = new(255, 255, 255, fadedButtonOpacity);
         }
-        else if (isAnswerCorrect)
+        // nếu trả lời đúng và chưa phải câu cuối
+        else if (isAnswerCorrect && !isFinish)
         {
             nextButton.interactable = true;
 
             nextButton.GetComponent<Image>().color = new(255, 255, 255, 1);
 
         }
-        else if (currentIndex == questionsSO.Length)
+        // nếu ở câu cuối và chưua trả lời đúng
+        else if (currentIndex == questionsSO.Length && !isAnswerCorrect)
         {
             nextButton.interactable = false;
             nextButton.GetComponent<Image>().color = new(255, 255, 255, fadedButtonOpacity);
 
+        }
+        // nếu ở câu cuối và trả lời đúng
+        else if (currentIndex == questionsSO.Length && isAnswerCorrect)
+        {
+            nextButton.interactable = true;
+            nextButton.GetComponent<Image>().color = new(255, 255, 255, 1);
         }
 
         if (currentIndex == 0)
@@ -231,6 +243,8 @@ public class QuestionManager : MonoBehaviour
 
             isAnswered = true;
             isAnswerCorrect = true;
+
+            // Tự động chuyển câu sau khi trả lời đúng câu hỏi
             Invoke(nameof(LoadNextQuestion), delayTime);
         }
         // nếu trả lời sai 
@@ -339,7 +353,7 @@ public class QuestionManager : MonoBehaviour
             case 4:
                 if (!quizSectionAudio.isPlaying && answer4Audio[currentIndex] != null)
                 {
-                    // chạy âm thanh đáp án của câu hỏi 4
+                    // chạy âm thanh đáp án của câu hỏi 5
                     quizSectionAudio.PlayOneShot(answer5Audio[index], answersAudioVolume);
 
                 }
@@ -350,7 +364,7 @@ public class QuestionManager : MonoBehaviour
             case 5:
                 if (!quizSectionAudio.isPlaying && answer4Audio[currentIndex] != null)
                 {
-                    // chạy âm thanh đáp án của câu hỏi 4
+                    // chạy âm thanh đáp án của câu hỏi 6
                     quizSectionAudio.PlayOneShot(answer6Audio[index], answersAudioVolume);
 
                 }
@@ -383,26 +397,30 @@ public class QuestionManager : MonoBehaviour
 
             // dừng Particle Effects tung hoa 
             rightAnswerPE.Stop();
-
+            rightAnswerPE.Clear();
 
 
             isAnswered = false;
             isAnswerCorrect = false;
         }
-        else if (currentIndex >= 0 && currentIndex == questionsSO.Length - 1 && isAnswerCorrect)
+        // nếu đã trả lời đúng câu hỏi cuối cùng va van chua xong (isFinish != true)
+        else if (currentIndex >= 0 && currentIndex == questionsSO.Length - 1 
+            && isAnswerCorrect && !isFinish 
+            && (!rewardWindow.activeSelf && !congratsWindow.activeSelf))
         {
-            nextButton.GetComponent<Image>().color = new(255, 255, 255, fadedButtonOpacity);
 
+            // load ra màn báo thưởng
+            LoadVictoryScreen();
 
-            // khi trả lời đúng câu hỏi cuối cùng
-            StartCoroutine(LoadVictoryScreen());
+            isFinish = true;
+
         }
 
     }
 
-    IEnumerator LoadVictoryScreen()
+    void LoadVictoryScreen()
     {
-        yield return new WaitForSeconds(delayTimeSmall);
+        //yield return new WaitForSeconds(delayTimeSmall);
 
         finishLevelPE.Play();
         screenDarkenEffects.SetActive(true);
@@ -432,6 +450,7 @@ public class QuestionManager : MonoBehaviour
 
             // tang sao cho nguoi choi
             playerProgress.SavePlayerData("playerStars", starsReward);
+            Debug.Log("đã tăng sao cho người chơi");
 
             // lưu vào biến là đã hoàn thành
             PlayerPrefs.SetInt(levelPrefName, 1);

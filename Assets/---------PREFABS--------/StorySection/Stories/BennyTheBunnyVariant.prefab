@@ -204,6 +204,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2581426708049603049, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: He puts a bell, a basket, and a brush in the backpack.
+      objectReference: {fileID: 0}
     - target: {fileID: 2794367401903990404, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -232,9 +236,25 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4538852769835136124, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: Benny the Bunny has a big blue backpack.
+      objectReference: {fileID: 0}
     - target: {fileID: 4698994611462040449, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5296154456189003040, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: He sings a song and dances with joy.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5434125150526677499, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: Benny goes to the barn.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5517242031456603487, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: He brushes the horse and feeds it some hay.
       objectReference: {fileID: 0}
     - target: {fileID: 5589429467208134401, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_AnchorMax.y
@@ -316,6 +336,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -4633661227068839893, guid: fea5a747956d6a04e914ba071ed8aa30, type: 3}
+    - target: {fileID: 6563306869916312052, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: Benny plays with the birds and the butterflies.
+      objectReference: {fileID: 0}
     - target: {fileID: 7149797056146681877, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -464,6 +488,10 @@ PrefabInstance:
       propertyPath: 'questionsAudio.Array.data[3]'
       value: 
       objectReference: {fileID: 8300000, guid: 55665ee7cda6fc540982c02f2a81ad22, type: 3}
+    - target: {fileID: 8199124760661431113, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: Benny The Bunny. A phonics story is told by Sunny Friends.
+      objectReference: {fileID: 0}
     - target: {fileID: 8356392378336566795, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1

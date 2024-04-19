@@ -277,7 +277,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 4
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -5193,7 +5193,6 @@ ParticleSystemRenderer:
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -10712,7 +10711,6 @@ ParticleSystemRenderer:
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -10845,7 +10843,7 @@ MonoBehaviour:
   rightAudio: 0.5
   questionsAudio: []
   quizQuestionsAudioVolume: 1
-  delayTime: 3
+  delayTime: 2.5
   delayTimeSmall: 1
   nextButton: {fileID: 9157189718466534344}
   backButton: {fileID: 4682170732514686195}
@@ -10858,6 +10856,7 @@ MonoBehaviour:
   congratsWindow: {fileID: 2182253332558642565}
   rewardWindow: {fileID: 7357070497206382317}
   isRewarded: 0
+  isFinish: 0
   quizSection: {fileID: 633013497534337394}
   questionManager: {fileID: 7822098288838830745}
   storyManager: {fileID: 0}
@@ -12768,7 +12767,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2294420745555587863, guid: 684368741ae2e1346b84c7ea8f6d39bb, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -13
       objectReference: {fileID: 0}
     - target: {fileID: 2294420745555587863, guid: 684368741ae2e1346b84c7ea8f6d39bb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -12883,7 +12882,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6468041955559887402, guid: 582ee33b65f19444ba8b25b2753f610c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 39.5
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 6468041955559887402, guid: 582ee33b65f19444ba8b25b2753f610c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

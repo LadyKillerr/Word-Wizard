@@ -51,39 +51,39 @@ PrefabInstance:
     - target: {fileID: 1260301211301265960, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'audioParts.Array.data[0]'
       value: 
-      objectReference: {fileID: 8300000, guid: d992ce5e4f3b5134ea0586770a42ac7c, type: 3}
+      objectReference: {fileID: 8300000, guid: 0a83da3062f64294aa2a5db58c6e5b35, type: 3}
     - target: {fileID: 1260301211301265960, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'audioParts.Array.data[1]'
       value: 
-      objectReference: {fileID: 8300000, guid: e2f242303b19f034798d2e462f6f6139, type: 3}
+      objectReference: {fileID: 8300000, guid: 07518e7e3f80cde4096a8eb5c1110809, type: 3}
     - target: {fileID: 1260301211301265960, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'audioParts.Array.data[2]'
       value: 
-      objectReference: {fileID: 8300000, guid: ac62242cd10b41346bc8adf2d4dab027, type: 3}
+      objectReference: {fileID: 8300000, guid: 9658ed97da565d24e8ebaa4588ba629b, type: 3}
     - target: {fileID: 1260301211301265960, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'audioParts.Array.data[3]'
       value: 
-      objectReference: {fileID: 8300000, guid: 8676630e352406940be6995256bcccd8, type: 3}
+      objectReference: {fileID: 8300000, guid: 40d54007f6be9374e86a6370c63fa8d8, type: 3}
     - target: {fileID: 1260301211301265960, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'audioParts.Array.data[4]'
       value: 
-      objectReference: {fileID: 8300000, guid: bba2d3107ceb41d45862a14a5385df2e, type: 3}
+      objectReference: {fileID: 8300000, guid: 6c2772d57e581414eb17f7a609b1305e, type: 3}
     - target: {fileID: 1260301211301265960, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'audioParts.Array.data[5]'
       value: 
-      objectReference: {fileID: 8300000, guid: 26123762b9e8dae46a225c65bb62f98a, type: 3}
+      objectReference: {fileID: 8300000, guid: a8f321225a7ddd44388c743c026107ff, type: 3}
     - target: {fileID: 1260301211301265960, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'audioParts.Array.data[6]'
       value: 
-      objectReference: {fileID: 8300000, guid: 0580940181bc58b4db3ec71aa189b16a, type: 3}
+      objectReference: {fileID: 8300000, guid: 770e618de6c43724c88c9cae3d3d7f10, type: 3}
     - target: {fileID: 1260301211301265960, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'audioParts.Array.data[7]'
       value: 
-      objectReference: {fileID: 8300000, guid: c182382e4fa46bf4aa0f84099ac9fd6d, type: 3}
+      objectReference: {fileID: 8300000, guid: 403a0f84563f47e47bb826c31a7b9155, type: 3}
     - target: {fileID: 1260301211301265960, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: 'audioParts.Array.data[8]'
       value: 
-      objectReference: {fileID: 8300000, guid: 4a6eabba6cc889649aa9b3adb70fa896, type: 3}
+      objectReference: {fileID: 8300000, guid: 18d545eb703eb4242aca94d921f28a96, type: 3}
     - target: {fileID: 1425242604769763240, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -204,6 +204,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2581426708049603049, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: Dreams of adventures, reaching the sky.
+      objectReference: {fileID: 0}
     - target: {fileID: 2778210053684433427, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -232,13 +236,37 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -670.2368
       objectReference: {fileID: 0}
+    - target: {fileID: 3193532544673304272, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: Inspiring dreams under moon's soft light.
+      objectReference: {fileID: 0}
     - target: {fileID: 4051812505583224562, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4538852769835136124, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: Ivy the iguana, in her treehouse high,
+      objectReference: {fileID: 0}
     - target: {fileID: 4698994611462040449, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4818422131945983060, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5296154456189003040, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: Crafting wonders, both big and great.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5434125150526677499, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: She sings and swings with joy and grace,
+      objectReference: {fileID: 0}
+    - target: {fileID: 5517242031456603487, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: In her leafy haven, a magical place.
       objectReference: {fileID: 0}
     - target: {fileID: 5589429467208134401, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_AnchorMax.y
@@ -320,6 +348,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -4747168201815162448, guid: 0817658dd8c83e249bd4d4b1b9c5cdc9, type: 3}
+    - target: {fileID: 6563306869916312052, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: With colors and paints, she loves to create,
+      objectReference: {fileID: 0}
+    - target: {fileID: 6760187934379379861, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804830911636312136, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: Her stories weave tales of delight,
+      objectReference: {fileID: 0}
     - target: {fileID: 7149797056146681877, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -468,6 +508,10 @@ PrefabInstance:
       propertyPath: 'questionsAudio.Array.data[3]'
       value: 
       objectReference: {fileID: 8300000, guid: a2ff879e169577a4db5e9dbf6521e4f5, type: 3}
+    - target: {fileID: 8199124760661431113, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: Ivy The Iguana. A phonics story is told by Sunny Friends.
+      objectReference: {fileID: 0}
     - target: {fileID: 8356392378336566795, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
