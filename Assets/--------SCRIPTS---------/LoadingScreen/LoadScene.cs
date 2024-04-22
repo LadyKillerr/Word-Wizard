@@ -51,7 +51,6 @@ public class LoadScene : MonoBehaviour
             {
                 audioManager.PlayStartAudio();
             }
-            Debug.Log("Đã nhận lệnh load lại scene With Anim trong level LOADER");
 
             // đợi 1s để anim chạy thì sẽ load luôn
             StartCoroutine(LoadAsyncWithoutLoadingScreen(sceneIndex));

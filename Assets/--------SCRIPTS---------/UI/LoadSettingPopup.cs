@@ -3,9 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class LoadSettingPopup : MonoBehaviour
 {
+    [Header("Tweening Properties")]
+    [SerializeField] Vector3 startTweenScale;
+    [SerializeField] Vector3 endTweenScale;
+    [SerializeField] float tweenTime;
+
     [Header("Audio Button Sprites")]
 
     [SerializeField] Button sfxButton;
@@ -29,6 +35,7 @@ public class LoadSettingPopup : MonoBehaviour
 
     [SerializeField] bool isPrivacy = false;
     [SerializeField] bool isAbout = false;
+    [SerializeField] bool isSetting = false;
 
     [Header("Audio status")]
 
@@ -41,7 +48,7 @@ public class LoadSettingPopup : MonoBehaviour
 
     void Awake()
     {
-        settingPopup.SetActive(false);
+
 
         audioManager = FindAnyObjectByType<AudioManager>();
         gameMusic = FindAnyObjectByType<BackgroundMusicPlayer>();
@@ -55,12 +62,6 @@ public class LoadSettingPopup : MonoBehaviour
             CheckAudioButtonStatus();
 
         }
-
-
-    }
-
-    void Update()
-    {
 
 
     }
@@ -96,32 +97,38 @@ public class LoadSettingPopup : MonoBehaviour
         }
     }
 
-    // ẩn hộp thông báo đi 
-    public void HideSettingPopup()
+    public void ToggleSettingPopup()
     {
-        settingPopup.SetActive(false);
-        screenDarken.SetActive(false);
+        if (!isSetting)
+        {
+            settingPopup.transform.DOScale(endTweenScale, tweenTime)
+                .SetEase(Ease.InSine);
+            isSetting = true;
+            screenDarken.SetActive(true);
 
-    }
-
-    // trượt hộp thông báo xuống
-    public void ShowSettingPopup()
-    {
-        settingPopup.SetActive(true);
-
-        screenDarken.SetActive(true);
+        } else if (isSetting)
+        {
+            settingPopup.transform.DOScale(startTweenScale, tweenTime)
+                .SetEase(Ease.OutSine);
+            isSetting = false;
+            screenDarken.SetActive(false);
+        }
     }
 
     public void TogglePrivacyWindow()
     {
         if (!isPrivacy)
         {
-            privacyPolicy.SetActive(true);
+            privacyPolicy.transform.DOScale(endTweenScale, tweenTime)
+                .SetEase(Ease.InSine);
+
             isPrivacy = true;
         }
         else if (isPrivacy)
         {
-            privacyPolicy.SetActive(false);
+            privacyPolicy.transform.DOScale(startTweenScale, tweenTime)
+                .SetEase(Ease.OutSine);
+
             isPrivacy = false;
         }
     }
@@ -130,12 +137,15 @@ public class LoadSettingPopup : MonoBehaviour
     {
         if (!isAbout)
         {
-            aboutUs.SetActive(true);
+            aboutUs.transform.DOScale(endTweenScale, tweenTime)
+                .SetEase(Ease.InSine);
             isAbout = true;
         }
         else
         {
-            aboutUs.SetActive(false);
+            aboutUs.transform.DOScale(startTweenScale, tweenTime)
+                .SetEase(Ease.OutSine);
+            
             isAbout = false;
         }
     }
