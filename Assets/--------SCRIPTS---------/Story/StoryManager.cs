@@ -30,10 +30,12 @@ public class StoryManager : MonoBehaviour
     [SerializeField] AudioClip[] audioParts;
 
     [Header("Audio Adjustment")]
+
     [SerializeField][Range(0, 1)] float storyVolume;
 
-    [Header("Question time before continue")]
+    [Header("Delay Time Variables")]
     [SerializeField] float delayTime = 3f;
+    [SerializeField] float delayFirstQuestionAudio = 1.75f;
     // 1.5s anim end + 1s anim start
 
 
@@ -83,9 +85,20 @@ public class StoryManager : MonoBehaviour
 
         intersectionSection.SetActive(false);
 
+        HideAllImageParts();
+        HideAllStoryParts();
+        MuteAudio();
 
-        LoadFirstStoryPart();
+        ActivateStorySection();
+        currentIndex = 0;
+        // load ra hình với ảnh và câu hỏi ẩn của index phù hợp
+        storyParts[currentIndex].SetActive(true);
 
+        imageParts[currentIndex].SetActive(true);
+
+        Invoke(nameof(PlayCurrentAudioParts), delayFirstQuestionAudio);
+
+        // reset index
 
         // gọi tới data warehouse
         StoryData[] gameStory = gameStoryData.LoadStoryData("story-section.json");
@@ -135,22 +148,6 @@ public class StoryManager : MonoBehaviour
 
         }
 
-    }
-
-    void LoadFirstStoryPart()
-    {
-        // tắt hết đi và reset index
-        HideAllStoryParts();
-        HideAllImageParts();
-        MuteAudio();
-
-        // reset index
-        currentIndex = 0;
-
-        // kích hoạt phần interactive story section
-        ActivateStorySection();
-
-        LoadParts();
     }
 
     // load ra part tương ứng với index

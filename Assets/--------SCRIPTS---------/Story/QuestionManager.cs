@@ -37,7 +37,7 @@ public class QuestionManager : MonoBehaviour
     [SerializeField] AudioClip[] answer6Audio;
 
 
-    [SerializeField] float timeBeforeAudioPlay = 1f;
+    [SerializeField] float timeBeforeAudioPlay = 1.5f;
 
     [SerializeField][Range(0, 1)] float answersAudioVolume;
     [SerializeField] Sprite wrongAnswerSprite;
@@ -139,6 +139,7 @@ public class QuestionManager : MonoBehaviour
 
     void CheckIsAnswered()
     {
+        // Check Next Button
         // nếu trả lời sai
         if (!isAnswerCorrect)
         {
@@ -167,6 +168,7 @@ public class QuestionManager : MonoBehaviour
             nextButton.GetComponent<Image>().color = new(255, 255, 255, 1);
         }
 
+        // Check Back button
         if (currentIndex == 0)
         {
             if (storyManager != null)
@@ -200,7 +202,7 @@ public class QuestionManager : MonoBehaviour
         // Get ra câu hỏi theo index
         questionText.text = questionsSO[currentIndex].GetQuestion();
 
-        if (quizSection.activeSelf)
+        if (quizSection.activeSelf && !quizSectionAudio.isPlaying)
         {
 
             StartLoadQuestionAudio();
@@ -295,6 +297,8 @@ public class QuestionManager : MonoBehaviour
         // nếu không có anim transitions thì chạy bthg 
         else if (!quizSectionAudio.isPlaying && quizSection.activeSelf && (transitionsAnim == null || !transitionsAnim.enabled))
         {
+            yield return new WaitForSeconds(0.5f);
+            
             Debug.Log("Load audio luôn mà không phải chờ đợi anim");
 
             quizSectionAudio.PlayOneShot(questionsAudio[currentIndex], quizQuestionsAudioVolume);

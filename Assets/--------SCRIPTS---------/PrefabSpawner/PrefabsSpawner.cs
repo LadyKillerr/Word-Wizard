@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using DG.Tweening;
 
 public class PrefabsSpawner : MonoBehaviour
 {
@@ -11,20 +12,41 @@ public class PrefabsSpawner : MonoBehaviour
     [Header("Open Components")]
     [SerializeField] GameObject transitionsAnim;
     [SerializeField] GameObject storyListPanel;
+    [SerializeField] GameObject SelectionPanel;
+    
+    
+
+    [Header("Scaling Cordinates")]
+    [SerializeField] Vector3 originalScale;
+    [SerializeField] Vector3 endTweenScale;
+    [SerializeField] float tweenTime = 0.75f;
 
 
-    [SerializeField] GameObject storySpawnTarget;
 
-    [Header("Prefabs to Spawn")]
-    [SerializeField] GameObject catAndTheBatPrefab;
-    [SerializeField] GameObject bennyTheBunnyPrefab;
-    [SerializeField] GameObject caseyTheCatPrefab;
-    [SerializeField] GameObject dannyTheDogPrefab;
-    [SerializeField] GameObject ellieTheElephantPrefab;
-    [SerializeField] GameObject freddyTheFishPrefab;
-    [SerializeField] GameObject ginaTheGoosePrefab;
-    [SerializeField] GameObject henryTheHedgehogPrefab;
-    [SerializeField] GameObject ivyTheIguanaPrefab;
+    [Header("Story prefabs to Spawn")]
+    [SerializeField] GameObject objectSpawnTarget;
+    [SerializeField] int prefabsIndex;
+    [SerializeField] GameObject catAndTheBatStoryPrefab;
+    [SerializeField] GameObject bennyTheBunnyStoryPrefab;
+    [SerializeField] GameObject caseyTheCatStoryPrefab;
+    [SerializeField] GameObject dannyTheDogStoryPrefab;
+    [SerializeField] GameObject ellieTheElephantStoryPrefab;
+    [SerializeField] GameObject freddyTheFishStoryPrefab;
+    [SerializeField] GameObject ginaTheGooseStoryPrefab;
+    [SerializeField] GameObject henryTheHedgehogStoryPrefab;
+    [SerializeField] GameObject ivyTheIguanaStoryPrefab;
+
+    [Header("Quiz prefabs to Spawn")]
+    [SerializeField] GameObject catAndTheBatQuizPrefab;
+    [SerializeField] GameObject bennyTheBunnyQuizPrefab;
+    [SerializeField] GameObject caseyTheCatQuizPrefab;
+    [SerializeField] GameObject dannyTheDogQuizPrefab;
+    [SerializeField] GameObject ellieTheElephantQuizPrefab;
+    [SerializeField] GameObject freddyTheFishQuizPrefab;
+    [SerializeField] GameObject ginaTheGooseQuizPrefab;
+    [SerializeField] GameObject henryTheHedgehogQuizPrefab;
+    [SerializeField] GameObject ivyTheIguanaQuizPrefab;
+
 
     private void Awake()
     {
@@ -33,7 +55,44 @@ public class PrefabsSpawner : MonoBehaviour
 
     }
 
-    public void StartTogglePrefabsSpawning(int prefabsIndex)
+    public void ShowSelectionPanel(int index)
+    {
+        // anim chạy trong khoảng tweenTime 
+        SelectionPanel.transform.DOScale(endTweenScale, tweenTime)
+            .SetEase(Ease.InOutSine);
+
+        // biến truyền vào sẽ được lưu vào prefabsIndex
+        prefabsIndex = index;
+    }
+
+    public void HideSelectionPanel()
+    {
+        SelectionPanel.transform.DOScale(originalScale, tweenTime)
+            .SetEase(Ease.InOutBack);
+    }
+
+
+
+    public void SpawnStoryPrefabs()
+    {
+        if (audioManager != null)
+        {
+            audioManager.PlayStartAudio();
+
+        }
+        
+        // chạy anim chuyển màn
+        transitionsAnim.GetComponent<Animator>().SetTrigger("end");
+        StartCoroutine(ResetTransitionGameObject());
+
+        // scale khung lựa chọn nhỏ lại
+        HideSelectionPanel();
+
+        StartCoroutine(ToogleStoryPrefabs(prefabsIndex));
+        
+    }
+
+    public void SpawnQuizPrefabs()
     {
         if (audioManager != null)
         {
@@ -41,88 +100,139 @@ public class PrefabsSpawner : MonoBehaviour
 
         }
 
-        // bắt đầu đợi 2s để anim chạy
-        StartCoroutine(TooglePrefabsSpawning(prefabsIndex));
-
-        // anim chạy trong khoảng 1.5s 
+        // chạy anim chuyển màn
         transitionsAnim.GetComponent<Animator>().SetTrigger("end");
-
         StartCoroutine(ResetTransitionGameObject());
+
+        // scale khung lựa chọn nhỏ lại
+        HideSelectionPanel();
+
+        StartCoroutine(ToogleQuizPrefabs(prefabsIndex));
+
     }
 
-    IEnumerator TooglePrefabsSpawning(int quizValue)
+    IEnumerator ToogleStoryPrefabs(int storyPrefabsValue)
     {
-        // ngưng load tầm 1.5s để anim chạy, xong thì sẽ bdau hiện ra quiz 
-        yield return new WaitForSeconds(1.5f);
+        // ngưng load tầm 1s để anim chạy, xong thì sẽ bdau hiện ra quiz 
+        yield return new WaitForSeconds(1f);
 
-        // sau khi đợi 1.5s để start anim chạy xong -> màn đen xì sẽ bdau load ra question
+        // sau khi đợi 1s để start anim chạy xong -> màn đen xì sẽ bdau load ra question
         storyListPanel.SetActive(false);
 
-        
-
-
-
-        switch (quizValue)
+        switch (storyPrefabsValue)
         {
             case 0:
                 // instantiate ra cái quiz section tương ứng ( CatAndTheBat section sẽ là 0 giống trong StoryID.txt)
 
                 // Instantiate GameObject
-                spawnedObject = Instantiate(catAndTheBatPrefab, storySpawnTarget.transform);
+                spawnedObject = Instantiate(catAndTheBatStoryPrefab, objectSpawnTarget.transform);
                 break;
 
             case 1:
                 // Instantiate GameObject
-                spawnedObject = Instantiate(bennyTheBunnyPrefab, storySpawnTarget.transform);
+                spawnedObject = Instantiate(bennyTheBunnyStoryPrefab, objectSpawnTarget.transform);
                 break;
 
             case 2:
                 // Instantiate GameObject
-                spawnedObject = Instantiate(caseyTheCatPrefab, storySpawnTarget.transform);
+                spawnedObject = Instantiate(caseyTheCatStoryPrefab, objectSpawnTarget.transform);
                 break;
 
             case 3:
                 // Instantiate GameObject
-                spawnedObject = Instantiate(dannyTheDogPrefab, storySpawnTarget.transform);
+                spawnedObject = Instantiate(dannyTheDogStoryPrefab, objectSpawnTarget.transform);
                 break;
 
             case 4:
                 // Instantiate GameObject
-                spawnedObject = Instantiate(ellieTheElephantPrefab, storySpawnTarget.transform);
+                spawnedObject = Instantiate(ellieTheElephantStoryPrefab, objectSpawnTarget.transform);
                 break;
 
             case 5:
                 // Instantiate GameObject
-                spawnedObject = Instantiate(freddyTheFishPrefab, storySpawnTarget.transform);
+                spawnedObject = Instantiate(freddyTheFishStoryPrefab, objectSpawnTarget.transform);
                 break;
 
             case 6:
                 // Instantiate GameObject
-                spawnedObject = Instantiate(ginaTheGoosePrefab, storySpawnTarget.transform);
+                spawnedObject = Instantiate(ginaTheGooseStoryPrefab, objectSpawnTarget.transform);
                 break;
 
             case 7:
                 // Instantiate GameObject
-                spawnedObject = Instantiate(henryTheHedgehogPrefab, storySpawnTarget.transform);
+                spawnedObject = Instantiate(henryTheHedgehogStoryPrefab, objectSpawnTarget.transform);
                 break;
 
             case 8:
                 // Instantiate GameObject
-                spawnedObject = Instantiate(ivyTheIguanaPrefab, storySpawnTarget.transform);
+                spawnedObject = Instantiate(ivyTheIguanaStoryPrefab, objectSpawnTarget.transform);
                 break;
         }
+    }
 
-        // Set Anchor để gameObject neo full màn hình
-        //rectTransform.anchorMin = Vector2.zero;
-        //rectTransform.anchorMax = Vector2.one;
-        //rectTransform.anchoredPosition = Vector2.zero;
-        //rectTransform.sizeDelta = Vector2.zero;
+    IEnumerator ToogleQuizPrefabs(int quizPrefabsValue)
+    {
+        // ngưng load tầm 1s để anim chạy, xong thì sẽ bdau hiện ra quiz 
+        yield return new WaitForSeconds(1f);
+
+        // sau khi đợi 1s để start anim chạy xong -> màn đen xì sẽ bdau load ra question
+        storyListPanel.SetActive(false);
+
+        switch (quizPrefabsValue)
+        {
+            case 0:
+                // instantiate ra cái quiz section tương ứng ( CatAndTheBat section sẽ là 0 giống trong StoryID.txt)
+
+                // Instantiate GameObject
+                spawnedObject = Instantiate(catAndTheBatQuizPrefab, objectSpawnTarget.transform);
+                break;
+
+            case 1:
+                // Instantiate GameObject
+                spawnedObject = Instantiate(bennyTheBunnyQuizPrefab, objectSpawnTarget.transform);
+                break;
+
+            case 2:
+                // Instantiate GameObject
+                spawnedObject = Instantiate(caseyTheCatQuizPrefab, objectSpawnTarget.transform);
+                break;
+
+            case 3:
+                // Instantiate GameObject
+                spawnedObject = Instantiate(dannyTheDogQuizPrefab, objectSpawnTarget.transform);
+                break;
+
+            case 4:
+                // Instantiate GameObject
+                spawnedObject = Instantiate(ellieTheElephantQuizPrefab, objectSpawnTarget.transform);
+                break;
+
+            case 5:
+                // Instantiate GameObject
+                spawnedObject = Instantiate(freddyTheFishQuizPrefab, objectSpawnTarget.transform);
+                break;
+
+            case 6:
+                // Instantiate GameObject
+                spawnedObject = Instantiate(ginaTheGooseQuizPrefab, objectSpawnTarget.transform);
+                break;
+
+            case 7:
+                // Instantiate GameObject
+                spawnedObject = Instantiate(henryTheHedgehogQuizPrefab, objectSpawnTarget.transform);
+                break;
+
+            case 8:
+                // Instantiate GameObject
+                spawnedObject = Instantiate(ivyTheIguanaQuizPrefab, objectSpawnTarget.transform);
+                break;
+        }
     }
 
     // sau khi chạy lần đầu vào thì phải tắt anim đi không thì các câu hỏi sau cũng phải chờ
     IEnumerator ResetTransitionGameObject()
     {
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(3f);
 
         transitionsAnim.SetActive(false);
         transitionsAnim.GetComponent<Animator>().enabled = false;

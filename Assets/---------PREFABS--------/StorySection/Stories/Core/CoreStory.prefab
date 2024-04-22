@@ -2024,6 +2024,7 @@ MonoBehaviour:
   audioParts: []
   storyVolume: 1
   delayTime: 3
+  delayFirstQuestionAudio: 1.75
   isReading: 0
   interactiveStorySection: {fileID: 4698994611462040449}
   questionSection: {fileID: 4051812505583224562}
@@ -6692,7 +6693,7 @@ MonoBehaviour:
   answer4Audio: []
   answer5Audio: []
   answer6Audio: []
-  timeBeforeAudioPlay: 1.5
+  timeBeforeAudioPlay: 20.03
   answersAudioVolume: 1
   wrongAnswerSprite: {fileID: 21300000, guid: d8262a50fbf32d4408581ca2d0e4e2e9, type: 3}
   rightAnswerSprite: {fileID: 21300000, guid: c896f5c57cdfa0848b6e6249ef56117e, type: 3}
