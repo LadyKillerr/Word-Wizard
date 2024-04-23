@@ -18,7 +18,7 @@ PrefabInstance:
       objectReference: {fileID: 2565560953177711962, guid: b3d727f4accf19c4fb1798fefbcc4814, type: 3}
     - target: {fileID: 1247777406519457750, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1260301211301265960, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: storyId
@@ -344,6 +344,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Casey The Cat. A phonics story is told by Sunny Friends.
       objectReference: {fileID: 0}
+    - target: {fileID: 8199124760661431113, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -4679767318179579688, guid: 4ced626538778a642b1bc52f57f13874, type: 2}
     - target: {fileID: 8534337645335599026, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_Sprite
       value: 

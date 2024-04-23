@@ -1637,6 +1637,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2495109164451493687, guid: 15a05378dc804a240a3a630be036d102, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2495109164451493687, guid: 15a05378dc804a240a3a630be036d102, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4700197695414414027}
+    - target: {fileID: 2495109164451493687, guid: 15a05378dc804a240a3a630be036d102, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HideSelectionPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 2495109164451493687, guid: 15a05378dc804a240a3a630be036d102, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PrefabsSpawner, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 2586936837611968705, guid: 15a05378dc804a240a3a630be036d102, type: 3}
       propertyPath: m_Color.a
       value: 0.65882355
