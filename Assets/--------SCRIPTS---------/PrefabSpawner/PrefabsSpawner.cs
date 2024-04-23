@@ -68,7 +68,7 @@ public class PrefabsSpawner : MonoBehaviour
     public void HideSelectionPanel()
     {
         SelectionPanel.transform.DOScale(originalScale, tweenTime)
-            .SetEase(Ease.InOutBack);
+            .SetEase(Ease.InSine);
     }
 
 
