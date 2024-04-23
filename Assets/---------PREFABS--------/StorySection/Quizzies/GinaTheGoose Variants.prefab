@@ -1,0 +1,223 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7069280299375292580
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 633013497534337394, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: m_Name
+      value: GinaTheGoose Variants
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147057302212406278, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147057302212406278, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147057302212406278, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147057302212406278, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147057302212406278, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147057302212406278, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147057302212406278, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147057302212406278, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147057302212406278, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147057302212406278, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147057302212406278, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147057302212406278, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147057302212406278, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147057302212406278, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147057302212406278, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147057302212406278, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147057302212406278, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147057302212406278, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147057302212406278, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147057302212406278, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: levelPrefName
+      value: GinaTheGoose
+      objectReference: {fileID: 0}
+    - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: questionsSO.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: answer1Audio.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: answer2Audio.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: answer3Audio.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: answer4Audio.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: questionsAudio.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: 'questionsSO.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 6b53ad01ce455334081ddd7d188c956b, type: 2}
+    - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: 'questionsSO.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 71024ad07565dd74d900c52253763239, type: 2}
+    - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: 'questionsSO.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: ebb77fc629ae67b4d82bab6e776ea1e9, type: 2}
+    - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: 'questionsSO.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 7dd549a2b5da3aa48834e9a7afb6ac4c, type: 2}
+    - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: 'answer1Audio.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: e6316e2330bf6aa46874be94786d9c53, type: 3}
+    - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: 'answer1Audio.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 8adb18f9e54a66344bf5a82e007080d1, type: 3}
+    - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: 'answer1Audio.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 44c50d8ee46ff4043ad7b293f193f34b, type: 3}
+    - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: 'answer1Audio.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 147b2bd6e64760641bdace8436caa066, type: 3}
+    - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: 'answer2Audio.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 9b5ac910ddbbaa340bb1f1423579b199, type: 3}
+    - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: 'answer2Audio.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 64905ad72d0027b48b47aabf801a0f5f, type: 3}
+    - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: 'answer2Audio.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: c478eca5f5ec7be49bbae28b0e1579d6, type: 3}
+    - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: 'answer2Audio.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 52062382a59d34d48824bbf59b680d40, type: 3}
+    - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: 'answer3Audio.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 9bf6b5d89615bac4db8887a849cfecfb, type: 3}
+    - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: 'answer3Audio.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 880d3e7432fc7844b976916a3105b2cf, type: 3}
+    - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: 'answer3Audio.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 3e91ae427caeb844ab49606b8817984b, type: 3}
+    - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: 'answer3Audio.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 46dfa8d4e4685fb40b54761d1dd7ff2a, type: 3}
+    - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: 'answer4Audio.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: da7a7934a8279bc42afec331be4dde5c, type: 3}
+    - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: 'answer4Audio.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 13eb478b01a562e42888c898696df416, type: 3}
+    - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: 'answer4Audio.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 96103f5ddf211af4e93da84ece9c02d3, type: 3}
+    - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: 'answer4Audio.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 64f0c21b4047b824fa7e2cd0079eda4d, type: 3}
+    - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: 'questionsAudio.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: afd8cef17d2cef442bb116ed88613c59, type: 3}
+    - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: 'questionsAudio.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: c65e6b8bbf4b56d418fdc54c221c77cc, type: 3}
+    - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: 'questionsAudio.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: fc426ef607428354482a6617c9511764, type: 3}
+    - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
+      propertyPath: 'questionsAudio.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 81ed0c4a44b4b264bbfb6fc9879e31e6, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}

@@ -1,0 +1,44 @@
+{
+  "question": [
+    {
+      "q": "What does the cat wear?",
+      "a": [
+        "A bat",
+        "A hat",
+        "An apple",
+        "A cake"
+      ],
+      "c": 1
+    },
+    {
+      "q": "Why can the cat not climb the tree?",
+      "a": [
+        "The cat is hungry",
+        "The bat doesn't help",
+        "The hat is too large",
+        "The tree is very tall"
+      ],
+      "c": 2
+    },
+    {
+      "q": "What does the bat help the cat?",
+      "a": [
+        "The bat picks the apple",
+        "The bat eats the apple cake",
+        "The bat helps the cat to climb",
+        "The bat flies with the cat"
+      ],
+      "c": 0
+    },
+    {
+      "q": "What do the can and the cat share together?",
+      "a": [
+        "An apple",
+        "An apple cake",
+        "A hat",
+        "An apple tree"
+      ],
+      "c": 1
+    }
+  ]
+}
