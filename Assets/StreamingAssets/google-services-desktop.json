@@ -7,20 +7,22 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:896639453591:android:e74c2ddf78103ec9109cd2",
+        "mobilesdk_app_id": "1:896639453591:ios:2be7045936f6057c109cd2",
         "android_client_info": {
-          "package_name": "com.MeepoStudio.SunnyFriendsStories"
+          "package_name": "com.sunnyfriends.stories.kids"
         }
       },
-      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyD3mt7ZnuO4soF4_rIIC_5AC7Fd9x_W78Q"
+          "current_key": "AIzaSyCacq7mSC6-nWGwl-gy0XhQQlnegHSKfPo"
         }
       ],
       "services": {
+        "analytics_service": {
+          "status": 0
+        },
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "status": 1
         }
       }
     }
