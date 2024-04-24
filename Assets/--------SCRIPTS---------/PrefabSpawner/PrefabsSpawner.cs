@@ -6,15 +6,18 @@ public class PrefabsSpawner : MonoBehaviour
 {
 
     // hidden components
-    GameObject spawnedObject;
+
     AudioManager audioManager;
+
+    [SerializeField] bool isSelected = false;
 
     [Header("Open Components")]
     [SerializeField] GameObject transitionsAnim;
     [SerializeField] GameObject storyListPanel;
-    [SerializeField] GameObject SelectionPanel;
-    
-    
+
+    [SerializeField] GameObject objectSpawnTarget;
+
+
 
     [Header("Scaling Cordinates")]
     [SerializeField] Vector3 originalScale;
@@ -22,9 +25,20 @@ public class PrefabsSpawner : MonoBehaviour
     [SerializeField] float tweenTime = 0.75f;
 
 
+    [Header("Selection screen prefabs to Spawn")]
+    [SerializeField] GameObject catAndTheBatThumbnail;
+    [SerializeField] GameObject BennyTheBunnyThumbnail;
+    [SerializeField] GameObject CaseyTheCatThumbnail;
+    [SerializeField] GameObject DannyTheDogThumbnail;
+    [SerializeField] GameObject EllieTheElephantThumbnail;
+    [SerializeField] GameObject FreddyTheFishThumbnail;
+    [SerializeField] GameObject GinaTheGooseThumbnail;
+    [SerializeField] GameObject HenryTheHedgehogThumbnail;
+    [SerializeField] GameObject IvyTheIguanaThumbnail;
+
+
 
     [Header("Story prefabs to Spawn")]
-    [SerializeField] GameObject objectSpawnTarget;
     [SerializeField] int prefabsIndex;
     [SerializeField] GameObject catAndTheBatStoryPrefab;
     [SerializeField] GameObject bennyTheBunnyStoryPrefab;
@@ -50,65 +64,196 @@ public class PrefabsSpawner : MonoBehaviour
 
     private void Awake()
     {
+        isSelected = false;
+
         transitionsAnim.GetComponent<Animator>().SetTrigger("start");
         audioManager = FindAnyObjectByType<AudioManager>();
 
     }
 
+
+
+
     public void ShowSelectionPanel(int index)
     {
-        // anim chạy trong khoảng tweenTime 
-        SelectionPanel.transform.DOScale(endTweenScale, tweenTime)
-            .SetEase(Ease.InOutSine);
 
-        // biến truyền vào sẽ được lưu vào prefabsIndex
+
+        if (!isSelected)
+        {
+
+            switch (index)
+            {
+                case 0:
+                    // spawn ra prefabs cần thiết là phần tử con của ObjectSpawnTarget
+                    Instantiate(catAndTheBatThumbnail, objectSpawnTarget.transform);
+
+
+                    objectSpawnTarget.transform.GetChild(0).transform.localScale = new Vector2(0, 0);
+
+                    // anim chạy trong khoảng tweenTime 
+                    objectSpawnTarget.transform.GetChild(0).transform.DOScale(endTweenScale, tweenTime)
+                        .SetEase(Ease.InOutSine);
+
+                    Debug.Log("Run Scaling Tween");
+                    break;
+
+                case 1:
+                    Instantiate(BennyTheBunnyThumbnail, objectSpawnTarget.transform);
+                    // anim chạy trong khoảng tweenTime 
+                    BennyTheBunnyThumbnail.transform.DOScale(endTweenScale, tweenTime)
+                        .SetEase(Ease.InOutSine);
+                    break;
+                case 2:
+                    Instantiate(CaseyTheCatThumbnail, objectSpawnTarget.transform);
+                    // anim chạy trong khoảng tweenTime 
+                    CaseyTheCatThumbnail.transform.DOScale(endTweenScale, tweenTime)
+                        .SetEase(Ease.InOutSine);
+                    break;
+
+                case 3:
+                    Instantiate(DannyTheDogThumbnail, objectSpawnTarget.transform);
+                    // anim chạy trong khoảng tweenTime 
+                    DannyTheDogThumbnail.transform.DOScale(endTweenScale, tweenTime)
+                        .SetEase(Ease.InOutSine);
+                    break;
+
+                case 4:
+                    Instantiate(EllieTheElephantThumbnail, objectSpawnTarget.transform);
+                    // anim chạy trong khoảng tweenTime 
+                    EllieTheElephantThumbnail.transform.DOScale(endTweenScale, tweenTime)
+                        .SetEase(Ease.InOutSine);
+                    break;
+
+                case 5:
+                    Instantiate(FreddyTheFishThumbnail, objectSpawnTarget.transform);
+                    // anim chạy trong khoảng tweenTime 
+                    FreddyTheFishThumbnail.transform.DOScale(endTweenScale, tweenTime)
+                        .SetEase(Ease.InOutSine);
+                    break;
+
+                case 6:
+                    Instantiate(ginaTheGooseStoryPrefab, objectSpawnTarget.transform);
+                    // anim chạy trong khoảng tweenTime 
+                    ginaTheGooseStoryPrefab.transform.DOScale(endTweenScale, tweenTime)
+                        .SetEase(Ease.InOutSine);
+                    break;
+
+                case 7:
+                    Instantiate(henryTheHedgehogStoryPrefab, objectSpawnTarget.transform);
+                    // anim chạy trong khoảng tweenTime 
+                    henryTheHedgehogStoryPrefab.transform.DOScale(endTweenScale, tweenTime)
+                        .SetEase(Ease.InOutSine);
+                    break;
+
+                case 8:
+                    Instantiate(ivyTheIguanaStoryPrefab, objectSpawnTarget.transform);
+                    // anim chạy trong khoảng tweenTime 
+                    ivyTheIguanaStoryPrefab.transform.DOScale(endTweenScale, tweenTime)
+                        .SetEase(Ease.InOutSine);
+                    break;
+
+            }
+
+        }
+
+
+        // biến truyền vào sẽ được lưu vào prefabsIndex 
         prefabsIndex = index;
+
+        isSelected = true;
+        StartCoroutine(ResetIsSelected(tweenTime));
     }
 
     public void HideSelectionPanel()
     {
-        SelectionPanel.transform.DOScale(originalScale, tweenTime)
-            .SetEase(Ease.InSine);
-    }
-
-
-
-    public void SpawnStoryPrefabs()
-    {
-        if (audioManager != null)
+        if (!isSelected)
         {
-            audioManager.PlayStartAudio();
+            // track ra child của object vừa spawn vào và thu nhỏ nó lại
+            objectSpawnTarget.transform.GetChild(0).transform.DOScale(originalScale, tweenTime)
+        .SetEase(Ease.InSine);
 
-        }
-        
-        // chạy anim chuyển màn
-        transitionsAnim.GetComponent<Animator>().SetTrigger("end");
-        StartCoroutine(ResetTransitionGameObject());
 
-        // scale khung lựa chọn nhỏ lại
-        HideSelectionPanel();
 
-        StartCoroutine(ToogleStoryPrefabs(prefabsIndex));
-        
-    }
+            Debug.Log("đã tắt selection Panel đi ");
 
-    public void SpawnQuizPrefabs()
-    {
-        if (audioManager != null)
-        {
-            audioManager.PlayStartAudio();
+            StartCoroutine(KillSelectionPanel(tweenTime));
 
+            isSelected = true;
+            StartCoroutine(ResetIsSelected(tweenTime));
+
+            isSelected = true;
+            StartCoroutine(ResetIsSelected(tweenTime));
         }
 
-        // chạy anim chuyển màn
-        transitionsAnim.GetComponent<Animator>().SetTrigger("end");
-        StartCoroutine(ResetTransitionGameObject());
+    }
 
-        // scale khung lựa chọn nhỏ lại
-        HideSelectionPanel();
+    IEnumerator KillSelectionPanel(float delay)
+    {
+        yield return new WaitForSeconds(delay);
 
-        StartCoroutine(ToogleQuizPrefabs(prefabsIndex));
+        // lặp qua các phần tử selectionPanel được spawn ra và kill hết đi 
+        foreach (Transform child in objectSpawnTarget.transform)
+        {
+            GameObject.Destroy(child.gameObject);
+        }
+    }
 
+    public int GetPrefabsIndex()
+    {
+        return prefabsIndex;
+    }
+
+    public void SpawnStoryPrefabs(int storyPrefabsValue)
+    {
+
+        if (!isSelected)
+        {
+            if (audioManager != null)
+            {
+                audioManager.PlayStartAudio();
+
+            }
+
+            // chạy anim chuyển màn
+            transitionsAnim.GetComponent<Animator>().SetTrigger("end");
+            StartCoroutine(ResetTransitionGameObject());
+
+            // scale khung lựa chọn nhỏ lại
+            HideSelectionPanel();
+
+            StartCoroutine(ToogleStoryPrefabs(storyPrefabsValue));
+
+            // ngăn không cho ấn liên tục bug game
+            isSelected = true;
+            StartCoroutine(ResetIsSelected(tweenTime));
+        }
+    }
+
+    public void SpawnQuizPrefabs(int quizPrefabsValue)
+    {
+        if (!isSelected)
+        {
+
+            if (audioManager != null)
+            {
+                audioManager.PlayStartAudio();
+
+            }
+
+            // chạy anim chuyển màn
+            transitionsAnim.GetComponent<Animator>().SetTrigger("end");
+            StartCoroutine(ResetTransitionGameObject());
+
+            // scale khung lựa chọn nhỏ lại
+            HideSelectionPanel();
+
+            StartCoroutine(ToogleQuizPrefabs(quizPrefabsValue));
+
+
+            isSelected = true;
+
+            StartCoroutine(ResetIsSelected(tweenTime));
+        }
     }
 
     IEnumerator ToogleStoryPrefabs(int storyPrefabsValue)
@@ -125,47 +270,47 @@ public class PrefabsSpawner : MonoBehaviour
                 // instantiate ra cái quiz section tương ứng ( CatAndTheBat section sẽ là 0 giống trong StoryID.txt)
 
                 // Instantiate GameObject
-                spawnedObject = Instantiate(catAndTheBatStoryPrefab, objectSpawnTarget.transform);
+                Instantiate(catAndTheBatStoryPrefab, objectSpawnTarget.transform);
                 break;
 
             case 1:
                 // Instantiate GameObject
-                spawnedObject = Instantiate(bennyTheBunnyStoryPrefab, objectSpawnTarget.transform);
+                Instantiate(bennyTheBunnyStoryPrefab, objectSpawnTarget.transform);
                 break;
 
             case 2:
                 // Instantiate GameObject
-                spawnedObject = Instantiate(caseyTheCatStoryPrefab, objectSpawnTarget.transform);
+                Instantiate(caseyTheCatStoryPrefab, objectSpawnTarget.transform);
                 break;
 
             case 3:
                 // Instantiate GameObject
-                spawnedObject = Instantiate(dannyTheDogStoryPrefab, objectSpawnTarget.transform);
+                Instantiate(dannyTheDogStoryPrefab, objectSpawnTarget.transform);
                 break;
 
             case 4:
                 // Instantiate GameObject
-                spawnedObject = Instantiate(ellieTheElephantStoryPrefab, objectSpawnTarget.transform);
+                Instantiate(ellieTheElephantStoryPrefab, objectSpawnTarget.transform);
                 break;
 
             case 5:
                 // Instantiate GameObject
-                spawnedObject = Instantiate(freddyTheFishStoryPrefab, objectSpawnTarget.transform);
+                Instantiate(freddyTheFishStoryPrefab, objectSpawnTarget.transform);
                 break;
 
             case 6:
                 // Instantiate GameObject
-                spawnedObject = Instantiate(ginaTheGooseStoryPrefab, objectSpawnTarget.transform);
+                Instantiate(ginaTheGooseStoryPrefab, objectSpawnTarget.transform);
                 break;
 
             case 7:
                 // Instantiate GameObject
-                spawnedObject = Instantiate(henryTheHedgehogStoryPrefab, objectSpawnTarget.transform);
+                Instantiate(henryTheHedgehogStoryPrefab, objectSpawnTarget.transform);
                 break;
 
             case 8:
                 // Instantiate GameObject
-                spawnedObject = Instantiate(ivyTheIguanaStoryPrefab, objectSpawnTarget.transform);
+                Instantiate(ivyTheIguanaStoryPrefab, objectSpawnTarget.transform);
                 break;
         }
     }
@@ -184,47 +329,47 @@ public class PrefabsSpawner : MonoBehaviour
                 // instantiate ra cái quiz section tương ứng ( CatAndTheBat section sẽ là 0 giống trong StoryID.txt)
 
                 // Instantiate GameObject
-                spawnedObject = Instantiate(catAndTheBatQuizPrefab, objectSpawnTarget.transform);
+                Instantiate(catAndTheBatQuizPrefab, objectSpawnTarget.transform);
                 break;
 
             case 1:
                 // Instantiate GameObject
-                spawnedObject = Instantiate(bennyTheBunnyQuizPrefab, objectSpawnTarget.transform);
+                Instantiate(bennyTheBunnyQuizPrefab, objectSpawnTarget.transform);
                 break;
 
             case 2:
                 // Instantiate GameObject
-                spawnedObject = Instantiate(caseyTheCatQuizPrefab, objectSpawnTarget.transform);
+                Instantiate(caseyTheCatQuizPrefab, objectSpawnTarget.transform);
                 break;
 
             case 3:
                 // Instantiate GameObject
-                spawnedObject = Instantiate(dannyTheDogQuizPrefab, objectSpawnTarget.transform);
+                Instantiate(dannyTheDogQuizPrefab, objectSpawnTarget.transform);
                 break;
 
             case 4:
                 // Instantiate GameObject
-                spawnedObject = Instantiate(ellieTheElephantQuizPrefab, objectSpawnTarget.transform);
+                Instantiate(ellieTheElephantQuizPrefab, objectSpawnTarget.transform);
                 break;
 
             case 5:
                 // Instantiate GameObject
-                spawnedObject = Instantiate(freddyTheFishQuizPrefab, objectSpawnTarget.transform);
+                Instantiate(freddyTheFishQuizPrefab, objectSpawnTarget.transform);
                 break;
 
             case 6:
                 // Instantiate GameObject
-                spawnedObject = Instantiate(ginaTheGooseQuizPrefab, objectSpawnTarget.transform);
+                Instantiate(ginaTheGooseQuizPrefab, objectSpawnTarget.transform);
                 break;
 
             case 7:
                 // Instantiate GameObject
-                spawnedObject = Instantiate(henryTheHedgehogQuizPrefab, objectSpawnTarget.transform);
+                Instantiate(henryTheHedgehogQuizPrefab, objectSpawnTarget.transform);
                 break;
 
             case 8:
                 // Instantiate GameObject
-                spawnedObject = Instantiate(ivyTheIguanaQuizPrefab, objectSpawnTarget.transform);
+                Instantiate(ivyTheIguanaQuizPrefab, objectSpawnTarget.transform);
                 break;
         }
     }
@@ -244,4 +389,10 @@ public class PrefabsSpawner : MonoBehaviour
         transitionsAnim.GetComponent<Animator>().enabled = true;
     }
 
+    IEnumerator ResetIsSelected(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        isSelected = false;
+    }
 }
