@@ -77,10 +77,8 @@ public class PrefabsSpawner : MonoBehaviour
     public void ShowSelectionPanel(int index)
     {
 
-
         if (!isSelected)
         {
-
             switch (index)
             {
                 case 0:
@@ -94,62 +92,109 @@ public class PrefabsSpawner : MonoBehaviour
                     objectSpawnTarget.transform.GetChild(0).transform.DOScale(endTweenScale, tweenTime)
                         .SetEase(Ease.InOutSine);
 
-                    Debug.Log("Run Scaling Tween");
                     break;
 
                 case 1:
+                    // spawn ra prefabs cần thiết là phần tử con của ObjectSpawnTarget
                     Instantiate(BennyTheBunnyThumbnail, objectSpawnTarget.transform);
+
+
+                    objectSpawnTarget.transform.GetChild(0).transform.localScale = new Vector2(0, 0);
+
                     // anim chạy trong khoảng tweenTime 
-                    BennyTheBunnyThumbnail.transform.DOScale(endTweenScale, tweenTime)
+                    objectSpawnTarget.transform.GetChild(0).transform.DOScale(endTweenScale, tweenTime)
                         .SetEase(Ease.InOutSine);
+
                     break;
                 case 2:
+                    // spawn ra prefabs cần thiết là phần tử con của ObjectSpawnTarget
                     Instantiate(CaseyTheCatThumbnail, objectSpawnTarget.transform);
+
+
+                    objectSpawnTarget.transform.GetChild(0).transform.localScale = new Vector2(0, 0);
+
                     // anim chạy trong khoảng tweenTime 
-                    CaseyTheCatThumbnail.transform.DOScale(endTweenScale, tweenTime)
+                    objectSpawnTarget.transform.GetChild(0).transform.DOScale(endTweenScale, tweenTime)
                         .SetEase(Ease.InOutSine);
+
                     break;
 
                 case 3:
+                    // spawn ra prefabs cần thiết là phần tử con của ObjectSpawnTarget
                     Instantiate(DannyTheDogThumbnail, objectSpawnTarget.transform);
+
+
+                    objectSpawnTarget.transform.GetChild(0).transform.localScale = new Vector2(0, 0);
+
                     // anim chạy trong khoảng tweenTime 
-                    DannyTheDogThumbnail.transform.DOScale(endTweenScale, tweenTime)
+                    objectSpawnTarget.transform.GetChild(0).transform.DOScale(endTweenScale, tweenTime)
                         .SetEase(Ease.InOutSine);
+
                     break;
 
                 case 4:
+                    // spawn ra prefabs cần thiết là phần tử con của ObjectSpawnTarget
                     Instantiate(EllieTheElephantThumbnail, objectSpawnTarget.transform);
+
+
+                    objectSpawnTarget.transform.GetChild(0).transform.localScale = new Vector2(0, 0);
+
                     // anim chạy trong khoảng tweenTime 
-                    EllieTheElephantThumbnail.transform.DOScale(endTweenScale, tweenTime)
+                    objectSpawnTarget.transform.GetChild(0).transform.DOScale(endTweenScale, tweenTime)
                         .SetEase(Ease.InOutSine);
+
                     break;
 
                 case 5:
+                    // spawn ra prefabs cần thiết là phần tử con của ObjectSpawnTarget
                     Instantiate(FreddyTheFishThumbnail, objectSpawnTarget.transform);
+
+
+                    objectSpawnTarget.transform.GetChild(0).transform.localScale = new Vector2(0, 0);
+
                     // anim chạy trong khoảng tweenTime 
-                    FreddyTheFishThumbnail.transform.DOScale(endTweenScale, tweenTime)
+                    objectSpawnTarget.transform.GetChild(0).transform.DOScale(endTweenScale, tweenTime)
                         .SetEase(Ease.InOutSine);
+
                     break;
 
                 case 6:
-                    Instantiate(ginaTheGooseStoryPrefab, objectSpawnTarget.transform);
+                    // spawn ra prefabs cần thiết là phần tử con của ObjectSpawnTarget
+                    Instantiate(GinaTheGooseThumbnail, objectSpawnTarget.transform);
+
+
+                    objectSpawnTarget.transform.GetChild(0).transform.localScale = new Vector2(0, 0);
+
                     // anim chạy trong khoảng tweenTime 
-                    ginaTheGooseStoryPrefab.transform.DOScale(endTweenScale, tweenTime)
+                    objectSpawnTarget.transform.GetChild(0).transform.DOScale(endTweenScale, tweenTime)
                         .SetEase(Ease.InOutSine);
+
                     break;
 
                 case 7:
-                    Instantiate(henryTheHedgehogStoryPrefab, objectSpawnTarget.transform);
+                    // spawn ra prefabs cần thiết là phần tử con của ObjectSpawnTarget
+                    Instantiate(HenryTheHedgehogThumbnail, objectSpawnTarget.transform);
+
+
+                    objectSpawnTarget.transform.GetChild(0).transform.localScale = new Vector2(0, 0);
+
                     // anim chạy trong khoảng tweenTime 
-                    henryTheHedgehogStoryPrefab.transform.DOScale(endTweenScale, tweenTime)
+                    objectSpawnTarget.transform.GetChild(0).transform.DOScale(endTweenScale, tweenTime)
                         .SetEase(Ease.InOutSine);
+
                     break;
 
                 case 8:
-                    Instantiate(ivyTheIguanaStoryPrefab, objectSpawnTarget.transform);
+                    // spawn ra prefabs cần thiết là phần tử con của ObjectSpawnTarget
+                    Instantiate(IvyTheIguanaThumbnail, objectSpawnTarget.transform);
+
+
+                    objectSpawnTarget.transform.GetChild(0).transform.localScale = new Vector2(0, 0);
+
                     // anim chạy trong khoảng tweenTime 
-                    ivyTheIguanaStoryPrefab.transform.DOScale(endTweenScale, tweenTime)
+                    objectSpawnTarget.transform.GetChild(0).transform.DOScale(endTweenScale, tweenTime)
                         .SetEase(Ease.InOutSine);
+
                     break;
 
             }
@@ -178,8 +223,7 @@ public class PrefabsSpawner : MonoBehaviour
 
             StartCoroutine(KillSelectionPanel(tweenTime));
 
-            isSelected = true;
-            StartCoroutine(ResetIsSelected(tweenTime));
+          
 
             isSelected = true;
             StartCoroutine(ResetIsSelected(tweenTime));
@@ -187,7 +231,7 @@ public class PrefabsSpawner : MonoBehaviour
 
     }
 
-    IEnumerator KillSelectionPanel(float delay)
+    IEnumerator KillSelectionPanel(float delay)  
     {
         yield return new WaitForSeconds(delay);
 

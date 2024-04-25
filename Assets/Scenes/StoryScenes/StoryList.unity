@@ -716,41 +716,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &678351177
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 678351178}
-  m_Layer: 5
-  m_Name: CenterScreenPosition
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &678351178
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 678351177}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5194017681101529815}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &741416359
 GameObject:
   m_ObjectHideFlags: 0
@@ -2409,14 +2374,14 @@ MonoBehaviour:
   endTweenScale: {x: 1, y: 1, z: 1}
   tweenTime: 1
   catAndTheBatThumbnail: {fileID: 3979361058311510928, guid: b8f01af4e0e4f7a4aa078030df7d8742, type: 3}
-  BennyTheBunnyThumbnail: {fileID: 0}
-  CaseyTheCatThumbnail: {fileID: 0}
-  DannyTheDogThumbnail: {fileID: 0}
-  EllieTheElephantThumbnail: {fileID: 0}
-  FreddyTheFishThumbnail: {fileID: 0}
-  GinaTheGooseThumbnail: {fileID: 0}
-  HenryTheHedgehogThumbnail: {fileID: 0}
-  IvyTheIguanaThumbnail: {fileID: 0}
+  BennyTheBunnyThumbnail: {fileID: 7212912532784836277, guid: 17ce974d81b91cd47b3f44def6c0cce5, type: 3}
+  CaseyTheCatThumbnail: {fileID: 164530347461873249, guid: 186479ebfbff3bd448e18dbb674b4da5, type: 3}
+  DannyTheDogThumbnail: {fileID: 4745272452705859468, guid: 0eca18d59467757418fbf130e3e5a325, type: 3}
+  EllieTheElephantThumbnail: {fileID: 1142728834121883120, guid: 7a9dfd79b938c2541999b1a0db01f7fc, type: 3}
+  FreddyTheFishThumbnail: {fileID: 2475765577398817581, guid: 822b913271f6a4b4e85354812519cbdd, type: 3}
+  GinaTheGooseThumbnail: {fileID: 5967493927056577019, guid: 53c77701712ef6541a362c305185d40c, type: 3}
+  HenryTheHedgehogThumbnail: {fileID: 976260714437033781, guid: 78b4367d81d18f54ba17bd206728f4b6, type: 3}
+  IvyTheIguanaThumbnail: {fileID: 8907378550831370276, guid: a8576f34a131667498c5b11f9f1fd2c5, type: 3}
   prefabsIndex: 0
   catAndTheBatStoryPrefab: {fileID: 1684999996213541621, guid: 2e2a15e117dce2144a800278d407162e, type: 3}
   bennyTheBunnyStoryPrefab: {fileID: 8301046516828432755, guid: 43ad34c61a512b046b9ac30f4ab072ec, type: 3}
@@ -2488,7 +2453,6 @@ RectTransform:
   m_Children:
   - {fileID: 169108670}
   - {fileID: 2279029514927755079}
-  - {fileID: 678351178}
   - {fileID: 476284029}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
