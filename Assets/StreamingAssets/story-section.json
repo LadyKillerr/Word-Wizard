@@ -141,5 +141,23 @@
     "Inspiring dreams under moon's soft light.",
   ],
 
-}
+},
+
+{
+  "id": "jax_the_iguana",
+  "story": "jax the iguana",
+  "sentences": [
+    "Jax The Iguana. A phonics story is told by Sunny Friends.",
+    "Hello! I'm Jax, a cheerful jaguar,",                             
+    "I can jump all day.",
+    "Would you like to join with me?",
+    "Let's jump over a jar. It is easy!",
+    "Let's jump over a jacket. It is easy too!",
+    "Let's jump over a jet. It is too big!",
+    "Yay, we did it!",
+    "I love jumping. It brings me plenty of joy.",
+  ],
+
+},
+
 ]

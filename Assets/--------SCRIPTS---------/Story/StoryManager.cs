@@ -102,8 +102,7 @@ public class StoryManager : MonoBehaviour
 
         // gọi tới data warehouse
         StoryData[] gameStory = gameStoryData.LoadStoryData("story-section.json");
-        //Debug.Log(gameStory.Length);
-        //Debug.Log("StoryID: " + storyId);
+
 
         // đếm xem data sentence của câu truyện thứ 2 có bnh câu
         int sentenceCount = gameStory[storyId].sentences.Count;

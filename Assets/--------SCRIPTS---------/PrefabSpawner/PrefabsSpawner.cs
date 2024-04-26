@@ -35,6 +35,7 @@ public class PrefabsSpawner : MonoBehaviour
     [SerializeField] GameObject GinaTheGooseThumbnail;
     [SerializeField] GameObject HenryTheHedgehogThumbnail;
     [SerializeField] GameObject IvyTheIguanaThumbnail;
+    [SerializeField] GameObject JaxTheJaguarThumbnail;
 
 
 
@@ -49,6 +50,7 @@ public class PrefabsSpawner : MonoBehaviour
     [SerializeField] GameObject ginaTheGooseStoryPrefab;
     [SerializeField] GameObject henryTheHedgehogStoryPrefab;
     [SerializeField] GameObject ivyTheIguanaStoryPrefab;
+    [SerializeField] GameObject jaxTheJaguarStoryPrefab;
 
     [Header("Quiz prefabs to Spawn")]
     [SerializeField] GameObject catAndTheBatQuizPrefab;
@@ -60,6 +62,7 @@ public class PrefabsSpawner : MonoBehaviour
     [SerializeField] GameObject ginaTheGooseQuizPrefab;
     [SerializeField] GameObject henryTheHedgehogQuizPrefab;
     [SerializeField] GameObject ivyTheIguanaQuizPrefab;
+    [SerializeField] GameObject jaxTheJaguarQuizPrefab;
 
 
     private void Awake()
@@ -197,6 +200,18 @@ public class PrefabsSpawner : MonoBehaviour
 
                     break;
 
+                case 9:
+                    // spawn ra prefabs cần thiết là phần tử con của ObjectSpawnTarget
+                    Instantiate(JaxTheJaguarThumbnail, objectSpawnTarget.transform);
+
+
+                    objectSpawnTarget.transform.GetChild(0).transform.localScale = new Vector2(0, 0);
+
+                    // anim chạy trong khoảng tweenTime 
+                    objectSpawnTarget.transform.GetChild(0).transform.DOScale(endTweenScale, tweenTime)
+                        .SetEase(Ease.InOutSine);
+
+                    break;
             }
 
         }
@@ -217,13 +232,7 @@ public class PrefabsSpawner : MonoBehaviour
             objectSpawnTarget.transform.GetChild(0).transform.DOScale(originalScale, tweenTime)
         .SetEase(Ease.InSine);
 
-
-
-            Debug.Log("đã tắt selection Panel đi ");
-
             StartCoroutine(KillSelectionPanel(tweenTime));
-
-          
 
             isSelected = true;
             StartCoroutine(ResetIsSelected(tweenTime));
@@ -356,6 +365,11 @@ public class PrefabsSpawner : MonoBehaviour
                 // Instantiate GameObject
                 Instantiate(ivyTheIguanaStoryPrefab, objectSpawnTarget.transform);
                 break;
+
+            case 9: 
+                Instantiate(jaxTheJaguarStoryPrefab, objectSpawnTarget.transform);
+                break;
+
         }
     }
 
@@ -415,9 +429,14 @@ public class PrefabsSpawner : MonoBehaviour
                 // Instantiate GameObject
                 Instantiate(ivyTheIguanaQuizPrefab, objectSpawnTarget.transform);
                 break;
+
+            case 9:
+                // Instantiate GameObject
+                Instantiate(jaxTheJaguarQuizPrefab, objectSpawnTarget.transform);
+                break;
         }
     }
-
+         
     // sau khi chạy lần đầu vào thì phải tắt anim đi không thì các câu hỏi sau cũng phải chờ
     IEnumerator ResetTransitionGameObject()
     {
