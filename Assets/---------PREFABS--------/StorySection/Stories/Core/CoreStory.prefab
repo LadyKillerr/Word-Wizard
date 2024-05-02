@@ -2029,7 +2029,7 @@ MonoBehaviour:
   intersectionSection: {fileID: 3287573299827096759}
   transitionsAnim: {fileID: 0}
   questionManager: {fileID: 7190754561829458267}
-  isCheating: 1
+  isCheating: 0
 --- !u!82 &196529376318339009
 AudioSource:
   m_ObjectHideFlags: 0

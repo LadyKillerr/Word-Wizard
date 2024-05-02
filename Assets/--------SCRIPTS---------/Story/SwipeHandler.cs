@@ -30,7 +30,6 @@ public class SwipeHandler : MonoBehaviour
     private void Awake()
     {
         storyAudioSource = storyManager.GetComponent<AudioSource>();
-        isAutoNextPage = true;
     }
 
     void Start()
@@ -168,4 +167,6 @@ public class SwipeHandler : MonoBehaviour
     {
         isAutoNextPage = nextPageValue;
     }
+
+    
 }

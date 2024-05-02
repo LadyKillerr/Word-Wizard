@@ -248,7 +248,7 @@ public class QuestionManager : MonoBehaviour
             isAnswered = true;
             isAnswerCorrect = true;
 
-            
+
 
             // Tự động chuyển câu sau khi trả lời đúng câu hỏi
             Invoke(nameof(LoadNextQuestion), delayTime);
@@ -286,14 +286,17 @@ public class QuestionManager : MonoBehaviour
 
     public IEnumerator LoadQuestionAudio()
     {
+        // thời gian đợi trước khi tự động đọc audio của câu đầu tiên(đợi để anim chạy xong)
+        yield return new WaitForSeconds(timeBeforeAudioPlay);
+
         // Debug.Log("transitionsAnim status: " + transitionsAnim.isActiveAndEnabled);
         // nếu có anim transitions thì phải đợi hết anim mới load audio vào 
         if (!quizSectionAudio.isPlaying && (transitionsAnim != null && transitionsAnim.enabled))
         {
-            // thời gian đợi trước khi tự động đọc audio của câu đầu tiên(đợi để anim chạy xong)
-            yield return new WaitForSeconds(timeBeforeAudioPlay);
 
             quizSectionAudio.PlayOneShot(questionsAudio[currentIndex], quizQuestionsAudioVolume);
+
+
 
             Debug.Log("Có load anim cùng audio");
 
@@ -301,8 +304,8 @@ public class QuestionManager : MonoBehaviour
         // nếu không có anim transitions thì chạy bthg 
         else if (!quizSectionAudio.isPlaying && quizSection.activeSelf && (transitionsAnim == null || !transitionsAnim.enabled))
         {
-            yield return new WaitForSeconds(0.5f);
             
+
             quizSectionAudio.PlayOneShot(questionsAudio[currentIndex], quizQuestionsAudioVolume);
 
         }
@@ -410,8 +413,8 @@ public class QuestionManager : MonoBehaviour
             isAnswerCorrect = false;
         }
         // nếu đã trả lời đúng câu hỏi cuối cùng va van chua xong (isFinish != true)
-        else if (currentIndex >= 0 && currentIndex == questionsSO.Length - 1 
-            && isAnswerCorrect && !isFinish 
+        else if (currentIndex >= 0 && currentIndex == questionsSO.Length - 1
+            && isAnswerCorrect && !isFinish
             && (!rewardWindow.activeSelf && !congratsWindow.activeSelf))
         {
 

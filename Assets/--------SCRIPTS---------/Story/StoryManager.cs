@@ -52,6 +52,8 @@ public class StoryManager : MonoBehaviour
     // Phần màn hình giao giữa story và quiz section
     [SerializeField] GameObject intersectionSection;
 
+
+
     // Components
     [SerializeField] Animator transitionsAnim;
     LoadScene levelLoader;
@@ -68,7 +70,7 @@ public class StoryManager : MonoBehaviour
     {
         return isCheating;
     }
-    //
+    
 
     void Awake()
     {
@@ -84,6 +86,8 @@ public class StoryManager : MonoBehaviour
         questionSection.SetActive(false);
 
         intersectionSection.SetActive(false);
+
+
 
         HideAllImageParts();
         HideAllStoryParts();
@@ -161,8 +165,8 @@ public class StoryManager : MonoBehaviour
 
 
 
-    }
 
+    }
     void HideParts()
     {
         storyParts[currentIndex].SetActive(false);
@@ -175,7 +179,6 @@ public class StoryManager : MonoBehaviour
     // chức năng sang trang tiếp theo của trang sách
     public void NextPart()
     {
-        isReading = false;
         // nếu index chưa phải max (chưa phải part cuối trong 1 câu truyện)
         // trừ 1 vì bắt đầu từ mảng bắt đầu từ 0
         if (currentIndex >= 0 && currentIndex < storyParts.Length - 1 && !isReading)
@@ -185,9 +188,6 @@ public class StoryManager : MonoBehaviour
             HideParts();
 
             MuteAudio();
-
-            // nếu để ở đây cứ sang trang là tắt auto next
-            //swipeHandler.SetIsAutoNextPage(false);
 
             currentIndex += 1;
 
@@ -218,6 +218,8 @@ public class StoryManager : MonoBehaviour
                 audioManager.PlayPageTurningClip();
 
             }
+
+
 
             // bật intersection
             ToggleIntersection();
@@ -291,6 +293,7 @@ public class StoryManager : MonoBehaviour
         intersectionSection.SetActive(false);
 
         // đoạn này bắt đầu đọc âm thanh question 
+
         questionManager.StartLoadQuestionAudio();
     }
 
