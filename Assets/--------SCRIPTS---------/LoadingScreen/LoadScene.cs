@@ -25,7 +25,7 @@ public class LoadScene : MonoBehaviour
     {
         audioManager = FindAnyObjectByType<AudioManager>();
 
-        if (transitionsAnim != null)
+        if (transitionsAnim != null && transitionsAnim.enabled)
         {
             transitionsAnim.SetTrigger("start");
 
@@ -100,8 +100,10 @@ public class LoadScene : MonoBehaviour
     // 2 hàm này dành cho intro load vào game 
     public void IntroLoadGame(int sceneIndex)
     {
-        if (transitionsAnim != null && transitionsAnim.enabled)
+        if (transitionsAnim != null)
         {
+            transitionsAnim.enabled = true;
+
             // đợi 1s để anim chạy thì sẽ load luôn
             StartCoroutine(IntroLoadAsync(sceneIndex));
 
@@ -119,10 +121,6 @@ public class LoadScene : MonoBehaviour
 
     }
 
-
-
-
-
     void LoadAudio()
     {
         if (audioManager != null)
@@ -132,3 +130,6 @@ public class LoadScene : MonoBehaviour
     }
 
 }
+
+
+

@@ -7,6 +7,8 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
 
+
+
 public class QuestionManager : MonoBehaviour
 {
     PlayerDataWarehouse playerProgress;
@@ -246,6 +248,8 @@ public class QuestionManager : MonoBehaviour
             isAnswered = true;
             isAnswerCorrect = true;
 
+            
+
             // Tự động chuyển câu sau khi trả lời đúng câu hỏi
             Invoke(nameof(LoadNextQuestion), delayTime);
         }
@@ -299,8 +303,6 @@ public class QuestionManager : MonoBehaviour
         {
             yield return new WaitForSeconds(0.5f);
             
-            Debug.Log("Load audio luôn mà không phải chờ đợi anim");
-
             quizSectionAudio.PlayOneShot(questionsAudio[currentIndex], quizQuestionsAudioVolume);
 
         }
