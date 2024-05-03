@@ -97,6 +97,8 @@ public class QuestionManager : MonoBehaviour
 
     Animator transitionsAnim;
 
+    SwipeHandler swipeHandler;
+
     public void ActivatePendingStatus()
     {
         if (PlayerPrefs.GetInt(levelPrefName) == 1)
@@ -120,6 +122,8 @@ public class QuestionManager : MonoBehaviour
         isRewarded = false;
 
         transitionsAnim = FindAnyObjectByType<Animator>();
+
+        swipeHandler = FindAnyObjectByType<SwipeHandler>();
     }
 
     private void Start()
@@ -286,17 +290,16 @@ public class QuestionManager : MonoBehaviour
 
     public IEnumerator LoadQuestionAudio()
     {
-        // thời gian đợi trước khi tự động đọc audio của câu đầu tiên(đợi để anim chạy xong)
-        yield return new WaitForSeconds(timeBeforeAudioPlay);
-
-        // Debug.Log("transitionsAnim status: " + transitionsAnim.isActiveAndEnabled);
         // nếu có anim transitions thì phải đợi hết anim mới load audio vào 
-        if (!quizSectionAudio.isPlaying && (transitionsAnim != null && transitionsAnim.enabled))
+        if (!quizSectionAudio.isPlaying && quizSection.activeSelf && (transitionsAnim != null && transitionsAnim.enabled))
         {
-
+            // thời gian đợi trước khi tự động đọc audio của câu đầu tiên(đợi để anim chạy xong)
+            yield return new WaitForSeconds(timeBeforeAudioPlay);
+            
+            
             quizSectionAudio.PlayOneShot(questionsAudio[currentIndex], quizQuestionsAudioVolume);
 
-
+          
 
             Debug.Log("Có load anim cùng audio");
 
@@ -304,7 +307,8 @@ public class QuestionManager : MonoBehaviour
         // nếu không có anim transitions thì chạy bthg 
         else if (!quizSectionAudio.isPlaying && quizSection.activeSelf && (transitionsAnim == null || !transitionsAnim.enabled))
         {
-            
+
+
 
             quizSectionAudio.PlayOneShot(questionsAudio[currentIndex], quizQuestionsAudioVolume);
 
@@ -485,6 +489,8 @@ public class QuestionManager : MonoBehaviour
             {
                 storyManager.ToggleLastStoryPart(storyManager.GetLastPartIndex());
 
+                // tắt isAutoNextPage đi để tránh bug tự động nhảy intersect ngay khi vừa load về
+                swipeHandler.SetIsAutoNextPage(false);
             }
 
             else if (storyManager == null)

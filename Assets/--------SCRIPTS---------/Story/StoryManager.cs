@@ -35,11 +35,17 @@ public class StoryManager : MonoBehaviour
 
     [Header("Delay Time Variables")]
     //[SerializeField] float delayTime = 3f;
-    [SerializeField] float delayFirstQuestionAudio = 1.75f;
+    [SerializeField] float delayFirstStoryAudio = 1.75f;
     // 1.5s anim end + 1s anim start
 
+    [SerializeField] float delayBeforeStory = 0.75f;
+
+    int lastIndex;
+    public bool isIntersect;
 
     public bool isReading;
+
+    public bool isFinishReading;
 
     [Header("Game Session Zone")]
 
@@ -70,7 +76,11 @@ public class StoryManager : MonoBehaviour
     {
         return isCheating;
     }
-    
+
+    private void Update()
+    {
+
+    }
 
     void Awake()
     {
@@ -100,7 +110,7 @@ public class StoryManager : MonoBehaviour
 
         imageParts[currentIndex].SetActive(true);
 
-        Invoke(nameof(PlayCurrentAudioParts), delayFirstQuestionAudio);
+        Invoke(nameof(PlayCurrentAudioParts), delayFirstStoryAudio);
 
         // reset index
 
@@ -121,6 +131,9 @@ public class StoryManager : MonoBehaviour
             //hiddenButtonsText[i].GetComponent<TextMeshProUGUI>().text = gameStory[storyId].noun[i];
         }
         // storyId là để biết đang ở data truyện nào trong file json
+
+        lastIndex = storyParts.Length - 1;
+
     }
 
     public void LoadSceneWithAnim(int sceneIndex)
@@ -161,12 +174,23 @@ public class StoryManager : MonoBehaviour
 
         imageParts[currentIndex].SetActive(true);
 
-        PlayCurrentAudioParts();
+        // bool đánh dấu đã đọc xong chưa
+        isReading = false;
 
+        isFinishReading = false;
 
+        StartCoroutine(AutoLoadAudio(delayBeforeStory));
 
 
     }
+
+    IEnumerator AutoLoadAudio(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        PlayCurrentAudioParts();
+    }
+
     void HideParts()
     {
         storyParts[currentIndex].SetActive(false);
@@ -179,9 +203,11 @@ public class StoryManager : MonoBehaviour
     // chức năng sang trang tiếp theo của trang sách
     public void NextPart()
     {
+
+        Debug.Log("NextPartActivated");
         // nếu index chưa phải max (chưa phải part cuối trong 1 câu truyện)
         // trừ 1 vì bắt đầu từ mảng bắt đầu từ 0
-        if (currentIndex >= 0 && currentIndex < storyParts.Length - 1 && !isReading)
+        if (currentIndex >= 0 && currentIndex < lastIndex && (!isReading || isCheating))
         {
 
             // ẩn hình với truyện hiện tại đi
@@ -203,15 +229,12 @@ public class StoryManager : MonoBehaviour
 
         }
         // nếu index đã max (là part cuối trong 1 câu truyện)
-        else if (currentIndex >= 0 && currentIndex >= storyParts.Length - 1 && !isReading)
+        else if (currentIndex >= 0 && currentIndex >= lastIndex && !isReading && !isIntersect)
         {
+
+
             // tắt âm thanh màn stories
             MuteAudio();
-
-
-            // load ra màn hình câu hỏi trắc nghiệm, sẽ có câu hỏi riêng để ng chơi trả lời trắc nghiệm
-            // ẩn hết màn hình câu hỏi đi 
-            //interactiveStorySection.SetActive(false);
 
             if (audioManager != null)
             {
@@ -219,10 +242,15 @@ public class StoryManager : MonoBehaviour
 
             }
 
+            if (isIntersect == false)
+            {
+                // bật intersection
+                ToggleIntersection();
+                isIntersect = true;
+
+            }
 
 
-            // bật intersection
-            ToggleIntersection();
 
 
 
@@ -234,9 +262,7 @@ public class StoryManager : MonoBehaviour
     public void PreviousPart()
     {
 
-        isReading = false;
-
-        if (currentIndex > 0 && currentIndex <= storyParts.Length - 1)
+        if (currentIndex > 0 && currentIndex <= lastIndex)
         {
 
             // ẩn hình với truyện hiện tại đi
@@ -252,12 +278,10 @@ public class StoryManager : MonoBehaviour
 
             }
 
-            //swipeHandler.SetIsAutoNextPage(false);
-
             // load ra trang tương ứng với index mới trừ đó
             LoadParts();
         }
-        else if (currentIndex == 0 && currentIndex < storyParts.Length - 1)
+        else if (currentIndex == 0 && currentIndex < lastIndex)
         {
             // nếu đã back về scene đầu tiên rồi thì không lùi được nữa
             return;
@@ -293,8 +317,9 @@ public class StoryManager : MonoBehaviour
         intersectionSection.SetActive(false);
 
         // đoạn này bắt đầu đọc âm thanh question 
-
         questionManager.StartLoadQuestionAudio();
+
+        isIntersect = false;
     }
 
     void MuteAudio()
@@ -310,20 +335,26 @@ public class StoryManager : MonoBehaviour
         if (!storyAudioSource.isPlaying)
         {
             isReading = true;
+
+            
+
             storyAudioSource.PlayOneShot(audioParts[currentIndex], storyVolume);
-            StartCoroutine(StopReadingCoroutine(audioParts[currentIndex].length));
+            StartCoroutine(StopReading(audioParts[currentIndex].length));
         }
         else { return; }
     }
 
-    IEnumerator StopReadingCoroutine(float clipLength)
+    IEnumerator StopReading(float clipLength)
     {
         yield return new WaitForSeconds(clipLength);
 
+        // biến để set trạng thái đang đọc
         isReading = false;
-    }
 
-    
+        // biến riêng để set trạng thái khi đã đọc xong 
+        isFinishReading = true;
+
+    }
 
     void ActivateStorySection()
     {
@@ -358,7 +389,7 @@ public class StoryManager : MonoBehaviour
 
     public int GetLastPartIndex()
     {
-        return storyParts.Length - 1;
+        return lastIndex;
     }
 
     public void ToggleLastStoryPart(int index)
@@ -406,5 +437,18 @@ public class StoryManager : MonoBehaviour
         isReading = value;
     }
 
+    public float GetDelayBeforeStory()
+    {
+        return delayBeforeStory;
+    }
 
+    public bool GetIsFinishReading()
+    {
+        return isFinishReading;
+    }
+
+    public void SetIsFinishReading(bool value)
+    {
+        isFinishReading = value;
+    }
 }

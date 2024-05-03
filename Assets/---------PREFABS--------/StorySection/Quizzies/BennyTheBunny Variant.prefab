@@ -98,7 +98,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
       propertyPath: timeBeforeAudioPlay
-      value: 0.3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7822098288838830745, guid: 0036391bc07ff0942ab51d6e608d5e82, type: 3}
       propertyPath: questionsSO.Array.size

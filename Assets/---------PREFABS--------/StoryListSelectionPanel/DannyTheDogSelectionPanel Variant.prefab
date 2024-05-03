@@ -88,18 +88,125 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2297765295215027547, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1351205994926081761, guid: 9052837b05b40e6478ec3a0fff683c74, type: 3}
+    - target: {fileID: 3367105875365548581, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -5114181058042582998, guid: 0037cdc2a7889ed4a947b14383b29c9e, type: 3}
+    - target: {fileID: 3367105875365548581, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3367105875365548581, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3367105875365548581, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3367105875365548581, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3920809404447371225, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -3379574150838111524, guid: 784b6c1e5fa9ad9479c6e30403817ad9, type: 3}
+    - target: {fileID: 4719725966092335734, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719725966092335734, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719725966092335734, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719725966092335734, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719725966092335734, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719725966092335734, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -149
+      objectReference: {fileID: 0}
+    - target: {fileID: 5857590476475726409, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 234
+      objectReference: {fileID: 0}
+    - target: {fileID: 5857590476475726409, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 235
+      objectReference: {fileID: 0}
+    - target: {fileID: 5857590476475726409, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5857590476475726409, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5857590476475726409, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 117
+      objectReference: {fileID: 0}
+    - target: {fileID: 5857590476475726409, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -117.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7601129399771951035, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
       propertyPath: m_text
       value: 'Danny The Dog Thumbnail
 
 '
       objectReference: {fileID: 0}
+    - target: {fileID: 8126799513340651580, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 6626308322278400722, guid: a9caf590570ceb54c8cee64f5b5eaa21, type: 3}
     - target: {fileID: 8143539744715531669, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
       propertyPath: m_Name
       value: DannyTheDogSelectionPanel Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8905673779811034448, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8905673779811034448, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8905673779811034448, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8905673779811034448, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8905673779811034448, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8905673779811034448, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -335
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4983229485594065477, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
+    - {fileID: 1343885174270419864, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
+    - {fileID: 7570990340262393804, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}

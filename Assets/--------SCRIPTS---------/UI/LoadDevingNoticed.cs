@@ -1,47 +1,54 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using DG.Tweening;
 
 public class LoadDevingNoticed : MonoBehaviour
 {
     // panel tối tối để cover màn hình 
-    [SerializeField] GameObject underDevelopmentNoti;
+    [SerializeField] float tweenTime = .5f;
 
     // hộp thông báo "under development" 
-    [SerializeField] GameObject NotiText; 
+    [SerializeField] GameObject notiBoard;
 
     // Screen Darken
     [SerializeField] GameObject screenDarken;
 
-    void Start()
+    [SerializeField] float startValue = -800f ;
+    [SerializeField] float endValue = 0;
+
+
+    public bool isAvatar;
+
+
+
+
+    public void ToggleDevinNoti()
     {
-        underDevelopmentNoti.SetActive(false) ;
+
+
+        if (!isAvatar)
+        {
+
+            notiBoard.transform.DOMoveY(endValue, tweenTime)
+                .SetEase(Ease.InOutSine);
+
+            isAvatar = true;
+
+            screenDarken.SetActive(true);
+        }
+        else
+        {
+            notiBoard.transform.DOMoveY(startValue, tweenTime)
+                .SetEase(Ease.InOutSine);
+
+            isAvatar = false;
+
+            screenDarken.SetActive(false);
+        }
     }
 
-    void Update()
-    {
-        // hàm update là không càn thiết trong trường hợp sử dụng chay void
-        //HideDevingNoti();
-        //ShowDevingNoti();
-    }
 
-    // ẩn hộp thông báo đi 
-    public void HideDevingNoti()
-    {
-        underDevelopmentNoti.SetActive(false);
-        NotiText.SetActive(false);
-        screenDarken.SetActive(false);
 
-    }
-
-    // trượt hộp thông báo xuống
-    public void ShowDevingNoti()
-    {
-        underDevelopmentNoti.SetActive(true);
-        NotiText.SetActive(true);
-        screenDarken.SetActive(true);
-        Handheld.Vibrate();
-    }
-
-    
 }

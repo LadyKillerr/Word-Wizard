@@ -2023,13 +2023,16 @@ MonoBehaviour:
   audioParts: []
   storyVolume: 1
   delayFirstQuestionAudio: 1.75
+  delayBeforeStory: 0.75
+  isIntersect: 0
   isReading: 0
+  isFinishReading: 0
   interactiveStorySection: {fileID: 4698994611462040449}
   questionSection: {fileID: 4051812505583224562}
   intersectionSection: {fileID: 3287573299827096759}
   transitionsAnim: {fileID: 0}
   questionManager: {fileID: 7190754561829458267}
-  isCheating: 0
+  isCheating: 1
 --- !u!82 &196529376318339009
 AudioSource:
   m_ObjectHideFlags: 0

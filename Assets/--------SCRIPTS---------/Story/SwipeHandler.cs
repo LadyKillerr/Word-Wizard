@@ -50,11 +50,11 @@ public class SwipeHandler : MonoBehaviour
     {
 
         // nếu phần đọc truyện đang active và isReading && isAutoNextPage
-        if (interactiveStorySection.activeSelf && !storyManager.GetIsReading() && isAutoNextPage)
+        if (interactiveStorySection.activeSelf && storyManager.GetIsFinishReading() && isAutoNextPage)
         {
             StartCoroutine(AutoFlipPage());
 
-            storyManager.SetIsReading(true);
+            
         }
 
 
@@ -65,10 +65,13 @@ public class SwipeHandler : MonoBehaviour
         yield return new WaitForSeconds(autoFlipDelay);
 
 
-        if (isAutoNextPage  && !storyAudioSource.isPlaying && interactiveStorySection.activeSelf)
+        if (storyManager.GetIsFinishReading() && isAutoNextPage  && !storyAudioSource.isPlaying && interactiveStorySection.activeSelf)
         {
             Debug.Log("Tự động sang trang");
+
             storyManager.NextPart();
+
+            storyManager.SetIsFinishReading(false);
         }
 
     }
@@ -102,6 +105,7 @@ public class SwipeHandler : MonoBehaviour
                     && Mathf.Abs(swipeDistance) > swipeThreshold
                     && (!storyAudioSource.isPlaying || storyManager.GetIsCheating()))
                 {
+
                     storyManager.NextPart();
 
                     isAutoNextPage = false;
@@ -124,11 +128,12 @@ public class SwipeHandler : MonoBehaviour
     }
 
     void CheckNextButton()
+
     {
 
-        if (storyAudioSource.isPlaying)
+        // thì bắt đầu check bthg 
+        if (storyManager.GetIsReading())
         {
-            nextButton.GetComponent<Image>().color = new Color(255, 255, 255, 125);
             nextButton.GetComponent<Button>().interactable = false;
         }
         else

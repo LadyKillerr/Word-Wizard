@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: eb012c74e11a242429a6af5f5b971e49
+guid: 4d5ebba0f9bf38442b8534226ca91e68
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6075151507569264920
-    second: x_button_0
+      213: -2796329593154348591
+    second: casey story_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: x_button_0
+      name: casey story_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 46
-        height: 49
+        width: 3840
+        height: 2160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8e6b7a234e9b0bba0800000000000000
-      internalID: -6075151507569264920
+      spriteID: 1d95f15fc017139d0800000000000000
+      internalID: -2796329593154348591
       vertices: []
       indices: 
       edges: []

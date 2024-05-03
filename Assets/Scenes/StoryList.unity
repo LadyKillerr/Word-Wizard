@@ -2601,7 +2601,7 @@ MonoBehaviour:
   objectSpawnTarget: {fileID: 1880692838094184699}
   originalScale: {x: 0, y: 0, z: 0}
   endTweenScale: {x: 1, y: 1, z: 1}
-  tweenTime: 1
+  tweenTime: 0.5
   catAndTheBatThumbnail: {fileID: 3979361058311510928, guid: b8f01af4e0e4f7a4aa078030df7d8742, type: 3}
   BennyTheBunnyThumbnail: {fileID: 7212912532784836277, guid: 17ce974d81b91cd47b3f44def6c0cce5, type: 3}
   CaseyTheCatThumbnail: {fileID: 164530347461873249, guid: 186479ebfbff3bd448e18dbb674b4da5, type: 3}

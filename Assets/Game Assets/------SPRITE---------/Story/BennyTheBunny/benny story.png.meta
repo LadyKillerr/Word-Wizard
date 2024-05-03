@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: eb012c74e11a242429a6af5f5b971e49
+guid: e1bb33f6f44e454499ad62636e98c6c4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6075151507569264920
-    second: x_button_0
+      213: -334739596685272373
+    second: benny story_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,12 +72,12 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
-    crunchedCompression: 0
+    crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
     ignorePlatformSupport: 0
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: x_button_0
+      name: benny story_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 46
-        height: 49
+        width: 3840
+        height: 2160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8e6b7a234e9b0bba0800000000000000
-      internalID: -6075151507569264920
+      spriteID: bca115f3c14ca5bf0800000000000000
+      internalID: -334739596685272373
       vertices: []
       indices: 
       edges: []
@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      benny story_0: -334739596685272373
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

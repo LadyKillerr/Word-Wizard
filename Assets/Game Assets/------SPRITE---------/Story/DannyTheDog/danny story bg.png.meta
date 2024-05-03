@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: eb012c74e11a242429a6af5f5b971e49
+guid: 0037cdc2a7889ed4a947b14383b29c9e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6075151507569264920
-    second: x_button_0
+      213: -5114181058042582998
+    second: danny story bg_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: x_button_0
+      name: danny story bg_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 46
-        height: 49
+        width: 1291
+        height: 733
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8e6b7a234e9b0bba0800000000000000
-      internalID: -6075151507569264920
+      spriteID: a28275e7c67c609b0800000000000000
+      internalID: -5114181058042582998
       vertices: []
       indices: 
       edges: []
@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      danny story bg_0: -5114181058042582998
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
