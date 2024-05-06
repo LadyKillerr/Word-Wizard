@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      casey story_0: -2796329593154348591
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
