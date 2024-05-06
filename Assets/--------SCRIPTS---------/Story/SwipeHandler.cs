@@ -128,11 +128,9 @@ public class SwipeHandler : MonoBehaviour
     }
 
     void CheckNextButton()
-
     {
-
         // thì bắt đầu check bthg 
-        if (storyManager.GetIsReading())
+        if (!storyManager.GetIsFinishReading())
         {
             nextButton.GetComponent<Button>().interactable = false;
         }

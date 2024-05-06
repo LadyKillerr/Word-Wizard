@@ -336,7 +336,7 @@ public class StoryManager : MonoBehaviour
         {
             isReading = true;
 
-            
+
 
             storyAudioSource.PlayOneShot(audioParts[currentIndex], storyVolume);
             StartCoroutine(StopReading(audioParts[currentIndex].length));
@@ -348,11 +348,17 @@ public class StoryManager : MonoBehaviour
     {
         yield return new WaitForSeconds(clipLength);
 
-        // biến để set trạng thái đang đọc
-        isReading = false;
 
-        // biến riêng để set trạng thái khi đã đọc xong 
-        isFinishReading = true;
+
+        
+            // biến để set trạng thái đang đọc
+            isReading = false;
+
+            // biến riêng để set trạng thái khi đã đọc xong 
+            isFinishReading = true;
+
+        
+
 
     }
 
