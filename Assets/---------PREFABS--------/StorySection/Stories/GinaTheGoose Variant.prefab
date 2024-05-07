@@ -242,7 +242,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4538852769835136124, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_text
-      value: Gina the goose heads to school each day,
+      value: Gina the goose heads to school each day.
       objectReference: {fileID: 0}
     - target: {fileID: 5296154456189003040, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_text
@@ -250,7 +250,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5434125150526677499, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_text
-      value: With her paintbrush, she creates art so fine,
+      value: With her paintbrush, she creates art so fine.
       objectReference: {fileID: 0}
     - target: {fileID: 5517242031456603487, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_text
@@ -338,11 +338,11 @@ PrefabInstance:
       objectReference: {fileID: -4747168201815162448, guid: 2fa1a05777e8c5641a78537068a8a373, type: 3}
     - target: {fileID: 6563306869916312052, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_text
-      value: Helpful and kind, Gina lends a hand,
+      value: Helpful and kind, Gina lends a hand.
       objectReference: {fileID: 0}
     - target: {fileID: 6804830911636312136, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_text
-      value: At day's end, she spreads her wings with pride,
+      value: At day's end, she spreads her wings with pride.
       objectReference: {fileID: 0}
     - target: {fileID: 7149797056146681877, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_AnchorMax.y

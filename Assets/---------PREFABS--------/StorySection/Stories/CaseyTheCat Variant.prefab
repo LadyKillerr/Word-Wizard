@@ -174,7 +174,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4538852769835136124, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_text
-      value: Casey helps her mom cook,
+      value: Casey helps her mom cook.
       objectReference: {fileID: 0}
     - target: {fileID: 5296154456189003040, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_text
@@ -182,7 +182,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5434125150526677499, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_text
-      value: She adds carrots and celery,
+      value: She adds carrots and celery.
       objectReference: {fileID: 0}
     - target: {fileID: 5517242031456603487, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_text
@@ -198,11 +198,11 @@ PrefabInstance:
       objectReference: {fileID: -4747168201815162448, guid: e0a82afddc438a3468d509e932ad777b, type: 3}
     - target: {fileID: 6563306869916312052, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_text
-      value: Casey wipes the table neatly,
+      value: Casey wipes the table neatly.
       objectReference: {fileID: 0}
     - target: {fileID: 6804830911636312136, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_text
-      value: Later, they cuddle up to eat,
+      value: Later, they cuddle up to eat.
       objectReference: {fileID: 0}
     - target: {fileID: 7190754561829458267, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: levelPrefName

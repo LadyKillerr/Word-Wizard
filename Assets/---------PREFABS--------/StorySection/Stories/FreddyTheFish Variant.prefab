@@ -170,7 +170,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4538852769835136124, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_text
-      value: Freddy the fish dives in the sea's embrace,
+      value: Freddy the fish dives in the sea's embrace.
       objectReference: {fileID: 0}
     - target: {fileID: 5296154456189003040, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_text
@@ -178,7 +178,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5434125150526677499, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_text
-      value: With playful flips and joyful hops,
+      value: With playful flips and joyful hops.
       objectReference: {fileID: 0}
     - target: {fileID: 5517242031456603487, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_text
@@ -194,11 +194,11 @@ PrefabInstance:
       objectReference: {fileID: -4747168201815162448, guid: 4530a64ef30e29942b3d182cfd2f896d, type: 3}
     - target: {fileID: 6563306869916312052, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_text
-      value: Together they seek food divine,
+      value: Together they seek food divine.
       objectReference: {fileID: 0}
     - target: {fileID: 6804830911636312136, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_text
-      value: Through laughter and fun, their friendship is spun,
+      value: Through laughter and fun, their friendship is spun.
       objectReference: {fileID: 0}
     - target: {fileID: 7190754561829458267, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: levelPrefName

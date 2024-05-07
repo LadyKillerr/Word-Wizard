@@ -6760,7 +6760,6 @@ MonoBehaviour:
   questionManager: {fileID: 7190754561829458267}
   storyManager: {fileID: 1260301211301265960}
   coinImage: {fileID: 3134626955760732111}
-  startValue: 1800
   endValue: 0
   tweenTime: 0.5
   coinRewardEffects: {fileID: 0}
@@ -7646,7 +7645,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9109367796502068409, guid: 582ee33b65f19444ba8b25b2753f610c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

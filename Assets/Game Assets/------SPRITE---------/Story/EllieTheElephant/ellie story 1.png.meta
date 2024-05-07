@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ellie story 1_0: -8470192294735420005
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

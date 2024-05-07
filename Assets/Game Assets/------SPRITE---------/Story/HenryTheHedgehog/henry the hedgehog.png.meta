@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 85128fcdd80bb13469dd3c9c899ac24c
+guid: b37f6b6efd53b4ca691457c0fc270691
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -380897440077541507
-    second: great_0
+      213: 4773093550063272646
+    second: henry the hedgehog_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -97,19 +97,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -126,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: great_0
+      name: henry the hedgehog_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 98
-        width: 876
-        height: 805
+        y: 0
+        width: 3840
+        height: 2160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +127,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d7f825cdbc7c6baf0800000000000000
-      internalID: -380897440077541507
+      spriteID: 6c2ca3b7b4f6d3240800000000000000
+      internalID: 4773093550063272646
       vertices: []
       indices: 
       edges: []
@@ -156,8 +143,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      great_0: -380897440077541507
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -95,7 +95,6 @@ public class QuestionManager : MonoBehaviour
 
     [Header("Coin Effect Section")]
     [SerializeField] GameObject coinImage;
-    [SerializeField] float startValue = 1800f;
     [SerializeField] float endValue = 0;
 
     [SerializeField] float tweenTime = 0.5f;

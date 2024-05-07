@@ -23,6 +23,8 @@ public class LoadScene : MonoBehaviour
 
     private void Awake()
     {
+        Application.targetFrameRate = 60;
+
         audioManager = FindAnyObjectByType<AudioManager>();
 
         if (transitionsAnim != null && transitionsAnim.enabled)

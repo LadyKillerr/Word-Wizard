@@ -166,11 +166,11 @@ PrefabInstance:
       objectReference: {fileID: -5910228175204626835, guid: 89adb8658110f14499fd10a22a163bf7, type: 3}
     - target: {fileID: 3193532544673304272, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_text
-      value: Ellie's happy adventures have just begun!.
+      value: Ellie's happy adventures have just begun!
       objectReference: {fileID: 0}
     - target: {fileID: 4538852769835136124, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_text
-      value: Ellie the elephant wears a big red hat,
+      value: Ellie the elephant wears a big red hat.
       objectReference: {fileID: 0}
     - target: {fileID: 5296154456189003040, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_text
@@ -178,7 +178,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5434125150526677499, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_text
-      value: Eating apples, she's full of cheer,
+      value: Eating apples, she's full of cheer.
       objectReference: {fileID: 0}
     - target: {fileID: 5517242031456603487, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_text
@@ -194,11 +194,11 @@ PrefabInstance:
       objectReference: {fileID: -4747168201815162448, guid: 63ac193ec9c740a42a684c092001f815, type: 3}
     - target: {fileID: 6563306869916312052, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_text
-      value: Ellie meets Eddie, a friendly bear,
+      value: Ellie meets Eddie, a friendly bear.
       objectReference: {fileID: 0}
     - target: {fileID: 6804830911636312136, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_text
-      value: Every day with friends, is full of fun,
+      value: Every day with friends, is full of fun.
       objectReference: {fileID: 0}
     - target: {fileID: 7190754561829458267, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: levelPrefName

@@ -170,7 +170,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4538852769835136124, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_text
-      value: Danny the dog, off to school he strides,
+      value: Danny the dog, off to school he strides.
       objectReference: {fileID: 0}
     - target: {fileID: 5296154456189003040, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_text
@@ -178,7 +178,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5434125150526677499, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_text
-      value: With crayons, he draws, colors so bright,
+      value: With crayons, he draws, colors so bright.
       objectReference: {fileID: 0}
     - target: {fileID: 5517242031456603487, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_text
@@ -194,11 +194,11 @@ PrefabInstance:
       objectReference: {fileID: -5910228175204626835, guid: 5d6d265af345ce748b7f6225c12564e2, type: 3}
     - target: {fileID: 6563306869916312052, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_text
-      value: Sharing his toys, his heart full of cheer,
+      value: Sharing his toys, his heart full of cheer.
       objectReference: {fileID: 0}
     - target: {fileID: 6804830911636312136, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_text
-      value: With hugs he gives, spreading joy each day,
+      value: With hugs he gives, spreading joy each day.
       objectReference: {fileID: 0}
     - target: {fileID: 7190754561829458267, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: levelPrefName

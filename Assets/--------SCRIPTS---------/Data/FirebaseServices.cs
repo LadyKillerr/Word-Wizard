@@ -8,6 +8,7 @@ public class FirebaseServices : MonoBehaviour
     Firebase.FirebaseApp app;
     private void Awake()
     {
+
         Firebase.FirebaseApp.CheckAndFixDependenciesAsync().ContinueWithOnMainThread(task =>
         {
             var dependencyStatus = task.Result;

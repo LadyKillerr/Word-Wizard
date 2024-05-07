@@ -104,7 +104,10 @@ public class StoryManager : MonoBehaviour
         MuteAudio();
          
         ActivateStorySection();
+
         currentIndex = 0;
+
+
         // load ra hình với ảnh và câu hỏi ẩn của index phù hợp
         storyParts[currentIndex].SetActive(true);
 
@@ -134,6 +137,7 @@ public class StoryManager : MonoBehaviour
 
         lastIndex = storyParts.Length - 1;
 
+        Debug.Log("Story Part Last Index is:" + lastIndex);
     }
 
     public void LoadSceneWithAnim(int sceneIndex)
@@ -226,10 +230,10 @@ public class StoryManager : MonoBehaviour
             // tăng index lên sau khi đã ẩn hình với ảnh hiện tại đi
             LoadParts();
 
-
+            Debug.Log("Sang trang mới của truyện");
         }
         // nếu index đã max (là part cuối trong 1 câu truyện)
-        else if (currentIndex >= 0 && currentIndex >= lastIndex && !isReading && !isIntersect)
+        else if (currentIndex >= lastIndex && !isReading && !isIntersect)
         {
 
 
@@ -242,13 +246,15 @@ public class StoryManager : MonoBehaviour
 
             }
 
-            if (isIntersect == false)
-            {
+            
                 // bật intersection
-                ToggleIntersection();
-                isIntersect = true;
+                //ToggleIntersection();
 
-            }
+
+            isIntersect = true;
+
+
+            Debug.Log("Tới trang cuối của truyện");
 
 
 

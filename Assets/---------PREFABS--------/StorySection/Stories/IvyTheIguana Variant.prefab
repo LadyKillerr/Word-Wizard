@@ -246,7 +246,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4538852769835136124, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_text
-      value: Ivy the iguana, in her treehouse high,
+      value: Ivy the iguana, in her treehouse high.
       objectReference: {fileID: 0}
     - target: {fileID: 4698994611462040449, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_IsActive
@@ -262,7 +262,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5434125150526677499, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_text
-      value: She sings and swings with joy and grace,
+      value: She sings and swings with joy and grace.
       objectReference: {fileID: 0}
     - target: {fileID: 5517242031456603487, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_text
@@ -350,7 +350,7 @@ PrefabInstance:
       objectReference: {fileID: -4747168201815162448, guid: 0817658dd8c83e249bd4d4b1b9c5cdc9, type: 3}
     - target: {fileID: 6563306869916312052, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_text
-      value: With colors and paints, she loves to create,
+      value: With colors and paints, she loves to create.
       objectReference: {fileID: 0}
     - target: {fileID: 6760187934379379861, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_SortingLayer
@@ -358,7 +358,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6804830911636312136, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_text
-      value: Her stories weave tales of delight,
+      value: Her stories weave tales of delight.
       objectReference: {fileID: 0}
     - target: {fileID: 7149797056146681877, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_AnchorMax.y

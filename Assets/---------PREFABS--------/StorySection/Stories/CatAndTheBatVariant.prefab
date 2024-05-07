@@ -184,6 +184,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2581426708049603049, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: He wants to eat apple cake.
+      objectReference: {fileID: 0}
     - target: {fileID: 2794367401903990404, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -212,10 +216,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4538852769835136124, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: A playful cat wears a big hat.
+      objectReference: {fileID: 0}
     - target: {fileID: 4818422131945983060, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_SortingLayer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5434125150526677499, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: He goes to the apple tree.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5517242031456603487, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: The hat is too large, so he cannot climb up the tree.
+      objectReference: {fileID: 0}
     - target: {fileID: 5589429467208134401, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -287,10 +303,18 @@ PrefabInstance:
     - target: {fileID: 6255202906718135663, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563306869916312052, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: The bat appears and says, "I will help.".
       objectReference: {fileID: 0}
     - target: {fileID: 6760187934379379861, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_SortingLayer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804830911636312136, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_text
+      value: The cat makes an apple cake.
       objectReference: {fileID: 0}
     - target: {fileID: 7149797056146681877, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_AnchorMax.y

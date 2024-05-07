@@ -5,6 +5,8 @@ public class AwakeAnim : MonoBehaviour
     Animator transitionsAnim;
     private void Awake()
     {
+        Application.targetFrameRate = 60;
+
         transitionsAnim = FindAnyObjectByType<Animator>();
     }
 
