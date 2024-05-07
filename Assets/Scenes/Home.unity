@@ -1614,7 +1614,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 922ef4b78a9423d4d9879e946688d208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tweenTime: 0.5
+  tweenTime: 0.2
   notiBoard: {fileID: 193008760421722904}
   screenDarken: {fileID: 3066021469426036904}
   startValue: 10
@@ -2600,18 +2600,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AudioGetter, Assembly-CSharp
-        m_MethodName: PlayButtonClip
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1418439008}
         m_TargetAssemblyTypeName: DeleteAllPlayerPrefsData, Assembly-CSharp
         m_MethodName: DeleteAllData
@@ -3025,7 +3013,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTweenScale: {x: 0, y: 0, z: 0}
   endTweenScale: {x: 1, y: 1, z: 1}
-  tweenTime: 0.5
+  tweenTime: 0.1
   sfxButton: {fileID: 1541092994}
   musicButton: {fileID: 1244016511}
   activatedSoundButtonSprite: {fileID: 21300000, guid: 4eb278292b90b504b9431c222b9b1c94, type: 3}
@@ -4466,6 +4454,10 @@ PrefabInstance:
     - target: {fileID: 3491435134456179889, guid: eb6c3b888343b9c43a96d9a765eeccc1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4266212968060603643, guid: eb6c3b888343b9c43a96d9a765eeccc1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6386391429320156167, guid: eb6c3b888343b9c43a96d9a765eeccc1, type: 3}
       propertyPath: m_Name

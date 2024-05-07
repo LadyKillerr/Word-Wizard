@@ -17,12 +17,14 @@ public class PrefabsSpawner : MonoBehaviour
 
     [SerializeField] GameObject objectSpawnTarget;
 
+    [SerializeField] float delayBeforeSpawnPrefabs = .5f;
 
 
     [Header("Scaling Cordinates")]
     [SerializeField] Vector3 originalScale;
     [SerializeField] Vector3 endTweenScale;
     [SerializeField] float tweenTime = 0.75f;
+
 
 
     [Header("Selection screen prefabs to Spawn")]
@@ -311,8 +313,8 @@ public class PrefabsSpawner : MonoBehaviour
 
     IEnumerator ToogleStoryPrefabs(int storyPrefabsValue)
     {
-        // ngưng load tầm 1s để anim chạy, xong thì sẽ bdau hiện ra quiz 
-        yield return new WaitForSeconds(1f);
+        // ngưng load tầm 1s để anim chạy, xong thì sẽ bdau hiện ra prefabs 
+        yield return new WaitForSeconds(delayBeforeSpawnPrefabs);
 
         // sau khi đợi 1s để start anim chạy xong -> màn đen xì sẽ bdau load ra question
         storyListPanel.SetActive(false);
@@ -376,7 +378,7 @@ public class PrefabsSpawner : MonoBehaviour
     IEnumerator ToogleQuizPrefabs(int quizPrefabsValue)
     {
         // ngưng load tầm 1s để anim chạy, xong thì sẽ bdau hiện ra quiz 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(delayBeforeSpawnPrefabs);
 
         // sau khi đợi 1s để start anim chạy xong -> màn đen xì sẽ bdau load ra question
         storyListPanel.SetActive(false);
@@ -442,7 +444,7 @@ public class PrefabsSpawner : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);
 
-        transitionsAnim.SetActive(false);
+        //transitionsAnim.SetActive(false);
         transitionsAnim.GetComponent<Animator>().enabled = false;
     }
 

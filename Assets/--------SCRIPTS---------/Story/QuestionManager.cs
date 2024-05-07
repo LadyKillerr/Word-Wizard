@@ -6,7 +6,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
-
+using DG.Tweening;
 
 
 public class QuestionManager : MonoBehaviour
@@ -75,7 +75,7 @@ public class QuestionManager : MonoBehaviour
     [Header("Quiz Effects")]
     [SerializeField] ParticleSystem rightAnswerPE;
     [SerializeField] GameObject screenDarkenEffects;
-    [SerializeField] ParticleSystem finishLevelPE;
+    [SerializeField] ParticleSystem congratsPE;
 
     // Components that are hidden
     AudioSource quizSectionAudio;
@@ -92,6 +92,15 @@ public class QuestionManager : MonoBehaviour
 
     [SerializeField] QuestionManager questionManager;
     [SerializeField] StoryManager storyManager;
+
+    [Header("Coin Effect Section")]
+    [SerializeField] GameObject coinImage;
+    [SerializeField] float startValue = 1800f;
+    [SerializeField] float endValue = 0;
+
+    [SerializeField] float tweenTime = 0.5f;
+
+    [SerializeField] ParticleSystem coinRewardEffects;
 
     LoadScene levelLoader;
 
@@ -295,11 +304,11 @@ public class QuestionManager : MonoBehaviour
         {
             // thời gian đợi trước khi tự động đọc audio của câu đầu tiên(đợi để anim chạy xong)
             yield return new WaitForSeconds(timeBeforeAudioPlay);
-            
-            
+
+
             quizSectionAudio.PlayOneShot(questionsAudio[currentIndex], quizQuestionsAudioVolume);
 
-          
+
 
             Debug.Log("Có load anim cùng audio");
 
@@ -422,6 +431,8 @@ public class QuestionManager : MonoBehaviour
             && (!rewardWindow.activeSelf && !congratsWindow.activeSelf))
         {
 
+            MuteAudio();
+
             // load ra màn báo thưởng
             LoadVictoryScreen();
 
@@ -435,28 +446,42 @@ public class QuestionManager : MonoBehaviour
     {
         //yield return new WaitForSeconds(delayTimeSmall);
 
-        finishLevelPE.Play();
         screenDarkenEffects.SetActive(true);
 
-        if (audioManager != null)
-        {
-            audioManager.PlayCongratsClip();
-
-        }
+        rightAnswerPE.Stop();
+        rightAnswerPE.Clear();
 
         // kiểm tra trong player pref nếu level hiện tại có status là hoàn thành (== 1)
         if (!isRewarded && PlayerPrefs.GetInt(levelPrefName) == 1)
         {
+            congratsPE.Play();
+
             isRewarded = true;
 
             // chạy màn chúc mừng (không cộng điểm)
             congratsWindow.SetActive(true);
+
+            if (audioManager != null)
+            {
+                audioManager.PlayCongratsClip();
+
+            }
 
             rewardWindow.SetActive(false);
         }
         //kiểm tra trong player pref nếu level hiện tại có status là chưa hoàn thành(0 hoặc 2)
         else if (!isRewarded && PlayerPrefs.GetInt(levelPrefName) != 1)
         {
+
+            // Chạy hiệu ứng rơi xu và âm thanh tăng xu
+            coinRewardEffects.Play();
+
+            if (audioManager != null)
+            {
+                audioManager.PlayCoinSoundClip();
+
+            }
+
             isRewarded = true;
             rewardWindow.SetActive(true);
             congratsWindow.SetActive(false);
@@ -468,6 +493,39 @@ public class QuestionManager : MonoBehaviour
             // lưu vào biến là đã hoàn thành
             PlayerPrefs.SetInt(levelPrefName, 1);
         }
+    }
+
+    public void ActivateCoinNoti()
+    {
+        coinImage.SetActive(true);
+
+        if (audioManager != null)
+        {
+            audioManager.PlayCongratsClip();
+
+        }
+
+        coinImage.transform.DOMoveY(endValue, tweenTime)
+            .SetEase(Ease.InOutSine);
+
+        StartCoroutine(LoadLevelWithAnim(tweenTime));
+
+    }
+
+    IEnumerator LoadLevelWithAnim(float tweenTime)
+    {
+        yield return new WaitForSeconds(tweenTime);
+
+        if (transitionsAnim != null)
+        {
+            transitionsAnim.enabled = true;
+
+            transitionsAnim.SetTrigger("end");
+
+        }
+
+        // index của màn home 
+        FindAnyObjectByType<LoadScene>().LoadAsyncWithoutAudio(2);
     }
 
     public void LoadPreviousQuestions()
@@ -503,8 +561,12 @@ public class QuestionManager : MonoBehaviour
 
     public void LoadSceneWithAnim(int sceneIndex)
     {
-        finishLevelPE.Stop();
-        finishLevelPE.Clear();
+        if (congratsPE != null)
+        {
+            congratsPE.Stop();
+            congratsPE.Clear();
+
+        }
 
 
 

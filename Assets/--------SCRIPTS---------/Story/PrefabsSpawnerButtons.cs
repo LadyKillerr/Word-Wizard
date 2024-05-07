@@ -7,9 +7,12 @@ public class PrefabsSpawnerButtons : MonoBehaviour
     PrefabsSpawner prefabsSpawner;
     [SerializeField] int prefabsIndex;
 
+    AudioManager audioManager;
+
     void Awake()
     {
         prefabsSpawner = FindAnyObjectByType<PrefabsSpawner>();
+        audioManager = FindAnyObjectByType<AudioManager>();
     }
 
     void Update()
@@ -49,5 +52,10 @@ public class PrefabsSpawnerButtons : MonoBehaviour
 
         Debug.Log("Run Spawn Quiz Prefabs");
 
+    }
+
+    public void PlayButtonSound()
+    {
+        audioManager.PlayButtonClip();
     }
 }

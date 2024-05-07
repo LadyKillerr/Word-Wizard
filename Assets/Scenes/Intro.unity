@@ -602,6 +602,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MusicPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 8290822603959909138, guid: b872e7da7b75d364ea5b231f8bad9eac, type: 3}
+      propertyPath: m_Volume
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 8970261392319137663, guid: b872e7da7b75d364ea5b231f8bad9eac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -742,6 +746,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3518955357863942397, guid: ac62527c941b7204ebe2d7ac2ac0cd74, type: 3}
+      propertyPath: startVolume
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3518955357863942397, guid: ac62527c941b7204ebe2d7ac2ac0cd74, type: 3}
+      propertyPath: coinRewardAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 1a73a7d60d4a64e4cbc84c98a7d44e1b, type: 3}
     - target: {fileID: 6342129843199408744, guid: ac62527c941b7204ebe2d7ac2ac0cd74, type: 3}
       propertyPath: StartAudio
       value: 
@@ -1307,10 +1319,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlideTransitionsAnim
       objectReference: {fileID: 0}
-    - target: {fileID: 6386391429320156167, guid: eb6c3b888343b9c43a96d9a765eeccc1, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1407,26 +1415,6 @@ PrefabInstance:
     - target: {fileID: 689974152543545837, guid: b95edb86509958c46b0a57659f2e55f1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2370778240128235345, guid: b95edb86509958c46b0a57659f2e55f1, type: 3}
-      propertyPath: delayTime
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2370778240128235345, guid: b95edb86509958c46b0a57659f2e55f1, type: 3}
-      propertyPath: loadingBar
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2370778240128235345, guid: b95edb86509958c46b0a57659f2e55f1, type: 3}
-      propertyPath: loadingScreen
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2370778240128235345, guid: b95edb86509958c46b0a57659f2e55f1, type: 3}
-      propertyPath: loadingPercent
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2370778240128235345, guid: b95edb86509958c46b0a57659f2e55f1, type: 3}
-      propertyPath: loadingBarImage
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2370778240128235345, guid: b95edb86509958c46b0a57659f2e55f1, type: 3}
       propertyPath: transitionsAnim

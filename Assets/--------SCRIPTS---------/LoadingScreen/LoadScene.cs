@@ -14,9 +14,9 @@ public class LoadScene : MonoBehaviour
     //[SerializeField] Image loadingBarImage; // dùng khi chị Khánh gửi chữ Loading
     [SerializeField] TextMeshProUGUI loadingPercent;
 
-    [Header("Animation Timer")]
-    [SerializeField] float endAnimTime = 1f;
-    [SerializeField] float startAnimTime = 1f;
+    [Header("Animation Timer - equal to Anim time")]
+    [SerializeField] float endAnimTime = .5f;
+    [SerializeField] float startAnimTime = .5f;
 
     AudioManager audioManager;
     [SerializeField] Animator transitionsAnim;
@@ -29,6 +29,10 @@ public class LoadScene : MonoBehaviour
         {
             transitionsAnim.SetTrigger("start");
 
+        }
+        else
+        {
+            return;
         }
     }
 
@@ -60,15 +64,21 @@ public class LoadScene : MonoBehaviour
 
 
 
-    // hàm này sẽ load có đợi 1s để anim chạy
+    // hàm này sẽ load có đợi endAnimTime để anim chạy
     public IEnumerator LoadAsyncWithoutLoadingScreen(int sceneIndex)
     {
         yield return new WaitForSeconds(endAnimTime);
         SceneManager.LoadSceneAsync(sceneIndex);
 
 
+
+
     }
 
+    public void LoadAsyncWithoutAudio(int sceneIndex)
+    {
+        StartCoroutine(LoadAsyncWithoutLoadingScreen(sceneIndex));
+    }
 
     public IEnumerator LoadAsynchrounously(int sceneIndex)
     {

@@ -61,7 +61,7 @@ public class StoryManager : MonoBehaviour
 
 
     // Components
-    [SerializeField] Animator transitionsAnim;
+    Animator transitionsAnim;
     LoadScene levelLoader;
     AudioSource storyAudioSource;
     AudioManager audioManager;
@@ -102,7 +102,7 @@ public class StoryManager : MonoBehaviour
         HideAllImageParts();
         HideAllStoryParts();
         MuteAudio();
-
+         
         ActivateStorySection();
         currentIndex = 0;
         // load ra hình với ảnh và câu hỏi ẩn của index phù hợp

@@ -17,13 +17,18 @@ public class AudioManager : MonoBehaviour
     [SerializeField][Range(0, 1)] float pageTurningVolume = 1f;
 
     [SerializeField] AudioClip bugAudio;
-    [SerializeField][Range(0, 1)] float bugAudioVolume = 1f;
+    [SerializeField][Range(0, 1)] float bugVolume = 1f;
 
     [SerializeField] AudioClip congratsAudio;
-    [SerializeField][Range(0, 1)] float congratsAudioVolume = 1f;
+    [SerializeField][Range(0, 1)] float congratsVolume = 1f;
+
+    [SerializeField] AudioClip coinRewardAudio;
+    [SerializeField][Range(0, 1)] float coinRewardVolume = 1f;
 
     [SerializeField] AudioClip balloonPoppinAudio;
-    [SerializeField][Range(0, 1)] float balloonPoppinAudioVolume = 1f;
+    [SerializeField][Range(0, 1)] float balloonPoppinVolume = 1f;
+
+
 
     AudioSource gameAudio;
 
@@ -82,19 +87,25 @@ public class AudioManager : MonoBehaviour
 
     public void PlayBugClip()
     {
-        PlayAudio(bugAudio, bugAudioVolume);
+        PlayAudio(bugAudio, bugVolume);
     }
 
     public void PlayCongratsClip()
     {
-        PlayAudio(congratsAudio, congratsAudioVolume);
+        PlayAudio(congratsAudio, congratsVolume);
     }
 
-    public void PlayBalloonPoppinAudio()
+    public void PlayBalloonPoppinClip()
     {
-        PlayAudio(balloonPoppinAudio, balloonPoppinAudioVolume);
+        PlayAudio(balloonPoppinAudio, balloonPoppinVolume);
     }
 
+    public void PlayCoinSoundClip()
+    {
+        PlayAudio(coinRewardAudio, coinRewardVolume);
+    }
+
+    #region LegacyAlphabetAudio
 
 
     //public void PlayWordA()
@@ -195,4 +206,5 @@ public class AudioManager : MonoBehaviour
     //    PlayAudio(uWord, uWordAudioVolume);
     //}
 
+    #endregion
 }

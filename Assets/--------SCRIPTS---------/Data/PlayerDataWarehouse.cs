@@ -150,7 +150,7 @@ public class PlayerDataWarehouse : MonoBehaviour
 
             PlayerProgressData timesPlayed = new PlayerProgressData();
             timesPlayed.numberPlayed = "playerStars";
-            timesPlayed.stars = 0;
+            timesPlayed.stars = 100;
 
             playerProgresses.Add(timesPlayed);
 
