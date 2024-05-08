@@ -235,8 +235,6 @@ public class QuestionManager : MonoBehaviour
             answersText.text = questionsSO[currentIndex].GetAnswer(i);
         }
 
-
-
     }
 
     public void OnAnswerSelected(int userAnswerIndex)

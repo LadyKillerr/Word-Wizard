@@ -56,6 +56,10 @@ public class PrefabsSpawnerButtons : MonoBehaviour
 
     public void PlayButtonSound()
     {
-        audioManager.PlayButtonClip();
+        if (audioManager != null)
+        {
+            audioManager.PlayButtonClip();
+
+        }
     }
 }

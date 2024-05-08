@@ -1,0 +1,5 @@
+E:/Word Wizard/Word-Wizard/.utmp/Debug/42675a23/arm64-v8a/CMakeFiles/edit_cache.dir
+E:/Word Wizard/Word-Wizard/.utmp/Debug/42675a23/arm64-v8a/CMakeFiles/rebuild_cache.dir
+E:/Word Wizard/Word-Wizard/.utmp/Debug/42675a23/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir
+E:/Word Wizard/Word-Wizard/.utmp/Debug/42675a23/arm64-v8a/FramePacing/CMakeFiles/edit_cache.dir
+E:/Word Wizard/Word-Wizard/.utmp/Debug/42675a23/arm64-v8a/FramePacing/CMakeFiles/rebuild_cache.dir
