@@ -473,12 +473,16 @@ public class QuestionManager : MonoBehaviour
         {
 
             // Chạy hiệu ứng rơi xu và âm thanh tăng xu
-            coinRewardEffects.Play();
+            if (coinRewardEffects != null)
+            {
+                coinRewardEffects.Play();
+                
+            }
 
             if (audioManager != null)
             {
                 audioManager.PlayCoinSoundClip();
-
+                StartCoroutine(ResetCoinSound(audioManager.coinRewardAudio.length));
             }
 
             isRewarded = true;
@@ -494,12 +498,22 @@ public class QuestionManager : MonoBehaviour
         }
     }
 
+    IEnumerator ResetCoinSound(float value)
+    {
+        yield return new WaitForSeconds(value);
+
+        audioManager.PlayCoinSoundClip();
+    }
+
     public void ActivateCoinNoti()
     {
+        
+
         coinImage.SetActive(true);
 
         if (audioManager != null)
         {
+            audioManager.StopAudio();
             audioManager.PlayCongratsClip();
 
         }

@@ -22,7 +22,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioClip congratsAudio;
     [SerializeField][Range(0, 1)] float congratsVolume = 1f;
 
-    [SerializeField] AudioClip coinRewardAudio;
+    public AudioClip coinRewardAudio;
     [SerializeField][Range(0, 1)] float coinRewardVolume = 1f;
 
     [SerializeField] AudioClip balloonPoppinAudio;
@@ -68,6 +68,11 @@ public class AudioManager : MonoBehaviour
         }
 
 
+    }
+
+    public void StopAudio()
+    {
+        gameAudio.Stop();
     }
 
     public void PlayStartAudio()
