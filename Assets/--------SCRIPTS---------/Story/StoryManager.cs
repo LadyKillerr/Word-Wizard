@@ -248,7 +248,7 @@ public class StoryManager : MonoBehaviour
 
             
                 // bật intersection
-                //ToggleIntersection();
+                ToggleIntersection();
 
 
             isIntersect = true;
