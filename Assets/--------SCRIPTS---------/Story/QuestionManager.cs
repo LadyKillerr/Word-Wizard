@@ -61,7 +61,7 @@ public class QuestionManager : MonoBehaviour
     [Header("Quiz Settings")]
 
     [SerializeField] float delayTime = 2f;
-    [SerializeField] float delayTimeSmall = 1f;
+    [SerializeField] float delayBetweenAnswer = 1f;
 
     [SerializeField] Button nextButton;
     [SerializeField] Button backButton;
@@ -107,6 +107,7 @@ public class QuestionManager : MonoBehaviour
 
     SwipeHandler swipeHandler;
 
+    NotiManager tutorialManager;
     public void ActivatePendingStatus()
     {
         if (PlayerPrefs.GetInt(levelPrefName) == 1)
@@ -132,6 +133,8 @@ public class QuestionManager : MonoBehaviour
         transitionsAnim = FindAnyObjectByType<Animator>();
 
         swipeHandler = FindAnyObjectByType<SwipeHandler>();
+
+        tutorialManager = FindAnyObjectByType<NotiManager>();
     }
 
     private void Start()
@@ -277,6 +280,7 @@ public class QuestionManager : MonoBehaviour
             // tạm thời khoá nút lại khoảng chừng 2s
             isAnswered = true;
             isAnswerCorrect = false;
+            
             StartCoroutine(ResetIsAnswered());
 
             // chạy hiệu ứng âm thanh trả lời sai
@@ -286,7 +290,17 @@ public class QuestionManager : MonoBehaviour
             // chuyển ảnh của nút bấm sang ảnh mới
             answersButton[userAnswerIndex].GetComponent<Image>().sprite = wrongAnswerSprite;
 
+            // Load lại truyện từ đầu bắt ng dùng đọc lại
+            StartCoroutine(ShowWrongAnswerNoti(delayBetweenAnswer));
+
         }
+    }
+
+    IEnumerator ShowWrongAnswerNoti(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        tutorialManager.ShowWrongAnswerNoti();
     }
 
     public void StartLoadQuestionAudio()
@@ -441,7 +455,7 @@ public class QuestionManager : MonoBehaviour
 
     void LoadVictoryScreen()
     {
-        //yield return new WaitForSeconds(delayTimeSmall);
+        //yield return new WaitForSeconds(delayBetweenAnswer);
 
         screenDarkenEffects.SetActive(true);
 
@@ -556,7 +570,7 @@ public class QuestionManager : MonoBehaviour
 
             if (storyManager != null)
             {
-                storyManager.ToggleLastStoryPart(storyManager.GetLastPartIndex());
+                storyManager.LoadSpecificStoryPart(storyManager.GetLastPartIndex());
 
                 // tắt isAutoNextPage đi để tránh bug tự động nhảy intersect ngay khi vừa load về
                 swipeHandler.SetIsAutoNextPage(false);
@@ -627,7 +641,8 @@ public class QuestionManager : MonoBehaviour
 
     IEnumerator ResetIsAnswered()
     {
-        yield return new WaitForSeconds(delayTimeSmall);
+        // tăng lên 0.5f để thời gian resetIsAnswered luôn lâu hơn thời gian hiện ra thông báo trả lời sai
+        yield return new WaitForSeconds(delayBetweenAnswer + 0.5f);
 
         isAnswered = false;
     }

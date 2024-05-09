@@ -103,7 +103,7 @@ public class SwipeHandler : MonoBehaviour
                 // so sánh khoảng cách đó với swipeThreshhold để biết khoảng cách có đủ lớn không 
                 if (swipeDistance < -Mathf.Epsilon
                     && Mathf.Abs(swipeDistance) > swipeThreshold
-                    && (!storyAudioSource.isPlaying || storyManager.GetIsCheating()))
+                    && (storyManager.GetIsFinishReading() || storyManager.GetIsCheating()))
                 {
 
                     storyManager.NextPart();

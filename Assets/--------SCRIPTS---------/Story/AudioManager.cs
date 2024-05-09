@@ -72,6 +72,8 @@ public class AudioManager : MonoBehaviour
 
     public void StopAudio()
     {
+        gameAudio.enabled = false;
+        gameAudio.enabled = true;
         gameAudio.Stop();
     }
 

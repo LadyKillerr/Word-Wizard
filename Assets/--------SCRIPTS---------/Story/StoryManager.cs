@@ -137,6 +137,7 @@ public class StoryManager : MonoBehaviour
 
         lastIndex = storyParts.Length - 1;
 
+
         Debug.Log("Story Part Last Index is:" + lastIndex);
     }
 
@@ -253,8 +254,6 @@ public class StoryManager : MonoBehaviour
 
             isIntersect = true;
 
-
-            Debug.Log("Tới trang cuối của truyện");
 
 
 
@@ -401,10 +400,12 @@ public class StoryManager : MonoBehaviour
 
     public int GetLastPartIndex()
     {
+
+
         return lastIndex;
     }
 
-    public void ToggleLastStoryPart(int index)
+    public void LoadSpecificStoryPart(int index)
     {
         currentIndex = index;
 
@@ -414,10 +415,14 @@ public class StoryManager : MonoBehaviour
         // bật màn câu hỏi  
         interactiveStorySection.SetActive(true);
 
-        LoadParts();
+        HideAllImageParts();
+        HideAllStoryParts();
 
         // tắt âm thanh linh tinh
         MuteAudio();
+
+        LoadParts();
+
 
         // chạy âm thanh của index hiện tại
         PlayCurrentAudioParts();

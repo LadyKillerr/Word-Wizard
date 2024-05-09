@@ -48,7 +48,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d89e9f809e50244188a3629eea8dd2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabsIndex: 0
+  bookName: 
+  quizButton: {fileID: 2398504359843239053}
+  normalState: {fileID: 0}
+  lockedState: {fileID: 0}
 --- !u!1 &3198055620677966904
 GameObject:
   m_ObjectHideFlags: 0
@@ -62,7 +65,7 @@ GameObject:
   - component: {fileID: 3920809404447371225}
   - component: {fileID: 2398504359843239053}
   m_Layer: 5
-  m_Name: Quiz Section Button
+  m_Name: Quiz Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

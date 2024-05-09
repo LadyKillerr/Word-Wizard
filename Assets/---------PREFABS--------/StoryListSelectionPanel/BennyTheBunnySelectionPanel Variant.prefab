@@ -198,6 +198,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: BennyTheBunnySelectionPanel Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8752112810927376960, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
+      propertyPath: bookName
+      value: BennyTheBunny
+      objectReference: {fileID: 0}
+    - target: {fileID: 8752112810927376960, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
+      propertyPath: lockedState
+      value: 
+      objectReference: {fileID: 2641698482785147981, guid: 4e25160d02abdb549be8a9cc60931f50, type: 3}
+    - target: {fileID: 8752112810927376960, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
+      propertyPath: normalState
+      value: 
+      objectReference: {fileID: -9021855561667895644, guid: c369322efb0f30b4d905bfbaab8c5fd1, type: 3}
     - target: {fileID: 8905673779811034448, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.5

@@ -130,7 +130,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4719725966092335734, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 286
+      value: 332
       objectReference: {fileID: 0}
     - target: {fileID: 5857590476475726409, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
       propertyPath: m_SizeDelta.x
@@ -168,6 +168,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: HenryTheHedgehogSelectionPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 8752112810927376960, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
+      propertyPath: bookName
+      value: HenryTheHedgehog
+      objectReference: {fileID: 0}
+    - target: {fileID: 8752112810927376960, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
+      propertyPath: lockedState
+      value: 
+      objectReference: {fileID: 7175521830830924091, guid: 3c48a6671b1bc5e48a4f4e88a8412368, type: 3}
+    - target: {fileID: 8752112810927376960, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
+      propertyPath: normalState
+      value: 
+      objectReference: {fileID: -5255389639553494131, guid: b5e12cb4eb2fa224a898e2a0078bc0b1, type: 3}
     - target: {fileID: 8905673779811034448, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.5
@@ -198,7 +210,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8905673779811034448, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 90
+      value: 136
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

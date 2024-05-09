@@ -196,6 +196,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: CatAndTheBat
       objectReference: {fileID: 0}
+    - target: {fileID: 8752112810927376960, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
+      propertyPath: bookName
+      value: TheCatAndTheBat
+      objectReference: {fileID: 0}
+    - target: {fileID: 8752112810927376960, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
+      propertyPath: lockedState
+      value: 
+      objectReference: {fileID: 7175521830830924091, guid: 3c48a6671b1bc5e48a4f4e88a8412368, type: 3}
+    - target: {fileID: 8752112810927376960, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
+      propertyPath: normalState
+      value: 
+      objectReference: {fileID: -6134948420854180459, guid: 30a443c960450a44bb80f540477b5433, type: 3}
     - target: {fileID: 8905673779811034448, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
       propertyPath: m_Pivot.y
       value: 0

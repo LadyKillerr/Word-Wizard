@@ -154,7 +154,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4719725966092335734, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -164
+      value: -128
       objectReference: {fileID: 0}
     - target: {fileID: 5857590476475726409, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
       propertyPath: m_SizeDelta.x
@@ -194,6 +194,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: DannyTheDogSelectionPanel Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8752112810927376960, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
+      propertyPath: bookName
+      value: DannyTheDog
+      objectReference: {fileID: 0}
+    - target: {fileID: 8752112810927376960, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
+      propertyPath: lockedState
+      value: 
+      objectReference: {fileID: 7175521830830924091, guid: 3c48a6671b1bc5e48a4f4e88a8412368, type: 3}
+    - target: {fileID: 8752112810927376960, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
+      propertyPath: normalState
+      value: 
+      objectReference: {fileID: -3379574150838111524, guid: 784b6c1e5fa9ad9479c6e30403817ad9, type: 3}
     - target: {fileID: 8905673779811034448, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.5
@@ -232,7 +244,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8905673779811034448, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -347
+      value: -311
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

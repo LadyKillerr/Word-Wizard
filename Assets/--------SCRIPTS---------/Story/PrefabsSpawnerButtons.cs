@@ -1,28 +1,46 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class PrefabsSpawnerButtons : MonoBehaviour
 {
     PrefabsSpawner prefabsSpawner;
-    [SerializeField] int prefabsIndex;
+    int prefabsIndex;
+    [Header("Quiz Button State")]
+    [SerializeField] string bookName;
+    [SerializeField] Button quizButton;
+    [SerializeField] Sprite normalState;
+    [SerializeField] Sprite lockedState;
 
     AudioManager audioManager;
+
+    NotiManager notiManager;
+
 
     void Awake()
     {
         prefabsSpawner = FindAnyObjectByType<PrefabsSpawner>();
         audioManager = FindAnyObjectByType<AudioManager>();
+        notiManager = FindAnyObjectByType<NotiManager>();
+
+
+        UpdateQuizButtonState();
     }
 
-    void Update()
+    public void UpdateQuizButtonState()
     {
-
-        if (prefabsSpawner == null)
+        if (PlayerPrefs.GetInt(bookName) == 1)
         {
-            Debug.Log("prefabsSpawner is null");
+            quizButton.image.sprite = normalState;
+        }
+        else
+        {
+            quizButton.image.sprite = lockedState;
         }
     }
+
 
     public void HideSelectionPanel()
     {
@@ -38,6 +56,7 @@ public class PrefabsSpawnerButtons : MonoBehaviour
 
     public void ConnectStoryPrefabs()
     {
+
         prefabsIndex = prefabsSpawner.GetPrefabsIndex();
 
         prefabsSpawner.SpawnStoryPrefabs(prefabsIndex);
@@ -46,11 +65,21 @@ public class PrefabsSpawnerButtons : MonoBehaviour
 
     public void ConnectQuizPrefabs()
     {
-        prefabsIndex = prefabsSpawner.GetPrefabsIndex();
+        // nếu status là đã xong thì ấn bthg
+        if (PlayerPrefs.GetInt(bookName) == 1)
+        {
+            prefabsIndex = prefabsSpawner.GetPrefabsIndex();
 
-        prefabsSpawner.SpawnQuizPrefabs(prefabsIndex);
+            prefabsSpawner.SpawnQuizPrefabs(prefabsIndex);
 
-        Debug.Log("Run Spawn Quiz Prefabs");
+            Debug.Log("Run Spawn Quiz Prefabs");
+
+        }
+        // nếu status là chưa xong || pending thì không nhận 
+        else
+        {
+            notiManager.ShowIsLockedNoti();
+        }
 
     }
 
@@ -60,6 +89,6 @@ public class PrefabsSpawnerButtons : MonoBehaviour
         {
             audioManager.PlayButtonClip();
 
-        }
+        } 
     }
 }

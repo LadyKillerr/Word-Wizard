@@ -130,7 +130,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4719725966092335734, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 306
+      value: 321
       objectReference: {fileID: 0}
     - target: {fileID: 5857590476475726409, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
       propertyPath: m_SizeDelta.x
@@ -170,6 +170,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: FreddyTheFishSelectionPanel Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8752112810927376960, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
+      propertyPath: bookName
+      value: FreddyTheFish
+      objectReference: {fileID: 0}
+    - target: {fileID: 8752112810927376960, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
+      propertyPath: lockedState
+      value: 
+      objectReference: {fileID: 2641698482785147981, guid: 4e25160d02abdb549be8a9cc60931f50, type: 3}
+    - target: {fileID: 8752112810927376960, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
+      propertyPath: normalState
+      value: 
+      objectReference: {fileID: -9021855561667895644, guid: fab5a06e6ee60d34bbdc6df383704347, type: 3}
     - target: {fileID: 8905673779811034448, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.5
@@ -200,7 +212,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8905673779811034448, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 133
+      value: 148
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
