@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: 34932363747500665, guid: 12df3394cd53d2f479544f43fb749425, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1142779096857227008, guid: 2c991ddb079b19f4fae1d62a78c621a8, type: 3}
+      objectReference: {fileID: -215076530526341208, guid: 3f5433cd9cfdf9041b193422b4e9f6d6, type: 3}
     - target: {fileID: 2441398799443602533, guid: 12df3394cd53d2f479544f43fb749425, type: 3}
       propertyPath: m_Name
       value: FreddyTheFish Variant

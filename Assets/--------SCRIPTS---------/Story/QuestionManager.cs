@@ -280,7 +280,7 @@ public class QuestionManager : MonoBehaviour
             // tạm thời khoá nút lại khoảng chừng 2s
             isAnswered = true;
             isAnswerCorrect = false;
-            
+
             StartCoroutine(ResetIsAnswered());
 
             // chạy hiệu ứng âm thanh trả lời sai
@@ -290,8 +290,12 @@ public class QuestionManager : MonoBehaviour
             // chuyển ảnh của nút bấm sang ảnh mới
             answersButton[userAnswerIndex].GetComponent<Image>().sprite = wrongAnswerSprite;
 
-            // Load lại truyện từ đầu bắt ng dùng đọc lại
-            StartCoroutine(ShowWrongAnswerNoti(delayBetweenAnswer));
+            if (storyManager != null)
+            {
+                // Load lại truyện từ đầu bắt ng dùng đọc lại
+                StartCoroutine(ShowWrongAnswerNoti(delayBetweenAnswer));
+
+            }
 
         }
     }
@@ -488,7 +492,7 @@ public class QuestionManager : MonoBehaviour
             if (coinRewardEffects != null)
             {
                 coinRewardEffects.Play();
-                
+
             }
 
             if (audioManager != null)
@@ -519,7 +523,7 @@ public class QuestionManager : MonoBehaviour
 
     public void ActivateCoinNoti()
     {
-        
+
 
         coinImage.SetActive(true);
 
