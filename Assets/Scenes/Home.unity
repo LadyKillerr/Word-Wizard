@@ -292,7 +292,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -201.99994}
+  m_AnchoredPosition: {x: 0, y: -280.30002}
   m_SizeDelta: {x: 392, y: 101}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &213654976
@@ -383,7 +383,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2a536f358d126414084d5c76db78e289, type: 3}
+  m_Sprite: {fileID: -7543869078279237610, guid: 8bb15af317d5a9d4b91814a0f436d927, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -480,7 +480,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -77.699936}
+  m_AnchoredPosition: {x: 0, y: -156}
   m_SizeDelta: {x: 392, y: 101}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &291943760
@@ -571,7 +571,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 155c790bc80773f4c8a67d5740777cde, type: 3}
+  m_Sprite: {fileID: 4178497384730245040, guid: 020da749486a61b4d84b301d67655574, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -588,6 +588,430 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 291943758}
+  m_CullTransparentMesh: 1
+--- !u!1 &339670708
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 339670709}
+  - component: {fileID: 339670711}
+  - component: {fileID: 339670710}
+  - component: {fileID: 339670712}
+  m_Layer: 5
+  m_Name: Content
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &339670709
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339670708}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1218356399}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -674.00006, y: 302.93796}
+  m_SizeDelta: {x: 1348, y: 0}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &339670710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339670708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "1. License and restrictions.\r\n\r\nSubject to these Terms, MEPPO Game
+    Studio (MGS) grants you a non-exclusive, limited, revocable, non-transferable
+    license to use the Services for your personal, non-commercial use. You may not:
+    (a) modify, translate, reverse-engineer, reverse-compile or decompile, disassemble,
+    create derivative works of, or use data gathering or extraction tools in connection
+    with the Services; (b) reproduce, duplicate, copy, sell, resell, or otherwise
+    exploit the Services, in whole or in part, for any purpose without MGS\u2019s
+    express written consent; (c) frame or utilize framing techniques to enclose any
+    trademark, logo, or other proprietary information (including images, text, page
+    layout, or form) without the express written consent of the respective owner;
+    (d) use any data mining tools or automation tools such as spiders, crawlers,
+    scripts, bots, or any automated method of recording information; (e) use any
+    meta-tags or any other \u201Chidden text\u201D utilizing \u201CMGS ,\u201D its
+    affiliates, partners or artists without MGS\u2019s express written permission;
+    or (f) engage in any conduct in connection with the Services that may be considered
+    illegal or tortious including, without limitation, \u201Chacking\u201D the Services,
+    or infringing the intellectual property or other proprietary rights of MGS or
+    third-parties.\r\n\r\nAdditionally, where the Services are a downloadable game
+    and/or application (\u201CApp\u201D), MGS grants you a non-exclusive, non-transferable,
+    revocable, limited license to use the App for your personal, non-commercial use
+    on authorized devices, unless otherwise specified. The App may not be copied,
+    resold, or sublicensed. These Terms apply to all versions and updates to the
+    App, including, without limitation, free and paid versions.\r\n\r\nThe App may
+    include measures to control access to the App (including age controls), prevent
+    unauthorized copies, or otherwise attempt to prevent anyone from exceeding the
+    limited rights and licenses granted under these Terms. You may not take any action
+    to circumvent or defeat such security features. If you disable or otherwise tamper
+    with the technical protection measures, your license to use the App or other
+    Services shall be considered automatically revoked.\r\n\r\n2. Third-party product,
+    services and links.\r\n\r\nMGS may offer third-party products through the Services.
+    You assume all risks and liabilities associated with the use of any such third-party
+    products. Additionally, your rights and obligations regarding such products or
+    services will be governed by the separate terms of use and privacy policies of
+    the applicable third-party provider.\r\n\r\nThe Services may include hyperlinks
+    to other websites over which MGS has no control. MGS is not responsible for the
+    availability of such external sites or resources and will not be responsible
+    or liable for any content, advertising, products, or other materials on or available
+    from such third-party websites or resources.\r\n\r\n3. Access to the services.\r\n\r\nBy
+    using the Services, you affirm that you are at least 18 years of age (or have
+    reached the age of majority if that is not 18 years of age where you live) or
+    that you have reviewed these Terms with your parent or guardian and he or she
+    assents to these Terms on your behalf and takes full responsibility for your
+    compliance with them. If you are under the age of 13, you must have permission
+    from your parent or guardian in order to use the Services. If you do not have
+    permission from your parent of guardian, certain features and functionality of
+    the Services may be disabled. Information regarding use of your personal information
+    can be found in MGS\u2019s Privacy Policy or in the privacy policy specific to
+    the Service you are using.\r\n\r\nYou may be required to register an account
+    before using certain Services (\u201CAccount\u201D). You may also be required
+    or have the option to access the Services through a social networking service
+    (\u201CSNS\u201D). Your Account is personal to you, and you may not rent, lease,
+    sell, trade, gift, bequeath, or otherwise transfer it to anyone else. You agree
+    to provide true and complete information about yourself when you register your
+    Account and to keep it up to date. You may not have more than one Account or
+    access the Services through more than one SNS at any given time. You are solely
+    responsible for maintaining the confidentiality of your password and user name
+    and for any activities that occur under your Account. MGS does not authorize
+    use of automated methods to sign up for an Account, and MGS reserves the right
+    to immediately terminate your access to the Services or your Account if you breach
+    these Terms or otherwise violate any applicable law, rule, or regulation in your
+    jurisdiction.\r\n\r\nYou are responsible for the internet connection and/or mobile
+    charges that you may incur for accessing and/or using the Services.\r\n\r\n4.
+    In-app purchases.\r\n\r\nA. In-game Virtual Currency and Virtual Items\r\n\r\nThe
+    Service may include an opportunity for you to earn, buy or otherwise obtain in-game
+    currency (\u201CVirtual Currency\u201D) to access virtual, in-game digital goods
+    or items (\u201CVirtual Items\u201D). Methods of obtaining Virtual Currency are
+    at MGS\u2019s sole discretion. Virtual Currency and Virtual Items are not real
+    currency, do not have monetary value, and may not be redeemed for legal currency,
+    or items of value outside of the Services.\r\n\r\nVirtual Currency and Virtual
+    Items obtained via the Service are provided to you under a limited, personal,
+    revocable, non-transferable, non-sublicenseable license to use within the Service.
+    You have no property interest, right or title in or to any Virtual Currency or
+    Virtual Items appearing or originating in the Service, and they may not be transferred
+    or resold in any manner, including, without limitation, by means of any direct
+    sale or auction service.\r\n\r\nMGS has no liability for hacking or loss of your
+    Virtual Currency or Virtual Items or any goods or services obtained via Virtual
+    Currency. MGS has no obligation to, and will not, reimburse you for any Virtual
+    Currency or Virtual Items obtained via Virtual Currency. MGS reserves the right,
+    in its sole discretion and without prior notification, to change or limit the
+    price, availability, or order quantity of any Virtual Currency or Virtual Items
+    and to refuse to provide you with any Virtual Currency or Virtual Items.\r\n\r\nVirtual
+    Currency may have an expiration date. If your Virtual Currency or Virtual Items
+    expire and you still have an active Account, MGS may offer conversion of such
+    Virtual Currency into Virtual Items for you in its sole discretion, however MGS
+    is under no obligation to do so. Virtual Currency and Virtual Items may be forfeited
+    if: (a) your Account or access to the Services is terminated or suspended for
+    any reason; (b) you breach these Terms; (c) MGS discontinues availability of
+    the Service; or (d) you disassociate from the Service.\r\n\r\nB. Subscriptions\r\n\r\nIn
+    some of our games, you may pay a fee for a subscription membership (\u201CSubscription\u201D).\r\n\r\nWhen
+    you buy a Subscription, you agree to the following:\r\n\r\nA Subscription fee
+    will be charged to your chosen payment method in the app store of your device\u2019s
+    platform (\u201CApp Store\u201D). You will be charged the Subscription fee displayed
+    at the time of sale; and\r\n\r\nYour Subscription will automatically renew for
+    the applicable length of your Subscription until either you or MGS cancels your
+    Subscription. By way of example, if you buy a 3-month Subscription, the Subscription
+    will automatically renew for another 3-month period (unless either you or MGS
+    cancels your Subscription).\r\n\r\nCanceling Subscriptions:\r\n\r\nTo stop automatic
+    renewal of your Subscription and automatic withdrawal of Subscription fees, you
+    must cancel your Subscription within 24 hours before it renews for the length
+    of the next Subscription period. You may cancel your Subscription at any time
+    by managing the subscription settings at your App Store.\r\n\r\nFor the Google
+    Play store, instructions for canceling your Subscription may be found here: https://support.google.com/googleplay/answer/7018481\r\n\r\nFor
+    the Apple App store, instructions for canceling your Subscription may be found
+    here: https://support.apple.com/en-us/HT202039\r\n\r\nOther Subscription Terms:\r\n\r\nTo
+    receive any daily rewards as part of your Subscription, you must open the game
+    that you have the Subscription for. You will not receive rewards for the days
+    on which you did not open the game.\r\n\r\nC. Payments for Subscriptions, Virtual
+    Currencies, and Virtual Items\r\n\r\nWhen you pay for a Subscription, Virtual
+    Currencies, and/or Virtual Items, all payments are charged and processed by the
+    App Store (e.g. the Google Play store or the Apple App store), so please review
+    your app store\u2019s payment terms for additional payment terms that may apply.\r\n\r\nYou
+    agree that all payments for Virtual Currency, Virtual Items, and Subscriptions
+    are final. No refunds will be given, except in MGS\u2019s sole and absolute discretion.\r\n\r\n5.
+    Title.\r\n\r\nUnless otherwise specified in these Terms, any and all title, ownership,
+    rights, and intellectual property rights in and to the Services including all
+    content therein (collectively the \u201CMGS Content\u201D) shall remain in MGS
+    and/or its suppliers, and are protected by the copyright laws of the United Kingdom,
+    the United States and other jurisdictions around the world via international
+    copyright treaties. The names and logos, and other graphics, icons, and service
+    names associated with the MGS Content are trademarks, registered trademarks or
+    trade dress of MGS or its licensors. You may not use, copy, transmit, modify,
+    distribute, or create any derivative works from the Services or the MGS Content
+    without prior written consent from MGS .\r\n\r\nThe Services may allow you to
+    create content (\u201CYour Content\u201D) that incorporates the MGS Content,
+    including, but not limited, to photos incorporating elements or graphics from
+    games, screenshots or a video of your game play. MGS retains all rights, title
+    and interest in and to the MGS Content. You retain all rights to Your Content;
+    provided, however, that MGS shall have an exclusive, perpetual, irrevocable,
+    fully transferable and sub-licensable worldwide right and license to Your Content
+    for any purpose, including, but not limited to, the rights to reproduce, copy,
+    adapt, modify, perform, display, publish, broadcast, transmit, or otherwise communicate
+    to the public by any means whether now known or unknown and distribute Your Content
+    without any further notice or compensation to you. Except where prohibited by
+    law, you hereby waive any moral rights of paternity, publication, reputation,
+    or attribution with respect to MGS\u2019s use of Your Content.\r\n\r\n6. Disclaimer
+    of warranty and limit of liability.\r\n\r\nMGS MAKES NO REPRESENTATION, WARRANTY,
+    AND/OR GUARANTEE OF THE SUITABILITY OF THE SERVICES FOR YOUR PURPOSES, OR THAT
+    THE USE OF THE SAME WILL BE SECURE, UNINTERRUPTED, ERROR-FREE, FREE OF VIRUSES
+    OR OTHER HARMFUL COMPONENTS, OR FUNCTION PROPERLY IN COMBINATION WITH ANY THIRD-PARTY
+    TECHNOLOGY, HARDWARE, SOFTWARE, SYSTEMS OR DATA.\r\n\r\nTHE SERVICES ARE PROVIDED
+    \u201CAS IS\u201D AND ALL CONDITIONS, REPRESENTATIONS AND WARRANTIES, WHETHER
+    EXPRESS, IMPLIED, STATUTORY OR OTHERWISE, INCLUDING, WITHOUT LIMITATION, ANY
+    IMPLIED WARRANTY OF MERCHANTABILITY, TITLE, FITNESS FOR A PARTICULAR PURPOSE,
+    OR NON-INFRINGEMENT ARE HEREBY DISCLAIMED TO THE MAXIMUM EXTENT PERMITTED BY
+    APPLICABLE LAW. FURTHER, MGS MAKES NO REPRESENTATIONS OR WARRANTIES OF ANY KIND,
+    EXPRESS OR IMPLIED, AS TO THE OPERATION OF THE SAME, OR TO THE INFORMATION, CONTENT,
+    COMMUNICATIONS, MATERIALS, OR PRODUCTS AND SERVICE CONTAINED THEREIN. YOUR USE
+    OF THE MGS SERVICES IS AT YOUR SOLE RISK.\r\n\r\nMGS WILL NOT BE LIABLE FOR ANY
+    DAMAGES OF ANY KIND ARISING FROM YOUR USE OF THE SERVICES, INCLUDING, WITHOUT
+    LIMITATION, DIRECT, INDIRECT, INCIDENTAL, PUNITIVE AND CONSEQUENTIAL DAMAGES.
+    CERTAIN REGIONAL LAWS DO NOT ALLOW LIMITATIONS ON IMPLIED WARRANTIES OR THE EXCLUSION
+    OR LIMITATION OF CERTAIN DAMAGES. IF THESE LAWS APPLY TO YOU, SOME OR ALL OF
+    THE ABOVE DISCLAIMERS, EXCLUSIONS, OR LIMITATIONS MAY NOT APPLY TO YOU, AND YOU
+    MAY HAVE ADDITIONAL RIGHTS.\r\n\r\nYOU FURTHER ACKNOWLEDGE THAT MGS IS NOT LIABLE,
+    AND YOU AGREE NOT TO HOLD MGS LIABLE, FOR THE CONDUCT OF THIRD-PARTIES, INCLUDING
+    OTHER USERS OF THE SERVICES AND OTHER THIRD-PARTY SITES, AND THAT THE RISK OF
+    USING OR ACCESSING THE SERVICES, AND OF INJURY FROM THE FOREGOING, RESTS ENTIRELY
+    WITH YOU.\r\n\r\n7. Indemnification.\r\n\r\nYou agree to hold harmless, indemnify
+    and defend MGS, its licensors, affiliates and suppliers and their respective
+    officers, directors and employees, from and against any losses, damages, fines
+    and expenses (including attorneys\u2019 fees and costs) due to, arising out of,
+    or relating to any information or item, including, without limitation, Your Content,
+    Forum Content, and/or Inappropriate Content you may submit, post, transmit or
+    make available through the Forums or Services, your use of the Forums and Services,
+    your connection to the Forums and Services, your violation of these Terms, or
+    your violation of any law, regulation or third-party right. Without limiting
+    your indemnification obligations described herein, MGS reserves the right, at
+    its own expense, to assume the exclusive defense and control of any matter subject
+    to indemnification by you.\r\n\r\n8. Termination.\r\n\r\nThese Terms will automatically
+    terminate if you fail to comply with any term hereof. You and MGS have the right
+    to terminate or cancel your Account, at any time for any reason and without notice.
+    Upon termination you shall immediately discontinue use of the Services. Your
+    obligations under Sections 5, 10, 12, and 13 shall survive any termination.\r\n\r\n9.
+    No assignment.\r\n\r\nThese Terms and the licenses granted to you herein are
+    personal to you, and may not be assigned prior to obtaining MGS\u2019s express
+    written consent.\r\n\r\n10. Arbitration and dispute resolution.\r\n\r\nThese
+    Terms and all disputes and claims relating in any way to, or arising out of,
+    these Terms, the Services, the Forums, Forum Content, Inappropriate Content,
+    Your Content, or your use of the Software or Forums shall be governed by the
+    laws of England and Wales. You and MGS agree that the exclusive remedy for all
+    disputes and claims relating in any way to, or arising out of, these Terms, the
+    Services, the Forums, or your use of the Services or Forums shall be final and
+    binding arbitration. The arbitration shall be conducted under the rules of the
+    ICC International Court of Arbitration (\u201CICA\u201D). To the fullest extent
+    permitted by law: (a) no arbitration under these Terms shall be joined to any
+    other arbitration; (b) no class arbitration proceedings shall be permitted; (c)
+    no finding or stipulation of fact in any other arbitration, judicial or similar
+    proceeding may be given preclusive or collateral estoppel effect in any arbitration
+    hereunder (unless determined in another proceeding between you and MGS); and
+    (d) no conclusion of law in any other arbitration may be given any weight in
+    any arbitration hereunder (unless determined in another proceeding between you
+    and MGS ). You and MGS must commence an arbitration by filing a demand for arbitration
+    with the ICA within ONE (1) YEAR after the date the party asserting the claim
+    first knows or reasonably should know of the act, omission or default giving
+    rise to the claim; and there shall be no right to any remedy for any claim not
+    asserted within that time period (if applicable law prohibits a one year limitations
+    period for asserting claims, the claim must be asserted within the shortest time
+    period in excess of one year that is permitted by applicable law). Both parties
+    will be responsible for their respective arbitration fees."
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 5e7c71a279ec23f41b6c2e0a34682b02, type: 2}
+  m_sharedMaterial: {fileID: -1472557853407900055, guid: 5e7c71a279ec23f41b6c2e0a34682b02, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4282410656
+  m_fontColor: {r: 0.627451, g: 0.40000004, b: 0.2509804, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 58.55
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 40
+  m_fontSizeMax: 71.77
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &339670711
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339670708}
+  m_CullTransparentMesh: 1
+--- !u!114 &339670712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339670708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 2
+--- !u!1 &366556321
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 366556322}
+  - component: {fileID: 366556324}
+  - component: {fileID: 366556323}
+  m_Layer: 5
+  m_Name: Handle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &366556322
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366556321}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 757475949}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 20, y: 20}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &366556323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366556321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &366556324
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366556321}
   m_CullTransparentMesh: 1
 --- !u!1 &377160464
 GameObject:
@@ -624,8 +1048,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -103, y: -178}
-  m_SizeDelta: {x: 133, y: 139}
+  m_AnchoredPosition: {x: -140, y: -191}
+  m_SizeDelta: {x: 80, y: 76}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &377160466
 MonoBehaviour:
@@ -715,7 +1139,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: de36cf1303367a847a694e5fb488caca, type: 3}
+  m_Sprite: {fileID: 3959922740387019359, guid: d2eb1c00163337a4aa35237c3564ce98, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -732,6 +1156,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 377160464}
+  m_CullTransparentMesh: 1
+--- !u!1 &458656897
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 458656898}
+  - component: {fileID: 458656900}
+  - component: {fileID: 458656899}
+  m_Layer: 5
+  m_Name: SoundLabel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &458656898
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458656897}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 692767434}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -183, y: -25}
+  m_SizeDelta: {x: 388, y: 130}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &458656899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458656897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 21e50ff2a53716b4d988ae87291a74a0, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &458656900
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458656897}
   m_CullTransparentMesh: 1
 --- !u!1 &477037495
 GameObject:
@@ -764,6 +1263,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1389428038}
+  - {fileID: 491618974}
   m_Father: {fileID: 1145303630}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -791,7 +1291,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7e99a720366004f41a7eabf7d17cc9b7, type: 3}
+  m_Sprite: {fileID: -1450627045260312672, guid: 145190940c58fbb4b8217d9b2e134e18, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -808,6 +1308,146 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 477037495}
+  m_CullTransparentMesh: 1
+--- !u!1 &491618973
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 491618974}
+  - component: {fileID: 491618976}
+  - component: {fileID: 491618975}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &491618974
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491618973}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 477037496}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.23999023, y: -59.26001}
+  m_SizeDelta: {x: -212.49, y: -347.26}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &491618975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491618973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Founded in 2023, MEEPO Game Studio is a group of small people with big
+    dreams, starting with small things. We always aim for enthusiasm, creativity
+    and build the foundation for our core values. What's more, we are constantly
+    striving for development and mutual benefit. Especially, our employees are the
+    heart of our company.
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 5e7c71a279ec23f41b6c2e0a34682b02, type: 2}
+  m_sharedMaterial: {fileID: -1472557853407900055, guid: 5e7c71a279ec23f41b6c2e0a34682b02, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4282410656
+  m_fontColor: {r: 0.627451, g: 0.4, b: 0.2509804, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 72
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &491618976
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491618973}
   m_CullTransparentMesh: 1
 --- !u!1 &623940923
 GameObject:
@@ -840,6 +1480,79 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &692767433
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 692767434}
+  m_Layer: 5
+  m_Name: SoundButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &692767434
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692767433}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1541092993}
+  - {fileID: 458656898}
+  m_Father: {fileID: 1063616284}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -446}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &757475948
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 757475949}
+  m_Layer: 5
+  m_Name: Sliding Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &757475949
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757475948}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 366556322}
+  m_Father: {fileID: 1695996386}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -20, y: -20}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &780604465
 GameObject:
   m_ObjectHideFlags: 0
@@ -959,15 +1672,15 @@ RectTransform:
   m_GameObject: {fileID: 829325622}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.4154, y: 1.4154, z: 1.4154}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1063616284}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 396, y: 213}
-  m_SizeDelta: {x: 41, y: 45}
+  m_AnchoredPosition: {x: 370.9, y: 245.4}
+  m_SizeDelta: {x: 67.57, y: 71.72}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &829325624
 MonoBehaviour:
@@ -1057,7 +1770,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 52315aee03fd67049af83a379298653b, type: 3}
+  m_Sprite: {fileID: 3959922740387019359, guid: d2eb1c00163337a4aa35237c3564ce98, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1171,10 +1884,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 829325623}
-  - {fileID: 1541092993}
-  - {fileID: 1244016510}
-  - {fileID: 1512736238}
-  - {fileID: 2126676927}
+  - {fileID: 692767434}
+  - {fileID: 1161246660}
   - {fileID: 1137333446}
   - {fileID: 291943759}
   - {fileID: 213654975}
@@ -1205,7 +1916,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6f700825996617a4eba3855c2463cdf3, type: 3}
+  m_Sprite: {fileID: 7907435572179794945, guid: 66e72c033df85ca4a95abbb18fc97557, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1526,6 +2237,43 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1161246659
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1161246660}
+  m_Layer: 5
+  m_Name: MusicButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1161246660
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161246659}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2146323732}
+  - {fileID: 1244016510}
+  m_Father: {fileID: 1063616284}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -323}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1199322167
 GameObject:
   m_ObjectHideFlags: 0
@@ -1652,6 +2400,96 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1208431551}
   m_CullTransparentMesh: 1
+--- !u!1 &1218356398
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1218356399}
+  - component: {fileID: 1218356402}
+  - component: {fileID: 1218356401}
+  - component: {fileID: 1218356400}
+  m_Layer: 5
+  m_Name: Viewport
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1218356399
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218356398}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 339670709}
+  m_Father: {fileID: 1417122460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &1218356400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218356398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
+--- !u!114 &1218356401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218356398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.6313726}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1218356402
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218356398}
+  m_CullTransparentMesh: 1
 --- !u!1 &1244016509
 GameObject:
   m_ObjectHideFlags: 0
@@ -1678,17 +2516,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1244016509}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.92045, y: 0.92045, z: 0.92045}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1063616284}
+  m_Father: {fileID: 1161246660}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 96.99998, y: 130}
-  m_SizeDelta: {x: 113, y: 122}
+  m_AnchoredPosition: {x: 174, y: 9.000002}
+  m_SizeDelta: {x: 314, y: 149}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1244016511
 MonoBehaviour:
@@ -1778,7 +2616,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a9d3ee166ef3ccd428ba26340f420749, type: 3}
+  m_Sprite: {fileID: 5175489880400350850, guid: 79395b9edf9b6ce49a28fb2862d133ba, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2050,8 +2888,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -99, y: -178}
-  m_SizeDelta: {x: 133, y: 139}
+  m_AnchoredPosition: {x: -146, y: -182.44}
+  m_SizeDelta: {x: 80, y: 65.89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1389428039
 MonoBehaviour:
@@ -2141,7 +2979,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: de36cf1303367a847a694e5fb488caca, type: 3}
+  m_Sprite: {fileID: 3959922740387019359, guid: d2eb1c00163337a4aa35237c3564ce98, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2296,6 +3134,114 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1413212278}
+  m_CullTransparentMesh: 1
+--- !u!1 &1417122459
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1417122460}
+  - component: {fileID: 1417122463}
+  - component: {fileID: 1417122462}
+  - component: {fileID: 1417122461}
+  m_Layer: 5
+  m_Name: Scroll View
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1417122460
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417122459}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1218356399}
+  - {fileID: 1695996386}
+  m_Father: {fileID: 1672678299}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -1, y: -33.51001}
+  m_SizeDelta: {x: -197.99, y: -281.09}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1417122461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417122459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Content: {fileID: 339670709}
+  m_Horizontal: 0
+  m_Vertical: 1
+  m_MovementType: 1
+  m_Elasticity: 0.1
+  m_Inertia: 1
+  m_DecelerationRate: 0.135
+  m_ScrollSensitivity: 1
+  m_Viewport: {fileID: 1218356399}
+  m_HorizontalScrollbar: {fileID: 0}
+  m_VerticalScrollbar: {fileID: 1695996387}
+  m_HorizontalScrollbarVisibility: 2
+  m_VerticalScrollbarVisibility: 2
+  m_HorizontalScrollbarSpacing: -3
+  m_VerticalScrollbarSpacing: -3
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1417122462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417122459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1417122463
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417122459}
   m_CullTransparentMesh: 1
 --- !u!1 &1418439007
 GameObject:
@@ -2700,144 +3646,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!1 &1512736237
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1512736238}
-  - component: {fileID: 1512736240}
-  - component: {fileID: 1512736239}
-  m_Layer: 5
-  m_Name: SoundLabel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1512736238
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1512736237}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1063616284}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -118.00002, y: 131}
-  m_SizeDelta: {x: 206.95, y: 73.71}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1512736239
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1512736237}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: 'Sound
-
-'
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5e7c71a279ec23f41b6c2e0a34682b02, type: 2}
-  m_sharedMaterial: {fileID: -1472557853407900055, guid: 5e7c71a279ec23f41b6c2e0a34682b02, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4281286510
-  m_fontColor: {r: 0.43137258, g: 0.24705884, b: 0.18431373, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 73.7
-  m_fontSizeBase: 36
-  m_fontWeight: 400
-  m_enableAutoSizing: 1
-  m_fontSizeMin: 18
-  m_fontSizeMax: 75
-  m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 8192
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 0
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_ActiveFontFeatures: 6e72656b
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_EmojiFallbackSupport: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &1512736240
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1512736237}
-  m_CullTransparentMesh: 1
 --- !u!1001 &1532510839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2952,17 +3760,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1541092992}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.92045, y: 0.92045, z: 0.92045}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1063616284}
+  m_Father: {fileID: 692767434}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -292.49902, y: 130}
-  m_SizeDelta: {x: 113, y: 122}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 174, y: -73}
+  m_SizeDelta: {x: 314, y: 149}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1541092994
 MonoBehaviour:
@@ -3052,7 +3860,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4eb278292b90b504b9431c222b9b1c94, type: 3}
+  m_Sprite: {fileID: 5175489880400350850, guid: 79395b9edf9b6ce49a28fb2862d133ba, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3233,13 +4041,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTweenScale: {x: 0, y: 0, z: 0}
   endTweenScale: {x: 1, y: 1, z: 1}
-  tweenTime: 0.4
+  tweenTime: 0.3
   sfxButton: {fileID: 1541092994}
   musicButton: {fileID: 1244016511}
-  activatedSoundButtonSprite: {fileID: 21300000, guid: 4eb278292b90b504b9431c222b9b1c94, type: 3}
-  disabledSoundButtonSprite: {fileID: 21300000, guid: 0d8e928a4f0028d4b8071b80a980a43f, type: 3}
-  activatedMusicButtonSprite: {fileID: 21300000, guid: a9d3ee166ef3ccd428ba26340f420749, type: 3}
-  disabledMusicButtonSprite: {fileID: 21300000, guid: bceeb5e7f4ccbee4a88e42702b0dc7cc, type: 3}
+  activatedSoundButtonSprite: {fileID: 5175489880400350850, guid: 79395b9edf9b6ce49a28fb2862d133ba, type: 3}
+  disabledSoundButtonSprite: {fileID: -6804654954444095153, guid: 3e8f92680a9f8a14a83b1841e059020f, type: 3}
+  activatedMusicButtonSprite: {fileID: 5175489880400350850, guid: 79395b9edf9b6ce49a28fb2862d133ba, type: 3}
+  disabledMusicButtonSprite: {fileID: -6804654954444095153, guid: 3e8f92680a9f8a14a83b1841e059020f, type: 3}
   settingPopup: {fileID: 1063616283}
   screenDarken: {fileID: 1306936658}
   privacyPolicy: {fileID: 1672678296}
@@ -3302,7 +4110,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3b0dd5bdb49173644bf70f65433954c1, type: 3}
+  m_Sprite: {fileID: 1206289083466979691, guid: 44e3e7fcecc1aee418cdda106983f032, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3332,14 +4140,141 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1417122460}
   - {fileID: 377160465}
   m_Father: {fileID: 1145303630}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 2}
   m_SizeDelta: {x: 1576, y: 977.3047}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1695996385
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1695996386}
+  - component: {fileID: 1695996389}
+  - component: {fileID: 1695996388}
+  - component: {fileID: 1695996387}
+  m_Layer: 5
+  m_Name: Scrollbar Vertical
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1695996386
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695996385}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 757475949}
+  m_Father: {fileID: 1417122460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 20, y: -17}
+  m_Pivot: {x: 1, y: 0}
+--- !u!114 &1695996387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695996385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a4db7a114972834c8e4117be1d82ba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 366556323}
+  m_HandleRect: {fileID: 366556322}
+  m_Direction: 2
+  m_Value: 1
+  m_Size: 0.5481317
+  m_NumberOfSteps: 0
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1695996388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695996385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1695996389
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695996385}
+  m_CullTransparentMesh: 1
 --- !u!1 &1965606424
 GameObject:
   m_ObjectHideFlags: 0
@@ -3415,7 +4350,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1965606424}
   m_CullTransparentMesh: 1
---- !u!1 &2126676926
+--- !u!1 &2146323731
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3423,9 +4358,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2126676927}
-  - component: {fileID: 2126676929}
-  - component: {fileID: 2126676928}
+  - component: {fileID: 2146323732}
+  - component: {fileID: 2146323734}
+  - component: {fileID: 2146323733}
   m_Layer: 5
   m_Name: MusicLabel
   m_TagString: Untagged
@@ -3433,35 +4368,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &2126676927
+--- !u!224 &2146323732
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2126676926}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_GameObject: {fileID: 2146323731}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1063616284}
+  m_Father: {fileID: 1161246660}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 278, y: 131.00002}
-  m_SizeDelta: {x: 206.95, y: 73.71}
+  m_AnchoredPosition: {x: -193, y: 8}
+  m_SizeDelta: {x: 386, y: 123}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2126676928
+--- !u!114 &2146323733
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2126676926}
+  m_GameObject: {fileID: 2146323731}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -3472,86 +4407,23 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Music
-
-'
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5e7c71a279ec23f41b6c2e0a34682b02, type: 2}
-  m_sharedMaterial: {fileID: -1472557853407900055, guid: 5e7c71a279ec23f41b6c2e0a34682b02, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4281285228
-  m_fontColor: {r: 0.42352945, g: 0.227451, b: 0.18431373, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 73.7
-  m_fontSizeBase: 36
-  m_fontWeight: 400
-  m_enableAutoSizing: 1
-  m_fontSizeMin: 18
-  m_fontSizeMax: 75
-  m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 8192
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 0
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_ActiveFontFeatures: 6e72656b
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_EmojiFallbackSupport: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &2126676929
+  m_Sprite: {fileID: 21300000, guid: ce26d7ef1ed5e3b4c9b54909db208f69, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2146323734
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2126676926}
+  m_GameObject: {fileID: 2146323731}
   m_CullTransparentMesh: 1
 --- !u!1 &193008760421722904
 GameObject:

@@ -29,6 +29,7 @@ public class LoadSettingPopup : MonoBehaviour
 
     // Screen Darken
     [SerializeField] GameObject screenDarken;
+    Image screenDarkenImage;
 
     [SerializeField] GameObject privacyPolicy;
     [SerializeField] GameObject aboutUs;
@@ -48,7 +49,7 @@ public class LoadSettingPopup : MonoBehaviour
 
     void Awake()
     {
-
+        screenDarkenImage = screenDarken.GetComponent<Image>();
 
         audioManager = FindAnyObjectByType<AudioManager>();
         gameMusic = FindAnyObjectByType<BackgroundMusicPlayer>();
@@ -104,14 +105,21 @@ public class LoadSettingPopup : MonoBehaviour
             settingPopup.transform.DOScale(endTweenScale, tweenTime)
                 .SetEase(Ease.InSine);
             isSetting = true;
+
             screenDarken.SetActive(true);
+
+            screenDarkenImage.DOFade(0.5f, tweenTime)
+                .SetEase(Ease.OutBack);
 
         } else if (isSetting)
         {
             settingPopup.transform.DOScale(startTweenScale, tweenTime)
                 .SetEase(Ease.OutSine);
             isSetting = false;
-            screenDarken.SetActive(false);
+            screenDarkenImage.DOFade(0, tweenTime)
+                .SetEase(Ease.InBack);
+
+            StartCoroutine(DisableScreenDarken(tweenTime));
         }
     }
 
@@ -209,5 +217,10 @@ public class LoadSettingPopup : MonoBehaviour
         }
     }
 
+    IEnumerator DisableScreenDarken(float delay)
+    {
+        yield return new WaitForSeconds(delay);
 
+        screenDarken.SetActive(false);
+    }
 }
