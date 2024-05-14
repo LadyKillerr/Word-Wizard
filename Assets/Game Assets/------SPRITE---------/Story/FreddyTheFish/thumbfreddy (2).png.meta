@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      thumbfreddy (2)_0: -215076530526341208
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

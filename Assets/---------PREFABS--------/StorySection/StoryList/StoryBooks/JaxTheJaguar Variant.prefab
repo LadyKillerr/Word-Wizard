@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &8858295836429483247
+--- !u!1001 &7428857714844896794
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -12,13 +12,9 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: e42101b60fa9e2c4392dfcab11fe7344, type: 3}
-    - target: {fileID: 2361034096842946257, guid: 12df3394cd53d2f479544f43fb749425, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: -1472557853407900055, guid: 5e7c71a279ec23f41b6c2e0a34682b02, type: 2}
     - target: {fileID: 2441398799443602533, guid: 12df3394cd53d2f479544f43fb749425, type: 3}
       propertyPath: m_Name
-      value: Jax The Jaguar  Variant
+      value: JaxTheJaguar Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2724418658143706670, guid: 12df3394cd53d2f479544f43fb749425, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName

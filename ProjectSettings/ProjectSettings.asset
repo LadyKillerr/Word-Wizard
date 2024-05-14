@@ -163,7 +163,7 @@ PlayerSettings:
   androidMinAspectRatio: 1
   applicationIdentifier:
     Android: com.sunnyfriends.stories.kids
-    Standalone: com.DefaultCompany.2DProject
+    Standalone: com.MeepoStudio.Learn-Stories
     iPhone: com.sunnyfriends.stories.kids
   buildNumber:
     Bratwurst: 0

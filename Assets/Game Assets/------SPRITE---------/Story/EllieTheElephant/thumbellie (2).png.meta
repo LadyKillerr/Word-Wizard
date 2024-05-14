@@ -156,7 +156,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      thumbellie (2)_0: -7533198916807823903
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
