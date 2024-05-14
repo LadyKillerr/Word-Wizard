@@ -21,11 +21,11 @@ public class NotiManager : MonoBehaviour
     [SerializeField] GameObject spawnLocation;
 
     StoryManager storyManager;
-    QuestionManager questionManager;
+
     AudioManager audioManager;
 
     //Header("Load Hint Parts")]
-    [SerializeField] int question1Part = 0;
+    //[SerializeField] int question1Part = 0;
     //[SerializeField] int question2Part = 0;
     //[SerializeField] int question3Part = 0;
     //[SerializeField] int question4Part = 0;
@@ -35,7 +35,7 @@ public class NotiManager : MonoBehaviour
 
     void Awake()
     {
-        questionManager = FindAnyObjectByType<QuestionManager>();
+
         storyManager = FindAnyObjectByType<StoryManager>();
         audioManager = FindAnyObjectByType<AudioManager>();
 
@@ -139,7 +139,7 @@ public class NotiManager : MonoBehaviour
         {
             Debug.Log("Đã reset lại story part về part đầu tiên của truyện");
 
-            storyManager.LoadSpecificStoryPart(question1Part);
+            storyManager.LoadSpecificStoryPart(0);
 
             //switch (questionManager.GetCurrentIndex())
             //{

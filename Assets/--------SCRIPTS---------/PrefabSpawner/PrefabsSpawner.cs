@@ -8,7 +8,7 @@ public class PrefabsSpawner : MonoBehaviour
     // hidden components
 
     AudioManager audioManager;
-
+     
     [SerializeField] bool isSelected = false;
 
     [Header("Open Components")]

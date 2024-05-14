@@ -1,0 +1,5 @@
+E:/Re clone/Word-Wizard/.utmp/RelWithDebInfo/2d67i6ka/armeabi-v7a/CMakeFiles/edit_cache.dir
+E:/Re clone/Word-Wizard/.utmp/RelWithDebInfo/2d67i6ka/armeabi-v7a/CMakeFiles/rebuild_cache.dir
+E:/Re clone/Word-Wizard/.utmp/RelWithDebInfo/2d67i6ka/armeabi-v7a/FramePacing/CMakeFiles/swappywrapper.dir
+E:/Re clone/Word-Wizard/.utmp/RelWithDebInfo/2d67i6ka/armeabi-v7a/FramePacing/CMakeFiles/edit_cache.dir
+E:/Re clone/Word-Wizard/.utmp/RelWithDebInfo/2d67i6ka/armeabi-v7a/FramePacing/CMakeFiles/rebuild_cache.dir

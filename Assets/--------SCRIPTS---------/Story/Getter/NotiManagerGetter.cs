@@ -6,18 +6,16 @@ public class NotiManagerGetter : MonoBehaviour
 {
     NotiManager notiManager;
     AudioManager audioManager;
+    StoryManager storyManager;
 
     // Start is called before the first frame update
     void Awake()
     {
         notiManager = FindAnyObjectByType<NotiManager>();
         audioManager = FindAnyObjectByType<AudioManager>();
+        storyManager = FindAnyObjectByType<StoryManager>();
     }
 
-    public void ResetStory()
-    {
-        notiManager.ReloadStory();
-    }
 
     public void PlayButtonAudio()
     {
@@ -31,6 +29,8 @@ public class NotiManagerGetter : MonoBehaviour
     public void HideIsLockedNoti()
     {
         notiManager.HideIsLockedNoti();
+
+        notiManager.ReloadStory();
     }
 
     public void HideWrongAnswerNoti()
