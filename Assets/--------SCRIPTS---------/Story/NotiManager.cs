@@ -79,7 +79,6 @@ public class NotiManager : MonoBehaviour
         }
 
 
-
     }
 
     #endregion
@@ -94,7 +93,7 @@ public class NotiManager : MonoBehaviour
 
         if (wrongAnswerNoti != null)
         {
-            if (spawnLocation.transform.childCount <= 1 )
+            if (spawnLocation.transform.childCount <= 1)
             {
 
                 Instantiate(wrongAnswerNoti, spawnLocation.transform);
@@ -120,75 +119,17 @@ public class NotiManager : MonoBehaviour
             spawnLocation.transform.GetChild(1).transform.DOScale(startValue, tweenTime)
                 .SetEase(Ease.InBack);
 
-            StartCoroutine(KillNoti(tweenTime));
+
+            // Load lại game từ đầu luôn
+            FindAnyObjectByType<StoryManager>().LoadSpecificStoryPart(0);
+
+
         }
-    }
-
-    IEnumerator KillNoti(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-
-        //hildDestroy(spawnLocation.gameObject.GetC(1);
     }
 
     #endregion
 
-    public void ReloadStory()
-    {
-        if (storyManager != null)
-        {
-            Debug.Log("Đã reset lại story part về part đầu tiên của truyện");
 
-            storyManager.LoadSpecificStoryPart(0);
-
-            //switch (questionManager.GetCurrentIndex())
-            //{
-            //	case 0:
-
-
-
-            //		storyManager.LoadSpecificStoryPart(question1Part);
-
-            //		break;
-            //	case 1:
-
-
-
-            //		storyManager.LoadSpecificStoryPart(question1Part);
-
-            //		break;
-            //	case 2:
-
-
-
-            //		storyManager.LoadSpecificStoryPart(question1Part);
-
-            //		break;
-            //	case 3:
-
-
-
-            //		storyManager.LoadSpecificStoryPart(question1Part);
-
-            //		break;
-            //	case 4:
-
-
-
-            //		storyManager.LoadSpecificStoryPart(question1Part);
-
-            //		break;
-            //	case 5:
-
-
-
-            //		storyManager.LoadSpecificStoryPart(question1Part);
-
-            //		break;
-
-            //}
-        }
-    }
 
     public void PlayButtonAudio()
     {
