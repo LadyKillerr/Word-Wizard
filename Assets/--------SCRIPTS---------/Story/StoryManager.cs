@@ -209,7 +209,7 @@ public class StoryManager : MonoBehaviour
     public void NextPart()
     {
 
-        Debug.Log("NextPartActivated");
+
         // nếu index chưa phải max (chưa phải part cuối trong 1 câu truyện)
         // trừ 1 vì bắt đầu từ mảng bắt đầu từ 0
         if (currentIndex >= 0 && currentIndex < lastIndex && (!isReading || isCheating))
@@ -231,7 +231,7 @@ public class StoryManager : MonoBehaviour
             // tăng index lên sau khi đã ẩn hình với ảnh hiện tại đi
             LoadParts();
 
-            Debug.Log("Sang trang mới của truyện");
+
         }
         // nếu index đã max (là part cuối trong 1 câu truyện)
         else if (currentIndex >= lastIndex && !isReading && !isIntersect)

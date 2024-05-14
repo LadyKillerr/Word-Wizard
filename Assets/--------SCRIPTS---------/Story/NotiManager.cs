@@ -5,169 +5,192 @@ using DG.Tweening;
 
 public class NotiManager : MonoBehaviour
 {
-    [SerializeField] GameObject screenDarken;
-
-    [Header("Noti")]
-    [SerializeField] GameObject wrongAnswerNoti;
-    [SerializeField] GameObject lockedNoti;
-
-    [Header("Scale Tween")]
-    [SerializeField] Vector2 startValue = new Vector2(0, 0);
-    [SerializeField] Vector2 endValue = new Vector2(1, 1);
-
-    [SerializeField] float tweenTime = 0.5f;
 
 
-    StoryManager storyManager;
-    QuestionManager questionManager;
-    AudioManager audioManager;
+	[Header("Noti")]
+	[SerializeField] GameObject wrongAnswerNoti;
+	[SerializeField] GameObject lockedNoti;
 
-    [Header("Load Hint Parts")]
-    [SerializeField] int question1Part = 0;
-    [SerializeField] int question2Part = 0;
-    [SerializeField] int question3Part = 0;
-    [SerializeField] int question4Part = 0;
-    [SerializeField] int question5Part = 0;
-    [SerializeField] int question6Part = 0;
+	[Header("Scale Tween")]
+	[SerializeField] Vector2 startValue = new Vector2(0, 0);
+	[SerializeField] Vector2 endValue = new Vector2(1, 1);
+
+	[SerializeField] float tweenTime = 0.5f;
 
 
-    void Awake()
-    {
-        questionManager = FindAnyObjectByType<QuestionManager>();
-        storyManager = FindAnyObjectByType<StoryManager>();
-        audioManager = FindAnyObjectByType<AudioManager>();
+	[SerializeField] GameObject spawnLocation;
 
-    }
+	StoryManager storyManager;
+	QuestionManager questionManager;
+	AudioManager audioManager;
+
+	//Header("Load Hint Parts")]
+	[SerializeField] int question1Part = 0;
+	//[SerializeField] int question2Part = 0;
+	//[SerializeField] int question3Part = 0;
+	//[SerializeField] int question4Part = 0;
+	//[SerializeField] int question5Part = 0;
+	//[SerializeField] int question6Part = 0;
 
 
-    #region isLockedNoti
+	void Awake()
+	{
+		questionManager = FindAnyObjectByType<QuestionManager>();
+		storyManager = FindAnyObjectByType<StoryManager>();
+		audioManager = FindAnyObjectByType<AudioManager>();
 
-    public void ShowIsLockedNoti()
-    {
-        if (lockedNoti != null)
-        {
+	}
 
-            lockedNoti.transform.DOScale(endValue, tweenTime)
-                .SetEase(Ease.InOutSine);
+
+	#region isLockedNoti
+
+	public void ShowIsLockedNoti()
+	{
+		if (lockedNoti != null)
+		{
+
+
+			Instantiate(lockedNoti, spawnLocation.transform);
+
+			spawnLocation.transform.GetChild(1).transform.localScale = new Vector2(0, 0);
+
+			spawnLocation.transform.GetChild(1).transform.DOScale(endValue, tweenTime)
+				.SetEase(Ease.InOutSine);
+		}
+
+
+
+
+
+	}
+
+	public void HideIsLockedNoti()
+	{
+		if (lockedNoti != null)
+		{
+			spawnLocation.transform.GetChild(1).transform.DOScale(startValue, tweenTime)
+			   .SetEase(Ease.OutBack);
+
+
+		}
+
+
+
+	}
+
+	#endregion
+
+
+	#region WrongAnswerNoti
+
+	public void ShowWrongAnswerNoti()
+	{
+
+
+
+		if (wrongAnswerNoti != null)
+		{
+
+			Instantiate(wrongAnswerNoti, spawnLocation.transform);
+
+			spawnLocation.transform.GetChild(1).transform.localScale = new Vector2(0, 0);
+
+			spawnLocation.transform.GetChild(1).transform.DOScale(endValue, tweenTime)
+				.SetEase(Ease.OutBack);
+
+		}
+	}
+
+	public void HideWrongAnswerNoti()
+	{
+		if (wrongAnswerNoti != null)
+		{
+
+			wrongAnswerNoti.transform.DOScale(startValue, tweenTime)
+				.SetEase(Ease.InOutSine);
+
+			spawnLocation.transform.GetChild(1).transform.DOScale(startValue, tweenTime)
+				.SetEase(Ease.InBack);
+
+			StartCoroutine(KillNoti(tweenTime));
+		}
+	}
+
+	IEnumerator KillNoti(float delay)
+	{
+		yield return new WaitForSeconds(delay);
+
+		//hildDestroy(spawnLocation.gameObject.GetC(1);
+	}
+
+	#endregion
+
+	public void ReloadStory()
+	{
+		if (storyManager != null)
+		{
+			Debug.Log("Đã reset lại story part về part đầu tiên của truyện");
+
+            storyManager.LoadSpecificStoryPart(question1Part);
+
+            //switch (questionManager.GetCurrentIndex())
+            //{
+            //	case 0:
+
+
+
+            //		storyManager.LoadSpecificStoryPart(question1Part);
+
+            //		break;
+            //	case 1:
+
+
+
+            //		storyManager.LoadSpecificStoryPart(question1Part);
+
+            //		break;
+            //	case 2:
+
+
+
+            //		storyManager.LoadSpecificStoryPart(question1Part);
+
+            //		break;
+            //	case 3:
+
+
+
+            //		storyManager.LoadSpecificStoryPart(question1Part);
+
+            //		break;
+            //	case 4:
+
+
+
+            //		storyManager.LoadSpecificStoryPart(question1Part);
+
+            //		break;
+            //	case 5:
+
+
+
+            //		storyManager.LoadSpecificStoryPart(question1Part);
+
+            //		break;
+
+            //}
         }
+	}
+
+	public void PlayButtonAudio()
+	{
+		if (audioManager != null)
+		{
+			audioManager.PlayButtonClip();
+
+		}
+	}
 
 
-
-        screenDarken.SetActive(true);
-
-    }
-
-    public void HideIsLockedNoti()
-    {
-        if (lockedNoti != null)
-        {
-            lockedNoti.transform.DOScale(startValue, tweenTime)
-               .SetEase(Ease.InOutSine);
-
-
-        }
-        screenDarken.SetActive(value: false);
-
-
-    }
-
-    #endregion
-
-
-    #region WrongAnswerNoti
-
-    public void ShowWrongAnswerNoti()
-    {
-
-        screenDarken.SetActive(true);
-
-        if (wrongAnswerNoti != null)
-        {
-            wrongAnswerNoti.transform.DOScale(endValue, tweenTime)
-                .SetEase(Ease.InOutSine);
-
-        }
-    }
-
-    public void HideWrongAnswerNoti()
-    {
-        if (wrongAnswerNoti != null)
-        {
-
-            wrongAnswerNoti.transform.DOScale(startValue, tweenTime)
-                .SetEase(Ease.InOutSine);
-
-
-        }
-
-        screenDarken.SetActive(false);
-
-
-    }
-
-    #endregion
-
-    public void ReloadStory()
-    {
-        if (questionManager != null && storyManager != null)
-        {
-
-            switch (questionManager.GetCurrentIndex())
-            {
-                case 0:
-
-
-
-                    storyManager.LoadSpecificStoryPart(question1Part);
-
-                    break;
-                case 1:
-
-
-
-                    storyManager.LoadSpecificStoryPart(question2Part);
-
-                    break;
-                case 2:
-
-
-
-                    storyManager.LoadSpecificStoryPart(question3Part);
-
-                    break;
-                case 3:
-
-
-
-                    storyManager.LoadSpecificStoryPart(question4Part);
-
-                    break;
-                case 4:
-
-
-
-                    storyManager.LoadSpecificStoryPart(question5Part);
-
-                    break;
-                case 5:
-
-
-
-                    storyManager.LoadSpecificStoryPart(question6Part);
-
-                    break;
-
-            }
-        }
-    }
-
-    public void PlayButtonAudio()
-    {
-        if (audioManager != null)
-        {
-            audioManager.PlayButtonClip();
-
-        }
-    }
 
 }

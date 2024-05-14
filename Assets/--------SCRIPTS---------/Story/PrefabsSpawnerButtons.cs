@@ -60,7 +60,7 @@ public class PrefabsSpawnerButtons : MonoBehaviour
         prefabsIndex = prefabsSpawner.GetPrefabsIndex();
 
         prefabsSpawner.SpawnStoryPrefabs(prefabsIndex);
-        Debug.Log("Run SpawnStory Prefabs");
+
     }
 
     public void ConnectQuizPrefabs()

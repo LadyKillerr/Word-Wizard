@@ -107,7 +107,7 @@ public class QuestionManager : MonoBehaviour
 
     SwipeHandler swipeHandler;
 
-    NotiManager tutorialManager;
+    NotiManager ttMtM;
     public void ActivatePendingStatus()
     {
         if (PlayerPrefs.GetInt(levelPrefName) == 1)
@@ -134,7 +134,7 @@ public class QuestionManager : MonoBehaviour
 
         swipeHandler = FindAnyObjectByType<SwipeHandler>();
 
-        tutorialManager = FindAnyObjectByType<NotiManager>();
+        ttMtM = FindAnyObjectByType<NotiManager>();
     }
 
     private void Start()
@@ -304,7 +304,7 @@ public class QuestionManager : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
 
-        tutorialManager.ShowWrongAnswerNoti();
+        ttMtM.ShowWrongAnswerNoti();
     }
 
     public void StartLoadQuestionAudio()
