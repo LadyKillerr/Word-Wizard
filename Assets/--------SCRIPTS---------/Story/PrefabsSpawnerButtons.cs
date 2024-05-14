@@ -79,6 +79,8 @@ public class PrefabsSpawnerButtons : MonoBehaviour
         else
         {
             notiManager.ShowIsLockedNoti();
+
+            audioManager.PlayBugClip();
         }
 
     }
