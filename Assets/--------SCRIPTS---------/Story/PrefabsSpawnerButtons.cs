@@ -47,6 +47,11 @@ public class PrefabsSpawnerButtons : MonoBehaviour
         prefabsSpawner.HideSelectionPanel();
     }
 
+    public void KillSelectionPanel()
+    {
+        prefabsSpawner.KillSelectionPanel();
+    }
+
     public void TurnOffGame()
     {
         Debug.Log("The game has been turned off");
@@ -72,7 +77,7 @@ public class PrefabsSpawnerButtons : MonoBehaviour
 
             prefabsSpawner.SpawnQuizPrefabs(prefabsIndex);
 
-            Debug.Log("Run Spawn Quiz Prefabs");
+
 
         }
         // nếu status là chưa xong || pending thì không nhận 
@@ -80,7 +85,11 @@ public class PrefabsSpawnerButtons : MonoBehaviour
         {
             notiManager.ShowIsLockedNoti();
 
-            audioManager.PlayBugClip();
+            if (audioManager != null)
+            {
+                audioManager.PlayBugClip();
+
+            }
         }
 
     }
@@ -91,6 +100,6 @@ public class PrefabsSpawnerButtons : MonoBehaviour
         {
             audioManager.PlayButtonClip();
 
-        } 
+        }
     }
 }

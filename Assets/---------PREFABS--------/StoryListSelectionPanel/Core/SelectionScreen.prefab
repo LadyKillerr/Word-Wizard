@@ -306,7 +306,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8752112810927376960}
         m_TargetAssemblyTypeName: PrefabsSpawnerButtons, Assembly-CSharp
-        m_MethodName: HideSelectionPanel
+        m_MethodName: KillSelectionPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

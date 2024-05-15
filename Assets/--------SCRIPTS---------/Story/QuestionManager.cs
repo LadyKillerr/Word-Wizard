@@ -107,7 +107,9 @@ public class QuestionManager : MonoBehaviour
 
     SwipeHandler swipeHandler;
 
-    NotiManager ttMtM;
+    NotiManager notiManager;
+
+    PrefabsSpawner prefabsSpawner;
     public void ActivatePendingStatus()
     {
         if (PlayerPrefs.GetInt(levelPrefName) == 1)
@@ -134,7 +136,9 @@ public class QuestionManager : MonoBehaviour
 
         swipeHandler = FindAnyObjectByType<SwipeHandler>();
 
-        ttMtM = FindAnyObjectByType<NotiManager>();
+        prefabsSpawner = FindAnyObjectByType<PrefabsSpawner>();
+
+        notiManager = FindAnyObjectByType<NotiManager>();
     }
 
     private void Start()
@@ -152,6 +156,13 @@ public class QuestionManager : MonoBehaviour
         }
 
 
+    }
+
+    public void KillCurrentStory()
+    {
+        prefabsSpawner.ActivateStoryList();
+
+        prefabsSpawner.DestroyStoryPrefabs();
     }
 
     void CheckIsAnswered()
@@ -304,7 +315,7 @@ public class QuestionManager : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
 
-        ttMtM.ShowWrongAnswerNoti();
+        notiManager.ShowWrongAnswerNoti();
     }
 
     public void StartLoadQuestionAudio()

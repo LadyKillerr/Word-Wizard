@@ -61,6 +61,7 @@ public class StoryManager : MonoBehaviour
 
 
     // Components
+
     Animator transitionsAnim;
     LoadScene levelLoader;
     AudioSource storyAudioSource;
@@ -84,6 +85,7 @@ public class StoryManager : MonoBehaviour
 
     void Awake()
     {
+
         levelLoader = FindAnyObjectByType<LoadScene>();
         transitionsAnim = FindAnyObjectByType<Animator>();
 
@@ -140,6 +142,8 @@ public class StoryManager : MonoBehaviour
 
         Debug.Log("Story Part Last Index is:" + lastIndex);
     }
+
+
 
     public void LoadSceneWithAnim(int sceneIndex)
     {

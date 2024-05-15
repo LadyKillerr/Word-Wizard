@@ -78,7 +78,14 @@ public class NotiManager : MonoBehaviour
 
         }
 
+        StartCoroutine(KillIsLockedNoti(tweenTime));
+    }
 
+    IEnumerator KillIsLockedNoti(float delayTime)
+    {
+        yield return new WaitForSeconds(delayTime);
+
+        GameObject.Destroy(spawnLocation.transform.GetChild(spawnLocation.transform.childCount - 1).gameObject);
     }
 
     #endregion

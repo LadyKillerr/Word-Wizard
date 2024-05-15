@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 using DG.Tweening;
+using Unity.VisualScripting;
 
 public class PrefabsSpawner : MonoBehaviour
 {
@@ -77,7 +78,7 @@ public class PrefabsSpawner : MonoBehaviour
     }
 
 
-
+    #region SelectionPanel Section
 
     public void ShowSelectionPanel(int index)
     {
@@ -215,9 +216,7 @@ public class PrefabsSpawner : MonoBehaviour
 
                     break;
             }
-
         }
-
 
         // biến truyền vào sẽ được lưu vào prefabsIndex 
         prefabsIndex = index;
@@ -225,6 +224,8 @@ public class PrefabsSpawner : MonoBehaviour
         isSelected = true;
         StartCoroutine(ResetIsSelected(tweenTime));
     }
+
+
 
     public void HideSelectionPanel()
     {
@@ -234,15 +235,28 @@ public class PrefabsSpawner : MonoBehaviour
             objectSpawnTarget.transform.GetChild(0).transform.DOScale(originalScale, tweenTime)
         .SetEase(Ease.InSine);
 
-            StartCoroutine(KillSelectionPanel(tweenTime));
-
             isSelected = true;
             StartCoroutine(ResetIsSelected(tweenTime));
         }
-
     }
 
-    IEnumerator KillSelectionPanel(float delay)  
+    public void KillSelectionPanel()
+    {
+        if (!isSelected)
+        {
+            // track ra child của object vừa spawn vào và thu nhỏ nó lại
+            objectSpawnTarget.transform.GetChild(0).transform.DOScale(originalScale, tweenTime)
+        .SetEase(Ease.InSine);
+
+
+            isSelected = true;
+            StartCoroutine(ResetIsSelected(tweenTime));
+
+            StartCoroutine(DestroySelectionPanel(tweenTime));
+        }
+    }
+
+    IEnumerator DestroySelectionPanel(float delay)
     {
         yield return new WaitForSeconds(delay);
 
@@ -252,6 +266,34 @@ public class PrefabsSpawner : MonoBehaviour
             GameObject.Destroy(child.gameObject);
         }
     }
+    #endregion
+
+    #region SpawnedPrefabs
+
+    public void DestroyStoryPrefabs()
+    {
+        ActivateStoryList();
+
+        // mở lại selectionPanel
+        objectSpawnTarget.transform.GetChild(objectSpawnTarget.transform.childCount - 2).transform.localScale = new Vector2(1, 1);
+
+        // get ra phần tử cuối cùng trong objectSpawnTarget
+        objectSpawnTarget.transform.GetChild(objectSpawnTarget.transform.childCount - 1).transform.DOScale(originalScale, tweenTime);
+
+
+
+        StartCoroutine(KillCurrentStory(tweenTime));
+    }
+
+    IEnumerator KillCurrentStory(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        GameObject.Destroy(objectSpawnTarget.transform.GetChild(objectSpawnTarget.transform.childCount - 1).gameObject);
+    }
+    #endregion
+
+    #region SpawningStoryAndQuizPrefabs
 
     public int GetPrefabsIndex()
     {
@@ -269,9 +311,12 @@ public class PrefabsSpawner : MonoBehaviour
 
             }
 
+            Debug.Log("Load anim chuyển màn");
+
+
             // chạy anim chuyển màn
             transitionsAnim.GetComponent<Animator>().SetTrigger("end");
-            StartCoroutine(ResetTransitionGameObject());
+            //StartCoroutine(ResetTransitionGameObject());
 
             // scale khung lựa chọn nhỏ lại
             HideSelectionPanel();
@@ -297,7 +342,7 @@ public class PrefabsSpawner : MonoBehaviour
 
             // chạy anim chuyển màn
             transitionsAnim.GetComponent<Animator>().SetTrigger("end");
-            StartCoroutine(ResetTransitionGameObject());
+            //StartCoroutine(ResetTransitionGameObject());
 
             // scale khung lựa chọn nhỏ lại
             HideSelectionPanel();
@@ -368,7 +413,7 @@ public class PrefabsSpawner : MonoBehaviour
                 Instantiate(ivyTheIguanaStoryPrefab, objectSpawnTarget.transform);
                 break;
 
-            case 9: 
+            case 9:
                 Instantiate(jaxTheJaguarStoryPrefab, objectSpawnTarget.transform);
                 break;
 
@@ -437,8 +482,9 @@ public class PrefabsSpawner : MonoBehaviour
                 Instantiate(jaxTheJaguarQuizPrefab, objectSpawnTarget.transform);
                 break;
         }
-    }
-         
+    } 
+    #endregion
+
     // sau khi chạy lần đầu vào thì phải tắt anim đi không thì các câu hỏi sau cũng phải chờ
     IEnumerator ResetTransitionGameObject()
     {
@@ -460,4 +506,11 @@ public class PrefabsSpawner : MonoBehaviour
 
         isSelected = false;
     }
+
+    public void ActivateStoryList()
+    {
+        storyListPanel.SetActive(true);
+    }
+
+
 }
