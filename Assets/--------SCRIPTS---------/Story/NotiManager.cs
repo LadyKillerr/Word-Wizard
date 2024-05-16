@@ -100,16 +100,16 @@ public class NotiManager : MonoBehaviour
 
         if (wrongAnswerNoti != null)
         {
-            if (spawnLocation.transform.childCount <= 1)
+            if (spawnLocation.transform.childCount <= 2)
             {
 
                 Instantiate(wrongAnswerNoti, spawnLocation.transform);
 
             }
 
-            spawnLocation.transform.GetChild(1).transform.localScale = new Vector2(0, 0);
+            spawnLocation.transform.GetChild(spawnLocation.transform.childCount - 1).transform.localScale = new Vector2(0, 0);
 
-            spawnLocation.transform.GetChild(1).transform.DOScale(endValue, tweenTime)
+            spawnLocation.transform.GetChild(spawnLocation.transform.childCount - 1).transform.DOScale(endValue, tweenTime)
                 .SetEase(Ease.OutBack);
 
         }
@@ -120,12 +120,10 @@ public class NotiManager : MonoBehaviour
         if (wrongAnswerNoti != null)
         {
 
-            wrongAnswerNoti.transform.DOScale(startValue, tweenTime)
-                .SetEase(Ease.InOutSine);
-
-            spawnLocation.transform.GetChild(1).transform.DOScale(startValue, tweenTime)
+            spawnLocation.transform.GetChild(spawnLocation.transform.childCount - 1).transform.DOScale(startValue, tweenTime)
                 .SetEase(Ease.InBack);
 
+            
 
             // Load lại game từ đầu luôn
             FindAnyObjectByType<StoryManager>().LoadSpecificStoryPart(0);
