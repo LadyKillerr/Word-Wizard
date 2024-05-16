@@ -280,12 +280,18 @@ public class PrefabsSpawner : MonoBehaviour
         // get ra phần tử cuối cùng trong objectSpawnTarget
         objectSpawnTarget.transform.GetChild(objectSpawnTarget.transform.childCount - 1).transform.DOScale(originalScale, tweenTime);
 
+        Debug.Log("đã thu nhỏ quiz prefab");
 
-
-        StartCoroutine(KillCurrentStory(tweenTime));
+        DestroyGameObject(tweenTime);
     }
 
-    IEnumerator KillCurrentStory(float delay)
+    public void DestroyGameObject(float delay)
+    {
+        StartCoroutine(KillCurrentStory(tweenTime));
+
+    }
+
+    public IEnumerator KillCurrentStory(float delay)
     {
         yield return new WaitForSeconds(delay);
 

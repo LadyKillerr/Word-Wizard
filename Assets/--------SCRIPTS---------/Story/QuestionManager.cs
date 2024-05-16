@@ -331,7 +331,11 @@ public class QuestionManager : MonoBehaviour
             // thời gian đợi trước khi tự động đọc audio của câu đầu tiên(đợi để anim chạy xong)
             yield return new WaitForSeconds(timeBeforeAudioPlay);
 
+            // ngắt âm thanh cũ đi 
+            quizSectionAudio.enabled = false;
+            quizSectionAudio.enabled = true;
 
+            // mở âm thanh mới
             quizSectionAudio.PlayOneShot(questionsAudio[currentIndex], quizQuestionsAudioVolume);
 
 
@@ -340,10 +344,8 @@ public class QuestionManager : MonoBehaviour
 
         }
         // nếu không có anim transitions thì chạy bthg 
-        else if (!quizSectionAudio.isPlaying && quizSection.activeSelf && (transitionsAnim == null || !transitionsAnim.enabled))
+        else if (!quizSectionAudio.isPlaying && quizSection.activeSelf && (transitionsAnim != null || transitionsAnim.enabled))
         {
-
-
 
             quizSectionAudio.PlayOneShot(questionsAudio[currentIndex], quizQuestionsAudioVolume);
 
@@ -532,9 +534,14 @@ public class QuestionManager : MonoBehaviour
         audioManager.PlayCoinSoundClip();
     }
 
-    public void ActivateCoinNoti()
-    {
 
+    #region CongratsPopupWindow
+
+    // chay hieu ung dong xu
+    public void KillCoinPopup()
+    {
+        //coinRewardEffects.Stop();
+        //coinRewardEffects.Clear();
 
         coinImage.SetActive(true);
 
@@ -545,24 +552,62 @@ public class QuestionManager : MonoBehaviour
 
         }
 
-        coinImage.transform.DOMoveY(endValue, tweenTime)
+        coinImage.transform.DOMove(new Vector3(0,0, -3000), tweenTime)
             .SetEase(Ease.InOutSine);
 
-        StartCoroutine(LoadLevelWithAnim(tweenTime));
+
+        DestroySpawnedObject();
+    }
+    
+    public void KillCongratsPopup()
+    {
+        if (audioManager != null)
+        {
+            audioManager.StopAudio();
+            audioManager.PlayCongratsClip();
+
+        }
+
+        DestroySpawnedObject();
+    }
+
+
+    // kill quiz prefabs di
+    public void DestroySpawnedObject()
+    {
+        PrefabsSpawnerButtons prefabsSpawnerButtons = FindAnyObjectByType<PrefabsSpawnerButtons>();
+
+        prefabsSpawnerButtons.UpdateQuizButtonState();
+
+        StartCoroutine(DestroySpawnedPrefabs(tweenTime));
 
     }
 
-    IEnumerator LoadLevelWithAnim(float tweenTime)
+
+    IEnumerator DestroySpawnedPrefabs(float delay)
     {
-        yield return new WaitForSeconds(tweenTime);
+        transitionsAnim.SetTrigger("end");
+
+        yield return new WaitForSeconds(delay);
+
+
+        prefabsSpawner.DestroyStoryPrefabs();
+    }
+
+     
+    #endregion
+
+    IEnumerator LoadLevelWithAnim(float delay)
+    {
+        yield return new WaitForSeconds(delay);
 
         if (transitionsAnim != null)
         {
             transitionsAnim.enabled = true;
 
             transitionsAnim.SetTrigger("end");
-
-        }
+                                                                                
+        }               
 
         // index của màn home 
         FindAnyObjectByType<LoadScene>().LoadAsyncWithoutAudio(2);

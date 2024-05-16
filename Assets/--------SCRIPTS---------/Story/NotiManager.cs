@@ -128,9 +128,19 @@ public class NotiManager : MonoBehaviour
             // Load lại game từ đầu luôn
             FindAnyObjectByType<StoryManager>().LoadSpecificStoryPart(0);
 
-
+            StartCoroutine(KillWrongAnswerNoti(tweenTime));
         }
     }
+
+    IEnumerator KillWrongAnswerNoti(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        GameObject.Destroy(spawnLocation.transform.GetChild(spawnLocation.transform.childCount - 1).gameObject);
+
+
+    }
+
 
     #endregion
 

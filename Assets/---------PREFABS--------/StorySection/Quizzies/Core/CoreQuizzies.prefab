@@ -10834,7 +10834,7 @@ MonoBehaviour:
   answer4Audio: []
   answer5Audio: []
   answer6Audio: []
-  timeBeforeAudioPlay: 1.5
+  timeBeforeAudioPlay: 0
   answersAudioVolume: 1
   wrongAnswerSprite: {fileID: 21300000, guid: d8262a50fbf32d4408581ca2d0e4e2e9, type: 3}
   rightAnswerSprite: {fileID: 21300000, guid: c896f5c57cdfa0848b6e6249ef56117e, type: 3}
@@ -12693,7 +12693,7 @@ PrefabInstance:
       objectReference: {fileID: 7822098288838830745}
     - target: {fileID: 1369354923789957271, guid: 684368741ae2e1346b84c7ea8f6d39bb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadSceneWithAnim
+      value: ActivateCongratsPopup
       objectReference: {fileID: 0}
     - target: {fileID: 1369354923789957271, guid: 684368741ae2e1346b84c7ea8f6d39bb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -12828,7 +12828,7 @@ PrefabInstance:
       objectReference: {fileID: 7822098288838830745}
     - target: {fileID: 6347842223848596400, guid: 582ee33b65f19444ba8b25b2753f610c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ActivateCoinNoti
+      value: ActivateCoinPopup
       objectReference: {fileID: 0}
     - target: {fileID: 6347842223848596400, guid: 582ee33b65f19444ba8b25b2753f610c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
