@@ -93,6 +93,11 @@ public class StatusManager : MonoBehaviour
 
     void Start()
     {
+        CheckAllStatus();
+    }
+
+    public void CheckAllStatus()
+    {
         CheckCatAndTheBat();
 
         CheckBennyTheBunny();
@@ -112,6 +117,9 @@ public class StatusManager : MonoBehaviour
         CheckIvyTheIguana();
 
         CheckJaxTheJaguar();
+
+
+
     }
 
     private void CheckJaxTheJaguar()

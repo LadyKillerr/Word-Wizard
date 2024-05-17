@@ -20,6 +20,9 @@ public class StoryManager : MonoBehaviour
     // index của story parts hiện tại
     [SerializeField] int currentIndex = 0;
 
+    // index cuối cùng của story hiện tại
+    int lastIndex;
+
     // mảng chứa các mảnh ghép của câu truyện
     [SerializeField] GameObject[] storyParts;
 
@@ -40,7 +43,7 @@ public class StoryManager : MonoBehaviour
 
     [SerializeField] float delayBeforeStory = 0.75f;
 
-    int lastIndex;
+
     public bool isIntersect;
 
     public bool isFinishReading;
@@ -78,11 +81,15 @@ public class StoryManager : MonoBehaviour
 
     private void Update()
     {
-
+        if (storyAudioSource.isPlaying)
+        {
+            isFinishReading = false;
+        }
     }
 
     void Awake()
     {
+
 
         levelLoader = FindAnyObjectByType<LoadScene>();
         transitionsAnim = FindAnyObjectByType<Animator>();
@@ -133,13 +140,6 @@ public class StoryManager : MonoBehaviour
             // duyet qua các prefab nút trong list nút ẩn để set text của chúng thành chữ trong json file -- chưa làm
             //hiddenButtonsText[i].GetComponent<TextMeshProUGUI>().text = gameStory[storyId].noun[i];
         }
-
-
-
-
-
-        
-
 
         Debug.Log("Story Part Last Index is:" + lastIndex);
     }
@@ -211,6 +211,7 @@ public class StoryManager : MonoBehaviour
     // chức năng sang trang tiếp theo của trang sách
     public void NextPart()
     {
+        MuteAudio();
         // nếu index chưa phải max (chưa phải part cuối trong 1 câu truyện)
         // trừ 1 vì bắt đầu từ mảng bắt đầu từ 0
         if (currentIndex < storyParts.Length - 1 && (isFinishReading || isCheating))
@@ -218,8 +219,6 @@ public class StoryManager : MonoBehaviour
 
             // ẩn hình với truyện hiện tại đi
             HideParts();
-
-            MuteAudio();
 
             currentIndex += 1;
 
@@ -242,8 +241,6 @@ public class StoryManager : MonoBehaviour
         {
 
             Debug.Log("Load ra intersect vì đang ở trang cuối");
-            // tắt âm thanh màn stories
-            MuteAudio();
 
             if (audioManager != null)
             {
@@ -263,13 +260,14 @@ public class StoryManager : MonoBehaviour
     // chức năng back lại trang cũ
     public void PreviousPart()
     {
+        MuteAudio();
 
         if (currentIndex > 0 && currentIndex <= lastIndex)
         {
 
             // ẩn hình với truyện hiện tại đi
             HideParts();
-            MuteAudio();
+            
 
             // giảm index đi để lùi trang truyện và trang tranh về trang trước 
             currentIndex -= 1;
@@ -330,6 +328,8 @@ public class StoryManager : MonoBehaviour
         storyAudioSource.enabled = false;
         storyAudioSource.enabled = true;
 
+        Debug.Log("Đã tắt âm lượng đi");
+
     }
 
     public void PlayCurrentAudioParts()
@@ -387,7 +387,7 @@ public class StoryManager : MonoBehaviour
 
     public int GetLastPartIndex()
     {
-
+        lastIndex = storyParts.Length - 1;
 
         return lastIndex;
     }

@@ -44,15 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 027a831f15cb5c048bc2e08f71dc411d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screenDarken: {fileID: 0}
-  wrongAnswerNoti: {fileID: 0}
-  lockedNoti: {fileID: 0}
+  wrongAnswerNoti: {fileID: 1822845387673638524, guid: de9634ad22f8243ab89604ac08e88478, type: 3}
+  lockedNoti: {fileID: 3646160692883194994, guid: 6066754e70c652e408761c5b50f6ac8c, type: 3}
   startValue: {x: 0, y: 0}
   endValue: {x: 1, y: 1}
-  tweenTime: 0.3
-  question1Part: 0
-  question2Part: 0
-  question3Part: 0
-  question4Part: 0
-  question5Part: 0
-  question6Part: 0
+  tweenTime: 0.5
+  spawnLocation: {fileID: 0}

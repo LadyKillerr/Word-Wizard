@@ -177,7 +177,7 @@ PrefabInstance:
     - target: {fileID: 8752112810927376960, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
       propertyPath: lockedState
       value: 
-      objectReference: {fileID: 2641698482785147981, guid: 4e25160d02abdb549be8a9cc60931f50, type: 3}
+      objectReference: {fileID: 535762060097584221, guid: adfb7525bb1e22b40a081003e28b65ac, type: 3}
     - target: {fileID: 8752112810927376960, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
       propertyPath: normalState
       value: 

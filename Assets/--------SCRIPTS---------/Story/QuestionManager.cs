@@ -331,7 +331,7 @@ public class QuestionManager : MonoBehaviour
             yield return new WaitForSeconds(timeBeforeAudioPlay);
 
             // ngắt âm thanh cũ đi 
-            quizSectionAudio.enabled = false;
+            quizSectionAudio.enabled = false; 
             quizSectionAudio.enabled = true;
 
             // mở âm thanh mới

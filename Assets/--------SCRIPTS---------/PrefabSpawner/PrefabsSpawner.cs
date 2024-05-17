@@ -67,9 +67,12 @@ public class PrefabsSpawner : MonoBehaviour
     [SerializeField] GameObject ivyTheIguanaQuizPrefab;
     [SerializeField] GameObject jaxTheJaguarQuizPrefab;
 
+    StatusManager statusManager;
 
     private void Awake()
     {
+        statusManager = FindAnyObjectByType<StatusManager>();
+
         isSelected = false;
 
         transitionsAnim.GetComponent<Animator>().SetTrigger("start");
@@ -229,6 +232,8 @@ public class PrefabsSpawner : MonoBehaviour
 
     public void HideSelectionPanel()
     {
+        statusManager.CheckAllStatus();
+
         if (!isSelected)
         {
             // track ra child của object vừa spawn vào và thu nhỏ nó lại

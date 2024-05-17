@@ -175,11 +175,11 @@ PrefabInstance:
     - target: {fileID: 8752112810927376960, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
       propertyPath: lockedState
       value: 
-      objectReference: {fileID: 7175521830830924091, guid: 3c48a6671b1bc5e48a4f4e88a8412368, type: 3}
+      objectReference: {fileID: 2563621921611078445, guid: 2b52963384c9ee448a70674662b6836f, type: 3}
     - target: {fileID: 8752112810927376960, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
       propertyPath: normalState
       value: 
-      objectReference: {fileID: -5255389639553494131, guid: b5e12cb4eb2fa224a898e2a0078bc0b1, type: 3}
+      objectReference: {fileID: -1794125552009949986, guid: 959bc1e5c8bce82469009ffe912dba60, type: 3}
     - target: {fileID: 8905673779811034448, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.5

@@ -3294,24 +3294,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5112990624524147316, guid: 6ee904e117cb11d40acf82eb0c182de1, type: 3}
       propertyPath: m_Name
-      value: NotiManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 8295313981928455600, guid: 6ee904e117cb11d40acf82eb0c182de1, type: 3}
-      propertyPath: lockedNoti
-      value: 
-      objectReference: {fileID: 3646160692883194994, guid: 6066754e70c652e408761c5b50f6ac8c, type: 3}
-    - target: {fileID: 8295313981928455600, guid: 6ee904e117cb11d40acf82eb0c182de1, type: 3}
-      propertyPath: screenDarken
-      value: 
+      value: PopupManager
       objectReference: {fileID: 0}
     - target: {fileID: 8295313981928455600, guid: 6ee904e117cb11d40acf82eb0c182de1, type: 3}
       propertyPath: spawnLocation
       value: 
       objectReference: {fileID: 1880692838094184699}
-    - target: {fileID: 8295313981928455600, guid: 6ee904e117cb11d40acf82eb0c182de1, type: 3}
-      propertyPath: wrongAnswerNoti
-      value: 
-      objectReference: {fileID: 1822845387673638524, guid: de9634ad22f8243ab89604ac08e88478, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
