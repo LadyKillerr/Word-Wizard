@@ -72,6 +72,7 @@ public class SwipeHandler : MonoBehaviour
             storyManager.NextPart();
 
             storyManager.SetIsFinishReading(false);
+
         }
 
     }

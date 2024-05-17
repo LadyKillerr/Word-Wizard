@@ -43,8 +43,6 @@ public class StoryManager : MonoBehaviour
     int lastIndex;
     public bool isIntersect;
 
-    public bool isReading;
-
     public bool isFinishReading;
 
     [Header("Game Session Zone")]
@@ -104,7 +102,7 @@ public class StoryManager : MonoBehaviour
         HideAllImageParts();
         HideAllStoryParts();
         MuteAudio();
-         
+
         ActivateStorySection();
 
         currentIndex = 0;
@@ -135,9 +133,12 @@ public class StoryManager : MonoBehaviour
             // duyet qua các prefab nút trong list nút ẩn để set text của chúng thành chữ trong json file -- chưa làm
             //hiddenButtonsText[i].GetComponent<TextMeshProUGUI>().text = gameStory[storyId].noun[i];
         }
-        // storyId là để biết đang ở data truyện nào trong file json
 
-        lastIndex = storyParts.Length - 1;
+
+
+
+
+        
 
 
         Debug.Log("Story Part Last Index is:" + lastIndex);
@@ -178,15 +179,13 @@ public class StoryManager : MonoBehaviour
     // load ra part tương ứng với index
     void LoadParts()
     {
+        lastIndex = storyParts.Length - 1;
+        PlayerPrefs.SetInt("StoryPartsIndex", lastIndex);
+
         // load ra hình với ảnh và câu hỏi ẩn của index phù hợp
         storyParts[currentIndex].SetActive(true);
 
         imageParts[currentIndex].SetActive(true);
-
-        // bool đánh dấu đã đọc xong chưa
-        isReading = false;
-
-        isFinishReading = false;
 
         StartCoroutine(AutoLoadAudio(delayBeforeStory));
 
@@ -212,11 +211,9 @@ public class StoryManager : MonoBehaviour
     // chức năng sang trang tiếp theo của trang sách
     public void NextPart()
     {
-
-
         // nếu index chưa phải max (chưa phải part cuối trong 1 câu truyện)
         // trừ 1 vì bắt đầu từ mảng bắt đầu từ 0
-        if (currentIndex >= 0 && currentIndex < lastIndex && (!isReading || isCheating))
+        if (currentIndex < storyParts.Length - 1 && (isFinishReading || isCheating))
         {
 
             // ẩn hình với truyện hiện tại đi
@@ -235,13 +232,16 @@ public class StoryManager : MonoBehaviour
             // tăng index lên sau khi đã ẩn hình với ảnh hiện tại đi
             LoadParts();
 
+            Debug.Log("Load ra trang kế");
 
         }
         // nếu index đã max (là part cuối trong 1 câu truyện)
-        else if (currentIndex >= lastIndex && !isReading && !isIntersect)
+        else if (currentIndex >= storyParts.Length - 1
+            
+            && (isFinishReading || isCheating) && !isIntersect)
         {
 
-
+            Debug.Log("Load ra intersect vì đang ở trang cuối");
             // tắt âm thanh màn stories
             MuteAudio();
 
@@ -251,17 +251,10 @@ public class StoryManager : MonoBehaviour
 
             }
 
-            
-                // bật intersection
-                ToggleIntersection();
-
+            // bật intersection
+            ToggleIntersection();
 
             isIntersect = true;
-
-
-
-
-
 
         }
 
@@ -333,7 +326,7 @@ public class StoryManager : MonoBehaviour
 
     void MuteAudio()
     {
-        isReading = false;
+
         storyAudioSource.enabled = false;
         storyAudioSource.enabled = true;
 
@@ -343,8 +336,8 @@ public class StoryManager : MonoBehaviour
     {
         if (!storyAudioSource.isPlaying)
         {
-            isReading = true;
 
+            isFinishReading = false;
 
 
             storyAudioSource.PlayOneShot(audioParts[currentIndex], storyVolume);
@@ -357,18 +350,8 @@ public class StoryManager : MonoBehaviour
     {
         yield return new WaitForSeconds(clipLength);
 
-
-
-        
-            // biến để set trạng thái đang đọc
-            isReading = false;
-
-            // biến riêng để set trạng thái khi đã đọc xong 
-            isFinishReading = true;
-
-        
-
-
+        // biến riêng để set trạng thái khi đã đọc xong 
+        isFinishReading = true;
     }
 
     void ActivateStorySection()
@@ -446,16 +429,6 @@ public class StoryManager : MonoBehaviour
     public void SetCurrentIndex()
     {
         currentIndex = storyParts.Length - 1;
-    }
-
-    public bool GetIsReading()
-    {
-        return isReading;
-    }
-
-    public void SetIsReading(bool value)
-    {
-        isReading = value;
     }
 
     public float GetDelayBeforeStory()

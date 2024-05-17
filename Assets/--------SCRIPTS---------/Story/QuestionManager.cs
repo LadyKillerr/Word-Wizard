@@ -95,7 +95,6 @@ public class QuestionManager : MonoBehaviour
 
     [Header("Coin Effect Section")]
     [SerializeField] GameObject coinImage;
-    [SerializeField] float endValue = 0;
 
     [SerializeField] float tweenTime = 0.5f;
 
@@ -511,7 +510,6 @@ public class QuestionManager : MonoBehaviour
             if (audioManager != null)
             {
                 audioManager.PlayCoinSoundClip();
-                StartCoroutine(ResetCoinSound(audioManager.coinRewardAudio.length));
             }
 
             isRewarded = true;
@@ -527,12 +525,6 @@ public class QuestionManager : MonoBehaviour
         }
     }
 
-    IEnumerator ResetCoinSound(float value)
-    {
-        yield return new WaitForSeconds(value);
-
-        audioManager.PlayCoinSoundClip();
-    }
 
 
     #region CongratsPopupWindow
