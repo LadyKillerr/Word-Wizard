@@ -624,7 +624,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -674.00006, y: 28413.758}
+  m_AnchoredPosition: {x: -674.00006, y: 85895.54}
   m_SizeDelta: {x: 1348, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &339670710
@@ -4041,7 +4041,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTweenScale: {x: 0, y: 0, z: 0}
   endTweenScale: {x: 1, y: 1, z: 1}
-  tweenTime: 0.3
+  tweenTime: 0.2
   sfxButton: {fileID: 1541092994}
   musicButton: {fileID: 1244016511}
   activatedSoundButtonSprite: {fileID: 5175489880400350850, guid: 79395b9edf9b6ce49a28fb2862d133ba, type: 3}
