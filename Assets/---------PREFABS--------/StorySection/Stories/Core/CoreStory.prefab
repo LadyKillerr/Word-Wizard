@@ -2026,7 +2026,6 @@ MonoBehaviour:
   delayFirstStoryAudio: 1.25
   delayBeforeStory: 0.5
   isIntersect: 0
-  isReading: 0
   isFinishReading: 0
   interactiveStorySection: {fileID: 4698994611462040449}
   questionSection: {fileID: 4051812505583224562}
@@ -6761,9 +6760,9 @@ MonoBehaviour:
   questionManager: {fileID: 7190754561829458267}
   storyManager: {fileID: 1260301211301265960}
   coinImage: {fileID: 3134626955760732111}
-  endValue: 0
   tweenTime: 0.5
   coinRewardEffects: {fileID: 2888566498671575617}
+  coinFallingTime: 4
 --- !u!82 &231769689886767427
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6912,6 +6911,26 @@ PrefabInstance:
     - target: {fileID: 507200747082526927, guid: bd25f0c780e2391459d6616d10cd0728, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575579824962652431, guid: bd25f0c780e2391459d6616d10cd0728, type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575579824962652431, guid: bd25f0c780e2391459d6616d10cd0728, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575579824962652431, guid: bd25f0c780e2391459d6616d10cd0728, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575579824962652431, guid: bd25f0c780e2391459d6616d10cd0728, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575579824962652431, guid: bd25f0c780e2391459d6616d10cd0728, type: 3}
+      propertyPath: InitialModule.startSpeed.minScalar
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8081113725757418110, guid: bd25f0c780e2391459d6616d10cd0728, type: 3}
       propertyPath: m_SortingLayer
@@ -7124,11 +7143,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6292623517196520927, guid: ca86024c9999c7f4991cffce0b4ed76d, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 430.575
       objectReference: {fileID: 0}
     - target: {fileID: 6292623517196520927, guid: ca86024c9999c7f4991cffce0b4ed76d, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 385.2513
       objectReference: {fileID: 0}
     - target: {fileID: 6292623517196520927, guid: ca86024c9999c7f4991cffce0b4ed76d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7140,7 +7159,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6292623517196520927, guid: ca86024c9999c7f4991cffce0b4ed76d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4000
+      value: -3000
       objectReference: {fileID: 0}
     - target: {fileID: 6292623517196520927, guid: ca86024c9999c7f4991cffce0b4ed76d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7160,11 +7179,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6292623517196520927, guid: ca86024c9999c7f4991cffce0b4ed76d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -45.323853
       objectReference: {fileID: 0}
     - target: {fileID: 6292623517196520927, guid: ca86024c9999c7f4991cffce0b4ed76d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1751
+      value: -1574
       objectReference: {fileID: 0}
     - target: {fileID: 6292623517196520927, guid: ca86024c9999c7f4991cffce0b4ed76d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7516,6 +7535,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CongratsWindow
       objectReference: {fileID: 0}
+    - target: {fileID: 1382798977300301822, guid: 684368741ae2e1346b84c7ea8f6d39bb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2294420745555587863, guid: 684368741ae2e1346b84c7ea8f6d39bb, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -7623,10 +7646,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 7190754561829458267}
-    - target: {fileID: 6347842223848596400, guid: 582ee33b65f19444ba8b25b2753f610c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: KillCoinPopup
-      objectReference: {fileID: 0}
     - target: {fileID: 6468041955559887402, guid: 582ee33b65f19444ba8b25b2753f610c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -7693,7 +7712,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6468041955559887402, guid: 582ee33b65f19444ba8b25b2753f610c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -19
       objectReference: {fileID: 0}
     - target: {fileID: 6468041955559887402, guid: 582ee33b65f19444ba8b25b2753f610c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7710,6 +7729,10 @@ PrefabInstance:
     - target: {fileID: 9109367796502068409, guid: 582ee33b65f19444ba8b25b2753f610c, type: 3}
       propertyPath: m_Name
       value: RewardWindow
+      objectReference: {fileID: 0}
+    - target: {fileID: 9109367796502068409, guid: 582ee33b65f19444ba8b25b2753f610c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

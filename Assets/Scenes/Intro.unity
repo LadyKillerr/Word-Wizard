@@ -753,7 +753,7 @@ PrefabInstance:
     - target: {fileID: 3518955357863942397, guid: ac62527c941b7204ebe2d7ac2ac0cd74, type: 3}
       propertyPath: coinRewardAudio
       value: 
-      objectReference: {fileID: 8300000, guid: 1a73a7d60d4a64e4cbc84c98a7d44e1b, type: 3}
+      objectReference: {fileID: 8300000, guid: ed4320e049099b541b6582e94ea56e2c, type: 3}
     - target: {fileID: 6342129843199408744, guid: ac62527c941b7204ebe2d7ac2ac0cd74, type: 3}
       propertyPath: StartAudio
       value: 

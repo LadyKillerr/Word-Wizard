@@ -198,7 +198,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8752112810927376960, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
       propertyPath: bookName
-      value: TheCatAndTheBat
+      value: CatAndTheBat
       objectReference: {fileID: 0}
     - target: {fileID: 8752112810927376960, guid: 5c20571bf18919f4cbec85dbef3ff48b, type: 3}
       propertyPath: lockedState

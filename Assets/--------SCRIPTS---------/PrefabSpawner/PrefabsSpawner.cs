@@ -279,10 +279,12 @@ public class PrefabsSpawner : MonoBehaviour
     {
         ActivateStoryList();
 
+        statusManager.CheckAllStatus();
+
         // mở lại selectionPanel
         objectSpawnTarget.transform.GetChild(objectSpawnTarget.transform.childCount - 2).transform.localScale = new Vector2(1, 1);
 
-        // get ra phần tử cuối cùng trong objectSpawnTarget
+        // get ra phần tử cuối cùng trong objectSpawnTarget - quiz prefab
         objectSpawnTarget.transform.GetChild(objectSpawnTarget.transform.childCount - 1).transform.DOScale(originalScale, tweenTime);
 
         Debug.Log("đã thu nhỏ quiz prefab");
@@ -321,8 +323,6 @@ public class PrefabsSpawner : MonoBehaviour
                 audioManager.PlayStartAudio();
 
             }
-
-            Debug.Log("Load anim chuyển màn");
 
 
             // chạy anim chuyển màn

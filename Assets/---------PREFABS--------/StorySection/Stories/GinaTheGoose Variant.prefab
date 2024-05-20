@@ -344,6 +344,10 @@ PrefabInstance:
       propertyPath: m_text
       value: At day's end, she spreads her wings with pride.
       objectReference: {fileID: 0}
+    - target: {fileID: 7097183987640734171, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1556
+      objectReference: {fileID: 0}
     - target: {fileID: 7149797056146681877, guid: cc5536502aed27448bf434de1f2406dc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

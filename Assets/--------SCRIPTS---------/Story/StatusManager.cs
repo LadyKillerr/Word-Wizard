@@ -55,7 +55,7 @@ public class StatusManager : MonoBehaviour
     [SerializeField] string story7PrefName;
     [SerializeField] GameObject ginaTheGooseDone;
     [SerializeField] GameObject ginaTheGoosePending;
-    [SerializeField] GameObject GinaTheGooseNew;
+
 
     int ginaTheGooseStatus;
 
@@ -215,13 +215,13 @@ public class StatusManager : MonoBehaviour
                 ginaTheGoosePending.SetActive(false);
                 break;
             case 1:
-                ginaTheGooseDone.SetActive(false);
+
                 // 1 là đã hoàn thành, đã đọc và nhận thưởng xong
                 ginaTheGooseDone.SetActive(true);
                 ginaTheGoosePending.SetActive(false);
                 break;
             case 2:
-                ginaTheGooseDone.SetActive(false);
+
                 // 2 là đang pending, đã đọc nhưng vẫn còn dở dang và không đọc tới cuối 
                 ginaTheGooseDone.SetActive(false);
                 ginaTheGoosePending.SetActive(true);

@@ -100,6 +100,8 @@ public class QuestionManager : MonoBehaviour
 
     [SerializeField] ParticleSystem coinRewardEffects;
 
+    [SerializeField] float coinFallingTime = 4;
+
     LoadScene levelLoader;
 
     Animator transitionsAnim;
@@ -331,7 +333,7 @@ public class QuestionManager : MonoBehaviour
             yield return new WaitForSeconds(timeBeforeAudioPlay);
 
             // ngắt âm thanh cũ đi 
-            quizSectionAudio.enabled = false; 
+            quizSectionAudio.enabled = false;
             quizSectionAudio.enabled = true;
 
             // mở âm thanh mới
@@ -501,15 +503,15 @@ public class QuestionManager : MonoBehaviour
         {
 
             // Chạy hiệu ứng rơi xu và âm thanh tăng xu
-            if (coinRewardEffects != null)
+            if (congratsPE != null)
             {
-                coinRewardEffects.Play();
+                congratsPE.Play();
 
             }
 
             if (audioManager != null)
             {
-                audioManager.PlayCoinSoundClip();
+                audioManager.PlayCongratsClip();
             }
 
             isRewarded = true;
@@ -532,25 +534,28 @@ public class QuestionManager : MonoBehaviour
     // chay hieu ung dong xu
     public void KillCoinPopup()
     {
-        //coinRewardEffects.Stop();
-        //coinRewardEffects.Clear();
+        congratsPE.Stop();
+
 
         coinImage.SetActive(true);
 
         if (audioManager != null)
         {
             audioManager.StopAudio();
-            audioManager.PlayCongratsClip();
+            audioManager.PlayCoinSoundClip();
+
 
         }
 
-        coinImage.transform.DOMove(new Vector3(0,0, -3000), tweenTime)
+        coinRewardEffects.Play();
+
+        coinImage.transform.DOMoveY(0, coinFallingTime)
             .SetEase(Ease.InOutSine);
 
 
         DestroySpawnedObject();
     }
-    
+
     public void KillCongratsPopup()
     {
         if (audioManager != null)
@@ -560,33 +565,70 @@ public class QuestionManager : MonoBehaviour
 
         }
 
-        DestroySpawnedObject();
+        DestroyCongratsObject();
     }
 
-
-    // kill quiz prefabs di
+    #region KillRewardedPrefabs
+    // kill quiz prefabs di khi có
     public void DestroySpawnedObject()
     {
         PrefabsSpawnerButtons prefabsSpawnerButtons = FindAnyObjectByType<PrefabsSpawnerButtons>();
 
         prefabsSpawnerButtons.UpdateQuizButtonState();
 
-        StartCoroutine(DestroySpawnedPrefabs(tweenTime));
+        StartCoroutine(DestroySpawnedPrefabs());
 
     }
-
-
-    IEnumerator DestroySpawnedPrefabs(float delay)
+      
+    IEnumerator DestroySpawnedPrefabs()
     {
-        transitionsAnim.SetTrigger("end");
+        yield return new WaitForSeconds(coinFallingTime);
 
-        yield return new WaitForSeconds(delay);
+        if (coinRewardEffects != null)
+        {
+            coinRewardEffects.Stop();
+            coinRewardEffects.Clear();
 
+        } 
+
+        if (audioManager != null)
+        {
+            audioManager.StopAudio();
+
+        }
 
         prefabsSpawner.DestroyStoryPrefabs();
     }
 
-     
+
+    #endregion
+
+    #region KillCongratsPrefabs
+
+    public void DestroyCongratsObject()
+    {
+        PrefabsSpawnerButtons prefabsSpawnerButtons = FindAnyObjectByType<PrefabsSpawnerButtons>();
+
+        prefabsSpawnerButtons.UpdateQuizButtonState();
+
+        StartCoroutine(DestroyCongratsPrefabs(tweenTime));
+    }
+
+    IEnumerator DestroyCongratsPrefabs(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+
+
+
+        prefabsSpawner.DestroyStoryPrefabs();
+
+    }
+
+
+    #endregion
+
+
     #endregion
 
     IEnumerator LoadLevelWithAnim(float delay)
@@ -598,8 +640,8 @@ public class QuestionManager : MonoBehaviour
             transitionsAnim.enabled = true;
 
             transitionsAnim.SetTrigger("end");
-                                                                                
-        }               
+
+        }
 
         // index của màn home 
         FindAnyObjectByType<LoadScene>().LoadAsyncWithoutAudio(2);
@@ -698,4 +740,5 @@ public class QuestionManager : MonoBehaviour
 
         isAnswered = false;
     }
+
 }

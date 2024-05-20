@@ -141,7 +141,6 @@ public class StoryManager : MonoBehaviour
             //hiddenButtonsText[i].GetComponent<TextMeshProUGUI>().text = gameStory[storyId].noun[i];
         }
 
-        Debug.Log("Story Part Last Index is:" + lastIndex);
     }
 
 
@@ -231,7 +230,7 @@ public class StoryManager : MonoBehaviour
             // tăng index lên sau khi đã ẩn hình với ảnh hiện tại đi
             LoadParts();
 
-            Debug.Log("Load ra trang kế");
+
 
         }
         // nếu index đã max (là part cuối trong 1 câu truyện)
@@ -327,8 +326,6 @@ public class StoryManager : MonoBehaviour
 
         storyAudioSource.enabled = false;
         storyAudioSource.enabled = true;
-
-        Debug.Log("Đã tắt âm lượng đi");
 
     }
 
