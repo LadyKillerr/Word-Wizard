@@ -13,11 +13,15 @@ public class StarsNumberUI : MonoBehaviour
     string filePath;
     string jsonData;
 
+
+    bool isRewardCollected;
+
     PlayerProgressData[] dataList;
 
-    [SerializeField] int increasedStarsNumber = 2;
+    [SerializeField] int increasedStarsNumber = 1;
 
     int currentStars;
+    int targetStars;
 
     //PlayerDataWarehouse gameData;
     // Start is called before the first frame update
@@ -33,6 +37,9 @@ public class StarsNumberUI : MonoBehaviour
 
         LoadStarsData();
 
+        int.TryParse(starsNumber.text, out currentStars);
+
+
         currentStars = int.Parse(starsNumber.text);
 
         Debug.Log("Player Stars" + dataList[0].stars);
@@ -47,6 +54,70 @@ public class StarsNumberUI : MonoBehaviour
 
     void CheckStarsNumber()
     {
+        int.TryParse(starsNumber.text, out currentStars);
+
+
+        // set số sao sau khi reward để tăng số sao hiên tai lên bằng số đó
+        targetStars = dataList[0].stars;
+
+
+        filePath = Application.persistentDataPath + "/interactiveStoriesData.json";
+        jsonData = File.Exists(filePath) ? File.ReadAllText(filePath) : "";
+
+
+        dataList = JsonConvert.DeserializeObject<PlayerProgressData[]>(jsonData);
+
+
+        if (dataList != null)
+        {
+
+            Debug.Log("Player Stars right now is: " + dataList[0].stars);
+
+
+            while (currentStars < targetStars && isRewardCollected)
+            {
+                StartCoroutine(IncreasingStars(0.2f));
+
+
+
+                isRewardCollected = false;
+
+
+            }
+
+
+            // duyet qua các prefab nút trong list nút ẩn để set text của chúng thành chữ trong json file
+            //hiddenButtonsText[i].GetComponent<TextMeshProUGUI>().text = gameStory[storyId].noun[i];
+
+
+        }
+    }
+
+    IEnumerator IncreasingStars(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        currentStars += increasedStarsNumber;
+
+        starsNumber.text = currentStars.ToString();
+
+
+        Debug.Log("Stars is increasing hehe " + currentStars);
+
+        isRewardCollected = true;
+    }
+
+
+
+    public void LoadStarsData()
+    {
+
+        filePath = Application.persistentDataPath + "/interactiveStoriesData.json";
+        jsonData = File.Exists(filePath) ? File.ReadAllText(filePath) : "";
+
+
+        dataList = JsonConvert.DeserializeObject<PlayerProgressData[]>(jsonData);
+
 
         if (dataList != null)
         {
@@ -54,17 +125,7 @@ public class StarsNumberUI : MonoBehaviour
             {
                 if (dataList[i].numberPlayed == "playerStars")
                 {
-                    //starsNumber.text = dataList[i].stars.ToString();
-
-                    while (currentStars < dataList[i].stars)
-                    {
-                        currentStars += increasedStarsNumber;
-
-
-                        starsNumber.text = currentStars.ToString();
-
-                        Debug.Log("Stars is increasing hehe");
-                    }
+                    starsNumber.text = dataList[i].stars.ToString();
                 }
 
 
@@ -77,24 +138,15 @@ public class StarsNumberUI : MonoBehaviour
     }
 
 
-    public void LoadStarsData()
+
+
+    public void SetTargetStars(int value)
     {
-        
-        if (dataList != null)
-        {
-        for (int i = 0; i < dataList.Length; i++)
-            {
-                if (dataList[i].numberPlayed == "playerStars")
-                {
-                    starsNumber.text = dataList[i].stars.ToString();
-                }
-                
+        targetStars = value;
+    }
 
-
-                // duyet qua các prefab nút trong list nút ẩn để set text của chúng thành chữ trong json file
-                //hiddenButtonsText[i].GetComponent<TextMeshProUGUI>().text = gameStory[storyId].noun[i];
-            }
-
-        }
+    public int GetStarsNumber()
+    {
+        return dataList[0].stars;
     }
 }

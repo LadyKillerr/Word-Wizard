@@ -416,7 +416,6 @@ MonoBehaviour:
   story7PrefName: GinaTheGoose
   ginaTheGooseDone: {fileID: 1433700883}
   ginaTheGoosePending: {fileID: 842079894}
-  GinaTheGooseNew: {fileID: 580895071}
   story8PrefName: HenryTheHedgehog
   henryTheHedgehogDone: {fileID: 1813344999}
   henryTheHedgehogPending: {fileID: 1769270090}
@@ -662,11 +661,6 @@ GameObject:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2845342167017704552, guid: 86578fd2785b57344818acfb71d64fe0, type: 3}
   m_PrefabInstance: {fileID: 9182121154762493613}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &580895071 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8705669287566611987, guid: 6c5889570f18aef4386be7f5dde322a2, type: 3}
-  m_PrefabInstance: {fileID: 8888373680099565103}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &603693895
 GameObject:
@@ -3833,7 +3827,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8705669287566611987, guid: 6c5889570f18aef4386be7f5dde322a2, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

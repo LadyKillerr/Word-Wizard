@@ -238,9 +238,6 @@ public class StoryManager : MonoBehaviour
             
             && (isFinishReading || isCheating) && !isIntersect)
         {
-
-            Debug.Log("Load ra intersect vì đang ở trang cuối");
-
             if (audioManager != null)
             {
                 audioManager.PlayPageTurningClip();

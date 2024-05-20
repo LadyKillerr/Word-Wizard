@@ -256,7 +256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   starsNumber: {fileID: 2081840279748142491}
-  increasedStarsNumber: 2
+  increasedStarsNumber: 1
 --- !u!1 &7415334424237747531
 GameObject:
   m_ObjectHideFlags: 0

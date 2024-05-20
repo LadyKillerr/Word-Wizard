@@ -6763,6 +6763,7 @@ MonoBehaviour:
   tweenTime: 0.5
   coinRewardEffects: {fileID: 2888566498671575617}
   coinFallingTime: 4
+  starsNumberUI: {fileID: 1378728240292498226}
 --- !u!82 &231769689886767427
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7744,6 +7745,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9109367796502068409, guid: 582ee33b65f19444ba8b25b2753f610c, type: 3}
   m_PrefabInstance: {fileID: 8975368287915245082}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1378728240292498226 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8047039593718052136, guid: 582ee33b65f19444ba8b25b2753f610c, type: 3}
+  m_PrefabInstance: {fileID: 8975368287915245082}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80d8a6702e569694d9f582cbd7518ecb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &2688068453386300464 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6468041955559887402, guid: 582ee33b65f19444ba8b25b2753f610c, type: 3}

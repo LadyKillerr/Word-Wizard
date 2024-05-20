@@ -7,7 +7,8 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
 using DG.Tweening;
-
+using Newtonsoft.Json;
+using System.IO;
 
 public class QuestionManager : MonoBehaviour
 {
@@ -111,6 +112,13 @@ public class QuestionManager : MonoBehaviour
     NotiManager notiManager;
 
     PrefabsSpawner prefabsSpawner;
+
+    string filePath;
+    string jsonData;
+
+    PlayerProgressData[] dataList;
+
+
     public void ActivatePendingStatus()
     {
         if (PlayerPrefs.GetInt(levelPrefName) == 1)
@@ -126,6 +134,7 @@ public class QuestionManager : MonoBehaviour
 
     void Awake()
     {
+
         levelLoader = FindAnyObjectByType<LoadScene>();
         playerProgress = FindAnyObjectByType<PlayerDataWarehouse>();
         audioManager = FindAnyObjectByType<AudioManager>();
@@ -140,6 +149,14 @@ public class QuestionManager : MonoBehaviour
         prefabsSpawner = FindAnyObjectByType<PrefabsSpawner>();
 
         notiManager = FindAnyObjectByType<NotiManager>();
+
+
+        filePath = Application.persistentDataPath + "/interactiveStoriesData.json";
+        jsonData = File.Exists(filePath) ? File.ReadAllText(filePath) : "";
+
+
+        dataList = JsonConvert.DeserializeObject<PlayerProgressData[]>(jsonData);
+
     }
 
     private void Start()
@@ -150,6 +167,8 @@ public class QuestionManager : MonoBehaviour
 
     private void Update()
     {
+
+
         if (quizSection.activeSelf)
         {
             CheckIsAnswered();
@@ -339,10 +358,6 @@ public class QuestionManager : MonoBehaviour
             // mở âm thanh mới
             quizSectionAudio.PlayOneShot(questionsAudio[currentIndex], quizQuestionsAudioVolume);
 
-
-
-            Debug.Log("Có load anim cùng audio");
-
         }
         // nếu không có anim transitions thì chạy bthg 
         else if (!quizSectionAudio.isPlaying && quizSection.activeSelf && (transitionsAnim != null || transitionsAnim.enabled))
@@ -518,9 +533,7 @@ public class QuestionManager : MonoBehaviour
             rewardWindow.SetActive(true);
             congratsWindow.SetActive(false);
 
-            // tang sao cho nguoi choi
-            playerProgress.SavePlayerData("playerStars", starsReward);
-            Debug.Log("đã tăng sao cho người chơi");
+
 
             // lưu vào biến là đã hoàn thành
             PlayerPrefs.SetInt(levelPrefName, 1);
@@ -549,8 +562,20 @@ public class QuestionManager : MonoBehaviour
 
         coinRewardEffects.Play();
 
+        // tang sao cho nguoi choi
+        playerProgress.SavePlayerData("playerStars", starsReward);
+        Debug.Log("đã tăng sao cho người chơi" + dataList[0].stars);
+
+
+        //if (starsNumberUI != null)
+        //{
+        //    starsNumberUI.SetTargetStars(dataList[0].stars);
+        //    starsNumberUI.SetIsRewardCollected(true);
+        //}
+
         coinImage.transform.DOMoveY(0, coinFallingTime)
             .SetEase(Ease.InOutSine);
+
 
 
         DestroySpawnedObject();
@@ -579,7 +604,7 @@ public class QuestionManager : MonoBehaviour
         StartCoroutine(DestroySpawnedPrefabs());
 
     }
-      
+
     IEnumerator DestroySpawnedPrefabs()
     {
         yield return new WaitForSeconds(coinFallingTime);
@@ -589,13 +614,17 @@ public class QuestionManager : MonoBehaviour
             coinRewardEffects.Stop();
             coinRewardEffects.Clear();
 
-        } 
+        }
 
         if (audioManager != null)
         {
             audioManager.StopAudio();
 
         }
+
+        transitionsAnim.SetTrigger("end");
+
+        yield return new WaitForSeconds(tweenTime);
 
         prefabsSpawner.DestroyStoryPrefabs();
     }
@@ -618,7 +647,9 @@ public class QuestionManager : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
 
+        transitionsAnim.SetTrigger("end");
 
+        yield return new WaitForSeconds(tweenTime);
 
 
         prefabsSpawner.DestroyStoryPrefabs();
