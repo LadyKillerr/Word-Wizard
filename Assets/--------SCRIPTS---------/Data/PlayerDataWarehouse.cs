@@ -105,7 +105,7 @@ public class PlayerDataWarehouse : MonoBehaviour
     }
 
     public void SavePlayerData(
-        string key, 
+        string key,
         int value)
     {
         string filePath = Application.persistentDataPath + "/interactiveStoriesData.json";
@@ -168,7 +168,7 @@ public class PlayerDataWarehouse : MonoBehaviour
             string dataSave = "";
             for (int i = 0; i < playerProgresses.Count; i++)
             {
-                if ( i == (playerProgresses.Count - 1 ))
+                if (i == (playerProgresses.Count - 1))
                 {
                     string settingJSON = JsonUtility.ToJson(playerProgresses[i]);
                     dataSave += settingJSON;
@@ -186,6 +186,39 @@ public class PlayerDataWarehouse : MonoBehaviour
 
 
 
+    }
+
+    public void ResetPlayerStars(string key, int value)
+    {
+        string filePath = Application.persistentDataPath + "/interactiveStoriesData.json";
+        string jsonData = File.Exists(filePath) ? File.ReadAllText(filePath) : "";
+
+        if (System.IO.File.Exists(filePath))
+        {
+            PlayerProgressData[] dataList = JsonConvert.DeserializeObject<PlayerProgressData[]>(jsonData);
+
+            for (int i = 0; i < dataList.Length; i++)
+            {
+                if (dataList[i].numberPlayed == key)
+                {
+                    // tăng số sao lên dựa theo số sao truyền vào
+                    dataList[i].stars = value;
+                }
+            }
+        }
+        else
+        {
+            // biến để lưu lại hết tất cả dữ liệu về người chơi
+            List<PlayerProgressData> playerProgresses = new List<PlayerProgressData>();
+
+            PlayerProgressData timesPlayed = new PlayerProgressData();
+
+
+            timesPlayed.numberPlayed = "playerStars";
+            timesPlayed.stars = 0;
+
+            playerProgresses.Add(timesPlayed);
+        }
     }
 }
 

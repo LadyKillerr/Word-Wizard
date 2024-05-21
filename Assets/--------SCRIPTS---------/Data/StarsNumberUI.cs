@@ -14,7 +14,8 @@ public class StarsNumberUI : MonoBehaviour
     string jsonData;
 
 
-    bool isRewardCollected;
+    bool isRewardCollected = true;
+    [SerializeField] bool atHome = false;
 
     PlayerProgressData[] dataList;
 
@@ -50,6 +51,19 @@ public class StarsNumberUI : MonoBehaviour
     void Update()
     {
         CheckStarsNumber();
+
+
+        // chỉ khi ở màn Home mới bật biến bool atHome để update số sao liên tục
+        if (atHome)
+        {
+            CheckHomeStars();
+        }
+
+    }
+
+    void CheckHomeStars()
+    {
+        starsNumber.text = dataList[0].stars.ToString();
     }
 
     void CheckStarsNumber()

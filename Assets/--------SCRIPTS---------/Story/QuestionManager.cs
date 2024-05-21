@@ -12,7 +12,7 @@ using System.IO;
 
 public class QuestionManager : MonoBehaviour
 {
-    PlayerDataWarehouse playerProgress;
+    PlayerDataWarehouse playerDataWarehouse;
     [SerializeField] int starsReward;
 
     [Header("Questions Section")]
@@ -136,7 +136,7 @@ public class QuestionManager : MonoBehaviour
     {
 
         levelLoader = FindAnyObjectByType<LoadScene>();
-        playerProgress = FindAnyObjectByType<PlayerDataWarehouse>();
+        playerDataWarehouse = FindAnyObjectByType<PlayerDataWarehouse>();
         audioManager = FindAnyObjectByType<AudioManager>();
         quizSectionAudio = GetComponent<AudioSource>();
 
@@ -563,7 +563,7 @@ public class QuestionManager : MonoBehaviour
         coinRewardEffects.Play();
 
         // tang sao cho nguoi choi
-        playerProgress.SavePlayerData("playerStars", starsReward);
+        playerDataWarehouse.SavePlayerData("playerStars", starsReward);
         Debug.Log("đã tăng sao cho người chơi" + dataList[0].stars);
 
 

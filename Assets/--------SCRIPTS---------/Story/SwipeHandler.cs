@@ -64,7 +64,7 @@ public class SwipeHandler : MonoBehaviour
     {
         yield return new WaitForSeconds(autoFlipDelay);
 
-
+        Debug.Log("đã vào auto flip page nhưng chưa chạy vào hàm ");
         if (storyManager.GetIsFinishReading() && isAutoNextPage  && !storyAudioSource.isPlaying && interactiveStorySection.activeSelf)
         {
             Debug.Log("Tự động sang trang");

@@ -210,6 +210,7 @@ public class StoryManager : MonoBehaviour
     // chức năng sang trang tiếp theo của trang sách
     public void NextPart()
     {
+        isFinishReading = false;
         MuteAudio();
         // nếu index chưa phải max (chưa phải part cuối trong 1 câu truyện)
         // trừ 1 vì bắt đầu từ mảng bắt đầu từ 0
@@ -335,7 +336,7 @@ public class StoryManager : MonoBehaviour
 
 
             storyAudioSource.PlayOneShot(audioParts[currentIndex], storyVolume);
-            StartCoroutine(StopReading(audioParts[currentIndex].length));
+            StartCoroutine(StopReading(audioParts[currentIndex].length + 0.5f));
         }
         else { return; }
     }
