@@ -35,4 +35,16 @@ public class BackgroundMusicPlayer : MonoBehaviour
     {
         gameMusic.Play();
     }
+
+    public void PlayGameMusicDelay(float value)
+    {
+        StartCoroutine(ContinueGameMusic(value));
+    }
+
+    IEnumerator ContinueGameMusic(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        gameMusic.Play();
+    }
 }

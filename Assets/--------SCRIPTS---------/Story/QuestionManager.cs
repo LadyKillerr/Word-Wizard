@@ -113,6 +113,8 @@ public class QuestionManager : MonoBehaviour
 
     PrefabsSpawner prefabsSpawner;
 
+    BackgroundMusicPlayer backgroundMusicPlayer;
+
     string filePath;
     string jsonData;
 
@@ -130,11 +132,14 @@ public class QuestionManager : MonoBehaviour
             PlayerPrefs.SetInt(levelPrefName, 2);
 
         }
+
+        // bật lại âm thanh nhạc nền sau khi quit game
+        backgroundMusicPlayer.PlayGameMusicDelay(tweenTime);
     }
 
     void Awake()
     {
-
+        backgroundMusicPlayer = FindAnyObjectByType<BackgroundMusicPlayer>();
         levelLoader = FindAnyObjectByType<LoadScene>();
         playerDataWarehouse = FindAnyObjectByType<PlayerDataWarehouse>();
         audioManager = FindAnyObjectByType<AudioManager>();
@@ -547,6 +552,10 @@ public class QuestionManager : MonoBehaviour
     // chay hieu ung dong xu
     public void KillCoinPopup()
     {
+        // cho nhạc nền tiếp tuc chạy sau khi đã hết thời gian hiêu ứng đồng xu
+        backgroundMusicPlayer.PlayGameMusicDelay(coinFallingTime);
+
+
         congratsPE.Stop();
 
 
@@ -589,6 +598,9 @@ public class QuestionManager : MonoBehaviour
             audioManager.PlayCongratsClip();
 
         }
+
+        // cho nhạc nền tiếp tuc chạy sau khi đã hết thời gian hiêu ứng chuyển scene(transitions anim)
+        backgroundMusicPlayer.PlayGameMusicDelay(tweenTime);
 
         DestroyCongratsObject();
     }

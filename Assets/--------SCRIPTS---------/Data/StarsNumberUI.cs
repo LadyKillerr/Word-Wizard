@@ -84,10 +84,6 @@ public class StarsNumberUI : MonoBehaviour
 
         if (dataList != null)
         {
-
-            Debug.Log("Player Stars right now is: " + dataList[0].stars);
-
-
             while (currentStars < targetStars && isRewardCollected)
             {
                 StartCoroutine(IncreasingStars(0.2f));

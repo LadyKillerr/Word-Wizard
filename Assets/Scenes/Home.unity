@@ -624,7 +624,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -674.00006, y: 98429.16}
+  m_AnchoredPosition: {x: -674.00006, y: 113998.1}
   m_SizeDelta: {x: 1348, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &339670710
@@ -1583,6 +1583,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   starsNumber: {fileID: 1413212280}
+  atHome: 1
+  increasedStarsNumber: 1
 --- !u!4 &780604467
 Transform:
   m_ObjectHideFlags: 0
@@ -3316,7 +3318,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 321206636890298461, guid: de94462da5ef98f4e98156fd87cd9d9b, type: 3}
+  m_Sprite: {fileID: -7614428315884958269, guid: 31e21c51b54f0a94f842d686f84a4d25, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4106,6 +4108,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1965606424}
   m_CullTransparentMesh: 1
+--- !u!1 &1991330500
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1991330502}
+  - component: {fileID: 1991330501}
+  m_Layer: 0
+  m_Name: PlayerDataWarehouse
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1991330501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991330500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d228efeedb148144a57468e2f278c48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storyBooks: []
+  totalBooks: 0
+--- !u!4 &1991330502
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991330500}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.9006066, y: 4.4954314, z: -61.99359}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2146323731
 GameObject:
   m_ObjectHideFlags: 0
@@ -5404,3 +5452,4 @@ SceneRoots:
   - {fileID: 780604467}
   - {fileID: 1418439009}
   - {fileID: 238654908}
+  - {fileID: 1991330502}

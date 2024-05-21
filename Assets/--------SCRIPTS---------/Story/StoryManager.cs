@@ -63,6 +63,7 @@ public class StoryManager : MonoBehaviour
 
     // Components
 
+    BackgroundMusicPlayer backgroundMusic;
     Animator transitionsAnim;
     LoadScene levelLoader;
     AudioSource storyAudioSource;
@@ -89,7 +90,7 @@ public class StoryManager : MonoBehaviour
 
     void Awake()
     {
-
+        backgroundMusic = FindAnyObjectByType<BackgroundMusicPlayer>();
 
         levelLoader = FindAnyObjectByType<LoadScene>();
         transitionsAnim = FindAnyObjectByType<Animator>();
@@ -141,9 +142,18 @@ public class StoryManager : MonoBehaviour
             //hiddenButtonsText[i].GetComponent<TextMeshProUGUI>().text = gameStory[storyId].noun[i];
         }
 
+        // tắt nhạc nền của game khi vào truyện
+
     }
 
+    private void Start()
+    {
+        if (backgroundMusic != null)
+        {
+            backgroundMusic.StopGameMusic();
 
+        }
+    }
 
     public void LoadSceneWithAnim(int sceneIndex)
     {
@@ -236,7 +246,7 @@ public class StoryManager : MonoBehaviour
         }
         // nếu index đã max (là part cuối trong 1 câu truyện)
         else if (currentIndex >= storyParts.Length - 1
-            
+
             && (isFinishReading || isCheating) && !isIntersect)
         {
             if (audioManager != null)
@@ -264,7 +274,7 @@ public class StoryManager : MonoBehaviour
 
             // ẩn hình với truyện hiện tại đi
             HideParts();
-            
+
 
             // giảm index đi để lùi trang truyện và trang tranh về trang trước 
             currentIndex -= 1;
